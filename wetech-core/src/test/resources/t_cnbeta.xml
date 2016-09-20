@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<t_cnbeta id="1" news_title="测试标题1" introduction="测试引言1" content="测试内容1" date="2016-12-11" news_where="测试稿源1" author="测试作者1" url="http://www.cnbeta.com/xxxxx"/>
+	<t_cnbeta id="2" news_title="测试标题2" introduction="测试引言2" content="测试内容2" date="2016-12-12" news_where="测试稿源2" author="测试作者2" url="http://www.cnbeta.com/xxxxx"/>
+	<t_cnbeta id="3" news_title="测试标题3" introduction="测试引言3" content="测试内容3" date="2016-12-13" news_where="测试稿源3" author="测试作者3" url="http://www.cnbeta.com/xxxxx"/>
+	<t_cnbeta id="4" news_title="测试标题4" introduction="测试引言4" content="测试内容4" date="2016-12-14" news_where="测试稿源4" author="测试作者4" url="http://www.cnbeta.com/xxxxx"/>
+	<t_cnbeta id="5" news_title="测试标题5" introduction="测试引言5" content="测试内容5" date="2016-12-15" news_where="测试稿源5" author="测试作者5" url="http://www.cnbeta.com/xxxxx"/>
+</dataset>
