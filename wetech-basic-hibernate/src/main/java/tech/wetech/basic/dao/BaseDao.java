@@ -55,64 +55,40 @@ public class BaseDao<T> implements IBaseDao<T> {
 		return sessionFactory.getCurrentSession();
 	}
 
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#add(java.lang.Object)
-	 */
 	@Override
 	public T add(T t) {
 		getSession().save(t);
 		return t;
 	}
 
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#update(java.lang.Object)
-	 */
 	@Override
 	public void update(T t) {
 		getSession().update(t);
 	}
 
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#delete(int)
-	 */
 	@Override
 	public void delete(int id) {
 		getSession().delete(this.load(id));
 	}
 
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#load(int)
-	 */
 	@Override
 	public T load(int id) {
 		return (T)getSession().load(getClz(), id);
 	}
 	
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#load(int)
-	 */
 	@Override
 	public T get(int id) {
 		return (T)getSession().get(getClz(), id);
 	}
 
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#list(java.lang.String, java.lang.Object[])
-	 */
 	public List<T> list(String hql, Object[] args) {
 		return this.list(hql, args, null);
 	}
 
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#list(java.lang.String, java.lang.Object)
-	 */
 	public List<T> list(String hql, Object arg) {
 		return this.list(hql, new Object[]{arg});
 	}
 
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#list(java.lang.String)
-	 */
 	public List<T> list(String hql) {
 		return this.list(hql,null);
 	}
@@ -153,9 +129,6 @@ public class BaseDao<T> implements IBaseDao<T> {
 		}
 	}
 
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#list(java.lang.String, java.lang.Object[], java.util.Map)
-	 */
 	public List<T> list(String hql, Object[] args, Map<String, Object> alias) {
 		hql = initSort(hql);
 		Query query = getSession().createQuery(hql);
@@ -164,30 +137,18 @@ public class BaseDao<T> implements IBaseDao<T> {
 		return query.list();
 	}
 
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#list(java.lang.String, java.util.Map)
-	 */
 	public List<T> listByAlias(String hql, Map<String, Object> alias) {
 		return this.list(hql, null, alias);
 	}
 
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#find(java.lang.String, java.lang.Object[])
-	 */
 	public Pager<T> find(String hql, Object[] args) {
 		return this.find(hql, args, null);
 	}
 
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#find(java.lang.String, java.lang.Object)
-	 */
 	public Pager<T> find(String hql, Object arg) {
 		return this.find(hql, new Object[]{arg});
 	}
 
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#find(java.lang.String)
-	 */
 	public Pager<T> find(String hql) {
 		return this.find(hql,null);
 	}
@@ -211,9 +172,6 @@ public class BaseDao<T> implements IBaseDao<T> {
 		return c;
 	}
 
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#find(java.lang.String, java.lang.Object[], java.util.Map)
-	 */
 	public Pager<T> find(String hql, Object[] args, Map<String, Object> alias) {
 		hql = initSort(hql);
 		String cq = getCountHql(hql,true);
@@ -234,83 +192,50 @@ public class BaseDao<T> implements IBaseDao<T> {
 		return pages;
 	}
 
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#find(java.lang.String, java.util.Map)
-	 */
 	public Pager<T> findByAlias(String hql, Map<String, Object> alias) {
 		return this.find(hql,null, alias);
 	}
 
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#queryObject(java.lang.String, java.lang.Object[])
-	 */
 	public Object queryObject(String hql, Object[] args) {
 		return this.queryObject(hql, args,null);
 	}
 
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#queryObject(java.lang.String, java.lang.Object)
-	 */
 	public Object queryObject(String hql, Object arg) {
 		return this.queryObject(hql, new Object[]{arg});
 	}
 
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#queryObject(java.lang.String)
-	 */
 	public Object queryObject(String hql) {
 		return this.queryObject(hql,null);
 	}
 
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#updateByHql(java.lang.String, java.lang.Object[])
-	 */
 	public void updateByHql(String hql, Object[] args) {
 		Query query = getSession().createQuery(hql);
 		setParameter(query, args);
 		query.executeUpdate();
 	}
 
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#updateByHql(java.lang.String, java.lang.Object)
-	 */
 	public void updateByHql(String hql, Object arg) {
 		this.updateByHql(hql,new Object[]{arg});
 	}
 
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#updateByHql(java.lang.String)
-	 */
 	public void updateByHql(String hql) {
 		this.updateByHql(hql,null);
 	}
 
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#listBySql(java.lang.String, java.lang.Object[], java.lang.Class, boolean)
-	 */
 	public <N extends Object>List<N> listBySql(String sql, Object[] args, Class<?> clz,
 			boolean hasEntity) {
 		return this.listBySql(sql, args, null, clz, hasEntity);
 	}
 
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#listBySql(java.lang.String, java.lang.Object, java.lang.Class, boolean)
-	 */
 	public <N extends Object>List<N> listBySql(String sql, Object arg, Class<?> clz,
 			boolean hasEntity) {
 		return this.listBySql(sql, new Object[]{arg}, clz, hasEntity);
 	}
 
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#listBySql(java.lang.String, java.lang.Class, boolean)
-	 */
 	public <N extends Object>List<N> listBySql(String sql, Class<?> clz, boolean hasEntity) {
 		return this.listBySql(sql, null, clz, hasEntity);
 	}
 
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#listBySql(java.lang.String, java.lang.Object[], java.util.Map, java.lang.Class, boolean)
-	 */
 	public <N extends Object>List<N> listBySql(String sql, Object[] args,
 			Map<String, Object> alias, Class<?> clz, boolean hasEntity) {
 		sql = initSort(sql);
@@ -324,40 +249,25 @@ public class BaseDao<T> implements IBaseDao<T> {
 		return sq.list();
 	}
 
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#listBySql(java.lang.String, java.util.Map, java.lang.Class, boolean)
-	 */
 	public <N extends Object>List<N> listByAliasSql(String sql, Map<String, Object> alias,
 			Class<?> clz, boolean hasEntity) {
 		return this.listBySql(sql, null, alias, clz, hasEntity);
 	}
 
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#findBySql(java.lang.String, java.lang.Object[], java.lang.Class, boolean)
-	 */
 	public <N extends Object>Pager<N> findBySql(String sql, Object[] args, Class<?> clz,
 			boolean hasEntity) {
 		return this.findBySql(sql, args, null, clz, hasEntity);
 	}
 
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#findBySql(java.lang.String, java.lang.Object, java.lang.Class, boolean)
-	 */
 	public <N extends Object>Pager<N> findBySql(String sql, Object arg, Class<?> clz,
 			boolean hasEntity) {
 		return this.findBySql(sql, new Object[]{arg}, clz, hasEntity);
 	}
 
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#findBySql(java.lang.String, java.lang.Class, boolean)
-	 */
 	public <N extends Object>Pager<N> findBySql(String sql, Class<?> clz, boolean hasEntity) {
 		return this.findBySql(sql, null, clz, hasEntity);
 	}
 
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#findBySql(java.lang.String, java.lang.Object[], java.util.Map, java.lang.Class, boolean)
-	 */
 	public <N extends Object>Pager<N> findBySql(String sql, Object[] args,
 			Map<String, Object> alias, Class<?> clz, boolean hasEntity) {
 		sql = initSort(sql);
@@ -382,9 +292,6 @@ public class BaseDao<T> implements IBaseDao<T> {
 		return pages;
 	}
 
-	/* (non-Javadoc)
-	 * @see com.cjbi.baisc.dao.IBaseDao#findBySql(java.lang.String, java.util.Map, java.lang.Class, boolean)
-	 */
 	public <N extends Object>Pager<N> findByAliasSql(String sql, Map<String, Object> alias,
 			Class<?> clz, boolean hasEntity) {
 		return this.findBySql(sql, null, alias, clz, hasEntity);

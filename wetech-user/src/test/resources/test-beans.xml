@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+         http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context-3.0.xsd
+         http://www.springframework.org/schema/aop
+         http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+         http://www.springframework.org/schema/tx 
+         http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+         
+	<!-- 打开Spring的Annotation支持 -->
+	<context:annotation-config />
+	
+	<bean id="userDao" class="org.easymock.EasyMock" factory-method="createStrictMock">
+		<constructor-arg value="tech.wetech.cms.dao.IUserDao"/>
+	</bean>
+	
+	<bean id="channelDao" class="org.easymock.EasyMock" factory-method="createStrictMock">
+		<constructor-arg value="tech.wetech.cms.dao.IChannelDao"/>
+	</bean>
+	
+	<bean id="roleDao" class="org.easymock.EasyMock" factory-method="createStrictMock">
+		<constructor-arg value="tech.wetech.cms.dao.IRoleDao"/>
+	</bean>
+	
+	<bean id="groupDao" class="org.easymock.EasyMock" factory-method="createStrictMock">
+		<constructor-arg value="tech.wetech.cms.dao.IGroupDao"/>
+	</bean>
+	
+	<bean id="userService" class="tech.wetech.cms.service.UserService">
+		<property name="userDao" ref="userDao"/>
+		<property name="groupDao" ref="groupDao"/>
+		<property name="roleDao" ref="roleDao"/>
+	</bean>
+	<bean id="groupService" class="tech.wetech.cms.service.GroupService">
+		<property name="userDao" ref="userDao"/>
+		<property name="groupDao" ref="groupDao"/>
+		<property name="channelDao" ref="channelDao"/>
+	</bean>
+	<bean id="roleService" class="tech.wetech.cms.service.RoleService">
+		<property name="userDao" ref="userDao"/>
+		<property name="roleDao" ref="roleDao"/>
+	</bean>
+
+</beans>
