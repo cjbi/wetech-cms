@@ -24,7 +24,6 @@
 		<module>wetech-basic-hibernate</module>
 		<module>wetech-core</module>
 		<module>wetech-web</module>
-		<module>wetech-extension</module>
 	</modules>
 
 	<dependencies>
