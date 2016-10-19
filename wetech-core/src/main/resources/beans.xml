@@ -16,7 +16,15 @@
 	<context:annotation-config />
 	<!-- 设定Spring 去哪些包中找Annotation -->
 	<context:component-scan base-package="tech.wetech" />
-
+	
+	<bean id="ftlPath" class="java.lang.String">
+		<constructor-arg value="/ftl"/>
+	</bean>
+	
+	<bean id="outPath" class="java.lang.String">
+		<constructor-arg value="/jsp/template"/>
+	</bean>
+	
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="${jdbc.driverClassName}" />
@@ -46,7 +54,7 @@
 		<property name="dataSource" ref="dataSource" />
 		<!-- 设置Spring取那个包中查找相应的实体类 -->
 		<property name="packagesToScan">
-			<value>tech.wetech.model</value>
+			<value>tech.wetech.cms.model</value>
 		</property>
 		<property name="hibernateProperties">
 			<!-- <value> hibernate.dialect=org.hibernate.dialect.HSQLDialect </value> -->
@@ -71,7 +79,7 @@
 	<!-- 以下的事务是声明在DAO中，但是通常都会在Service来处理多个业务对象逻辑的关系，注入删除，更新等，此时如果在执行了一个步骤之后抛出异常
 		就会导致数据不完整，所以事务不应该在DAO层处理，而应该在service，这也就是Spring所提供的一个非常方便的工具，声明式事务 -->
 		<aop:pointcut id="allMethods"
-			expression="execution(* tech.wetech.dao.*.*(..))" />
+			expression="execution(* tech.wetech.cms.service.*.*(..))" />
 		<!-- 通过advisor来确定具体要加入事务控制的方法 -->
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="allMethods" />
 	</aop:config>
