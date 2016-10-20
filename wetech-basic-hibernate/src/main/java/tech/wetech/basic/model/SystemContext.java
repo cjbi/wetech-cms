@@ -2,7 +2,7 @@ package tech.wetech.basic.model;
 
 /**
  * 用来传递列表对象的ThreadLocal数据
- * @author cjb
+ * @author Administrator
  *
  */
 public class SystemContext {
@@ -23,6 +23,16 @@ public class SystemContext {
 	 */
 	private static ThreadLocal<String> order = new ThreadLocal<String>();
 	
+	private static ThreadLocal<String> realPath = new ThreadLocal<String>();
+	
+	
+	
+	public static String getRealPath() {
+		return realPath.get();
+	}
+	public static void setRealPath(String _realPath) {
+		SystemContext.realPath.set(_realPath);
+	}
 	public static Integer getPageSize() {
 		return pageSize.get();
 	}
@@ -62,6 +72,10 @@ public class SystemContext {
 	
 	public static void removeOrder() {
 		order.remove();
+	}
+	
+	public static void removeRealPath() {
+		realPath.remove();
 	}
 	
 }
