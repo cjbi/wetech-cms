@@ -9,7 +9,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.TransactionConfiguration;
 import org.springframework.transaction.annotation.Transactional;
 
-@SuppressWarnings("deprecation")
 @RunWith(SpringJUnit4ClassRunner.class)//让junit工作在spring环境中
 @ContextConfiguration("/beans.xml")//在classes中spring的配置文件
 //transactionManager表示在spring配置文件中所声明的事务对象
