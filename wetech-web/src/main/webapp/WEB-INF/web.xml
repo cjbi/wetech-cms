@@ -39,11 +39,13 @@
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
+	<listener>
+		<listener-class>tech.wetech.cms.web.CmsSessionListener</listener-class>
+	</listener>
 	<!-- Spring 的监听器可以通过这个上下文参数来获取beans.xml的位置 -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath*:beans.xml</param-value>
-
 	</context-param>
 	<!-- Spring中提供了 org.springframework.orm.hibernate3.support.OpenSessionInViewFilter; 
 		这个类来实现OpenSessionInViewer的操作 -->

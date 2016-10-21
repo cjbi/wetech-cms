@@ -1,0 +1,31 @@
+*{
+	margin:0px;
+	padding:0px;
+	font-size:12px;
+}
+
+#container {
+	width:873px;
+	height:480px;
+	position:absolute;
+	border:1px solid #999;
+	width:872px;
+	height:479px;
+	background:url("img/admin_error_bg.jpg") no-repeat;
+	font-size:14px;
+}
+
+#error {
+	position: relative;
+	top:210px;
+	text-align: center;
+}
+
+#error span {
+	font-weight: bold;
+}
+
+*.errorContainer {
+	color:#f00;
+	padding:0px 4px;
+}

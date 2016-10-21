@@ -1,0 +1,29 @@
+#keyword-container {
+	border:1px solid #bbb;
+	width:700px;
+}
+#keyword-exists {
+	display:none;
+}
+input.keyword-input {
+	border:none;
+	width:298px;
+	color:#aaa;
+	height:28px;
+}
+div.keyword-in {
+	float:left;
+	font-size:12px;
+	margin:3px;
+	background:#3fa7cb;
+	padding:3px;
+	color:#fff;
+}
+a.keyword-shut:link,a.keyword-shut:visited {
+	margin-left:3px;
+	color:#fff;
+	text-decoration:none;
+}
+a.keyword-shut:hover {
+	color:#732;
+}
