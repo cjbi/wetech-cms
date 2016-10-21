@@ -1,4 +1,4 @@
-package tech.wetech.basic.test.util;
+package tech.wetech.basic.util;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

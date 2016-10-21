@@ -25,8 +25,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.support.TransactionSynchronizationManager;
 
 import tech.wetech.basic.model.Pager;
-import tech.wetech.basic.test.util.TestUtil;
 import tech.wetech.basic.util.AbstractDbUnitTestCase;
+import tech.wetech.basic.util.TestUtil;
 import tech.wetech.cms.model.Topic;
 
 

@@ -7,7 +7,7 @@ import java.util.List;
 
 import org.junit.Test;
 
-import tech.wetech.basic.test.util.EntitiesHelper;
+import tech.wetech.basic.util.EntitiesHelper;
 import tech.wetech.basic.util.EnumUtils;
 import tech.wetech.cms.model.ChannelType;
 import tech.wetech.cms.model.RoleType;

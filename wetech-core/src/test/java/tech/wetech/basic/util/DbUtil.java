@@ -1,4 +1,4 @@
-package tech.wetech.basic.test.util;
+package tech.wetech.basic.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

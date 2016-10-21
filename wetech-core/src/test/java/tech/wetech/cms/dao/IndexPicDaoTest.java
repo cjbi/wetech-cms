@@ -15,6 +15,7 @@ import org.springframework.orm.hibernate4.SessionHolder;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.support.TransactionSynchronizationManager;
+
 import tech.wetech.basic.util.AbstractDbUnitTestCase;
 import tech.wetech.cms.model.IndexPic;
 

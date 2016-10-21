@@ -27,9 +27,9 @@ import org.springframework.transaction.support.TransactionSynchronizationManager
 
 import tech.wetech.basic.model.Pager;
 import tech.wetech.basic.model.SystemContext;
-import tech.wetech.basic.test.util.EntitiesHelper;
-import tech.wetech.basic.test.util.TestUtil;
 import tech.wetech.basic.util.AbstractDbUnitTestCase;
+import tech.wetech.basic.util.EntitiesHelper;
+import tech.wetech.basic.util.TestUtil;
 import tech.wetech.cms.model.Channel;
 import tech.wetech.cms.model.ChannelTree;
 import tech.wetech.cms.model.Group;

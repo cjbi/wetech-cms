@@ -1,5 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>tech.wetech</groupId>
@@ -17,23 +20,17 @@
 	</properties>
 
 	<modules>
-		<module>wetech-basic-common</module>
+		<!-- 下方已添加wetech-basic-common依赖，打开此注释会导致循环调用 -->
+		<!-- <module>wetech-basic-common</module> -->
 		<module>wetech-basic-hibernate</module>
 		<module>wetech-core</module>
-		<module>wetech-web</module>
 		<module>wetech-user</module>
 		<module>wetech-topic</module>
-    <module>wetech-basic</module>
-  </modules>
+		<module>wetech-web</module>
+	</modules>
 
 	<dependencies>
 		<!-- 所有工程都要引用 wetech-basic-common -->
-		<dependency>
-			<groupId>${project.groupId}</groupId>
-			<artifactId>wetech-basic-common</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-
 		<dependency>
 			<groupId>${project.groupId}</groupId>
 			<artifactId>wetech-basic-common</artifactId>
@@ -137,6 +134,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
@@ -146,6 +144,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.9</version>
 				<configuration>
 					<skip>true</skip>
 				</configuration>

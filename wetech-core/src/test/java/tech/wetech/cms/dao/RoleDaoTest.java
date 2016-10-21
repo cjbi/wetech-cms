@@ -23,8 +23,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.support.TransactionSynchronizationManager;
 
-import tech.wetech.basic.test.util.EntitiesHelper;
 import tech.wetech.basic.util.AbstractDbUnitTestCase;
+import tech.wetech.basic.util.EntitiesHelper;
 import tech.wetech.cms.model.Role;
 import tech.wetech.cms.model.RoleType;
 import tech.wetech.cms.model.User;

@@ -21,17 +21,6 @@
 			<groupId>${project.groupId}</groupId>
 			<artifactId>wetech-basic-hibernate</artifactId>
 			<version>${project.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId></groupId>
-					<artifactId>wetech-basic-hibernate</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>${project.groupId}</groupId>
-			<artifactId>wetech-basic-common</artifactId>
-			<version>${project.version}</version>
 		</dependency>
 		
 		<dependency>
@@ -39,14 +28,6 @@
 			<artifactId>hibernate-validator</artifactId>
 			<version>4.3.1.Final</version>
 		</dependency>
-
-
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-validator</artifactId>
-			<version>4.3.1.Final</version>
-		</dependency>
-
 
 	</dependencies>
 </project>

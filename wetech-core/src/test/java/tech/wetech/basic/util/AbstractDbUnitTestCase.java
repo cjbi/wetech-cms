@@ -1,4 +1,4 @@
-package tech.wetech.basic.test.util;
+package tech.wetech.basic.util;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -8,8 +8,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.SQLException;
-
-import junit.framework.Assert;
 
 import org.dbunit.DatabaseUnitException;
 import org.dbunit.database.DatabaseConnection;
@@ -24,6 +22,9 @@ import org.dbunit.operation.DatabaseOperation;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.xml.sax.InputSource;
+
+import junit.framework.Assert;
+import tech.wetech.basic.util.DbUtil;
 
 public class AbstractDbUnitTestCase {
 	public static IDatabaseConnection dbunitCon;
