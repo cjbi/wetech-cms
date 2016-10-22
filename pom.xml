@@ -21,7 +21,7 @@
 
 	<modules>
 		<!-- 下方已添加wetech-basic-common依赖，打开此注释会导致循环调用 -->
-		<!-- <module>wetech-basic-common</module> -->
+		<module>wetech-basic-common</module>
 		<module>wetech-basic-hibernate</module>
 		<module>wetech-core</module>
 		<module>wetech-user</module>
@@ -30,13 +30,6 @@
 	</modules>
 
 	<dependencies>
-		<!-- 所有工程都要引用 wetech-basic-common -->
-		<dependency>
-			<groupId>${project.groupId}</groupId>
-			<artifactId>wetech-basic-common</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>

@@ -13,10 +13,10 @@
         <dependent-module archiveName="wetech-basic-hibernate-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/wetech-basic-hibernate/wetech-basic-hibernate">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="wetech-user-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/wetech-user/wetech-user">
+        <dependent-module archiveName="wetech-basic-common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/wetech-basic-common/wetech-basic-common">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="wetech-basic-common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/wetech-basic-common/wetech-basic-common">
+        <dependent-module archiveName="wetech-user-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/wetech-user/wetech-user">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="context-root" value="wetech-web"/>
