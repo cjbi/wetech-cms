@@ -33,7 +33,7 @@ $(function(){
 	<h3 class="admin_link_bar">
 		<jsp:include page="inc.jsp"></jsp:include>
 	</h3>
-	<sf:form method="post" modelAttribute="cmsLink" id="addForm">
+<sf:form method="post" modelAttribute="cmsLink" id="addForm">
 	<table width="550px" cellspacing="0" cellPadding="0">
 		<thead><tr><td colspan="2">添加超链接</td></tr></thead>
 		<tr>

@@ -24,6 +24,7 @@ $(function(){
 </head>
 <body>
 <div id="content">
+	
 	<h3 class="admin_link_bar">
 		<jsp:include page="inc.jsp"></jsp:include>
 	</h3>

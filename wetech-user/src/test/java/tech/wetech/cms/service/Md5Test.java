@@ -8,7 +8,7 @@ import tech.wetech.basic.util.SecurityUtil;
 
 public class Md5Test {
 	public static void main(String[] args) {
-		String password = "abcd";
+		String password = "123456";
 		try {
 			MessageDigest md = MessageDigest.getInstance("MD5");
 			md.update(password.getBytes(), 0, password.length());
