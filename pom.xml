@@ -30,7 +30,7 @@
 	</modules>
 
 	<dependencies>
-		
+		<!-- 备注 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
