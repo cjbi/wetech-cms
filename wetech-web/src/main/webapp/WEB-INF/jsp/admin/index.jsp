@@ -1,20 +1,53 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!doctype html>
+<html class="no-js fixed-layout">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>欢迎使用附中网站后台管理程序</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>后台管理</title>
+<meta name="description" content="后台管理">
+<meta name="keywords" content="index">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="icon" type="image/png" href="<%=request.getContextPath()%>/resources/assets/i/favicon.png">
+<link rel="apple-touch-icon-precomposed" href="<%=request.getContextPath()%>/resources/assets/i/app-icon72x72@2x.png">
+<meta name="apple-mobile-web-app-title" content="Amaze UI" />
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/assets/css/amazeui.min.css" />
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/assets/css/admin.css">
 </head>
-<frameset cols="*,1035,*"  border="0" frameborder="0" frameSpacing="0" scrolling="false">
-	<frame src="<%=request.getContextPath() %>/resources/admin/background.html" frameSpacing="0">
-	<frameset rows="110,*" frameborder="0" noresize frameSpacing="0">
-		<frame name="top" src="<%=request.getContextPath() %>/jsp/admin/top.jsp" frameborder="0" frameSpacing="0"/>
-		<frameset cols="164,*" frameborder="0" frameSpacing="0">
-			<frame name="nav" src="<%=request.getContextPath() %>/jsp/admin/nav.jsp" frameborder="0"/>
-			<frame name="content" src="<%=request.getContextPath() %>/resources/admin/01.html" frameborder="0"/>
-		</frameset>
-	</frameset>
-	<frame src="<%=request.getContextPath() %>/resources/admin/background.html" frameSpacing="0">
-</frameset>
+<body>
+
+	<!-- header start -->
+	<jsp:include page="/jsp/admin/header.jsp"/>
+	<!-- header end -->
+
+	<div class="am-cf admin-main">
+		<!-- sidebar start -->
+		<jsp:include page="/jsp/admin/sidebar.jsp" />
+		<!-- sidebar end -->
+
+		<!-- content start -->
+
+		<div class="admin-content">
+			<div class="admin-content-body">
+				<div class="am-cf am-padding">
+					<div class="am-fl am-cf">
+						<strong class="am-text-primary am-text-lg">仪表盘</strong> / <small>没有内容</small>
+					</div>
+				</div>
+			</div>
+			<!-- footer start -->
+			<jsp:include page="/jsp/admin/footer.jsp" />
+			<!-- footer end -->
+		</div>
+		<!-- content end -->
+
+	</div>
+
+	<script src="<%=request.getContextPath()%>/resources/assets/js/jquery.min.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/assets/js/amazeui.min.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/assets/js/app.js"></script>
+</body>
 </html>
+

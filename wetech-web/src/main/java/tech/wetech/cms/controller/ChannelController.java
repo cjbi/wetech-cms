@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import tech.wetech.basic.util.EnumUtils;
+import tech.wetech.basic.util.JsonUtil;
 import tech.wetech.cms.auth.AuthClass;
 import tech.wetech.cms.dto.AjaxObj;
 import tech.wetech.cms.dto.TreeDto;
@@ -51,7 +52,7 @@ public class ChannelController {
 
 	@RequestMapping("/channels")
 	public String list(Model model) {
-//		model.addAttribute("treeDatas", JsonUtil.getInstance().obj2json(channelService.generateTree()));
+		model.addAttribute("treeDatas", JsonUtil.getInstance().obj2json(channelService.generateTree()));
 		return "channel/list";
 	}
 	

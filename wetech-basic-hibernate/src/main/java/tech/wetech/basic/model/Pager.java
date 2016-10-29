@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * 分页对象
- * @author Administrator
+ * @author cjbi
  *
  * @param <T>
  */
@@ -50,4 +50,5 @@ public class Pager<T> {
 	public void setDatas(List<T> datas) {
 		this.datas = datas;
 	}
+	
 }

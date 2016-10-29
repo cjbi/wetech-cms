@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import tech.wetech.basic.model.SystemContext;
 
 public class SystemContextFilter implements Filter{
-	private Integer pageSize;
+//	private Integer pageSize;
 
 	@Override
 	public void destroy() {
@@ -23,8 +23,10 @@ public class SystemContextFilter implements Filter{
 	public void doFilter(ServletRequest req, ServletResponse resp,
 			FilterChain chain) throws IOException, ServletException {
 		Integer offset = 0;
+		Integer pageSize = 20;
 		try {
-			offset = Integer.parseInt(req.getParameter("pager.offset"));
+			offset = Integer.parseInt(req.getParameter("start"));
+			pageSize = Integer.parseInt(req.getParameter("length"));
 		} catch (NumberFormatException e) {}
 		try {
 			SystemContext.setOrder(req.getParameter("order"));
@@ -44,11 +46,11 @@ public class SystemContextFilter implements Filter{
 
 	@Override
 	public void init(FilterConfig cfg) throws ServletException {
-		try {
-			pageSize = Integer.parseInt(cfg.getInitParameter("pageSize"));
-		} catch (NumberFormatException e) {
-			pageSize = 15;
-		}
+//		try {
+//			pageSize = Integer.parseInt(cfg.getInitParameter("pageSize"));
+//		} catch (NumberFormatException e) {
+//			pageSize = 15;
+//		}
 	}
 
 }
