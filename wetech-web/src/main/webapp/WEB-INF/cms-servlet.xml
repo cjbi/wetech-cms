@@ -37,13 +37,13 @@
 	 </property> 
 	</bean>
 
-	<bean id="exceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+	<!-- <bean id="exceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
 		<property name="exceptionMappings">
 			<props>
 				<prop key="tech.wetech.cms.model.CmsException">error</prop>
 			</props>
 		</property>
-	</bean>
+	</bean> -->
 	<bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		<property name="maxUploadSize" value="500000000"></property>

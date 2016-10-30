@@ -1,5 +1,4 @@
-//-------------------------------------------------------------------------
-package tech.wetech.cms.dto;
+package tech.wetech.cms.web;
 
 import java.util.HashMap;
 import java.util.Map;

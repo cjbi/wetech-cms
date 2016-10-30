@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import tech.wetech.cms.auth.AuthClass;
 import tech.wetech.cms.auth.AuthMethod;
-import tech.wetech.cms.dto.DataTableMap;
 import tech.wetech.cms.dto.UserDto;
 import tech.wetech.cms.model.ChannelTree;
 import tech.wetech.cms.model.Role;
@@ -28,7 +27,12 @@ import tech.wetech.cms.service.IChannelService;
 import tech.wetech.cms.service.IGroupService;
 import tech.wetech.cms.service.IRoleService;
 import tech.wetech.cms.service.IUserService;
+import tech.wetech.cms.web.DataTableMap;
+import tech.wetech.cms.web.ResponseData;
 
+/**
+ * @author cjb
+ */
 @Controller
 @RequestMapping("/admin/user")
 @AuthClass("login")
@@ -59,30 +63,22 @@ public class UserController {
 		return DataTableMap.getMapData(userService.findUser());
 	}
 	
+	@RequestMapping(value = "/add", method = RequestMethod.POST)
+	public @ResponseBody ResponseData add(@Valid UserDto userDto, BindingResult br) {
+		System.out.println(userDto);
+		if (br.hasErrors()) {
+			return new ResponseData("操作失败"+br.getFieldError().toString());
+		}
+		userService.add(userDto.getUser(), userDto.getRoleIds(), userDto.getGroupIds());
+		return ResponseData.SUCCESS_NO_DATA;
+	}
+	
 	@RequestMapping("/users")
 	public String list2(Model model) {
 		model.addAttribute("datas", userService.findUser());
 		return "user/list";
 	}
 	
-	
-	@Deprecated
-	@RequestMapping(value = "/add", method = RequestMethod.GET)
-	public String add(Model model) {
-		model.addAttribute("userDto", new UserDto());// user,user
-		initUser(model);
-		return "user/add";
-	}
-
-	@RequestMapping(value = "/add", method = RequestMethod.POST)
-	public String add(@Valid UserDto userDto, BindingResult br, Model model) {
-		if (br.hasErrors()) {
-			initUser(model);
-			return "user/add";
-		}
-		userService.add(userDto.getUser(), userDto.getRoleIds(), userDto.getGroupIds());
-		return "redirect:/admin/user/users";
-	}
 
 	@RequestMapping(value = "/update/{id}", method = RequestMethod.GET)
 	public String update(@PathVariable int id, Model model) {

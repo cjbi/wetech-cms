@@ -1,6 +1,7 @@
 package tech.wetech.cms.dto;
 
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.hibernate.validator.constraints.Email;
@@ -185,4 +186,12 @@ public class UserDto {
 	}
 	public UserDto() {
 	}
+
+	@Override
+	public String toString() {
+		return "UserDto [id=" + id + ", username=" + username + ", password=" + password + ", nickname=" + nickname
+				+ ", email=" + email + ", phone=" + phone + ", status=" + status + ", roleIds="
+				+ Arrays.toString(roleIds) + ", groupIds=" + Arrays.toString(groupIds) + "]";
+	}
+	
 }

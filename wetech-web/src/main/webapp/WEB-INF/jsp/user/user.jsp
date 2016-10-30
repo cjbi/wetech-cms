@@ -14,6 +14,7 @@
 <link rel="apple-touch-icon-precomposed" href="<%=request.getContextPath()%>/resources/assets/i/app-icon72x72@2x.png">
 <meta name="apple-mobile-web-app-title" content="Amaze UI" />
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/assets/css/amazeui.min.css" />
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/assets/css/app.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/assets/css/amazeui.datatables.css" />
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/assets/css/admin.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/layer/skin/layer.css">
@@ -27,7 +28,7 @@
 		<jsp:include page="/jsp/admin/sidebar.jsp" />
 		<!-- sidebar end -->
 		<!-- content start -->
-		<div class="admin-content">
+				<div class="admin-content">
 			<div class="admin-content-body">
 				<div class="am-cf am-padding">
 					<div class="am-fl am-cf">
@@ -97,12 +98,12 @@
 		<!-- content end -->
 	</div>
 	<div id="add">
-		<form class="am-form am-form-horizontal">
+		<form class="am-form am-form-horizontal" id="add-form">
 			<br>
 			<div class="am-form-group">
 				<label class="am-u-sm-2 am-form-label">用户名</label>
 				<div class="am-u-sm-10">
-					<input type="text" id="" name="username" placeholder="必须是英文">
+					<input type="text" id="" name="username" placeholder="必须是英文(必填)" minlength="3" required>
 				</div>
 			</div>
 			<div class="am-form-group">
@@ -114,13 +115,13 @@
 			<div class="am-form-group">
 				<label class="am-u-sm-2 am-form-label">用户密码</label>
 				<div class="am-u-sm-10">
-					<input type="password" name="password" placeholder="设置一个密码">
+					<input type="password" name="password" id="password" placeholder="设置一个密码(必填)" required>
 				</div>
 			</div>
 			<div class="am-form-group">
 				<label class="am-u-sm-2 am-form-label">确认密码</label>
 				<div class="am-u-sm-10">
-					<input type="password" name="confirmPwd" placeholder="确认你的密码">
+					<input type="password" name="confirmPwd" placeholder="确认你的密码(必填)" data-equal-to="#password" required>
 				</div>
 			</div>
 			<div class="am-form-group">
@@ -132,7 +133,7 @@
 			<div class="am-form-group">
 				<label class="am-u-sm-2 am-form-label">电子邮件</label>
 				<div class="am-u-sm-10">
-					<input type="email" name="email" id="doc-ipt-3" placeholder="输入电子邮件">
+					<input type="email" name="email" id="email" placeholder="输入电子邮件">
 				</div>
 			</div>
 			<div class="am-form-group">
@@ -156,9 +157,8 @@
 			<div class="am-form-group">
 				<label class="am-u-sm-2 am-form-label">用户组</label>
 				<div class="am-u-sm-10">
-					<%-- <sf:checkboxes items="${groups }" path="groupIds" itemLabel="name" itemValue="id"/> --%>
 					<c:forEach var="group" items="${groups }">
-						<label class="am-checkbox-line"> <input type="checkbox" name="gpoupIds" value="${group.id }" />${group.name }
+						<label class="am-checkbox-line"> <input type="checkbox" name="groupIds" value="${group.id }" />${group.name }
 						</label>
 					</c:forEach>
 				</div>
@@ -166,9 +166,9 @@
 		</form>
 	</div>
 	<script src="<%=request.getContextPath()%>/resources/assets/js/jquery.min.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/layer/layer.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/assets/js/amazeui.min.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/assets/js/amazeui.datatables.min.js"></script>
-	<script src="<%=request.getContextPath()%>/resources/layer/layer.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/assets/js/app.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/js/admin/user.js"></script>
 </body>

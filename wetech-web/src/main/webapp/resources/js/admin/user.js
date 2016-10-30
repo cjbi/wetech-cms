@@ -1,7 +1,11 @@
 $(document).ready(function() {
+    /*------------ 初始化 ------------*/
 
-    /*------------ 初始化dataTables ------------*/
-    $('#example').dataTable({
+});
+
+$(function() {
+    /*------------ 填充dataTables ------------*/
+    var table = $('#example').DataTable({
 	"aLengthMenu" : [ 10, 15, 20, 40, 60 ],
 	"searching" : true,// 禁用搜索
 	"lengthChange" : true,
@@ -11,7 +15,7 @@ $(document).ready(function() {
 	"bAutoWidth" : true,
 	"sort" : "position",
 	"deferRender" : true,// 延迟渲染
-	"bStateSave" : false, // 在第三页刷新页面，会自动到第一页
+	"bStateSave" : true, // 在第三页刷新页面，会自动到第一页
 	"iDisplayLength" : 15,
 	"iDisplayStart" : 0,
 	"ordering" : false,// 全局禁用排序
@@ -33,7 +37,7 @@ $(document).ready(function() {
 	    "data" : "id",
 	    "bSortable" : false,
 	    "fnCreatedCell" : function(nTd, sData, oData, iRow, iCol) {
-		$(nTd).html("<input type='checkbox' title='" + sData + "' value='" + sData + "'>");
+		$(nTd).html("<label class='am-checkbox'><input type='checkbox' title='" + sData + "' value='" + sData + "'></label>");
 	    }
 	}, {
 	    "data" : "id"
@@ -69,6 +73,7 @@ $(document).ready(function() {
 
     /*------------ 新增 ------------*/
     add = function() {
+	$("#add-form").validator();
 	layer.open({
 	    title : '添加用户',
 	    type : 1,
@@ -78,50 +83,83 @@ $(document).ready(function() {
 	    // maxmin: true,
 	    area : [ "600px", "auto" ],
 	    content : $('#add'),
-	    btn : [ '确定', '取消' ],
+	    btn : [ '确定', '关闭' ],
+	    // 按钮一【确定】的回调
+	    // index 当前层索引 layero 当前层DOM对象
 	    yes : function(index, layero) {
-		// index 当前层索引 layero 当前层DOM对象
-		// 按钮一【确定】的回调
-		var data = [];
-		$("#add [name]").each(function(e) {
-		    data.push($(this).val());
-		    alert(data);
-		});
-		$.ajax({
-		    type : "post",
-		    url : "../../system/user/saveUser.do",
-		    dataType : "json",
-		    data : {
-			"username" : data[0],
-			"nickname" : data[1],
-			"password" : data[2],
-			"confirmPwd" : data[3],
-			"phone" : data[4],
-			"email" : data[5],
-			"status" : data[6]
-		    },
-		    success : function(data) {
-			table.ajax.reload();
-		    },
-		    error : function(data) {
-			alert("回调行数返回：出错");
-			table.ajax.reload();
-		    }
-		});
+		// 处理异步验证结果
+		var isFormValid = layero.find('#add-form').validator('isFormValid');
+		if (isFormValid) {
+		    var data = [];
+		    var roleIds = [];
+		    var groupIds = [];
+		    $("#add [name]").each(function(e) {
+			data.push($(this).val());
+		    });
+		    $("#add [name=roleIds]").each(function(e) {
+			if ($(this).attr("checked")) {
+			    roleIds.push($(this).val());
+			}
+		    });
+		    $("#add [name=groupIds]").each(function(e) {
+			if ($(this).attr("checked")) {
+			    groupIds.push($(this).val());
+			}
+		    });
+		    $.ajax({
+			type : "post",
+			url : "../../admin/user/add.do",
+			dataType : "json",
+			data : {
+			    "username" : data[0],
+			    "nickname" : data[1],
+			    "password" : data[2],
+			    "confirmPwd" : data[3],
+			    "phone" : data[4],
+			    "email" : data[5],
+			    "status" : data[6],
+			    "roleIds" : roleIds.join(),
+			    "groupIds" : groupIds.join()
+			},
+			success : function(data) {
+			    layer.msg(data.message, {
+				time : "2000",
+				icon : 6
+			    });
+			    layer.close(index);
+			    table.ajax.reload();
+			},
+			error : function(data) {
+
+			    layer.msg("操作失败", {
+				time : 2000,
+				icon : 5
+			    });
+			}
+		    });
+		} else {
+		    layer.msg("数据验证失败", {
+			time : 2000,
+			icon : 5
+		    });
+		}
+
 	    },
 	    cancel : function(index) {
-		// 按钮二【取消】和右上角关闭的回调
+		// 按钮二【关闭】和右上角关闭的回调
 	    },
 	    end : function() {
-		//无论是确认还是取消，只要层被销毁了，end都会执行
+		console.log('layer end');
+		// 无论是确认还是取消，只要层被销毁了，end都会执行
 		$("#add [name]").each(function(e) {
-		    if($(this).val()!='') {
+		    if ($(this).val() != '') {
 			$(this).val('');
 		    }
-		    if( $(this).attr("checked",true)) {
-			$(this).attr("checked",false);
+		    if ($(this).attr("checked")) {
+			$(this).attr("checked", false);
 		    }
 		});
+		$('#add-form').validator('destroy');
 	    },
 	    success : function(layero, index) {
 		// 层弹出后的成功回调方法
