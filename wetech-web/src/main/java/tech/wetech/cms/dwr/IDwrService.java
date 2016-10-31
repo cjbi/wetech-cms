@@ -1,5 +1,14 @@
 package tech.wetech.cms.dwr;
 
+import java.util.List;
+
+import tech.wetech.cms.model.Group;
+import tech.wetech.cms.model.Role;
+
+/**
+ * 用来放一些公共调用的ajax请求
+ * @author cjb
+ */
 public interface IDwrService {
 	/**
 	 * 添加GroupChannel对象
@@ -24,4 +33,8 @@ public interface IDwrService {
 	public void updatePicPos(int id, int oldPos, int newPos);
 	
 	public void updateLinkPos(int id,int oldPos,int newPos);
+	
+	public List<Group> listGroup();
+	
+	public List<Role> listRole();
 }

@@ -20,10 +20,16 @@
 		</mvc:interceptor>
 	</mvc:interceptors>
 	<context:component-scan base-package="tech.wetech.cms.controller" />
-	<dwr:controller id="dwrController" debug="false"/>
+	<dwr:controller id="dwrController" debug="true"/>
 	<dwr:annotation-config id="dwrAnnotationConfig" />
-  	<dwr:annotation-scan base-package="tech.wetech.cms.dwr" scanDataTransferObject="true"/>
-	
+  	<dwr:annotation-scan base-package="tech.wetech.cms" scanDataTransferObject="true"/>
+  	
+  	
+  	<!-- 标签用于模仿在 dwr.xml 中可用的配置的行为。主要是声明实体类转换 -->
+  	<dwr:configuration>
+  		<!-- To allow conversion of any class in the given package and all sub-packages -->
+  		<spring-dwr:convert class="tech.wetech.cms.model.**" type="bean"></spring-dwr:convert>
+  	</dwr:configuration>
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />

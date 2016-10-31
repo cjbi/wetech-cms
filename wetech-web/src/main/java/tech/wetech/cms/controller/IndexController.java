@@ -64,7 +64,7 @@ public class IndexController {
 		this.topicService = topicService;
 	}
 
-	@RequestMapping({"/","/index"})
+	@RequestMapping({"/","/index/"})
 	public String index(Model model) {
 		model.addAttribute("baseInfo", BaseInfoUtil.getInstacne().read());
 		return "index/index";

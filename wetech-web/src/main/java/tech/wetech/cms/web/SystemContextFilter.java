@@ -27,10 +27,7 @@ public class SystemContextFilter implements Filter{
 		try {
 			offset = Integer.parseInt(req.getParameter("start"));
 			pageSize = Integer.parseInt(req.getParameter("length"));
-		} catch (NumberFormatException e) {
-			System.out.println("offset:"+offset);
-			System.out.println("pageSize:"+pageSize);
-		}
+		} catch (NumberFormatException e) {}
 		try {
 			SystemContext.setOrder(req.getParameter("order"));
 			SystemContext.setSort(req.getParameter("sort"));

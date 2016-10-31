@@ -28,7 +28,7 @@
 		<jsp:include page="/jsp/admin/sidebar.jsp" />
 		<!-- sidebar end -->
 		<!-- content start -->
-				<div class="admin-content">
+		<div class="admin-content">
 			<div class="admin-content-body">
 				<div class="am-cf am-padding">
 					<div class="am-fl am-cf">
@@ -43,13 +43,10 @@
 								<button type="button" class="am-btn am-btn-default" onclick="add()">
 									<span class="am-icon-plus"></span> 新增
 								</button>
-								<button type="button" class="am-btn am-btn-default">
-									<span class="am-icon-save"></span> 保存
+								<button type="button" class="am-btn am-btn-default" onclick="edit()">
+									<span class="am-icon-edit"></span> 修改
 								</button>
-								<button type="button" class="am-btn am-btn-default">
-									<span class="am-icon-archive"></span> 审核
-								</button>
-								<button type="button" class="am-btn am-btn-default">
+								<button type="button" class="am-btn am-btn-default" onclick="del()">
 									<span class="am-icon-trash-o"></span> 删除
 								</button>
 							</div>
@@ -79,7 +76,7 @@
 					<table class="am-table am-table-striped am-table-bordered am-table-compact am-text-nowrap" width="100%" id="example">
 						<thead>
 							<tr>
-								<th><input type="checkbox" /></th>
+								<th><input type="checkbox" id='checkAll'></th>
 								<th>ID</th>
 								<th>用户名称</th>
 								<th>用户昵称</th>
@@ -97,7 +94,7 @@
 		</div>
 		<!-- content end -->
 	</div>
-	<div id="add">
+	<div id="add-modal">
 		<form class="am-form am-form-horizontal" id="add-form">
 			<br>
 			<div class="am-form-group">
@@ -165,10 +162,71 @@
 			</div>
 		</form>
 	</div>
+	<div id="edit-modal">
+		<form class="am-form am-form-horizontal" id="add-form">
+			<br> 
+			<input type="hidden" name="id">
+			<input type="hidden" name="password">
+			<div class="am-form-group">
+				<label class="am-u-sm-2 am-form-label">用户名</label>
+				<div class="am-u-sm-10">
+					<input type="text" name="username" placeholder="必须是英文(必填)" disabled>
+				</div>
+			</div>
+			<div class="am-form-group">
+				<label class="am-u-sm-2 am-form-label">显示名称</label>
+				<div class="am-u-sm-10">
+					<input type="text" name="nickname" placeholder="可以是中文">
+				</div>
+			</div>
+			<div class="am-form-group">
+				<label class="am-u-sm-2 am-form-label">联系电话</label>
+				<div class="am-u-sm-10">
+					<input type="tel" name="phone" placeholder="输入联系电话">
+				</div>
+			</div>
+			<div class="am-form-group">
+				<label class="am-u-sm-2 am-form-label">电子邮件</label>
+				<div class="am-u-sm-10">
+					<input type="email" name="email" id="email" placeholder="输入电子邮件">
+				</div>
+			</div>
+			<div class="am-form-group">
+				<label class="am-u-sm-2 am-form-label">状态</label>
+				<div class="am-u-sm-3" style="float: left;">
+					<select name="status">
+						<option value="0" selected="selected">停用</option>
+						<option value="1">启用</option>
+					</select>
+				</div>
+			</div>
+			<div class="am-form-group">
+				<label class="am-u-sm-2 am-form-label">角色</label>
+				<div class="am-u-sm-10">
+					<c:forEach var="role" items="${roles }">
+						<label class="am-checkbox-line"> <input type="checkbox" name="roleIds" value="${role.id }" readonly/>${role.name }
+						</label>
+					</c:forEach>
+				</div>
+			</div>
+			<div class="am-form-group">
+				<label class="am-u-sm-2 am-form-label">用户组</label>
+				<div class="am-u-sm-10">
+					<c:forEach var="group" items="${groups }">
+						<label class="am-checkbox-line"> <input type="checkbox" name="groupIds" value="${group.id }" readonly/>${group.name }
+						</label>
+					</c:forEach>
+				</div>
+			</div>
+		</form>
+	</div>
 	<script src="<%=request.getContextPath()%>/resources/assets/js/jquery.min.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/layer/layer.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/assets/js/amazeui.min.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/assets/js/amazeui.datatables.min.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/assets/js/amazeui.datatables.plugin.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/dwr/engine.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/dwr/interface/dwrService.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/assets/js/app.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/js/admin/user.js"></script>
 </body>

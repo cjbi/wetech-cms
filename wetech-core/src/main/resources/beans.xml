@@ -97,13 +97,13 @@
 	</tx:advice>
 	
 <!-- 配置JdbcTemplate 应付一些特殊场景 -->
-	<bean id="jbdcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+	<!-- <bean id="jbdcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 	
-	<!-- 开启这个配置，spring才能识别@Scheduled注解   -->  
-    <!-- 理论上只需要加上<task:annotation-driven />这句配置就可以了，这些参数都不是必须的。 --> 
+	开启这个配置，spring才能识别@Scheduled注解    
+    理论上只需要加上<task:annotation-driven />这句配置就可以了，这些参数都不是必须的。 
     <task:annotation-driven scheduler="qbScheduler" mode="proxy"/>  
-    <task:scheduler id="qbScheduler" pool-size="10"/>
+    <task:scheduler id="qbScheduler" pool-size="10"/> -->
     
 </beans>

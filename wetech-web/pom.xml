@@ -38,6 +38,13 @@
 			<version>${jackson.version}</version>
 		</dependency>
 		
+		
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>wetech-core</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		
 		<dependency>
 			<groupId>${project.groupId}</groupId>
 			<artifactId>wetech-basic-common</artifactId>
