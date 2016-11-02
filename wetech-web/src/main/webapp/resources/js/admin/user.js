@@ -7,7 +7,7 @@ $(function() {
     /*------------ 填充dataTables ------------*/
     var table = $('#example').DataTable({
 	'aLengthMenu' : [ 10, 15, 20, 40, 60 ],
-	'searching' : true,// 禁用搜索
+	'searching' : false,// 开启搜索框
 	'lengthChange' : true,
 	'paging' : true,// 开启表格分页
 	'bProcessing' : true,
@@ -23,16 +23,8 @@ $(function() {
 	'ajax' : {
 	    'type' : 'POST',
 	    'url' : '../../admin/user/list.do',
-	// 'data' : function(d) {
-	// d.state = $('#state').val();
-	// d.deptname = $('#deptname').val().trim();
-	// d.startTime = $('#startTime').val();
-	// d.endTime = $('#endTime').val();
-	// }
 	},
-	"dom": '<l<\'#topPlugin\'>f>rt<ip><"clear">',
-	// 'dom': 'rt<'am-g
-	// am-datatable-footer'<'am-u-sm-5'<'am-form-group'i><'am-form-group'l>><'am-u-sm-7'p>><'clear'>',
+	"dom" : '<"am-g am-g-collapse"<"am-g am-datatable-hd"<"am-u-sm-8"<"#topPlugin">><"am-u-sm-4"f>>rt<<"am-u-sm-4"l><"am-u-sm-4"i><"am-u-sm-4"p>><"clear">>',
 	'responsive' : true,
 	'columns' : [ {
 	    'data' : 'id',
@@ -42,7 +34,7 @@ $(function() {
 		$(nTd).html('<input type="checkbox" name="checkList" title="' + sData + '" value="' + sData + '">');
 	    }
 	}, {
-	    'data' : 'id',
+	    'data' : 'id'
 	}, {
 	    'data' : 'username'
 	}, {
@@ -71,7 +63,7 @@ $(function() {
 	    'sInfoEmpty' : '记录数为0',
 	    'sInfoFiltered' : '(全部记录数 _MAX_ 条)',
 	    'sInfoPostFix' : '',
-	    'sSearch' : '搜索',
+	    'sSearch' : '搜索:',
 	    'sUrl' : '',
 	    'oPaginate' : {
 		'sFirst' : '第一页',
@@ -83,23 +75,14 @@ $(function() {
 	initComplete : initComplete
     });
 
+    /*------------ 上方topPlugin DIV中追加HTML ------------*/
     function initComplete(data) {
-	// 上方topPlugin DIV中追加HTML
-	// var topPlugin='<button id="addButton" class="btn btn-success btn-sm"
-	// data-toggle="modal" data-target="#addUser" style="display:block;">' +
-	// '<span class="glyphicon glyphicon-plus"
-	// aria-hidden="true"></span>添加用户</button>';
-
-	// 删除用户按钮的HTMLDOM
-	var topPlugin = '<button   class="btn btn-danger btn-sm" id="deleteAll">批量删除</button> <button   class="btn btn-primary btn-sm addBtn" >新 增</button>             <iframe id="exp" style="display:none;"></iframe><button  class="btn btn-info btn-sm" id="expCsv">导 出全部</button>             <button  class="btn btn-warning btn-sm" id="reset">重置搜索条件</button>';
-
+	var topPlugin = '<div class="am-btn-group am-btn-group-xs"><button type="button" class="am-btn am-btn-default" onclick="add()"> <span class="am-icon-plus"></span> 新增 </button> <button type="button" class="am-btn am-btn-default" onclick="edit()"> <span class="am-icon-edit"></span> 修改 </button> <button type="button" class="am-btn am-btn-default" onclick="del()"> <span class="am-icon-trash-o"></span> 删除 </button></div>';
+	// <button class="am-btn am-btn-default" id="expCsv">导 出全部</button>
 	$("#topPlugin").append(topPlugin);// 在表格上方topPlugin DIV中追加HTML
-
-	// $("#expCsv").on("click", exp1);//给下方按钮绑定事件
 
     }
 
-    
     /*------------ 选中行触发事件 ------------*/
     $('#example tbody').on('click', 'tr', function() {
 	rowActive();

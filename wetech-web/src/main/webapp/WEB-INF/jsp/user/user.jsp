@@ -36,7 +36,7 @@
 					</div>
 				</div>
 				<hr>
-				<div class="am-g">
+				<!-- <div class="am-g">
 					<div class="am-u-sm-12 am-u-md-6">
 						<div class="am-btn-toolbar">
 							<div class="am-btn-group am-btn-group-xs">
@@ -71,7 +71,7 @@
 							</span>
 						</div>
 					</div>
-				</div>
+				</div> -->
 				<div class="am-u-sm-12">
 					<table class="am-table am-table-striped am-table-bordered am-table-compact am-text-nowrap" width="100%" id="example">
 						<thead>
