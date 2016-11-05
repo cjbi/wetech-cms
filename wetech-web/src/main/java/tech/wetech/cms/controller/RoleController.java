@@ -1,44 +1,73 @@
 package tech.wetech.cms.controller;
 
+import java.util.Map;
 import javax.inject.Inject;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
+import org.springframework.web.bind.annotation.ResponseBody;
 import tech.wetech.basic.util.EnumUtils;
 import tech.wetech.cms.auth.AuthClass;
 import tech.wetech.cms.model.Role;
 import tech.wetech.cms.model.RoleType;
 import tech.wetech.cms.service.IRoleService;
 import tech.wetech.cms.service.IUserService;
+import tech.wetech.cms.web.DataTableMap;
+import tech.wetech.cms.web.ResponseData;
 
 @Controller
 @RequestMapping("/admin/role")
 @AuthClass
 public class RoleController {
+	@Inject
 	private IRoleService roleService;
+	@Inject
 	private IUserService userService;
 
-	public IRoleService getRoleService() {
-		return roleService;
-	}
-	@Inject
-	public void setRoleService(IRoleService roleService) {
-		this.roleService = roleService;
+	@RequestMapping({ "/role", "/", ""})
+	public String role(Model model) {
+		return "admin/role";
 	}
 
-	public IUserService getUserService() {
-		return userService;
-	}
-	@Inject
-	public void setUserService(IUserService userService) {
-		this.userService = userService;
+	@RequestMapping("/list")
+	public @ResponseBody Map<String, Object> list() {
+		return DataTableMap.getMapData(roleService.findRole());
 	}
 
+	@RequestMapping(value = "/add", method = RequestMethod.POST)
+	public @ResponseBody ResponseData add(@Validated Role role, BindingResult br) {
+		if (br.hasErrors()) {
+			return new ResponseData("操作失败" + br.getFieldError().toString());
+		}
+		roleService.add(role);
+		return ResponseData.SUCCESS_NO_DATA;
+	}
 
+	@RequestMapping(value = "/edit", method = RequestMethod.POST)
+	public @ResponseBody ResponseData edit(Integer id, @Validated Role role, BindingResult br) {
+		if (br.hasErrors()) {
+			return new ResponseData("操作失败" + br.getFieldError().toString());
+		}
+		Role er = roleService.load(id);
+		er.setName(role.getName());
+		er.setRoleType(role.getRoleType());
+		roleService.update(er);
+		return ResponseData.SUCCESS_NO_DATA;
+	}
+	
+	@RequestMapping(value = "/delete")
+	public @ResponseBody ResponseData delete(Long[] ids) {
+		for (Long id : ids) {
+			roleService.delete(id.intValue());
+		}
+		return ResponseData.SUCCESS_NO_DATA;
+	}
+
+	/*-------------------------------------------------------------------*/
 
 	@RequestMapping("/roles")
 	public String list(Model model) {

@@ -4,17 +4,6 @@ import java.util.List;
 import java.util.Map;
 
 import javax.inject.Inject;
-import javax.validation.Valid;
-
-import tech.wetech.cms.auth.AuthClass;
-import tech.wetech.cms.dto.UserDto;
-import tech.wetech.cms.model.ChannelTree;
-import tech.wetech.cms.model.Group;
-import tech.wetech.cms.model.User;
-import tech.wetech.cms.service.IGroupService;
-import tech.wetech.cms.service.IUserService;
-import tech.wetech.cms.web.DataTableMap;
-import tech.wetech.cms.web.ResponseData;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,6 +13,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import tech.wetech.cms.auth.AuthClass;
+import tech.wetech.cms.model.ChannelTree;
+import tech.wetech.cms.model.Group;
+import tech.wetech.cms.service.IGroupService;
+import tech.wetech.cms.service.IUserService;
+import tech.wetech.cms.web.DataTableMap;
+import tech.wetech.cms.web.ResponseData;
 
 @RequestMapping("/admin/group")
 @Controller

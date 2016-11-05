@@ -6,6 +6,7 @@ import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
 
+import tech.wetech.basic.model.Pager;
 import tech.wetech.cms.dao.IRoleDao;
 import tech.wetech.cms.dao.IUserDao;
 import tech.wetech.cms.model.CmsException;
@@ -59,6 +60,11 @@ public class RoleService implements IRoleService {
 	@Override
 	public List<Role> listRole() {
 		return roleDao.listRole();
+	}
+	
+	@Override
+	public Pager<Role> findRole() {
+		return roleDao.findRole();
 	}
 
 	@Override
