@@ -164,7 +164,7 @@
 		</form>
 	</div>
 	<div id="edit-modal">
-		<form class="am-form am-form-horizontal" id="add-form">
+		<form class="am-form am-form-horizontal" id="edit-form">
 			<br> 
 			<input type="hidden" name="id">
 			<input type="hidden" name="password">

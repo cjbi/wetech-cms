@@ -42,7 +42,7 @@ $(function() {
 
     }
     // 页面数据加载
-    initTable(url, gridTable, initComplete);
+    var table = initTable(url, gridTable, initComplete);
 
     /*------------ 选中行触发事件 ------------*/
     $('#example tbody').on('click', 'tr', function() {
@@ -65,7 +65,6 @@ $(function() {
 
     /*------------ 修改 ------------*/
     edit = function() {
-	var table = $('#' + tableName).DataTable();
 	var rowLength = table.rows('.selected').data().length;
 	if (rowLength == 0) {
 	    layer.msg('请选择一条记录！', {
