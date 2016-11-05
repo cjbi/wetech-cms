@@ -5,83 +5,49 @@ $(document).ready(function() {
 
 $(function() {
     /*------------ 填充dataTables ------------*/
-    var table = $('#example').DataTable({
-	'aLengthMenu' : [ 10, 15, 20, 40, 60 ],
-	'searching' : false,// 开启搜索框
-	'lengthChange' : true,
-	'paging' : true,// 开启表格分页
-	'bProcessing' : true,
-	'bServerSide' : true,
-	'bAutoWidth' : true,
-	'sort' : 'position',
-	'deferRender' : true,// 延迟渲染
-	'bStateSave' : false, // 刷新时保存表格状态
-	'iDisplayLength' : 15,
-	'iDisplayStart' : 0,
-	'ordering' : false,// 全局禁用排序
-	// 'scrollX' : true,
-	'ajax' : {
-	    'type' : 'POST',
-	    'url' : '../../admin/user/list.do',
-	},
-	"dom" : '<"am-g am-g-collapse"<"am-g am-datatable-hd"<"am-u-sm-8"<"#topPlugin">><"am-u-sm-4"f>>rt<<"am-u-sm-4"l><"am-u-sm-4"i><"am-u-sm-4"p>><"clear">>',
-	'responsive' : true,
-	'columns' : [ {
-	    'data' : 'id',
-	    "sWidth" : "2%",
-	    'bSortable' : true,
-	    'fnCreatedCell' : function(nTd, sData, oData, iRow, iCol) {
-		$(nTd).html('<input type="checkbox" name="checkList" title="' + sData + '" value="' + sData + '">');
+    var url = '../../admin/user/list.do';
+    var gridTable = [ {
+	'data' : 'id',
+	"sWidth" : "2%",
+	'bSortable' : true,
+	'fnCreatedCell' : function(nTd, sData, oData, iRow, iCol) {
+	    $(nTd).html('<input type="checkbox" name="checkList" title="' + sData + '" value="' + sData + '">');
+	}
+    }, {
+	'data' : 'id'
+    }, {
+	'data' : 'username'
+    }, {
+	'data' : 'nickname'
+    }, {
+	'data' : 'status',
+	"mRender" : function(data, type, full) {
+	    if (data == '1') {
+		return '<font color="green">启用</font>';
+	    } else if (data == '0') {
+		return '<font color="red">停用</font>';
+	    } else {
+		return "未知";
 	    }
-	}, {
-	    'data' : 'id'
-	}, {
-	    'data' : 'username'
-	}, {
-	    'data' : 'nickname'
-	}, {
-	    'data' : 'status',
-	    "mRender" : function(data, type, full) {
-		if (data == '1') {
-		    return '<font color="green">启用</font>';
-		} else if (data == '0') {
-		    return '<font color="red">停用</font>';
-		} else {
-		    return "未知";
-		}
-	    }
-	}, {
-	    'data' : 'email'
-	}, {
-	    'data' : 'email'
-	} ],
-	'oLanguage' : { // 国际化配置
-	    'sProcessing' : '正在获取数据，请稍后...',
-	    // 'sLengthMenu' : ' 显示 _MENU_ 项结果',
-	    'sZeroRecords' : '没有找到数据',
-	    'sInfo' : '从 _START_ 到  _END_ 条记录 总记录数为 _TOTAL_ 条',
-	    'sInfoEmpty' : '记录数为0',
-	    'sInfoFiltered' : '(全部记录数 _MAX_ 条)',
-	    'sInfoPostFix' : '',
-	    'sSearch' : '搜索:',
-	    'sUrl' : '',
-	    'oPaginate' : {
-		'sFirst' : '第一页',
-		'sPrevious' : '«',
-		'sNext' : '»',
-		'sLast' : '最后一页'
-	    }
-	},
-	initComplete : initComplete
-    });
+	}
+    }, {
+	'data' : 'email'
+    }, {
+	'data' : 'createDate',
+	"mRender" : function(data) {
+	    return dateFormat(data);
+	}
+    } ];
 
-    /*------------ 上方topPlugin DIV中追加HTML ------------*/
+    // 上方topPlugin DIV中追加HTML
     function initComplete(data) {
-	var topPlugin = '<div class="am-btn-group am-btn-group-xs"><button type="button" class="am-btn am-btn-default" onclick="add()"> <span class="am-icon-plus"></span> 新增 </button> <button type="button" class="am-btn am-btn-default" onclick="edit()"> <span class="am-icon-edit"></span> 修改 </button> <button type="button" class="am-btn am-btn-default" onclick="del()"> <span class="am-icon-trash-o"></span> 删除 </button></div>';
+	var topPlugin = '<div class="am-btn-group am-btn-group-xs"><button type="button" class="am-btn am-btn-default" id="btn-add" onclick="add()"> <span class="am-icon-plus"></span> 新增 </button> <button type="button" class="am-btn am-btn-default" onclick="edit()"> <span class="am-icon-edit"></span> 修改 </button> <button type="button" class="am-btn am-btn-default" onclick="del()"> <span class="am-icon-trash-o"></span> 删除 </button> <button type="button" class="am-btn am-btn-default" id="test" onclick="test()"> <span class="am-icon-refresh"></span> 测试 </button></div>';
 	// <button class="am-btn am-btn-default" id="expCsv">导 出全部</button>
 	$("#topPlugin").append(topPlugin);// 在表格上方topPlugin DIV中追加HTML
 
     }
+    // 页面数据加载
+    initTable(url, gridTable, initComplete);
 
     /*------------ 选中行触发事件 ------------*/
     $('#example tbody').on('click', 'tr', function() {
@@ -125,7 +91,7 @@ $(function() {
 	    return false;
 	}
 
-	// 将数据填充到模态框
+	// 将数据填充到模态框 开始
 	editData();
 	var data = table.rows('.selected').data()[0];
 	var userData = load(data.id);
@@ -151,19 +117,10 @@ $(function() {
 		$(this).attr('checked', false);
 	    }
 	});
-
-	layer.open({
-	    title : '添加用户',
-	    type : 1,
-	    shift : 2,
-	    moveType : 1,
-	    // 此参数开启最大化最小化
-	    // maxmin: true,
-	    area : [ '600px', 'auto' ],
-	    content : $('#edit-modal'),
-	    btn : [ '确定', '关闭' ],
-	    // 按钮一【确定】的回调
-	    // index 当前层索引 layero 当前层DOM对象
+	// 将数据填充到模态框 结束
+	
+	var opts = {
+	    title : '修改用户',
 	    yes : function(index, layero) {
 		// 处理异步验证结果
 		var isFormValid = layero.find('#edit-form').validator('isFormValid');
@@ -223,19 +180,9 @@ $(function() {
 			icon : 5
 		    });
 		}
-
-	    },
-	    cancel : function(index) {
-		// 按钮二【关闭】和右上角关闭的回调
-	    },
-	    end : function() {
-		destoryForm('edit-form');
-	    },
-	    success : function(layero, index) {
-		// 层弹出后的成功回调方法
-		console.log(layero, index);
 	    }
-	});
+	};
+	 $('#edit-modal').layerOpen(opts);
     }
 
     /*------------ 删除 ------------*/
@@ -246,19 +193,8 @@ $(function() {
 
     /*------------ 新增 ------------*/
     add = function() {
-	$('#add-form').validator();
-	layer.open({
+	var opts = {
 	    title : '添加用户',
-	    type : 1,
-	    shift : 2,
-	    moveType : 1,
-	    // 此参数开启最大化最小化
-	    // maxmin: true,
-	    area : [ '600px', 'auto' ],
-	    content : $('#add-modal'),
-	    btn : [ '确定', '关闭' ],
-	    // 按钮一【确定】的回调
-	    // index 当前层索引 layero 当前层DOM对象
 	    yes : function(index, layero) {
 		// 处理异步验证结果
 		var isFormValid = layero.find('#add-form').validator('isFormValid');
@@ -317,20 +253,77 @@ $(function() {
 			icon : 5
 		    });
 		}
-
-	    },
-	    cancel : function(index) {
-		// 按钮二【关闭】和右上角关闭的回调
-	    },
-	    end : function() {
-		// 无论是确认还是取消，只要层被销毁了，end都会执行
-		destoryForm('add-form');
-	    },
-	    success : function(layero, index) {
-		// 层弹出后的成功回调方法
-		console.log(layero, index);
 	    }
-	});
+	};
+	$('#add-modal').layerOpen(opts);
     };
+
+    test = function() {
+	var opts = {
+	    title : '添加用户',
+	    yes : function(index, layero) {
+		// 处理异步验证结果
+		var isFormValid = layero.find('#add-form').validator('isFormValid');
+		if (isFormValid) {
+		    var data = [];
+		    var roleIds = [];
+		    var groupIds = [];
+		    $('#add-modal [name]').each(function(e) {
+			data.push($(this).val());
+		    });
+		    $('#add-modal [name=roleIds]').each(function(e) {
+			if ($(this).attr('checked')) {
+			    roleIds.push($(this).val());
+			}
+		    });
+		    $('#add-modal [name=groupIds]').each(function(e) {
+			if ($(this).attr('checked')) {
+			    groupIds.push($(this).val());
+			}
+		    });
+		    $.ajax({
+			type : 'post',
+			url : '../../admin/user/add.do',
+			dataType : 'json',
+			data : {
+			    'username' : data[0],
+			    'nickname' : data[1],
+			    'password' : data[2],
+			    'confirmPwd' : data[3],
+			    'phone' : data[4],
+			    'email' : data[5],
+			    'status' : data[6],
+			    'roleIds' : roleIds.join(),
+			    'groupIds' : groupIds.join()
+			},
+			success : function(data) {
+			    layer.msg(data.message, {
+				time : '2000',
+				icon : 6
+			    });
+			    console.log(data.message);
+			    layer.close(index);
+			    table.ajax.reload();
+			},
+			error : function(data) {
+
+			    layer.msg('操作失败', {
+				time : 2000,
+				icon : 5
+			    });
+			}
+		    });
+		} else {
+		    layer.msg('数据验证失败', {
+			time : 2000,
+			icon : 5
+		    });
+		}
+	    }
+
+	};
+	$('#add-modal').layerOpen(opts);
+
+    }
 
 });

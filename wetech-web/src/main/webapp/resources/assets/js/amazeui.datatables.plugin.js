@@ -14,8 +14,107 @@ jQuery.fn.dataTableExt.oApi.fnMultiFilter = function(oSettings, oData) {
     this.oApi._fnReDraw(oSettings);
 };
 
+/*------------ 对象级别的插件开发 ------------*/
+(function($) {
+    $.fn.layerOpen = function(opts) {
+	// Our plugin implementation code goes here.
+	var __modalDom = $(this);
+	console.log('---------------------->');
+	
+	var __title = $.extend({}, opts ? (opts.title || {}) : {});
+	
+	var __yes = $.extend(function(index, layero) {
+	    layer.msg('请定义参数yes');
+	}, opts ? (opts.yes || {}) : {});
+
+	var __defaultOpts = $.extend({
+	    title : __title,
+	    type : 1,
+	    shift : 2,
+	    moveType : 1,
+	    // 此参数开启最大化最小化
+	    // maxmin: true,
+	    area : [ '600px', 'auto' ],
+	    content : $(this),
+	    btn : [ '确定', '关闭' ],
+	    // 按钮一【确定】的回调
+	    // index 当前层索引 layero 当前层DOM对象
+	    yes : __yes,
+	    cancel : function(index) {
+		// 按钮二【关闭】和右上角关闭的回调
+	    },
+	    end : function() {
+		// 无论是确认还是取消，只要层被销毁了，end都会执行
+		__modalDom.children('form').find('[name]').each(function(e) {
+		    // 如果类型是checkbox，就取消选中
+		    if ($(this).attr('type') == 'checkbox') {
+			$(this).attr('checked', false);
+		    }
+		    // 否则如果不等于空，就清空
+		    else if ($(this).val() != '') {
+			$(this).val('');
+		    }
+		});
+		// 销毁表格验证
+		__modalDom.children("form").validator('destroy');
+	    },
+	    success : function(layero, index) {
+		// 层弹出后的成功回调方法
+		console.log(layero, index);
+	    }
+	}, opts || {});
+
+	layer.open(__defaultOpts);
+    };
+})(jQuery);
+
 var tableName = 'example';
 
+/*------------ 初始化table ------------*/
+initTable = function(url, gridTable, initComplete, ServerParams, tableNames) {
+    tableName = tableNames == undefined ? 'example' : tableNames;
+    var table = $('#' + tableName).dataTable({
+	'aLengthMenu' : [ 10, 15, 20, 40, 60 ],
+	'searching' : false,// 开启搜索框
+	'lengthChange' : true,
+	'paging' : true,// 开启表格分页
+	'bProcessing' : true,
+	'bServerSide' : true,
+	'bAutoWidth' : true,
+	'sort' : 'position',
+	'deferRender' : true,// 延迟渲染
+	'bStateSave' : false, // 刷新时保存表格状态
+	'iDisplayLength' : 15,
+	'iDisplayStart' : 0,
+	'ordering' : false,// 全局禁用排序
+	// 'scrollX' : true,
+	'ajax' : url,
+	"dom" : '<"am-g am-g-collapse"<"am-g am-datatable-hd"<"am-u-sm-8"<"#topPlugin">><"am-u-sm-4"f>>rt<<"am-datatable-hd am-u-sm-4"l><"am-u-sm-4"i><"am-u-sm-4"p>><"clear">>',
+	'responsive' : true,
+	'columns' : gridTable,
+	"fnServerData" : ServerParams,
+	'oLanguage' : { // 国际化配置
+	    'sProcessing' : '正在获取数据，请稍后...',
+	    // 'sLengthMenu' : ' 显示 _MENU_ 项结果',
+	    'sZeroRecords' : '没有找到数据',
+	    // 'sInfo' : '从 _START_ 到 _END_ 条记录 总记录数为 _TOTAL_ 条',
+	    'sInfo' : ' _START_ -  _END_  _TOTAL_ ',
+	    'sInfoEmpty' : '记录数为0',
+	    'sInfoFiltered' : '(全部记录数 _MAX_ 条)',
+	    'sInfoPostFix' : '',
+	    'sSearch' : '搜索:',
+	    'sUrl' : '',
+	    'oPaginate' : {
+		'sFirst' : '第一页',
+		'sPrevious' : '«',
+		'sNext' : '»',
+		'sLast' : '最后一页'
+	    }
+	},
+	initComplete : initComplete
+    });
+
+}
 /*------------ checkbox全选,必须用prop方法设置 ------------*/
 checkAll = function() {
     if ($('input[id="checkAll"]').is(':checked')) {
@@ -40,7 +139,7 @@ rowActive = function() {
 /*------------ 销毁表单 ------------*/
 destoryForm = function(formName) {
     // 无论是确认还是取消，只要层被销毁了，end都会执行
-    $('#'+formName+' [name]').each(function(e) {
+    $('#' + formName + ' [name]').each(function(e) {
 	if ($(this).val() != '' && $.contains($(this), 'checkbox') == false) {
 	    $(this).val('');
 	}
@@ -48,7 +147,7 @@ destoryForm = function(formName) {
 	    $(this).attr('checked', false);
 	}
     });
-    $('#'+formName).validator('destroy');
+    $('#' + formName).validator('destroy');
 }
 
 /*------------ 删除数据，url：请求地址，pk：主键 ------------*/

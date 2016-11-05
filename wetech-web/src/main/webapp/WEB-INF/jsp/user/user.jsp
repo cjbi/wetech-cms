@@ -82,7 +82,7 @@
 								<th>用户昵称</th>
 								<th>用户状态</th>
 								<th>用户邮箱</th>
-								<th>用户操作</th>
+								<th>创建时间</th>
 							</tr>
 						</thead>
 					</table>
@@ -225,6 +225,7 @@
 	<script src="<%=request.getContextPath()%>/resources/assets/js/amazeui.min.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/assets/js/amazeui.datatables.min.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/assets/js/amazeui.datatables.plugin.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/assets/js/dateFormat.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/dwr/engine.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/dwr/interface/dwrService.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/assets/js/app.js"></script>
