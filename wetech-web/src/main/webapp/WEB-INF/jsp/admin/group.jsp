@@ -79,7 +79,7 @@
 			<div class="am-form-group">
 				<label class="am-u-sm-2 am-form-label">组名称</label>
 				<div class="am-u-sm-10">
-					<input type="text"  name="name" placeholder="用户组名称(必填)" minlength="3" required>
+					<input type="text"  name="name" placeholder="用户组名称(必填)" required>
 				</div>
 			</div>
 			<div class="am-form-group">
