@@ -14,6 +14,21 @@ jQuery.fn.dataTableExt.oApi.fnMultiFilter = function(oSettings, oData) {
     this.oApi._fnReDraw(oSettings);
 };
 
+/*------------ checkbox全选 ------------*/
+$('input[id="checkAll"]').bind('click', function() {
+	checkAll();
+});
+
+rowActive = function() {
+	$('input[name="checkList"]').each(function() {
+	    if ($(this).is(':checked')) {
+		$(this).parent().parent().addClass('selected');
+	    } else {
+		$(this).parent().parent().removeClass('selected');
+	    }
+	});
+};
+
 /*------------ 对象级别的插件开发 ------------*/
 (function($) {
     $.fn.layerOpen = function(opts) {
@@ -83,7 +98,7 @@ initTable = function(url, gridTable, initComplete, ServerParams, tableNames) {
 	'bAutoWidth' : true,
 	'sort' : 'position',
 	'deferRender' : true,// 延迟渲染
-	'bStateSave' : false, // 刷新时保存表格状态
+	'bStateSave' : true, // 刷新时保存表格状态
 	'iDisplayLength' : 15,
 	'iDisplayStart' : 0,
 	'ordering' : false,// 全局禁用排序
@@ -97,8 +112,7 @@ initTable = function(url, gridTable, initComplete, ServerParams, tableNames) {
 	    'sProcessing' : '正在获取数据，请稍后...',
 	    // 'sLengthMenu' : ' 显示 _MENU_ 项结果',
 	    'sZeroRecords' : '没有找到数据',
-	    // 'sInfo' : '从 _START_ 到 _END_ 条记录 总记录数为 _TOTAL_ 条',
-	    'sInfo' : ' _START_ -  _END_  _TOTAL_ ',
+	     'sInfo' : '从 _START_ 到 _END_ 条记录 总记录数为 _TOTAL_ 条',
 	    'sInfoEmpty' : '记录数为0',
 	    'sInfoFiltered' : '(全部记录数 _MAX_ 条)',
 	    'sInfoPostFix' : '',
@@ -126,30 +140,6 @@ checkAll = function() {
     }
 };
 
-rowActive = function() {
-    $('input[name="checkList"]').each(function() {
-	if ($(this).is(':checked')) {
-	    $(this).parent().parent().addClass('selected');
-	} else {
-	    $(this).parent().parent().removeClass('selected');
-	}
-    });
-};
-
-/*------------ 销毁表单 ------------*/
-destoryForm = function(formName) {
-    // 无论是确认还是取消，只要层被销毁了，end都会执行
-    $('#' + formName + ' [name]').each(function(e) {
-	if ($(this).val() != '' && $.contains($(this), 'checkbox') == false) {
-	    $(this).val('');
-	}
-	if ($(this).attr('checked')) {
-	    $(this).attr('checked', false);
-	}
-    });
-    $('#' + formName).validator('destroy');
-}
-
 /*------------ 删除数据，url：请求地址，pk：主键 ------------*/
 deleteBatch = function(url, pk) {
     var table = $('#' + tableName).DataTable();
@@ -162,6 +152,7 @@ deleteBatch = function(url, pk) {
 	    time : '2000',
 	    icon : 0
 	});
+	return false;
     }
     $.each(dictType[0], function(key, value) {
 	key = new obj(key, []);
@@ -222,7 +213,7 @@ deleteBatch = function(url, pk) {
 };
 
 /*------------ 将值填充到表单中 ------------*/
-editData = function() {// 将值填充到表单中
+initData = function() {// 将值填充到表单中
     var table = $('#' + tableName).DataTable();
     var rowLength = table.rows('.selected').data().length;
     if (rowLength == 0) {

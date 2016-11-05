@@ -52,10 +52,10 @@ public class UserController {
 		model.addAttribute("groups", groupService.listGroup());
 	}
 
-	@RequestMapping("/user")
+	@RequestMapping({"/user","/",""})
 	public String user(Model model) {
 		initUser(model);
-		return "user/user";
+		return "admin/user";
 	}
 	
 	@RequestMapping(value = "/load/{id}", method = RequestMethod.GET)

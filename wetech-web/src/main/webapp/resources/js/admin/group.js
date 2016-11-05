@@ -1,42 +1,23 @@
+$(document).ready(function() {
+    /*------------ 初始化 ------------*/
+
+});
+
 $(function() {
     /*------------ 填充dataTables ------------*/
-    var url = contextPath+'/admin/user/list.do';
+    var url = contextPath+'/admin/group/list.do';
     var gridTable = [ {
 	'data' : 'id',
 	"sWidth" : "2%",
 	'bSortable' : true,
 	'fnCreatedCell' : function(nTd, sData, oData, iRow, iCol) {
-	    $(nTd).html('<input type="checkbox" name="checkList" title="' + sData + '" value="' + sData + '">');
-	}
-    }, {
-	'data' : 'id'
-    }, {
-	'data' : 'username'
-    }, {
-	'data' : 'nickname'
-    }, {
-	'data' : 'status',
-	"mRender" : function(data, type, full) {
-	    if (data == '1') {
-		return '<font color="green">启用</font>';
-	    } else if (data == '0') {
-		return '<font color="red">停用</font>';
-	    } else {
-		return "未知";
-	    }
-	}
-    }, {
-	'data' : 'email'
-    },{'data' : 'phone'}, {
-	'data' : 'createDate',
-	"mRender" : function(data) {
-	    return dateFormat(data);
-	}
-    } ];
-
+	    $(nTd).html('<input type="checkbox" name="checkList" title="' + sData + '" value="' + sData + '">');}},
+	    {'data' : 'id','sWidth' : '5%' },
+	    {'data' : 'name','sWidth' : '20%' },
+	    {'data' : 'descr'} ];
     // 上方topPlugin DIV中追加HTML
     function initComplete(data) {
-	var topPlugin = '<div class="am-btn-group am-btn-group-xs"><button type="button" class="am-btn am-btn-default" id="btn-add" onclick="add()"> <span class="am-icon-plus"></span> 新增 </button> <button type="button" class="am-btn am-btn-default" onclick="edit()"> <span class="am-icon-edit"></span> 修改 </button> <button type="button" class="am-btn am-btn-default" onclick="del()"> <span class="am-icon-trash-o"></span> 删除 </button> <button type="button" class="am-btn am-btn-default" id="test" onclick="test()"> <span class="am-icon-refresh"></span> 测试 </button></div>';
+	var topPlugin = '<div class="am-btn-group am-btn-group-xs"><button type="button" class="am-btn am-btn-default" id="btn-add" onclick="add()"> <span class="am-icon-plus"></span> 新增 </button> <button type="button" class="am-btn am-btn-default" onclick="edit()"> <span class="am-icon-edit"></span> 修改 </button> <button type="button" class="am-btn am-btn-default" onclick="del()"> <span class="am-icon-trash-o"></span> 删除 </button></div>';
 	// <button class="am-btn am-btn-default" id="expCsv">导 出全部</button>
 	$("#topPlugin").append(topPlugin);// 在表格上方topPlugin DIV中追加HTML
 
@@ -48,21 +29,7 @@ $(function() {
     $('#example tbody').on('click', 'tr', function() {
 	rowActive();
     });
-
-    /*------------ 通过id加载用户 ------------*/
-    load = function(id) {
-	var data = [];
-	$.ajax({
-	    type : "GET",
-	    url : contextPath+'/admin/user/load/' + id,
-	    async : false,
-	    success : function(d) {
-		data = d;
-	    }
-	});
-	return data;
-    }
-
+    
     /*------------ 修改 ------------*/
     edit = function() {
 	var table = $('#' + tableName).DataTable();
@@ -80,33 +47,8 @@ $(function() {
 	    });
 	    return false;
 	}
-
 	// 将数据填充到模态框 开始
 	initData();
-	var data = table.rows('.selected').data()[0];
-	var userData = load(data.id);
-	console.log(userData.groupIds.join());
-
-	var groupIds = userData.groupIds.join();
-	var roleIds = userData.roleIds.join();
-
-	$('#edit-modal [name=groupIds]').each(function() {
-	    // alert($(this).val());
-	    if (groupIds.indexOf($(this).val()) != -1) {
-		$(this).attr('checked', true);
-	    } else {
-		$(this).attr('checked', false);
-	    }
-	});
-
-	$('#edit-modal [name=roleIds]').each(function() {
-	    // alert($(this).val());
-	    if (roleIds.indexOf($(this).val()) != -1) {
-		$(this).attr('checked', true);
-	    } else {
-		$(this).attr('checked', false);
-	    }
-	});
 	// 将数据填充到模态框 结束
 	
 	var opts = {
@@ -134,7 +76,7 @@ $(function() {
 		    console.log(data);
 		    $.ajax({
 			type : 'post',
-			url : contextPath+'/admin/user/edit.do',
+			url : contextPath+'/admin/group/edit.do',
 			dataType : 'json',
 			data : {
 			    'id' : data[0],
@@ -177,7 +119,7 @@ $(function() {
 
     /*------------ 删除 ------------*/
     del = function() {
-	var url = contextPath+'/admin/user/delete.do';
+	var url = contextPath+'/admin/group/delete.do';
 	deleteBatch(url, 'id');
     }
 
@@ -189,36 +131,13 @@ $(function() {
 		// 处理异步验证结果
 		var isFormValid = layero.find('#add-form').validator('isFormValid');
 		if (isFormValid) {
-		    var data = [];
-		    var roleIds = [];
-		    var groupIds = [];
-		    $('#add-modal [name]').each(function(e) {
-			data.push($(this).val());
-		    });
-		    $('#add-modal [name=roleIds]').each(function(e) {
-			if ($(this).attr('checked')) {
-			    roleIds.push($(this).val());
-			}
-		    });
-		    $('#add-modal [name=groupIds]').each(function(e) {
-			if ($(this).attr('checked')) {
-			    groupIds.push($(this).val());
-			}
-		    });
 		    $.ajax({
 			type : 'post',
-			url : contextPath+'/admin/user/add.do',
+			url : contextPath+'/admin/group/add.do',
 			dataType : 'json',
 			data : {
-			    'username' : data[0],
-			    'nickname' : data[1],
-			    'password' : data[2],
-			    'confirmPwd' : data[3],
-			    'phone' : data[4],
-			    'email' : data[5],
-			    'status' : data[6],
-			    'roleIds' : roleIds.join(),
-			    'groupIds' : groupIds.join()
+			    'name' : data[0],
+			    'descr' : data[1],
 			},
 			success : function(data) {
 			    layer.msg(data.message, {
@@ -230,7 +149,6 @@ $(function() {
 			    table.ajax.reload();
 			},
 			error : function(data) {
-
 			    layer.msg('操作失败', {
 				time : 2000,
 				icon : 5
@@ -255,36 +173,14 @@ $(function() {
 		// 处理异步验证结果
 		var isFormValid = layero.find('#add-form').validator('isFormValid');
 		if (isFormValid) {
-		    var data = [];
-		    var roleIds = [];
-		    var groupIds = [];
-		    $('#add-modal [name]').each(function(e) {
-			data.push($(this).val());
-		    });
-		    $('#add-modal [name=roleIds]').each(function(e) {
-			if ($(this).attr('checked')) {
-			    roleIds.push($(this).val());
-			}
-		    });
-		    $('#add-modal [name=groupIds]').each(function(e) {
-			if ($(this).attr('checked')) {
-			    groupIds.push($(this).val());
-			}
-		    });
+		   
 		    $.ajax({
 			type : 'post',
-			url : contextPath+'/admin/user/add.do',
+			url : contextPath+'/admin/group/add.do',
 			dataType : 'json',
 			data : {
-			    'username' : data[0],
-			    'nickname' : data[1],
-			    'password' : data[2],
-			    'confirmPwd' : data[3],
-			    'phone' : data[4],
-			    'email' : data[5],
-			    'status' : data[6],
-			    'roleIds' : roleIds.join(),
-			    'groupIds' : groupIds.join()
+			    'name' : data[0],
+			    'descr' : data[1]
 			},
 			success : function(data) {
 			    layer.msg(data.message, {
@@ -310,10 +206,8 @@ $(function() {
 		    });
 		}
 	    }
-
 	};
 	$('#add-modal').layerOpen(opts);
-
     }
 
 });

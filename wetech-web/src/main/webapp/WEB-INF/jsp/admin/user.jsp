@@ -77,11 +77,12 @@
 						<thead>
 							<tr>
 								<th><input type="checkbox" id='checkAll'></th>
-								<th>ID</th>
+								<th>用户 ID</th>
 								<th>用户名称</th>
 								<th>用户昵称</th>
 								<th>用户状态</th>
 								<th>用户邮箱</th>
+								<th>用户电话</th>
 								<th>创建时间</th>
 							</tr>
 						</thead>
@@ -130,7 +131,7 @@
 			<div class="am-form-group">
 				<label class="am-u-sm-2 am-form-label">电子邮件</label>
 				<div class="am-u-sm-10">
-					<input type="email" name="email" id="email" placeholder="输入电子邮件">
+					<input type="email" name="email" id="email" placeholder="输入电子邮件(格式：xxx@xxx.com)">
 				</div>
 			</div>
 			<div class="am-form-group">
