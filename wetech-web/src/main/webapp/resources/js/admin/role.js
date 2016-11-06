@@ -17,7 +17,7 @@ $(function() {
     {'data' : 'name','sWidth' : '20%'},
 	{'data' : 'roleType' } ,
 	{'mRender' : function(data, type, full) {
-	    return '<div class="am-btn-group am-btn-group-xs"><button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-search"></span> 查询角色功能</button><button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 清空用户</button> </div>';
+	    return '<div class="am-btn-group am-btn-group-xs"><button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-search"></span> 查询用户</button><button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 清空用户</button> </div>';
 	} }];
     // 上方topPlugin DIV中追加HTML
     function initComplete(data) {
