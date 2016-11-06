@@ -14,10 +14,10 @@
 <link rel="apple-touch-icon-precomposed" href="<%=request.getContextPath()%>/resources/assets/i/app-icon72x72@2x.png">
 <meta name="apple-mobile-web-app-title" content="Amaze UI" />
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/assets/css/amazeui.min.css" />
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/assets/css/app.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/assets/css/amazeui.datatables.css" />
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/assets/css/admin.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/layer/skin/layer.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/assets/css/app.css">
 </head>
 <body>
 	<!-- header start -->
@@ -73,7 +73,7 @@
 					</div>
 				</div> -->
 				<div class="am-u-sm-12">
-					<table class="am-table am-table-striped am-table-bordered am-table-compact am-text-nowrap" width="100%" id="example">
+					<table class="am-table am-table-striped  am-table-hover table-main am-table-bordered am-table-compact am-text-nowrap" width="100%" id="example">
 						<thead>
 							<tr>
 								<th><input type="checkbox" id='checkAll'></th>

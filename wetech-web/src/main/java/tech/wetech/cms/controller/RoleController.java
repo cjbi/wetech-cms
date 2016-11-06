@@ -30,11 +30,12 @@ public class RoleController {
 
 	@RequestMapping({ "/role", "/", ""})
 	public String role(Model model) {
+		model.addAttribute("types", EnumUtils.enum2Name(RoleType.class));
 		return "admin/role";
 	}
 
 	@RequestMapping("/list")
-	public @ResponseBody Map<String, Object> list() {
+	public @ResponseBody Map<String, Object> list(Model model) {
 		return DataTableMap.getMapData(roleService.findRole());
 	}
 
@@ -69,11 +70,11 @@ public class RoleController {
 
 	/*-------------------------------------------------------------------*/
 
-	@RequestMapping("/roles")
+/*	@RequestMapping("/roles")
 	public String list(Model model) {
 		model.addAttribute("roles", roleService.listRole());
 		return "role/list";
-	}
+	}*/
 	
 	@RequestMapping("/{id}")
 	public String show(@PathVariable int id,Model model) {
@@ -91,19 +92,6 @@ public class RoleController {
 	@RequestMapping("/clearUsers/{id}")
 	public String clearUsers(@PathVariable int id) {
 		roleService.deleteRoleUsers(id);
-		return "redirect:/admin/role/roles";
-	}
-	
-	@RequestMapping(value="/add",method=RequestMethod.GET)
-	public String add(Model model) {
-		model.addAttribute(new Role());
-		model.addAttribute("types", EnumUtils.enum2Name(RoleType.class));
-		return "role/add";
-	}
-	
-	@RequestMapping(value="/add",method=RequestMethod.POST)
-	public String add(Role role) {
-		roleService.add(role);
 		return "redirect:/admin/role/roles";
 	}
 	

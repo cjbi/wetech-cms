@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 $(function() {
     /*------------ 填充dataTables ------------*/
-    var url = contextPath + '/admin/group/list.do';
+    var url = contextPath + '/admin/role/list.do';
     var gridTable = [ {
 	'data' : 'id',
 	"sWidth" : "2%",
@@ -13,15 +13,12 @@ $(function() {
 	'fnCreatedCell' : function(nTd, sData, oData, iRow, iCol) {
 	    $(nTd).html('<input type="checkbox" name="checkList" title="' + sData + '" value="' + sData + '">');
 	}
-    }, {
-	'data' : 'id',
-	'sWidth' : '5%'
-    }, {
-	'data' : 'name',
-	'sWidth' : '20%'
-    }, {
-	'data' : 'descr'
-    } ];
+    }, {'data' : 'id','sWidth' : '5%'},
+    {'data' : 'name','sWidth' : '20%'},
+	{'data' : 'roleType' } ,
+	{'mRender' : function(data, type, full) {
+	    return '<div class="am-btn-group am-btn-group-xs"><button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-search"></span> 查询角色功能</button><button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 清空用户</button> </div>';
+	} }];
     // 上方topPlugin DIV中追加HTML
     function initComplete(data) {
 	var topPlugin = '<div class="am-btn-group am-btn-group-xs"><button type="button" class="am-btn am-btn-default" id="btn-add" onclick="add()"> <span class="am-icon-plus"></span> 新增 </button> <button type="button" class="am-btn am-btn-default" onclick="edit()"> <span class="am-icon-edit"></span> 修改 </button> <button type="button" class="am-btn am-btn-default" onclick="del()"> <span class="am-icon-trash-o"></span> 删除 </button></div>';
@@ -63,7 +60,7 @@ $(function() {
 		// 处理异步验证结果
 		var isFormValid = layero.find('#edit-form').validator('isFormValid');
 		if (isFormValid) {
-		    $('#edit-modal').submit(contextPath + '/admin/group/edit.do');
+		    $('#edit-modal').submit(contextPath + '/admin/role/edit.do');
 		    layer.close(index);
 		} else {
 		    layer.msg('数据验证失败', {
@@ -78,7 +75,7 @@ $(function() {
 
     /*------------ 删除 ------------*/
     del = function() {
-	var url = contextPath + '/admin/group/delete.do';
+	var url = contextPath + '/admin/role/delete.do';
 	deleteBatch(url, 'id');
     }
 
@@ -90,7 +87,7 @@ $(function() {
 		// 处理异步验证结果
 		var isFormValid = layero.find('#add-form').validator('isFormValid');
 		if (isFormValid) {
-		    $('#add-modal').submit(contextPath + '/admin/group/add.do');
+		    $('#add-modal').submit(contextPath + '/admin/role/add.do');
 		    layer.close(index);
 		} else {
 		    layer.msg('数据验证失败', {

@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>用户组管理</title>
+<title>用户角色管理</title>
 <meta name="description" content="这是一个 index 页面">
 <meta name="keywords" content="index">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,7 +32,7 @@
 			<div class="admin-content-body">
 				<div class="am-cf am-padding">
 					<div class="am-fl am-cf">
-						<strong class="am-text-primary am-text-lg">用户管理</strong> / <small>用户组管理</small>
+						<strong class="am-text-primary am-text-lg">用户管理</strong> / <small>用户角色管理</small>
 					</div>
 				</div>
 				<hr>
@@ -41,9 +41,10 @@
 						<thead>
 							<tr>
 								<th><input type="checkbox" id='checkAll'></th>
-								<th>组 ID</th>
-								<th>组名称</th>
-								<th>组描述</th>
+								<th>角色 ID</th>
+								<th>角色名称</th>
+								<th>角色类型</th>
+								<th>角色操作</th>
 							</tr>
 						</thead>
 					</table>
@@ -59,33 +60,44 @@
 		<form class="am-form am-form-horizontal" id="add-form">
 			<br>
 			<div class="am-form-group">
-				<label class="am-u-sm-2 am-form-label">组名称</label>
+				<label class="am-u-sm-2 am-form-label">角色名称</label>
 				<div class="am-u-sm-10">
-					<input type="text" id="" name="name" placeholder="用户组名称(必填)" minlength="3" required>
+					<input type="text" id="" name="name" placeholder="角色名称(必填)" minlength="3" required>
 				</div>
 			</div>
 			<div class="am-form-group">
-				<label class="am-u-sm-2 am-form-label">组描述</label>
+				<label class="am-u-sm-2 am-form-label">角色名称</label>
 				<div class="am-u-sm-10">
-					<textarea id="" name="descr" placeholder="用户组的描述信息" maxlength="100"></textarea>
+					<select name="roleType">
+						<label class="am-checkbox-line">
+						 <c:forEach var="type" items="${types }">
+								<option value="${type }">${type }</option>
+							</c:forEach>
+					</label>
+					</select>
 				</div>
 			</div>
 		</form>
 	</div>
 	<div id="edit-modal">
 		<form class="am-form am-form-horizontal" id="edit-form">
-			<br>
-			<input type="hidden" name="id">
+			<br> <input type="hidden" name="id">
 			<div class="am-form-group">
-				<label class="am-u-sm-2 am-form-label">组名称</label>
+				<label class="am-u-sm-2 am-form-label">角色名称</label>
 				<div class="am-u-sm-10">
-					<input type="text"  name="name" placeholder="用户组名称(必填)" required>
+					<input type="text" name="name" placeholder="角色名称(必填)" required>
 				</div>
 			</div>
 			<div class="am-form-group">
-				<label class="am-u-sm-2 am-form-label">组描述</label>
+				<label class="am-u-sm-2 am-form-label">角色名称</label>
 				<div class="am-u-sm-10">
-					<textarea name="descr" placeholder="用户组的描述信息" maxlength="100"></textarea>
+					<select name="roleType">
+						<label class="am-checkbox-line">
+						 <c:forEach var="type" items="${types }">
+								<option value="${type }">${type }</option>
+							</c:forEach>
+					</label>
+					</select>
 				</div>
 			</div>
 		</form>
@@ -99,6 +111,6 @@
 	<script type="text/javascript" src="<%=request.getContextPath()%>/dwr/engine.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/dwr/interface/dwrService.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/assets/js/app.js"></script>
-	<script src="<%=request.getContextPath()%>/resources/js/admin/group.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/js/admin/role.js"></script>
 </body>
 </html>
