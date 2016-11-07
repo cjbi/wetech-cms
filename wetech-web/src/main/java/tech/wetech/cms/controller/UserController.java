@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -52,25 +53,30 @@ public class UserController {
 		model.addAttribute("groups", groupService.listGroup());
 	}
 
-	@RequestMapping({"/user","/",""})
+	@RequestMapping({ "/user", "/", "" })
 	public String user(Model model) {
 		initUser(model);
 		return "admin/user";
 	}
-	
+
+	@ResponseBody
 	@RequestMapping(value = "/load/{id}", method = RequestMethod.GET)
-	public @ResponseBody UserDto load(@PathVariable Integer id) {
+	public UserDto load(@PathVariable Integer id) {
 		User u = userService.load(id);
 		return new UserDto(u, userService.listUserRoleIds(id), userService.listUserGroupIds(id));
 	}
 
+	@ResponseBody
 	@RequestMapping("/list")
-	public @ResponseBody Map<String, Object> list() {
-		return DataTableMap.getMapData(userService.findUser());
+	public Map<String, Object> list(HttpServletRequest req) {
+		String searchCode = req.getParameter("searchCode");
+		String searchValue = req.getParameter("searchValue");
+		return DataTableMap.getMapData(userService.findUser(searchCode, searchValue));
 	}
 
+	@ResponseBody
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
-	public @ResponseBody ResponseData add(@Valid UserDto userDto, BindingResult br) {
+	public ResponseData add(@Valid UserDto userDto, BindingResult br) {
 		System.out.println(userDto);
 		if (br.hasErrors()) {
 			return new ResponseData("操作失败" + br.getFieldError().toString());
@@ -79,16 +85,18 @@ public class UserController {
 		return ResponseData.SUCCESS_NO_DATA;
 	}
 
+	@ResponseBody
 	@RequestMapping(value = "/delete")
-	public @ResponseBody ResponseData delete(Long[] ids) {
+	public ResponseData delete(Long[] ids) {
 		for (Long id : ids) {
 			userService.delete(id.intValue());
 		}
 		return ResponseData.SUCCESS_NO_DATA;
 	}
 
+	@ResponseBody
 	@RequestMapping(value = "/edit", method = RequestMethod.POST)
-	public @ResponseBody ResponseData edit(Integer id, @Valid UserDto userDto, BindingResult br) {
+	public ResponseData edit(Integer id, @Valid UserDto userDto, BindingResult br) {
 		if (br.hasErrors()) {
 			return new ResponseData("操作失败" + br.getFieldError().toString());
 		}
@@ -103,11 +111,11 @@ public class UserController {
 
 	/*----------------------------------------------------------------------*/
 
-	@RequestMapping("/users")
-	public String list2(Model model) {
-		model.addAttribute("datas", userService.findUser());
-		return "user/list";
-	}
+	/*
+	 * @RequestMapping("/users") public String list2(Model model) {
+	 * model.addAttribute("datas", userService.findUser()); return "user/list";
+	 * }
+	 */
 
 	@RequestMapping(value = "/update/{id}", method = RequestMethod.GET)
 	public String update(@PathVariable int id, Model model) {

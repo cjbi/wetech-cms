@@ -15,7 +15,7 @@ jQuery.fn.dataTableExt.oApi.fnMultiFilter = function(oSettings, oData) {
 };
 var tableName = 'example';
 /*------------ 初始化table ------------*/
-initTable = function(url, gridTable, initComplete, ServerParams, tableNames) {
+initTable = function(url, gridTable, ServerParams, initComplete, tableNames) {
     tableName = tableNames == undefined ? 'example' : tableNames;
     var table = $('#' + tableName).DataTable({
 	'aLengthMenu' : [ 10, 15, 20, 40, 60 ],
@@ -33,7 +33,10 @@ initTable = function(url, gridTable, initComplete, ServerParams, tableNames) {
 	'ordering' : false,// 全局禁用排序
 	// 'scrollX' : true,
 	'ajax' : url,
-	"dom" : '<"am-g am-g-collapse"<"am-g am-datatable-hd"<"am-u-sm-8"<"#topPlugin">><"am-u-sm-4"f>>rt<<"am-datatable-hd am-u-sm-4"l><"am-u-sm-4"i><"am-u-sm-4"p>><"clear">>',
+	"dom" : '<"am-g am-g-collapse"rt<<"am-datatable-hd am-u-sm-4"l><"am-u-sm-4"i><"am-u-sm-4"p>><"clear">>',
+	// "dom" : '<"am-g am-g-collapse"<"am-g
+	// am-datatable-hd"<"am-u-sm-6"<"#btnPlugin">><"am-u-sm-4"<"#regexPlugin">><"am-u-sm-2"f>>rt<<"am-datatable-hd
+	// am-u-sm-4"l><"am-u-sm-4"i><"am-u-sm-4"p>><"clear">>',
 	'responsive' : true,
 	'columns' : gridTable,
 	"fnServerData" : ServerParams,
@@ -41,7 +44,8 @@ initTable = function(url, gridTable, initComplete, ServerParams, tableNames) {
 	    'sProcessing' : '正在获取数据，请稍后...',
 	    // 'sLengthMenu' : ' 显示 _MENU_ 项结果',
 	    'sZeroRecords' : '没有找到数据',
-	    'sInfo' : '从 _START_ 到 _END_ 条记录 总记录数为 _TOTAL_ 条',
+	    // 显示第 1 至 10 项结果，共 12 项
+	    'sInfo' : '显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项',
 	    'sInfoEmpty' : '记录数为0',
 	    'sInfoFiltered' : '(全部记录数 _MAX_ 条)',
 	    'sInfoPostFix' : '',
@@ -183,17 +187,22 @@ rowActive = function() {
     });
 };
 
+/*------------ 查询数据 ------------*/
+reloadTable = function() {
+    $('#example').DataTable().ajax.reload();
+};
+
 /*------------ 对象级别的插件开发 ------------*/
 (function($) {
 
     // 点确定时提交表单，只支持文本框提交
-    //url 链接地址
+    // url 链接地址
     $.fn.submit = function(url) {
 	var table = $('#' + tableName).DataTable();
 	var dataValue = {};
 	var __modalDom = $(this);
 	__modalDom.children('form').find('[name]').each(function() {
-	    dataValue[$(this).attr('name')]= $(this).val();
+	    dataValue[$(this).attr('name')] = $(this).val();
 	});
 	console.log(dataValue);
 	$.ajax({
@@ -271,4 +280,3 @@ rowActive = function() {
 	layer.open(__defaultOpts);
     };
 })(jQuery);
-

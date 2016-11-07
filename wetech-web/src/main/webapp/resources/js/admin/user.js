@@ -1,9 +1,18 @@
 $(function() {
     /*------------ 填充dataTables ------------*/
-    var url = contextPath+'/admin/user/list.do';
+    var url ={
+            'url': contextPath+'/admin/user/list.do',
+            'data': function ( d ) {
+        	if($('#searchValue').val() != '') {
+        	    d.searchCode = $('#searchCode').val();
+        	    d.searchValue = $('#searchValue').val();
+        	}
+            }
+        };
+    
     var gridTable = [ {
 	'data' : 'id',
-	"sWidth" : "2%",
+	'sWidth' : '2%',
 	'bSortable' : true,
 	'fnCreatedCell' : function(nTd, sData, oData, iRow, iCol) {
 	    $(nTd).html('<input type="checkbox" name="checkList" title="' + sData + '" value="' + sData + '">');
@@ -34,15 +43,22 @@ $(function() {
 	}
     } ];
 
-    // 上方topPlugin DIV中追加HTML
-    function initComplete(data) {
-	var topPlugin = '<div class="am-btn-group am-btn-group-xs"><button type="button" class="am-btn am-btn-default" id="btn-add" onclick="add()"> <span class="am-icon-plus"></span> 新增 </button> <button type="button" class="am-btn am-btn-default" onclick="edit()"> <span class="am-icon-edit"></span> 修改 </button> <button type="button" class="am-btn am-btn-default" onclick="del()"> <span class="am-icon-trash-o"></span> 删除 </button> <button type="button" class="am-btn am-btn-default" id="test" onclick="test()"> <span class="am-icon-refresh"></span> 测试 </button></div>';
-	// <button class="am-btn am-btn-default" id="expCsv">导 出全部</button>
-	$("#topPlugin").append(topPlugin);// 在表格上方topPlugin DIV中追加HTML
-
-    }
+/*
+ * // 上方btnPlugin DIV中追加HTML function initComplete(data) { var btnPlugin = '<div
+ * class="am-btn-group am-btn-group-xs"><button type="button" class="am-btn
+ * am-btn-default" id="btn-add" onclick="add()"> <span class="am-icon-plus"></span>
+ * 新增 </button> <button type="button" class="am-btn am-btn-default"
+ * onclick="edit()"> <span class="am-icon-edit"></span> 修改 </button> <button
+ * type="button" class="am-btn am-btn-default" onclick="del()"> <span
+ * class="am-icon-trash-o"></span> 删除 </button> <button type="button"
+ * class="am-btn am-btn-default" id="test" onclick="test()"> <span
+ * class="am-icon-refresh"></span> 测试 </button></div>'; // <button
+ * class="am-btn am-btn-default" id="expCsv">导 出全部</button>
+ * $("#btnPlugin").append(btnPlugin);// 在表格上方btnPlugin DIV中追加HTML
+ *  }
+ */
     // 页面数据加载
-    var table = initTable(url, gridTable, initComplete);
+    var table = initTable(url, gridTable);
 
     /*------------ 选中行触发事件 ------------*/
     $('#example tbody').on('click', 'tr', function() {
@@ -62,6 +78,11 @@ $(function() {
 	});
 	return data;
     }
+    
+    // draw event 事件
+    $('#example').on( 'draw.dt', function () {
+	    console.log( 'Redraw occurred at: '+new Date().getTime() );
+     } );
 
     /*------------ 修改 ------------*/
     edit = function() {

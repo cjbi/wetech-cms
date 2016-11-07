@@ -36,6 +36,38 @@
 					</div>
 				</div>
 				<hr>
+				<div class="am-g">
+					<div class="am-u-sm-12 am-u-md-6">
+						<div class="am-btn-toolbar">
+							<div class="am-btn-group am-btn-group-xs">
+								<button type="button" class="am-btn am-btn-default" onclick="add()">
+									<span class="am-icon-plus"></span> 新增
+								</button>
+								<button type="button" class="am-btn am-btn-default" onclick="edit()">
+									<span class="am-icon-edit"></span> 修改
+								</button>
+								<button type="button" class="am-btn am-btn-default" onclick="del()">
+									<span class="am-icon-trash-o"></span> 删除
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="am-u-sm-12 am-u-md-3">
+						<div class="am-form-group">
+							<select data-am-selected="{btnSize: 'sm'}">
+								<option value="id">组 ID</option>
+								<option value="name">组名称</option>
+							</select>
+						</div>
+					</div>
+					<div class="am-u-sm-12 am-u-md-3">
+						<div class="am-input-group am-input-group-sm">
+							<input type="text" class="am-form-field"> <span class="am-input-group-btn">
+								<button class="am-btn am-btn-default" type="button">搜索</button>
+							</span>
+						</div>
+					</div>
+				</div>
 				<div class="am-u-sm-12">
 					<table class="am-table am-table-striped  am-table-hover table-main am-table-bordered am-table-compact am-text-nowrap" width="100%" id="example">
 						<thead>
@@ -74,12 +106,11 @@
 	</div>
 	<div id="edit-modal">
 		<form class="am-form am-form-horizontal" id="edit-form">
-			<br>
-			<input type="hidden" name="id">
+			<br> <input type="hidden" name="id">
 			<div class="am-form-group">
 				<label class="am-u-sm-2 am-form-label">组名称</label>
 				<div class="am-u-sm-10">
-					<input type="text"  name="name" placeholder="用户组名称(必填)" required>
+					<input type="text" name="name" placeholder="用户组名称(必填)" required>
 				</div>
 			</div>
 			<div class="am-form-group">

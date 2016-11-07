@@ -280,9 +280,10 @@ public class TopicController {
 		resp.getWriter().write(JsonUtil.getInstance().obj2json(ao));
 	}
 	
+	@ResponseBody
 	@RequestMapping("/treeAll")
 	@AuthMethod(role="ROLE_PUBLISH")
-	public @ResponseBody List<ChannelTree> tree(HttpSession session) {
+	public  List<ChannelTree> tree(HttpSession session) {
 		boolean isAdmin = (Boolean)session.getAttribute("isAdmin");
 		User loginUser = (User)session.getAttribute("loginUser");
 		if(isAdmin)

@@ -2,6 +2,9 @@ package tech.wetech.cms.dao;
 
 import java.util.List;
 
+import org.apache.commons.lang.StringUtils;
+import org.hibernate.Criteria;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
 import tech.wetech.basic.dao.BaseDao;
@@ -112,10 +115,25 @@ public class UserDao extends BaseDao<User> implements IUserDao {
 		String hql = "delete UserGroup ug where ug.user.id=?";
 		this.updateByHql(hql, gid);
 	}
-
+	
 	@Override
 	public Pager<User> findUser() {
-		return this.find("from User");
+		return findUser(null, null);
+	}
+	
+	@Override
+	public Pager<User> findUser(String searchCode, String searchValue) {
+		String hql = "from User u where 1=1";
+		if(StringUtils.isNotBlank(searchCode)&&StringUtils.isNotBlank(searchValue)) {
+			if("id".equals(searchCode)) {
+				hql +=" and u.id like '%"+searchValue+"%'";
+			} else if("username".equals(searchCode)) {
+				hql +=" and u.username like '%"+searchValue+"%'";
+			} else if("nikename".equals(searchCode)) {
+				hql +=" and u.nickname like '%"+searchValue+"%'";
+			}
+		}
+		return this.find(hql);
 	}
 
 	@Override
@@ -129,5 +147,7 @@ public class UserDao extends BaseDao<User> implements IUserDao {
 		String hql = "delete UserGroup ug where ug.user.id=? and ug.group.id=?";
 		this.updateByHql(hql, new Object[]{uid,gid});
 	}
+
+	
 
 }

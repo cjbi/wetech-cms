@@ -100,6 +100,8 @@ public interface IUserDao extends IBaseDao<User>{
 	 */
 	public void deleteUserGroups(int gid);
 	
+	public Pager<User> findUser(String searchCode,String SearchName);
+	
 	public Pager<User> findUser();
 	/**
 	 * 删除用户角色对象

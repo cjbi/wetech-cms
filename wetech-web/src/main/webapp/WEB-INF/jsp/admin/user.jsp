@@ -36,7 +36,7 @@
 					</div>
 				</div>
 				<hr>
-				<!-- <div class="am-g">
+				<div class="am-g">
 					<div class="am-u-sm-12 am-u-md-6">
 						<div class="am-btn-toolbar">
 							<div class="am-btn-group am-btn-group-xs">
@@ -54,24 +54,21 @@
 					</div>
 					<div class="am-u-sm-12 am-u-md-3">
 						<div class="am-form-group">
-							<select data-am-selected="{btnSize: 'sm'}">
-								<option value="option1">用户标识</option>
-								<option value="option1">用户名称</option>
-								<option value="option1">用户昵称</option>
-								<option value="option1">用户状态</option>
-								<option value="option1">用户邮箱</option>
-								<option value="option1">用户操作</option>
+							<select name="searchCode" id="searchCode" data-am-selected="{btnSize: 'sm'}">
+								<option value="id">用户 ID</option>
+								<option value="username">用户名称</option>
+								<option value="nickname">用户昵称</option>
 							</select>
 						</div>
 					</div>
 					<div class="am-u-sm-12 am-u-md-3">
 						<div class="am-input-group am-input-group-sm">
-							<input type="text" class="am-form-field"> <span class="am-input-group-btn">
-								<button class="am-btn am-btn-default" type="button">搜索</button>
+							<input type="text" name="searchValue" id="searchValue" class="am-form-field"> <span class="am-input-group-btn">
+								<button class="am-btn am-btn-default" onclick="reloadTable();" type="button">搜索</button>
 							</span>
 						</div>
 					</div>
-				</div> -->
+				</div>
 				<div class="am-u-sm-12">
 					<table class="am-table am-table-striped  am-table-hover table-main am-table-bordered am-table-compact am-text-nowrap" width="100%" id="example">
 						<thead>

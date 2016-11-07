@@ -36,13 +36,15 @@ public class GroupController {
 		return "admin/group";
 	}
 
+	@ResponseBody
 	@RequestMapping("/list")
-	public @ResponseBody Map<String, Object> list() {
+	public Map<String, Object> list() {
 		return DataTableMap.getMapData(groupService.findGroup());
 	}
 
+	@ResponseBody
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
-	public @ResponseBody ResponseData add(@Validated Group group, BindingResult br) {
+	public ResponseData add(@Validated Group group, BindingResult br) {
 		if (br.hasErrors()) {
 			return new ResponseData("操作失败" + br.getFieldError().toString());
 		}
@@ -50,8 +52,9 @@ public class GroupController {
 		return ResponseData.SUCCESS_NO_DATA;
 	}
 
+	@ResponseBody
 	@RequestMapping(value = "/edit", method = RequestMethod.POST)
-	public @ResponseBody ResponseData edit(Integer id, @Validated Group group, BindingResult br) {
+	public ResponseData edit(Integer id, @Validated Group group, BindingResult br) {
 		if (br.hasErrors()) {
 			return new ResponseData("操作失败" + br.getFieldError().toString());
 		}
@@ -61,9 +64,10 @@ public class GroupController {
 		groupService.update(ug);
 		return ResponseData.SUCCESS_NO_DATA;
 	}
-	
+
+	@ResponseBody
 	@RequestMapping(value = "/delete")
-	public @ResponseBody ResponseData delete(Long[] ids) {
+	public ResponseData delete(Long[] ids) {
 		for (Long id : ids) {
 			groupService.delete(id.intValue());
 		}

@@ -22,15 +22,8 @@ $(function() {
     }, {
 	'data' : 'descr'
     } ];
-    // 上方topPlugin DIV中追加HTML
-    function initComplete(data) {
-	var topPlugin = '<div class="am-btn-group am-btn-group-xs"><button type="button" class="am-btn am-btn-default" id="btn-add" onclick="add()"> <span class="am-icon-plus"></span> 新增 </button> <button type="button" class="am-btn am-btn-default" onclick="edit()"> <span class="am-icon-edit"></span> 修改 </button> <button type="button" class="am-btn am-btn-default" onclick="del()"> <span class="am-icon-trash-o"></span> 删除 </button></div>';
-	// <button class="am-btn am-btn-default" id="expCsv">导 出全部</button>
-	$("#topPlugin").append(topPlugin);// 在表格上方topPlugin DIV中追加HTML
-
-    }
     // 页面数据加载
-    var table = initTable(url, gridTable, initComplete);
+    var table = initTable(url, gridTable);
 
     /*------------ 选中行触发事件 ------------*/
     $('#example tbody').on('click', 'tr', function() {

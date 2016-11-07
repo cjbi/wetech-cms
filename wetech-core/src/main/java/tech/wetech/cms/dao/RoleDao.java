@@ -7,7 +7,6 @@ import org.springframework.stereotype.Repository;
 
 import tech.wetech.basic.dao.BaseDao;
 import tech.wetech.basic.model.Pager;
-import tech.wetech.cms.model.Group;
 import tech.wetech.cms.model.Role;
 
 @Repository("roleDao")

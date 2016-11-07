@@ -24,10 +24,13 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.support.TransactionSynchronizationManager;
 
+import com.fasterxml.jackson.databind.util.JSONPObject;
+
 import tech.wetech.basic.model.Pager;
 import tech.wetech.basic.model.SystemContext;
 import tech.wetech.basic.util.AbstractDbUnitTestCase;
 import tech.wetech.basic.util.EntitiesHelper;
+import tech.wetech.basic.util.JsonUtil;
 import tech.wetech.cms.model.ChannelTree;
 import tech.wetech.cms.model.Group;
 import tech.wetech.cms.model.Role;
@@ -200,6 +203,15 @@ public class UserDaoTest extends AbstractDbUnitTestCase{
 		int gid = 2;
 		userDao.deleteUserGroup(uid,gid);
 		assertNull(userDao.loadUserGroup(uid, gid));
+	}
+	
+	@Test
+	public void destFindUserByCond() {
+		SystemContext.setPageOffset(0);
+		SystemContext.setPageSize(15);
+		Pager<User> pages = userDao.findUser("id", "3");
+		assertNotNull(pages);
+		System.out.println(JsonUtil.getInstance().obj2json(pages));
 	}
 	
 	@Test

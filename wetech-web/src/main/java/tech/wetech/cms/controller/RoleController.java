@@ -28,19 +28,21 @@ public class RoleController {
 	@Inject
 	private IUserService userService;
 
-	@RequestMapping({ "/role", "/", ""})
+	@RequestMapping({ "/role", "/", "" })
 	public String role(Model model) {
 		model.addAttribute("types", EnumUtils.enum2Name(RoleType.class));
 		return "admin/role";
 	}
 
+	@ResponseBody
 	@RequestMapping("/list")
-	public @ResponseBody Map<String, Object> list(Model model) {
+	public Map<String, Object> list(Model model) {
 		return DataTableMap.getMapData(roleService.findRole());
 	}
 
+	@ResponseBody
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
-	public @ResponseBody ResponseData add(@Validated Role role, BindingResult br) {
+	public ResponseData add(@Validated Role role, BindingResult br) {
 		if (br.hasErrors()) {
 			return new ResponseData("操作失败" + br.getFieldError().toString());
 		}
@@ -48,8 +50,9 @@ public class RoleController {
 		return ResponseData.SUCCESS_NO_DATA;
 	}
 
+	@ResponseBody
 	@RequestMapping(value = "/edit", method = RequestMethod.POST)
-	public @ResponseBody ResponseData edit(Integer id, @Validated Role role, BindingResult br) {
+	public ResponseData edit(Integer id, @Validated Role role, BindingResult br) {
 		if (br.hasErrors()) {
 			return new ResponseData("操作失败" + br.getFieldError().toString());
 		}
@@ -59,9 +62,10 @@ public class RoleController {
 		roleService.update(er);
 		return ResponseData.SUCCESS_NO_DATA;
 	}
-	
+
+	@ResponseBody
 	@RequestMapping(value = "/delete")
-	public @ResponseBody ResponseData delete(Long[] ids) {
+	public ResponseData delete(Long[] ids) {
 		for (Long id : ids) {
 			roleService.delete(id.intValue());
 		}
@@ -70,40 +74,40 @@ public class RoleController {
 
 	/*-------------------------------------------------------------------*/
 
-/*	@RequestMapping("/roles")
-	public String list(Model model) {
-		model.addAttribute("roles", roleService.listRole());
-		return "role/list";
-	}*/
-	
+	/*
+	 * @RequestMapping("/roles") public String list(Model model) {
+	 * model.addAttribute("roles", roleService.listRole()); return "role/list";
+	 * }
+	 */
+
 	@RequestMapping("/{id}")
-	public String show(@PathVariable int id,Model model) {
+	public String show(@PathVariable int id, Model model) {
 		model.addAttribute(roleService.load(id));
-		model.addAttribute("us",userService.listRoleUsers(id));
+		model.addAttribute("us", userService.listRoleUsers(id));
 		return "role/show";
 	}
-	
+
 	@RequestMapping("/delete/{id}")
 	public String delete(@PathVariable int id) {
 		roleService.delete(id);
 		return "redirect:/admin/role/roles";
 	}
-	
+
 	@RequestMapping("/clearUsers/{id}")
 	public String clearUsers(@PathVariable int id) {
 		roleService.deleteRoleUsers(id);
 		return "redirect:/admin/role/roles";
 	}
-	
-	@RequestMapping(value="/update/{id}",method=RequestMethod.GET)
-	public String update(@PathVariable int id,Model model) {
+
+	@RequestMapping(value = "/update/{id}", method = RequestMethod.GET)
+	public String update(@PathVariable int id, Model model) {
 		model.addAttribute(roleService.load(id));
 		model.addAttribute("types", EnumUtils.enum2Name(RoleType.class));
 		return "role/update";
 	}
-	
-	@RequestMapping(value="/update/{id}",method=RequestMethod.POST)
-	public String update(@PathVariable int id,Role role) {
+
+	@RequestMapping(value = "/update/{id}", method = RequestMethod.POST)
+	public String update(@PathVariable int id, Role role) {
 		Role er = roleService.load(id);
 		er.setName(role.getName());
 		er.setRoleType(role.getRoleType());
