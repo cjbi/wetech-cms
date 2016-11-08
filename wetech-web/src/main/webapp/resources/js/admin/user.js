@@ -27,9 +27,9 @@ $(function() {
 	'data' : 'status',
 	"mRender" : function(data, type, full) {
 	    if (data == '1') {
-		return '<font color="green">启用</font>';
+		return '<a class="am-badge am-badge-success am-radius">启用</a>';
 	    } else if (data == '0') {
-		return '<font color="red">停用</font>';
+		return '<a class="am-badge am-badge-danger am-radius">停用</a>';
 	    } else {
 		return "未知";
 	    }
