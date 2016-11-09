@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/wetech-basic-common/wetech-basic-common.iml" filepath="$PROJECT_DIR$/wetech-basic-common/wetech-basic-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wetech-basic-hibernate/wetech-basic-hibernate.iml" filepath="$PROJECT_DIR$/wetech-basic-hibernate/wetech-basic-hibernate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wetech-core/wetech-core.iml" filepath="$PROJECT_DIR$/wetech-core/wetech-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wetech-parent.iml" filepath="$PROJECT_DIR$/wetech-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wetech-topic/wetech-topic.iml" filepath="$PROJECT_DIR$/wetech-topic/wetech-topic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wetech-user/wetech-user.iml" filepath="$PROJECT_DIR$/wetech-user/wetech-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wetech-web/wetech-web.iml" filepath="$PROJECT_DIR$/wetech-web/wetech-web.iml" />
+    </modules>
+  </component>
+</project>
