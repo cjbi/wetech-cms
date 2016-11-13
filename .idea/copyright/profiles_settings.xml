@@ -1,3 +1,12 @@
 <component name="CopyrightManager">
-  <settings default="" />
+  <settings default="">
+    <LanguageOptions name="HTML">
+      <option name="fileTypeOverride" value="3" />
+      <option name="separateBefore" value="true" />
+      <option name="separateAfter" value="true" />
+      <option name="prefixLines" value="false" />
+      <option name="lenBefore" value="180" />
+      <option name="lenAfter" value="180" />
+    </LanguageOptions>
+  </settings>
 </component>

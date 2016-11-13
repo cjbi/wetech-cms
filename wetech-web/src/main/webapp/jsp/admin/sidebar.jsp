@@ -5,16 +5,17 @@
 			<li><a href="<%=request.getContextPath()%>/admin"><span class="am-icon-dashboard"></span> 仪表盘</a></li>
 			<li class="am-panel"><a class="am-cf" data-am-collapse="{parent:'#collapase-nav-1', target: '#collapse-nav'}"><span class="am-icon-user"></span> 用户管理 <span
 					class="am-icon-angle-right am-fr am-margin-right"></span></a>
-				<ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav">
-					<li><a href="<%=request.getContextPath()%>/admin/user" class="am-cf"><span class="am-icon-info"></span> 用户信息管理<span class="am-fr am-margin-right admin-icon-yellow"></span></a></li>
+				<!-- ul class add am-in to open sidebar item. -->
+				<ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav">
+					<li><a href="<%=request.getContextPath()%>/admin/user" class="am-cf active"><span class="am-icon-info"></span> 用户信息管理<span class="am-fr am-margin-right admin-icon-yellow"></span></a></li>
 					<li><a href="<%=request.getContextPath()%>/admin/group" class="am-cf"><span class="am-icon-group"></span> 用户组管理<span class="am-fr am-margin-right admin-icon-yellow"></span></a></li>
 					<li><a href="<%=request.getContextPath()%>/admin/role" class="am-cf"><span class="am-icon-child"></span> 用户角色管理<span class="am-fr am-margin-right admin-icon-yellow"></span></a></li>
 				</ul></li>
 			<li class="am-panel"><a class="am-cf" data-am-collapse="{parent:'#collapase-nav-1', target: '#collapse-nav1'}"><span class="am-icon-file-text"></span> 文章管理 <span
 					class="am-icon-angle-right am-fr am-margin-right"></span></a>
 				<ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav1">
-					<li><a href="<%=request.getContextPath()%>/admin/user/#" class="am-cf"><span class="am-icon-navicon"></span> 栏目信息管理<span class="am-fr am-margin-right admin-icon-yellow"></span></a></li>
-					<li><a href="<%=request.getContextPath()%>/admin/user/#" class="am-cf"><span class="am-icon-file-text-o"></span> 文章信息管理<span class="am-fr am-margin-right admin-icon-yellow"></span></a></li>
+					<li><a href="<%=request.getContextPath()%>/admin/channel" class="am-cf"><span class="am-icon-navicon"></span> 栏目信息管理<span class="am-fr am-margin-right admin-icon-yellow"></span></a></li>
+					<li><a href="<%=request.getContextPath()%>/admin/topic" class="am-cf"><span class="am-icon-file-text-o"></span> 文章信息管理<span class="am-fr am-margin-right admin-icon-yellow"></span></a></li>
 				</ul></li>
 			<li class="am-panel"><a class="am-cf" data-am-collapse="{parent:'#collapase-nav-1', target: '#collapse-nav2'}"><span class="am-icon-cogs"></span> 系统配置 <span
 					class="am-icon-angle-right am-fr am-margin-right"></span></a>

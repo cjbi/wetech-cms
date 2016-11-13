@@ -33,7 +33,7 @@ initTable = function(url, gridTable, ServerParams, initComplete, tableNames) {
 	'ordering' : false,// 全局禁用排序
 	// 'scrollX' : true,
 	'ajax' : url,
-	"dom" : '<"am-g am-g-collapse"rt<<"am-datatable-hd am-u-sm-4"l><"am-u-sm-4"i><"am-u-sm-4"p>><"clear">>',
+	"dom" : '<"am-g am-g-collapse"rt<<"am-datatable-hd am-u-sm-4"l><"am-u-sm-4 am-text-center"i><"am-u-sm-4"p>><"clear">>',
 	// "dom" : '<"am-g am-g-collapse"<"am-g
 	// am-datatable-hd"<"am-u-sm-6"<"#btnPlugin">><"am-u-sm-4"<"#regexPlugin">><"am-u-sm-2"f>>rt<<"am-datatable-hd
 	// am-u-sm-4"l><"am-u-sm-4"i><"am-u-sm-4"p>><"clear">>',
@@ -243,7 +243,7 @@ reloadTable = function() {
 	var __defaultOpts = $.extend({
 	    title : __title,
 	    type : 1,
-	    shift : 2,
+	    shift : 5,
 	    moveType : 1,
 	    // 此参数开启最大化最小化
 	    // maxmin: true,

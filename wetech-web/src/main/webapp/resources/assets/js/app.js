@@ -1,6 +1,6 @@
+var cookie = $.AMUI.utils.cookie;
 (function($) {
     'use strict';
-
     $(function() {
 	var $fullText = $('.admin-fullText');
 	$('#admin-fullscreen').on('click', function() {
@@ -12,29 +12,23 @@
 	});
     });
 })(jQuery);
-
-/*------------ 自定义 Tooltip ------------*/
-//$(function() {
-//    var $form = $('#form-with-tooltip');
-//    var $tooltip = $('<div id="vld-tooltip">提示信息！</div>');
-//    $tooltip.appendTo(document.body);
-//
-//    $form.validator();
-//
-//    var validator = $form.data('amui.validator');
-//
-//    $form.on('focusin focusout', '.am-form-error input', function(e) {
-//	if (e.type === 'focusin') {
-//	    var $this = $(this);
-//	    var offset = $this.offset();
-//	    var msg = $this.data('foolishMsg') || validator.getValidationMessage($this.data('validity'));
-//
-//	    $tooltip.text(msg).show().css({
-//		left : offset.left + 10,
-//		top : offset.top + $(this).outerHeight() + 10
-//	    });
-//	} else {
-//	    $tooltip.hide();
-//	}
-//    });
-//});
+/*------------ 初始化 ------------*/
+$(document).ready(function() {
+    var tagNav = cookie.get('collapase-nav');
+    if (tagNav != null) {
+	$('#' + tagNav).addClass('am-in');
+    }
+});
+/*------------ 折叠面板绑定事件 ------------*/
+$(function() {
+    $('#collapase-nav-1').on('open.collapse.amui', '.am-panel', function(event) {
+	console.log('折叠菜单打开了！');
+	// cookie 7天之后失效
+	var expires = new Date(new Date().valueOf() + 7 * 24 * 60 * 60 * 1000);
+	var tagId = $(this).find('ul').attr('id');
+	cookie.set('collapase-nav', tagId, expires, '/');
+    }).on('close.collapse.amui', function() {
+	console.log('折叠菜单关闭了！');
+//	cookie.unset('collapase-nav', '/');
+    });
+});

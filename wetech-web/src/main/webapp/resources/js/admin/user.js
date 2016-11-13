@@ -27,9 +27,9 @@ $(function() {
 	'data' : 'status',
 	"mRender" : function(data, type, full) {
 	    if (data == '1') {
-		return '<a class="am-badge am-badge-success am-radius">启用</a>';
+		return '<span class="am-badge am-badge-success">已启用</span>';
 	    } else if (data == '0') {
-		return '<a class="am-badge am-badge-danger am-radius">停用</a>';
+		return '<span class="am-badge am-badge-danger">已停用</span>';
 	    } else {
 		return "未知";
 	    }
