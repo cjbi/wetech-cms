@@ -69,7 +69,13 @@ public class TopicController {
 	@RequestMapping({ "/topic", "/", "" })
 	public String topic(Model model) {
 		initChannel(model);
-		return "admin/topic";
+		return "topic/topic";
+	}
+	
+	@RequestMapping(value = "/add", method = RequestMethod.GET)
+	@AuthMethod(role = "ROLE_PUBLISH")
+	public String add(Model model) {
+		return "topic/add";
 	}
 
 	private void initChannel(Model model) {
@@ -146,14 +152,14 @@ public class TopicController {
 		}
 	}
 
-	@RequestMapping(value = "/add", method = RequestMethod.GET)
+	@RequestMapping(value = "/add2", method = RequestMethod.GET)
 	@AuthMethod(role = "ROLE_PUBLISH")
-	public String add(Model model) {
+	public String add2(Model model) {
 		Topic t = new Topic();
 		t.setPublishDate(new Date());
 		TopicDto td = new TopicDto(t);
 		model.addAttribute("topicDto", td);
-		return "topic/add";
+		return "topic/add2";
 	}
 
 	@RequestMapping(value = "/add", method = RequestMethod.POST)

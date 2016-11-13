@@ -14,7 +14,7 @@ function ubb2html($sUBB)
 	$sHtml=$sUBB;
 	
 	global $emotPath,$cnum,$arrcode,$bUbb2htmlFunctionInit;$cnum=0;$arrcode=array();
-	$emotPath='../xheditor_emot/';//±íÇé¸ùÂ·¾¶
+	$emotPath='../xheditor_emot/';//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½
 	
 	if(!$bUbb2htmlFunctionInit){
 	function saveCodeArea($match)

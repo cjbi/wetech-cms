@@ -1,5 +1,5 @@
 <script type="text/javascript">
-//----------------跨域支持代码开始(非跨域环境请删除这段代码)----------------
+//----------------锟斤拷锟斤拷支锟街达拷锟诫开始(锟角匡拷锟津环撅拷锟斤拷删锟斤拷锟斤拷锟轿达拷锟斤拷)----------------
 var JSON = JSON || {};
 JSON.stringify = JSON.stringify || function (obj) {
 	var t = typeof (obj);
@@ -21,14 +21,14 @@ JSON.stringify = JSON.stringify || function (obj) {
 var callback = callback || function(v){
 	v=JSON.stringify(v);
 	window.name=escape(v);
-	window.location='http://<?php echo $_POST['parenthost'];?>/xheditorproxy.html';//这个文件最好是一个0字节文件，如果无此文件也会正常工作	
+	window.location='http://<?php echo $_POST['parenthost'];?>/xheditorproxy.html';//锟斤拷锟斤拷锟侥硷拷锟斤拷锟斤拷锟斤拷一锟斤拷0锟街斤拷锟侥硷拷锟斤拷锟斤拷锟斤拷锟睫达拷锟侥硷拷也锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷	
 }
-//----------------跨域支持代码结束----------------
+//----------------锟斤拷锟斤拷支锟街达拷锟斤拷锟斤拷锟斤拷----------------
 
 var url='test2.zip';
 
 setTimeout(function(){callback(url);},100);
-//跨域模式下可直接调用callback，不需要setTimeout延迟
+//锟斤拷锟斤拷模式锟铰匡拷直锟接碉拷锟斤拷callback锟斤拷锟斤拷锟斤拷要setTimeout锟接筹拷
 //callback(url);
 
 </script>

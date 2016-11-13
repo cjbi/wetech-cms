@@ -116,7 +116,6 @@ deleteBatch = function(url, pk) {
 	layer.confirm('确定要删除这' + str + '条数据吗？', {
 	    icon : 3,
 	    title : '系统提示',
-	    moveType : 1,
 	    yes : function(index, layero) {
 		// 从rowData中获得主键id数组
 		console.log(rowData);
@@ -243,8 +242,8 @@ reloadTable = function() {
 	var __defaultOpts = $.extend({
 	    title : __title,
 	    type : 1,
-	    shift : 5,
-	    moveType : 1,
+	  /* shift : 5,
+	    moveType : 1,*/
 	    // 此参数开启最大化最小化
 	    // maxmin: true,
 	    area : [ '600px', 'auto' ],

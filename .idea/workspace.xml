@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="047bcc55-a7c6-4c9f-bbf9-04b2a3f9acce" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/topic.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/layer/skin/layer.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/TopicController.java" afterPath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/TopicController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/topic.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/topic.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/jsp/admin/sidebar.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/jsp/admin/sidebar.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/group.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/group.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/role.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/role.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/user.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/user.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/js/amazeui.datatables.plugin.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/js/amazeui.datatables.plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/user.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/user.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/layer/layer.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/layer/layer.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/topic.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/topic/topic.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/topic/add.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/topic/add2.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/topic.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/topic/topic.js" />
     </list>
     <ignored path="wetech-parent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,43 +48,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="topic.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/topic.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="54" column="44" selection-start-line="54" selection-start-column="44" selection-end-line="54" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="InvocableHandlerMethod.java" pinned="false" current-in-tab="true">
         <entry file="jar://D:/Java/maven/repository/org/springframework/spring-web/4.3.3.RELEASE/spring-web-4.3.3.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+            <state relative-caret-position="-285">
+              <caret line="49" column="51" selection-start-line="49" selection-start-column="51" selection-end-line="49" selection-end-column="51" />
               <folding>
+                <element signature="method#InvocableHandlerMethod#2;class#InvocableHandlerMethod#0" expanded="true" />
+                <element signature="method#setHandlerMethodArgumentResolvers#0;class#InvocableHandlerMethod#0" expanded="false" />
+                <element signature="method#setParameterNameDiscoverer#0;class#InvocableHandlerMethod#0" expanded="false" />
+                <element signature="method#invokeForRequest#0;class#InvocableHandlerMethod#0" expanded="true" />
+                <element signature="method#getMethodArgumentValues#0;class#InvocableHandlerMethod#0" expanded="true" />
                 <element signature="method#doInvoke#0;class#InvocableHandlerMethod#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TopicController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/TopicController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-              <folding>
-                <element signature="e#2460#2461#0" expanded="true" />
-                <element signature="e#2496#2497#0" expanded="true" />
-                <element signature="method#initChannel#0;class#TopicController#0" expanded="true" />
-                <element signature="method#initList#0;class#TopicController#0" expanded="true" />
-                <element signature="method#add#1;class#TopicController#0" expanded="true" />
-                <element signature="method#update#0;class#TopicController#0" expanded="true" />
-                <element signature="method#update#1;class#TopicController#0" expanded="true" />
-                <element signature="method#upload#0;class#TopicController#0" expanded="true" />
-                <element signature="method#tree#0;class#TopicController#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -400,6 +377,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -916,10 +897,6 @@
         <option name="show-excluded-files" value="false" />
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane">
-        <subPane />
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1526,6 +1503,7 @@
       <workItem from="1478962901028" duration="5914000" />
       <workItem from="1479006341292" duration="178000" />
       <workItem from="1479007076035" duration="895000" />
+      <workItem from="1479024117148" duration="707000" />
     </task>
     <servers />
   </component>
@@ -1544,7 +1522,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50748000" />
+    <option name="totallyTimeSpent" value="51455000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1576,7 +1554,6 @@
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15565032" sideWeight="0.5275459" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18763326" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38565022" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17643923" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24946696" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1589,6 +1566,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295964" sideWeight="0.4914712" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="856" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38565022" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1639,7 +1617,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/TopicController.java</url>
-          <line>56</line>
+          <line>57</line>
           <properties />
           <option name="timeStamp" value="17" />
         </line-breakpoint>
@@ -2349,7 +2327,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="861" column="0" selection-start-line="861" selection-start-column="0" selection-end-line="861" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2357,7 +2334,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="899" column="0" selection-start-line="899" selection-start-column="0" selection-end-line="899" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2365,24 +2341,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/maven/repository/org/springframework/spring-webmvc/4.3.3.RELEASE/spring-webmvc-4.3.3.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="826" column="0" selection-start-line="826" selection-start-column="0" selection-end-line="826" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/maven/repository/org/springframework/spring-webmvc/4.3.3.RELEASE/spring-webmvc-4.3.3.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/TopicController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        <state relative-caret-position="19">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IChannelDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="57" column="41" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
           <folding>
-            <element signature="e#2460#2461#0" expanded="true" />
-            <element signature="e#2496#2497#0" expanded="true" />
-            <element signature="method#initChannel#0;class#TopicController#0" expanded="true" />
-            <element signature="method#initList#0;class#TopicController#0" expanded="true" />
-            <element signature="method#add#1;class#TopicController#0" expanded="true" />
-            <element signature="method#update#0;class#TopicController#0" expanded="true" />
-            <element signature="method#update#1;class#TopicController#0" expanded="true" />
-            <element signature="method#upload#0;class#TopicController#0" expanded="true" />
-            <element signature="method#tree#0;class#TopicController#0" expanded="true" />
+            <element signature="docComment;method#listPublishChannel#0;class#IChannelDao#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2403,16 +2392,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IChannelDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="57" column="41" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
-          <folding>
-            <element signature="docComment;method#listPublishChannel#0;class#IChannelDao#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wetech-topic/src/main/java/tech/wetech/cms/service/ChannelService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -2426,35 +2405,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/topic.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
+        <state relative-caret-position="-529">
           <caret line="54" column="44" selection-start-line="54" selection-start-column="44" selection-end-line="54" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Java/maven/repository/org/springframework/spring-webmvc/4.3.3.RELEASE/spring-webmvc-4.3.3.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="826" column="0" selection-start-line="826" selection-start-column="0" selection-end-line="826" selection-end-column="0" />
-          <folding>
-            <element signature="method#handleInternal#0;class#RequestMappingHandlerAdapter#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Java/maven/repository/org/springframework/spring-webmvc/4.3.3.RELEASE/spring-webmvc-4.3.3.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://D:/Java/maven/repository/org/springframework/spring-web/4.3.3.RELEASE/spring-web-4.3.3.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+        <state relative-caret-position="-285">
+          <caret line="49" column="51" selection-start-line="49" selection-start-column="51" selection-end-line="49" selection-end-column="51" />
           <folding>
+            <element signature="method#InvocableHandlerMethod#2;class#InvocableHandlerMethod#0" expanded="true" />
+            <element signature="method#setHandlerMethodArgumentResolvers#0;class#InvocableHandlerMethod#0" expanded="false" />
+            <element signature="method#setParameterNameDiscoverer#0;class#InvocableHandlerMethod#0" expanded="false" />
+            <element signature="method#invokeForRequest#0;class#InvocableHandlerMethod#0" expanded="true" />
+            <element signature="method#getMethodArgumentValues#0;class#InvocableHandlerMethod#0" expanded="true" />
             <element signature="method#doInvoke#0;class#InvocableHandlerMethod#0" expanded="true" />
           </folding>
         </state>

@@ -11,12 +11,12 @@
  */
 function ubb2html(sUBB)
 {
-	var emotPath='../xheditor_emot/';//±íÇé¸ùÂ·¾¶
+	var emotPath='../xheditor_emot/';//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½
 	
 	var i,sHtml=String(sUBB),arrcode=new Array(),cnum=0;
 	var arrFontsize=['10px','13px','16px','18px','24px','32px','48px'];
 	
-	sHtml=sHtml.replace(/\[code\s*(?:=\s*([^\]]+?))?\]([\s\S]*?)\[\/code\]/ig,function(all,t,c){//codeÌØÊâ´¦Àí
+	sHtml=sHtml.replace(/\[code\s*(?:=\s*([^\]]+?))?\]([\s\S]*?)\[\/code\]/ig,function(all,t,c){//codeï¿½ï¿½ï¿½â´¦ï¿½ï¿½
 		cnum++;arrcode[cnum]=all;
 		return "[\tubbcodeplace_"+cnum+"\t]";
 	});
@@ -108,7 +108,7 @@ function html2ubb(sHtml)
 
 	sUBB=sUBB.replace(/<br(\s+[^>]*)?\/?>/ig,"\r\n");
 	
-	sUBB=sUBB.replace(/\[code\s*(=\s*([^\]]+?))?\]([\s\S]*?)\[\/code\]/ig,function(all,t,c){//codeÌØÊâ´¦Àí
+	sUBB=sUBB.replace(/\[code\s*(=\s*([^\]]+?))?\]([\s\S]*?)\[\/code\]/ig,function(all,t,c){//codeï¿½ï¿½ï¿½â´¦ï¿½ï¿½
 		cnum++;arrcode[cnum]=all;
 		return "[\tubbcodeplace_"+cnum+"\t]";
 	});
@@ -142,9 +142,9 @@ function html2ubb(sHtml)
 		}
 		return arrStart.join('')+content+arrEnd.join('');
 	}
-	sUBB = sUBB.replace(/<(font)(\s+[^>]*?)?>(((?!<\1(\s+[^>]*?)?>)[\s\S]|<\1(\s+[^>]*?)?>((?!<\1(\s+[^>]*?)?>)[\s\S]|<\1(\s+[^>]*?)?>((?!<\1(\s+[^>]*?)?>)[\s\S])*?<\/\1>)*?<\/\1>)*?)<\/\1>/ig,font2ubb);//µÚ3²ã
-	sUBB = sUBB.replace(/<(font)(\s+[^>]*?)?>(((?!<\1(\s+[^>]*?)?>)[\s\S]|<\1(\s+[^>]*?)?>((?!<\1(\s+[^>]*?)?>)[\s\S])*?<\/\1>)*?)<\/\1>/ig,font2ubb);//µÚ2²ã
-	sUBB = sUBB.replace(/<(font)(\s+[^>]*?)?>(((?!<\1(\s+[^>]*?)?>)[\s\S])*?)<\/\1>/ig,font2ubb);//×îÀï²ã
+	sUBB = sUBB.replace(/<(font)(\s+[^>]*?)?>(((?!<\1(\s+[^>]*?)?>)[\s\S]|<\1(\s+[^>]*?)?>((?!<\1(\s+[^>]*?)?>)[\s\S]|<\1(\s+[^>]*?)?>((?!<\1(\s+[^>]*?)?>)[\s\S])*?<\/\1>)*?<\/\1>)*?)<\/\1>/ig,font2ubb);//ï¿½ï¿½3ï¿½ï¿½
+	sUBB = sUBB.replace(/<(font)(\s+[^>]*?)?>(((?!<\1(\s+[^>]*?)?>)[\s\S]|<\1(\s+[^>]*?)?>((?!<\1(\s+[^>]*?)?>)[\s\S])*?<\/\1>)*?)<\/\1>/ig,font2ubb);//ï¿½ï¿½2ï¿½ï¿½
+	sUBB = sUBB.replace(/<(font)(\s+[^>]*?)?>(((?!<\1(\s+[^>]*?)?>)[\s\S])*?)<\/\1>/ig,font2ubb);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 	for(i=0;i<3;i++)sUBB=sUBB.replace(/<(span)(?:\s+[^>]*?)?\s+style\s*=\s*"((?:[^"]*?;)*\s*(?:font-family|font-size|color|background|background-color)\s*:[^"]*)"(?: [^>]+)?>(((?!<\1(\s+[^>]*?)?>)[\s\S]|<\1(\s+[^>]*?)?>((?!<\1(\s+[^>]*?)?>)[\s\S]|<\1(\s+[^>]*?)?>((?!<\1(\s+[^>]*?)?>)[\s\S])*?<\/\1>)*?<\/\1>)*?)<\/\1>/ig,function(all,tag,style,content){
 		var face=style.match(/(?:^|;)\s*font-family\s*:\s*([^;]+)/i),size=style.match(/(?:^|;)\s*font-size\s*:\s*([^;]+)/i),color=style.match(/(?:^|;)\s*color\s*:\s*([^;]+)/i),back=style.match(/(?:^|;)\s*(?:background|background-color)\s*:\s*([^;]+)/i),str=content;
@@ -276,17 +276,17 @@ function html2ubb(sHtml)
 	for(i=0;i<3;i++)sUBB=sUBB.replace(/<(p)(?:\s+[^>]*?)?>(((?!<\1(\s+[^>]*?)?>)[\s\S]|<\1(\s+[^>]*?)?>((?!<\1(\s+[^>]*?)?>)[\s\S]|<\1(\s+[^>]*?)?>((?!<\1(\s+[^>]*?)?>)[\s\S])*?<\/\1>)*?<\/\1>)*?)<\/\1>/ig,"\r\n\r\n$2\r\n\r\n");
 	for(i=0;i<3;i++)sUBB=sUBB.replace(/<(div)(?:\s+[^>]*?)?>(((?!<\1(\s+[^>]*?)?>)[\s\S]|<\1(\s+[^>]*?)?>((?!<\1(\s+[^>]*?)?>)[\s\S]|<\1(\s+[^>]*?)?>((?!<\1(\s+[^>]*?)?>)[\s\S])*?<\/\1>)*?<\/\1>)*?)<\/\1>/ig,"\r\n$2\r\n");
 	
-	sUBB=sUBB.replace(/((\s|&nbsp;)*\r?\n){3,}/g,"\r\n\r\n");//ÏÞÖÆ×î¶à2´Î»»ÐÐ
-	sUBB=sUBB.replace(/^((\s|&nbsp;)*\r?\n)+/g,'');//Çå³ý¿ªÍ·»»ÐÐ
-	sUBB=sUBB.replace(/((\s|&nbsp;)*\r?\n)+$/g,'');//Çå³ý½áÎ²»»ÐÐ
+	sUBB=sUBB.replace(/((\s|&nbsp;)*\r?\n){3,}/g,"\r\n\r\n");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½2ï¿½Î»ï¿½ï¿½ï¿½
+	sUBB=sUBB.replace(/^((\s|&nbsp;)*\r?\n)+/g,'');//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½
+	sUBB=sUBB.replace(/((\s|&nbsp;)*\r?\n)+$/g,'');//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î²ï¿½ï¿½ï¿½ï¿½
 	
 	for(i=1;i<=cnum;i++)sUBB=sUBB.replace("[\tubbcodeplace_"+i+"\t]", arrcode[i]);
 
-	sUBB=sUBB.replace(/<[^<>]+?>/g,'');//É¾³ýËùÓÐHTML±êÇ©
+	sUBB=sUBB.replace(/<[^<>]+?>/g,'');//É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½HTMLï¿½ï¿½Ç©
 	var arrEntities={'lt':'<','gt':'>','nbsp':' ','amp':'&','quot':'"'};
 	sUBB=sUBB.replace(/&(lt|gt|nbsp|amp|quot);/ig,function(all,t){return arrEntities[t];});
 	
-	//Çå³ý¿ÕÄÚÈÝµÄUBB±êÇ©
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ýµï¿½UBBï¿½ï¿½Ç©
 	sUBB=sUBB.replace(/\[([a-z]+)(?:=[^\[\]]+)?\]\s*\[\/\1\]/ig,'');
 	
 	return sUBB;

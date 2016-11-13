@@ -1,0 +1,84 @@
+$(function() {
+    /*------------ 填充dataTables ------------*/
+    var url = contextPath + '/admin/topic/list.do';
+    var gridTable = [ {
+	'data' : 'id',
+	"sWidth" : "2%",
+	'bSortable' : true,
+	'fnCreatedCell' : function(nTd, sData, oData, iRow, iCol) {
+	    $(nTd).html('<input type="checkbox" name="checkList" title="' + sData + '" value="' + sData + '">');
+	}
+    }, {
+	'data' : 'id',
+	'sWidth' : '5%'
+    }, {
+	'data' : 'title',
+	'sWidth' : '30%',
+	"mRender" : function(data, type, full) {
+	    return '<a href="#">' + data + '</a>';
+	}
+    }, {
+	'data' : 'author'
+    }, {
+	'data' : 'recommend',
+	"mRender" : function(data, type, full) {
+	    if (data == '1') {
+		return '<span class="am-badge am-badge-primary">推荐</span>';
+	    } else if (data == '0') {
+		return '<span class="am-badge">不推荐</span>';
+	    } else {
+		return "未知";
+	    }
+	}
+    }, {
+	'data' : 'cname'
+    }, {
+	'data' : 'status',
+	"mRender" : function(data, type, full) {
+	    if (data == '1') {
+		return '<span class="am-badge am-badge-success">已发布</span>';
+	    } else if (data == '0') {
+		return '<span class="am-badge  am-badge-success">未发布</span>';
+	    } else {
+		return "未知";
+	    }
+	}
+    }, {
+	'data' : 'publishDate',
+	"mRender" : function(data) {
+	    return dateFormat(data);
+	}
+    } ];
+    // 页面数据加载
+    var table = initTable(url, gridTable);
+
+    /*------------ 选中行触发事件 ------------*/
+    $('#example tbody').on('click', 'tr', function() {
+	rowActive();
+    });
+
+    /*------------ 修改 ------------*/
+   $('#edit').on('click', function() {
+       layer.msg('开发中...');
+   });
+    
+    
+
+    /*------------ 删除 ------------*/
+    del = function() {
+	var url = contextPath + '/admin/group/delete.do';
+	deleteBatch(url, 'id');
+    }
+
+    /*------------ 新增 ------------*/
+    $('#add').on('click', function() {
+	layer.open({
+	    type : 2,
+	    title : '发表文章',
+	    maxmin : true, // 开启最大化最小化按钮
+	    area: ['80%', '95%'],
+	    /*btn : [ '发表', '关闭' ],*/
+	    content : contextPath + '/admin/topic/add'
+	});
+    });
+});

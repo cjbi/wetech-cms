@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/assets/css/amazeui.min.css" />
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/assets/css/amazeui.datatables.css" />
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/assets/css/admin.css">
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/layer/skin/layer.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/layer/skin/default/layer.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/assets/css/app.css">
 </head>
 <body>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodePage="65001" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodePage="65001" %>
 <%@ Import namespace="System" %>
 <%@ Import namespace="System.Collections" %>
 <%@ Import namespace="System.Configuration" %>
