@@ -118,6 +118,5 @@ public class ChannelService implements IChannelService {
 	public List<Channel> listChannelByType(ChannelType ct) {
 		return channelDao.listChannelByType(ct);
 	}
-	
 
 }

@@ -32,6 +32,7 @@ public interface IChannelDao extends IBaseDao<Channel> {
 	 * @param pid
 	 * @return
 	 */
+	@Deprecated
 	public List<ChannelTree> generateTreeByParent(Integer pid);
 	/**
 	 * 通过一个数组来完成排序

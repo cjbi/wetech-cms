@@ -63,7 +63,14 @@ public class Channel {
 	 * 导航的序号
 	 */
 	private int navOrder;
-	
+	/**
+	 * 叶子节点 0表示否，1表示是
+	 */
+	private int isLeaf;
+	/**
+	 * 描述
+	 */
+	private String descn;
 	
 	@Column(name="nav_order")
 	public int getNavOrder() {
@@ -157,6 +164,20 @@ public class Channel {
 		this.id = id;
 		this.name = name;
 	}
+	@Column(name="is_leaf")
+	public int getIsLeaf() {
+		return isLeaf;
+	}
+	public void setIsLeaf(int isLeaf) {
+		this.isLeaf = isLeaf;
+	}
+	public String getDescn() {
+		return descn;
+	}
+	public void setDescn(String descn) {
+		this.descn = descn;
+	}
+	
 	public Channel(int id, String name,ChannelType ct) {
 		super();
 		this.id = id;
