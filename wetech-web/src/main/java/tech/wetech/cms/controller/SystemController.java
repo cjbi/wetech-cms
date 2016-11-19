@@ -29,48 +29,40 @@ import tech.wetech.cms.web.BaseInfoUtil;
 @Controller
 @AuthClass
 public class SystemController {
+
+	@Inject
 	private IAttachmentService attachmentService;
+	@Inject
 	private IIndexPicService indexPicService;
+	@Inject
 	private IIndexService indexService;
 	
 	
-
-	public IIndexService getIndexService() {
-		return indexService;
+	@RequestMapping("/baseInfo")
+	public String baseInfo() {
+		return "admin/system/baseInfo";
 	}
-	@Inject
-	public void setIndexService(IIndexService indexService) {
-		this.indexService = indexService;
+	
+	@RequestMapping("/clean")
+	public String clean() {
+		return "admin/system/clean";
 	}
-	public IAttachmentService getAttachmentService() {
-		return attachmentService;
-	}
-	@Inject
-	public void setAttachmentService(IAttachmentService attachmentService) {
-		this.attachmentService = attachmentService;
-	}
-
-	public IIndexPicService getIndexPicService() {
-		return indexPicService;
-	}
-	@Inject
-	public void setIndexPicService(IIndexPicService indexPicService) {
-		this.indexPicService = indexPicService;
-	}
-
+	
+	/*----------------------------------------------------------------*/
 	@RequestMapping("/baseinfo")
 	public String showBaseInfo() {
 		return "system/showBaseInfo";
 	}
-	
-	@RequestMapping(value="/baseinfo/update",method=RequestMethod.GET)
-	public String updateBaseInfo(HttpSession session,Model model) {
+
+	@RequestMapping(value = "/baseinfo/update", method = RequestMethod.GET)
+	public String updateBaseInfo(HttpSession session, Model model) {
 		model.addAttribute("baseInfo", session.getServletContext().getAttribute("baseInfo"));
 		return "system/updateBaseInfo";
 	}
-	@RequestMapping(value="/baseinfo/update",method=RequestMethod.POST)
-	public String updateBaseInfo(@Validated BaseInfo baseInfo,BindingResult br,HttpSession session) {
-		if(br.hasErrors()) {
+
+	@RequestMapping(value = "/baseinfo/update", method = RequestMethod.POST)
+	public String updateBaseInfo(@Validated BaseInfo baseInfo, BindingResult br, HttpSession session) {
+		if (br.hasErrors()) {
 			return "system/updateBaseInfo";
 		}
 		BaseInfo bi = BaseInfoUtil.getInstacne().write(baseInfo);
@@ -79,75 +71,78 @@ public class SystemController {
 		indexService.generateTop();
 		return "redirect:/admin/system/baseinfo";
 	}
-	
+
 	@RequestMapping("/cleans")
 	public String listCleans(Model model) {
 		model.addAttribute("attNums", attachmentService.findNoUseAttachmentNum());
 		model.addAttribute("indexPics", listNoUseIndexPicNum(indexPicService.listAllIndexPicName()));
 		return "system/cleans";
 	}
-	
+
 	private File[] listPicFile() {
 		String path = SystemContext.getRealPath();
-		File f = new File(path+"/resources/indexPic");
+		File f = new File(path + "/resources/indexPic");
 		File[] fs = f.listFiles(new FileFilter() {
 			@Override
 			public boolean accept(File pathname) {
-				if(pathname.isDirectory())
+				if (pathname.isDirectory())
 					return false;
 				return true;
 			}
 		});
 		return fs;
 	}
-	
+
 	@RequestMapping("/cleanList/{name}")
-	public String cleanList(@PathVariable String name,Model model) {
-		if(name.equals("atts")) {
+	public String cleanList(@PathVariable String name, Model model) {
+		if (name.equals("atts")) {
 			model.addAttribute("datas", attachmentService.findNoUseAttachment());
 			return "system/cleanAtts";
-		} else if(name.equals("pics")) {
+		} else if (name.equals("pics")) {
 			model.addAttribute("datas", listNoUseIndexPic(indexPicService.listAllIndexPicName()));
 			return "system/cleanPics";
 		}
 		return "";
 	}
-	
-	
+
 	@RequestMapping("/clean/{name}")
-	public String clean(@PathVariable String name,Model model) throws IOException {
-		if(name.equals("atts")) {
+	public String clean(@PathVariable String name, Model model) throws IOException {
+		if (name.equals("atts")) {
 			attachmentService.clearNoUseAttachment();
-		} else if(name.equals("pics")) {
+		} else if (name.equals("pics")) {
 			indexPicService.cleanNoUseIndexPic(listNoUseIndexPic(indexPicService.listAllIndexPicName()));
 		}
 		return "redirect:/admin/system/cleans";
 	}
-	
-	
+
 	/**
 	 * 获取没有使用的首页图片数量
+	 * 
 	 * @param pics
 	 * @return
 	 */
 	private int listNoUseIndexPicNum(List<String> pics) {
 		File[] fs = listPicFile();
 		int count = 0;
-		for(File file:fs) {
-			if(!pics.contains(file.getName())) count++;
+		for (File file : fs) {
+			if (!pics.contains(file.getName()))
+				count++;
 		}
 		return count;
 	}
+
 	/**
 	 * 获取没有使用的首页图片列表
+	 * 
 	 * @param pics
 	 * @return
 	 */
 	private List<String> listNoUseIndexPic(List<String> pics) {
 		File[] fs = listPicFile();
 		List<String> npics = new ArrayList<String>();
-		for(File f:fs) {
-			if(!pics.contains(f.getName())) npics.add(f.getName());
+		for (File f : fs) {
+			if (!pics.contains(f.getName()))
+				npics.add(f.getName());
 		}
 		return npics;
 	}

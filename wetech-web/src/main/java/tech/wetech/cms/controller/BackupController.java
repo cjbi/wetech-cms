@@ -15,19 +15,21 @@ import tech.wetech.cms.service.IIndexService;
 
 @AuthClass
 @Controller
-@RequestMapping("/admin")
+@RequestMapping("/admin/backup")
 public class BackupController {
+	
+	@Inject
 	private IIndexService indexService;
 	
+	@RequestMapping({ "/backup", "/", "" })
+	public String backup(Model model) {
+		return "admin/backup";
+	}
 	
-	public IIndexService getIndexService() {
-		return indexService;
-	}
-	@Inject
-	public void setIndexService(IIndexService indexService) {
-		this.indexService = indexService;
-	}
-
+	
+	
+	/*---------------------------------------------------*/
+	
 	@RequestMapping(value="/backup/add",method=RequestMethod.GET)
 	public String backup() {
 		return "backup/add";
