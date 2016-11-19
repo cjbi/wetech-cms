@@ -261,6 +261,8 @@ reloadTable = function() {
 		    // 如果类型是checkbox，就取消选中
 		    if ($(this).attr('type') == 'checkbox') {
 			$(this).attr('checked', false);
+		    } if($(this).attr('type') == 'radio') {
+			//TODO 不对radio进行操作
 		    }
 		    // 否则如果不等于空，就清空
 		    else if ($(this).val() != '') {

@@ -20,19 +20,16 @@ import tech.wetech.cms.service.ICmsLinkService;
 @AuthClass
 @RequestMapping("/admin/cmsLink")
 public class CmsLinkController {
+	
+	@Inject
 	private ICmsLinkService cmsLinkService;
 	
+	@RequestMapping({ "/cmsLink", "/", "" })
+	public String cmsLink(Model model) {
+		return "admin/cmsLink";
+	}
 	
-	public ICmsLinkService getCmsLinkService() {
-		return cmsLinkService;
-	}
-
-	@Inject
-	public void setCmsLinkService(ICmsLinkService cmsLinkService) {
-		this.cmsLinkService = cmsLinkService;
-	}
-
-
+	/*------------------------------------------------------------*/
 	@RequestMapping("/links")
 	public String list(Model model,String type) {
 		model.addAttribute("datas", cmsLinkService.findByType(type));

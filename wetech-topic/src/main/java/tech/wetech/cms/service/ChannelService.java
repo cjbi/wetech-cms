@@ -36,10 +36,10 @@ public class ChannelService implements IChannelService {
 		this.channelDao = channelDao;
 	}
 
-	public void add(Channel channel, Integer pid) {
-		Integer orders = channelDao.getMaxOrderByParent(pid);
-		if(pid!=null&&pid>0) {
-			Channel pc = channelDao.load(pid);
+	public void add(Channel channel, Integer pId) {
+		Integer orders = channelDao.getMaxOrderByParent(pId);
+		if(pId!=null&&pId>0) {
+			Channel pc = channelDao.load(pId);
 			if(pc==null) throw new CmsException("要添加栏目的父类对象不正确!");
 			channel.setParent(pc);
 		}

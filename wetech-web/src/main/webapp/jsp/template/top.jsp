@@ -23,9 +23,6 @@
 		<ul>
 			<li><span href="<%=request.getContextPath()%>/index">附中首页</span></li>
 				<li>
-					<span href="<%=request.getContextPath()%>/channel/1">学校简介</span>
-				</li>
-				<li>
 					<span href="<%=request.getContextPath()%>/channel/2">校园之窗</span>
 				</li>
 				<li>
@@ -39,9 +36,6 @@
 				</li>
 				<li>
 					<span href="<%=request.getContextPath()%>/channel/22">学生工作</span>
-				</li>
-				<li>
-					<span href="<%=request.getContextPath()%>/channel/18">学科资源</span>
 				</li>
 				<li>
 					<span href="<%=request.getContextPath()%>/channel/28">校园文化</span>

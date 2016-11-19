@@ -2,6 +2,7 @@ package tech.wetech.cms.dto;
 
 public class TreeDto {
 	private int id;
+	private int pId;
 	private String name;
 	private int isParent;
 	private Object obj;
@@ -33,13 +34,22 @@ public class TreeDto {
 		this.obj = obj;
 	}
 	
+	public int getpId() {
+		return pId;
+	}
+	
+	public void setpId(int pId) {
+		this.pId = pId;
+	}
+	
 	public TreeDto() {
 	
 	}
 	
-	public TreeDto(int id, String name, int isParent,Object obj) {
+	public TreeDto(int id,int pId, String name, int isParent,Object obj) {
 		super();
 		this.id = id;
+		this.pId = pId;
 		this.name = name;
 		this.isParent = isParent;
 		this.obj = obj;

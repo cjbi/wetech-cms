@@ -191,4 +191,13 @@ public class Channel {
 		this.customLink = customLink;
 		this.customLinkUrl = customLinkUrl;
 	}
+	
+	@Override
+	public String toString() {
+		return "Channel [id=" + id + ", name=" + name + ", customLink=" + customLink + ", customLinkUrl="
+				+ customLinkUrl + ", type=" + type + ", isIndex=" + isIndex + ", isTopNav=" + isTopNav + ", recommend="
+				+ recommend + ", status=" + status + ", orders=" + orders + ", parent=" + parent + ", navOrder="
+				+ navOrder + ", isLeaf=" + isLeaf + ", descn=" + descn + "]";
+	}
+	
 }

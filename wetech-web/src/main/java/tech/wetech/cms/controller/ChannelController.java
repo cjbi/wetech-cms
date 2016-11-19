@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.validation.Valid;
 
 import org.jboss.logging.Param;
 import org.springframework.stereotype.Controller;
@@ -22,8 +23,10 @@ import tech.wetech.cms.dto.TreeDto;
 import tech.wetech.cms.model.Channel;
 import tech.wetech.cms.model.ChannelTree;
 import tech.wetech.cms.model.ChannelType;
+import tech.wetech.cms.model.CmsException;
 import tech.wetech.cms.service.IChannelService;
 import tech.wetech.cms.service.IIndexService;
+import tech.wetech.cms.web.ResponseData;
 
 @RequestMapping("/admin/channel")
 @Controller
@@ -47,13 +50,64 @@ public class ChannelController {
 		List<Channel> cs = channelService.listByParent(pId);
 		List<TreeDto> tds = new ArrayList<TreeDto>();
 		for (Channel c : cs) {
-			tds.add(new TreeDto(c.getId(), c.getName(), c.getIsLeaf() == 1 ? 0 : 1, c));
+			tds.add(new TreeDto(c.getId(), c.getParent() != null ? c.getParent().getId() : 0, c.getName(),
+					c.getIsLeaf() == 1 ? 0 : 1, c));
 		}
 		return tds;
 	}
 
-	/*--------------------------------------------------------------------*/
+	@ResponseBody
+	@RequestMapping(value = "/add", method = RequestMethod.POST)
+	public ResponseData add(Integer pId, @Valid Channel c, BindingResult br) {
+		System.out.println("发送过来的报文：" + JsonUtil.getInstance().obj2json(c));
+		if (br.hasErrors()) {
+			return new ResponseData("操作失败" + br.getFieldError().toString());
+		}
+		channelService.add(c, pId);
+		return ResponseData.SUCCESS_NO_DATA;
+	}
 
+	@ResponseBody
+	@RequestMapping(value = "/edit", method = RequestMethod.POST)
+	public ResponseData edit(@Valid Channel c, BindingResult br) {
+		System.out.println("发送过来的报文：" + JsonUtil.getInstance().obj2json(c));
+		if (br.hasErrors()) {
+			return new ResponseData("操作失败" + br.getFieldError().toString());
+		}
+		Channel oc = channelService.load(c.getId());
+		oc.setCustomLink(c.getCustomLink());
+		oc.setCustomLinkUrl(c.getCustomLinkUrl());
+		oc.setDescn(c.getDescn());
+		oc.setIsIndex(c.getIsIndex());
+		oc.setIsLeaf(c.getIsLeaf());
+		oc.setIsTopNav(c.getIsTopNav());
+		oc.setName(c.getName());
+		oc.setNavOrder(c.getNavOrder());
+		oc.setOrders(c.getOrders());
+		oc.setRecommend(c.getRecommend());
+		oc.setStatus(c.getStatus());
+		oc.setType(c.getType());
+		System.out.println(oc);
+		channelService.update(oc);
+		return ResponseData.SUCCESS_NO_DATA;
+	}
+	
+	@ResponseBody
+	@RequestMapping("/delete")
+	public ResponseData delete( Integer id, Model model) {
+		try {
+			
+		channelService.delete(id);
+		indexService.generateTop();
+		} catch (CmsException e) {
+			return new ResponseData(false, e.getMessage());
+		}
+		return ResponseData.SUCCESS_NO_DATA;
+	}
+
+	
+	
+	/*--------------------------------------------------------------------*/
 	@RequestMapping("/channels")
 	public String list(Model model) {
 		model.addAttribute("treeDatas", JsonUtil.getInstance().obj2json(channelService.generateTree()));
@@ -84,7 +138,6 @@ public class ChannelController {
 	public @ResponseBody List<ChannelTree> tree() {
 		return channelService.generateTree();
 	}
-
 
 	private void initAdd(Model model, Integer pid) {
 		if (pid == null)

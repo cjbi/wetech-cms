@@ -20,11 +20,11 @@
 			<li class="am-panel"><a class="am-cf" data-am-collapse="{parent:'#collapase-nav-1', target: '#collapse-nav2'}"><span class="am-icon-cogs"></span> 系统配置 <span
 					class="am-icon-angle-right am-fr am-margin-right"></span></a>
 				<ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav2">
-					<li><a href="#" class="am-cf"><span class="am-icon-link"></span> 超级链接管理<span class="am-fr am-margin-right admin-icon-yellow"></span></a></li>
-					<li><a href="#" class="am-cf"><span class="am-icon-sitemap"></span> 网站信息管理<span class="am-fr am-margin-right admin-icon-yellow"></span></a></li>
-					<li><a href="#" class="am-cf"><span class="am-icon-picture-o"></span> 首页图片管理<span class="am-fr am-margin-right admin-icon-yellow"></span></a></li>
-					<li><a href="#" class="am-cf"><span class="am-icon-database"></span> 网站数据备份<span class="am-fr am-margin-right admin-icon-yellow"></span></a></li>
-					<li><a href="#" class="am-cf"><span class="am-icon-cog"></span> 系统清理管理<span class="am-fr am-margin-right admin-icon-yellow"></span></a></li>
+					<li><a href="<%=request.getContextPath()%>/admin/cmsLink" class="am-cf"><span class="am-icon-link"></span> 超级链接管理<span class="am-fr am-margin-right admin-icon-yellow"></span></a></li>
+					<li><a href="<%=request.getContextPath()%>/admin/system/baseinfo" class="am-cf"><span class="am-icon-sitemap"></span> 网站信息管理<span class="am-fr am-margin-right admin-icon-yellow"></span></a></li>
+					<li><a href="<%=request.getContextPath()%>/admin/pic/indexPic" class="am-cf"><span class="am-icon-picture-o"></span> 首页图片管理<span class="am-fr am-margin-right admin-icon-yellow"></span></a></li>
+					<li><a href="<%=request.getContextPath()%>/admin/backup" class="am-cf"><span class="am-icon-database"></span> 网站数据备份<span class="am-fr am-margin-right admin-icon-yellow"></span></a></li>
+					<li><a href="<%=request.getContextPath()%>/admin/system/clean" class="am-cf"><span class="am-icon-cog"></span> 系统清理管理<span class="am-fr am-margin-right admin-icon-yellow"></span></a></li>
 				</ul></li>
 			<li><a href="<%=request.getContextPath()%>/admin/logout"><span class="am-icon-sign-out"></span> 注销</a></li>
 		</ul>

@@ -73,7 +73,7 @@
                     <label class="am-u-sm-2 am-form-label">发布时间</label>
                     <div class="am-u-sm-8">
                         <input type="text" class="am-form-field" placeholder="日历组件"
-                               data-am-datepicker="{theme: 'success'}" readonly/>
+                               data-am-datepicker readonly/>
                     </div>
                     <div class="am-u-sm-2"></div>
                 </div>
@@ -86,10 +86,10 @@
                 </div>
                 <div class="am-form-group">
                     <label class="am-u-sm-2 am-form-label">文章附件</label>
-                    <div class="am-u-sm-8">
+                    <div class="am-u-sm-4">
                         <div id="attachs"></div>
                         <input type="file" id="attach" name="attach"/>
-                        <input type="button" id="uploadFile" value="上传文件"/>
+                        <input type="button" class="am-btn " id="uploadFile" value="上传文件"/>
                     </div>
                     <div class="am-u-sm-2"></div>
                 </div>
