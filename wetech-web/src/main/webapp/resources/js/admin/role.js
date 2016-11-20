@@ -22,11 +22,6 @@ $(function() {
     // 页面数据加载
     var table = initTable(url, gridTable);
 
-    /*------------ 选中行触发事件 ------------*/
-    $('#example tbody').on('click', 'tr', function() {
-	rowActive();
-    });
-
     /*------------ 修改 ------------*/
     edit = function() {
 	var rowLength = table.rows('.selected').data().length;

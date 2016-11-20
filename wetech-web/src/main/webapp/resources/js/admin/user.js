@@ -60,11 +60,6 @@ $(function() {
     // 页面数据加载
     var table = initTable(url, gridTable);
 
-    /*------------ 选中行触发事件 ------------*/
-    $('#example tbody').on('click', 'tr', function() {
-	rowActive();
-    });
-
     /*------------ 通过id加载用户 ------------*/
     load = function(id) {
 	var data = [];

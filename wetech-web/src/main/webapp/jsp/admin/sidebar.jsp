@@ -1,13 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<style>
+a:hover
+{
+background-color:#f5f5f5;
+}
+</style>
 <div class="admin-sidebar am-offcanvas admin-sidebar-list" id="admin-offcanvas">
 	<div class="am-offcanvas-bar admin-offcanvas-bar">
 		<ul class="am-list admin-sidebar-list" id="collapase-nav-1">
-			<li><a href="<%=request.getContextPath()%>/admin"><span class="am-icon-dashboard"></span> 仪表盘</a></li>
+			<li><a href="#" class="am-cf"><span class="am-icon-dashboard"></span> 仪表盘</a></li>
 			<li class="am-panel"><a class="am-cf" data-am-collapse="{parent:'#collapase-nav-1', target: '#collapse-nav'}"><span class="am-icon-user"></span> 用户管理 <span
 					class="am-icon-angle-right am-fr am-margin-right"></span></a>
 				<!-- ul class add am-in to open sidebar item. -->
 				<ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav">
-					<li><a href="<%=request.getContextPath()%>/admin/user" class="am-cf active"><span class="am-icon-info"></span> 用户信息管理<span class="am-fr am-margin-right admin-icon-yellow"></span></a></li>
+					<li><a href="<%=request.getContextPath()%>/admin/user" class="am-cf"><span class="am-icon-info"></span> 用户信息管理<span class="am-fr am-margin-right admin-icon-yellow"></span></a></li>
 					<li><a href="<%=request.getContextPath()%>/admin/group" class="am-cf"><span class="am-icon-group"></span> 用户组管理<span class="am-fr am-margin-right admin-icon-yellow"></span></a></li>
 					<li><a href="<%=request.getContextPath()%>/admin/role" class="am-cf"><span class="am-icon-child"></span> 用户角色管理<span class="am-fr am-margin-right admin-icon-yellow"></span></a></li>
 				</ul></li>

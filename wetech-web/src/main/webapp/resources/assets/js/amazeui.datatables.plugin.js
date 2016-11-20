@@ -172,8 +172,13 @@ function obj(tkey, tval) { // 动态生成类变量方法
 }
 
 /*------------ checkbox全选 ------------*/
-$('input[id="checkAll"]').bind('click', function() {
+$('div').on('click','th input[type="checkbox"]', function() {
     checkAll();
+});
+
+/*------------ 选中行触发事件 ------------*/
+$('div').on('click', 'td input[type="checkbox"]', function() {
+	rowActive();
 });
 
 rowActive = function() {

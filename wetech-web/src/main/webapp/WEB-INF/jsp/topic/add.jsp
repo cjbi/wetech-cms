@@ -29,7 +29,7 @@
 <input type="hidden" id="sid" value="<%=session.getId()%>"/>
 <div class="admin-content">
     <div class="admin-content-body">
-        <div class="am-cf am-padding">
+        <div class="am-cf am-padding am-padding-bottom-0">
             <div class="am-fl am-cf">
                 <strong class="am-text-primary am-text-lg">文章信息管理</strong> /
                 <small>新增文章</small>

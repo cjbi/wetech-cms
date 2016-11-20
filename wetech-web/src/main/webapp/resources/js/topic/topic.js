@@ -52,11 +52,6 @@ $(function() {
     // 页面数据加载
     var table = initTable(url, gridTable);
 
-    /*------------ 选中行触发事件 ------------*/
-    $('#example tbody').on('click', 'tr', function() {
-	rowActive();
-    });
-
     /*------------ 修改 ------------*/
    $('#edit').on('click', function() {
        layer.msg('开发中...');
