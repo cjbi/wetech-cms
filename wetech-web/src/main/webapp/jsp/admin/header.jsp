@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <header class="am-topbar am-topbar-inverse admin-header">
 	<div class="am-topbar-brand">
-		<strong>Wetech CMS </strong><small>后台管理</small>
+		<strong>WETECH CMS </strong><small>后台管理</small>
 	</div>
 	<button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}">
 		<span class="am-sr-only">导航切换</span><span class="am-icon-bars"></span>

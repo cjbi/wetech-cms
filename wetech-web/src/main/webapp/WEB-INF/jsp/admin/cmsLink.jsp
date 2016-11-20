@@ -8,7 +8,7 @@
 	<div class="admin-content-body">
 		<div class="am-cf am-padding am-padding-bottom-0">
 			<div class="am-fl am-cf">
-				<strong class="am-text-primary am-text-lg">用户管理</strong> / <small>用户组管理</small>
+				<strong class="am-text-primary am-text-lg">系统配置</strong> / <small>超级链接管理</small>
 			</div>
 		</div>
 		<hr>
@@ -49,9 +49,11 @@
 				<thead>
 					<tr>
 						<th><input type="checkbox" id='checkAll'></th>
-						<th>组 ID</th>
-						<th>组名称</th>
-						<th>组描述</th>
+						<th>链接 ID</th>
+						<th>标题</th>
+						<th>超链接</th>
+						<th>类型</th>
+						<th>排序</th>
 					</tr>
 				</thead>
 			</table>
@@ -97,4 +99,4 @@
 	</form>
 </div>
 
-<script src="<%=request.getContextPath()%>/resources/js/admin/group.js"></script>
+<script src="<%=request.getContextPath()%>/resources/js/admin/cmsLink.js"></script>

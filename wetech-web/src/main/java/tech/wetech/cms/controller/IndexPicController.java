@@ -33,6 +33,7 @@ import tech.wetech.cms.model.IndexPic;
 import tech.wetech.cms.service.IAttachmentService;
 import tech.wetech.cms.service.IIndexPicService;
 import tech.wetech.cms.service.IIndexService;
+import tech.wetech.cms.web.DataTableMap;
 
 @Controller
 @RequestMapping("/admin/pic")
@@ -48,9 +49,22 @@ public class IndexPicController {
 	public final static String FILE_PATH = "/resources/indexPic";
 	public final static int T_W = 120;
 
+	
+	private void initIndexPic(Model model) {
+		Map<String, Integer> mm = indexPicService.getMinAdnMaxPos();
+		model.addAttribute("min", mm.get("min"));
+		model.addAttribute("max", mm.get("max"));
+	}
+	
 	@RequestMapping("/indexPic")
-	public String indexPic() {
+	public String indexPic(Model model) {
+		initIndexPic( model);
 		return "admin/pic/indexPic";
+	}
+	@ResponseBody
+	@RequestMapping("/listIndexPic")
+	public Map<String, Object> listIndexPic() {
+		return DataTableMap.getMapData(indexPicService.findIndexPic());
 	}
 	
 	/*-----------------------------------------------------*/

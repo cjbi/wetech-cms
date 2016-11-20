@@ -49,9 +49,12 @@
 				<thead>
 					<tr>
 						<th><input type="checkbox" id='checkAll'></th>
-						<th>组 ID</th>
-						<th>组名称</th>
-						<th>组描述</th>
+						<th>图片 ID</th>
+						<th>缩略图</th>
+						<th>图片标题</th>
+						<th>状态</th>
+						<th>链接类型</th>
+						<th>位置</th>
 					</tr>
 				</thead>
 			</table>
@@ -97,4 +100,4 @@
 	</form>
 </div>
 
-<script src="<%=request.getContextPath()%>/resources/js/admin/group.js"></script>
+<script src="<%=request.getContextPath()%>/resources/js/admin/pic/indexPic.js"></script>
