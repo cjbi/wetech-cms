@@ -93,6 +93,7 @@
 			<tx:method name="del*" propagation="REQUIRED"/>
 			<tx:method name="update*" propagation="REQUIRED"/>
 			<tx:method name="save*" propagation="REQUIRED"/>
+			<tx:method name="clear*" propagation="REQUIRED"/>
 		</tx:attributes>
 	</tx:advice>
 	

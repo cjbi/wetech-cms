@@ -46,7 +46,7 @@ $(function() {
 	// 将值赋给编辑表单
 	$.each(treeNode.obj, function(key, value) {
 	    if ($('#edit-form [name="' + key + '"]').attr('type') == 'radio') {
-		$('#edit-form [name="' + key + '"][value="' + value + '"]').attr('checked', true);
+		$('#edit-form [name="' + key + '"][value="' + value + '"]').prop('checked', true);
 	    } else {
 		$('#edit-form [name="' + key + '"]').val(value);
 	    }

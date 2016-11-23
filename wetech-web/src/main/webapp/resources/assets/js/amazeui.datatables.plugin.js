@@ -1,3 +1,5 @@
+//TODO 注意： jq 1.8 以后 使用prop选固定元素，attr不能选固有元素
+
 /*------------ 多列查询 ------------*/
 jQuery.fn.dataTableExt.oApi.fnMultiFilter = function(oSettings, oData) {
     for ( var key in oData) {
@@ -13,7 +15,9 @@ jQuery.fn.dataTableExt.oApi.fnMultiFilter = function(oSettings, oData) {
     }
     this.oApi._fnReDraw(oSettings);
 };
+
 var tableName = 'example';
+
 /*------------ 初始化table ------------*/
 initTable = function(url, gridTable, ServerParams, initComplete, tableNames) {
     tableName = tableNames == undefined ? 'example' : tableNames;
@@ -144,7 +148,7 @@ deleteBatch = function(url, pk) {
     }
 };
 
-/*------------ 将值填充到表单中 ------------*/
+/*------------ 将值填充到表单中(修改表单回显) ------------*/
 initData = function() {// 将值填充到表单中
     var table = $('#' + tableName).DataTable();
     var rowLength = table.rows('.selected').data().length;
@@ -163,7 +167,14 @@ initData = function() {// 将值填充到表单中
     }
     var data = table.rows('.selected').data()[0];
     $.each(data, function(key, value) {
-	$("#edit-modal [name='" + key + "']").val(value);
+
+	// 如果类型为单选框
+	if ($('#edit-form [name="' + key + '"]').attr('type') == 'radio') {
+	    $('#edit-form [name="' + key + '"][value="' + value + '"]').prop('checked', true);
+	} else {
+	    $("#edit-modal [name='" + key + "']").val(value);
+	}
+
     });
 };
 
@@ -172,13 +183,13 @@ function obj(tkey, tval) { // 动态生成类变量方法
 }
 
 /*------------ checkbox全选 ------------*/
-$('div').on('click','th input[type="checkbox"]', function() {
+$('div').on('click', 'th input[type="checkbox"]', function() {
     checkAll();
 });
 
 /*------------ 选中行触发事件 ------------*/
 $('div').on('click', 'td input[type="checkbox"]', function() {
-	rowActive();
+    rowActive();
 });
 
 rowActive = function() {
@@ -199,14 +210,22 @@ reloadTable = function() {
 /*------------ 对象级别的插件开发 ------------*/
 (function($) {
 
-    // 点确定时提交表单，只支持文本框提交
+    // 点确定时提交表单，目前只支持文本框和单选框提交
     // url 链接地址
     $.fn.submit = function(url) {
 	var table = $('#' + tableName).DataTable();
 	var dataValue = {};
 	var __modalDom = $(this);
 	__modalDom.children('form').find('[name]').each(function() {
-	    dataValue[$(this).attr('name')] = $(this).val();
+	    //如果是单选框
+	    if ($(this).attr('type') == 'radio') {
+		//如果已经选中
+		if($(this).is(':checked')) {
+		    dataValue[$(this).attr('name')] = $(this).val();
+		}
+	    } else {
+		dataValue[$(this).attr('name')] = $(this).val();
+	    }
 	});
 	console.log(dataValue);
 	$.ajax({
@@ -223,7 +242,6 @@ reloadTable = function() {
 		table.ajax.reload();
 	    },
 	    error : function(data) {
-
 		layer.msg('操作失败', {
 		    time : 2000,
 		    icon : 5
@@ -232,23 +250,21 @@ reloadTable = function() {
 	});
 
     };
+
     // 封装layer.open ，暴露部分参数
     $.fn.layerOpen = function(opts) {
 	// Our plugin implementation code goes here.
 	var __modalDom = $(this);
-	console.log('---------------------->');
-
 	var __title = $.extend({}, opts ? (opts.title || {}) : {});
-
 	var __yes = $.extend(function(index, layero) {
 	    layer.msg('请定义参数yes');
 	}, opts ? (opts.yes || {}) : {});
-
 	var __defaultOpts = $.extend({
 	    title : __title,
 	    type : 1,
-	  /* shift : 5,
-	    moveType : 1,*/
+	    /*
+	     * shift : 5, moveType : 1,
+	     */
 	    // 此参数开启最大化最小化
 	    // maxmin: true,
 	    area : [ '600px', 'auto' ],
@@ -265,9 +281,14 @@ reloadTable = function() {
 		__modalDom.children('form').find('[name]').each(function() {
 		    // 如果类型是checkbox，就取消选中
 		    if ($(this).attr('type') == 'checkbox') {
-			$(this).attr('checked', false);
-		    } if($(this).attr('type') == 'radio') {
-			//TODO 不对radio进行操作
+			$(this).prop('checked', false);
+		    } else if ($(this).attr('type') == 'radio') {
+			// 2016-11-21 更新 默认radio为 0 选中
+			if ($(this).attr('value') == '0') {
+			    $(this).prop('checked', true);
+			} else {
+			    $(this).prop('checked', false);
+			}
 		    }
 		    // 否则如果不等于空，就清空
 		    else if ($(this).val() != '') {

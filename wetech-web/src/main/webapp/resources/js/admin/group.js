@@ -1,8 +1,3 @@
-$(document).ready(function() {
-    /*------------ 初始化 ------------*/
-
-});
-
 $(function() {
     /*------------ 填充dataTables ------------*/
     var url = contextPath + '/admin/group/list.do';

@@ -1,5 +1,7 @@
 package tech.wetech.cms.controller;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import org.springframework.stereotype.Controller;
@@ -7,7 +9,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import tech.wetech.basic.model.BackupFile;
 import tech.wetech.basic.model.SystemContext;
 import tech.wetech.basic.util.BackupFileUtil;
 import tech.wetech.cms.auth.AuthClass;
@@ -24,6 +28,13 @@ public class BackupController {
 	@RequestMapping({ "/backup", "/", "" })
 	public String backup(Model model) {
 		return "admin/backup";
+	}
+	
+	@ResponseBody
+	@RequestMapping("/listBackups")
+	public List<BackupFile> list() {
+		BackupFileUtil bfu = BackupFileUtil.getInstance(SystemContext.getRealPath());
+		return bfu.listBackups();
 	}
 	
 	

@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/assets/css/amazeui.datatables.css" />
-
 <!-- content start -->
 <div class="admin-content">
 	<div class="admin-content-body">
@@ -12,49 +10,64 @@
 			</div>
 		</div>
 		<hr>
-		<div class="am-g">
-			<div class="am-u-sm-12 am-u-md-6">
-				<div class="am-btn-toolbar">
-					<div class="am-btn-group am-btn-group-xs">
-						<button type="button" class="am-btn am-btn-default" onclick="add()">
-							<span class="am-icon-plus"></span> 新增
-						</button>
-						<button type="button" class="am-btn am-btn-default" onclick="edit()">
-							<span class="am-icon-edit"></span> 修改
-						</button>
-						<button type="button" class="am-btn am-btn-default" onclick="del()">
-							<span class="am-icon-trash-o"></span> 删除
-						</button>
+		<div class="am-u-sm-12">
+			<div class="am-panel am-panel-default">
+				<div class="am-panel-hd">
+					<span class="am-icon-recycle am-animation-scale-up"></span> 系统清理管理
+				</div>
+				<div class="am-tabs" data-am-tabs>
+					<ul class="am-tabs-nav am-nav am-nav-tabs">
+						<li class="am-active"><a href="#tab1">未引用的垃圾附件</a></li>
+						<li><a href="#tab2">未引用的首页图片</a></li>
+					</ul>
+					<div class="am-tabs-bd">
+						<div class="am-tab-panel am-fade am-in am-active" id="tab1">
+							<div class="am-g am-g-fixed">
+								<div class="am-u-sm-6">
+									当前未引用的垃圾附件共<span id="attaCount" class="am-badge am-badge-warning am-round am-animation-slide-top">0</span>条
+								</div>
+								<div class="am-u-sm-6">
+									<button id="cleanAtta" class="am-btn-xs am-btn-danger am-round am-animation-fade">
+										<i class="am-icon-trash-o"></i> 清理
+									</button>
+								</div>
+							</div>
+							<hr>
+							<table class="am-table am-table-striped  am-table-hover table-main am-table-bordered am-table-compact am-text-nowrap" width="100%" id="example">
+								<thead>
+									<tr>
+										<th>文件 ID</th>
+										<th>原文件名</th>
+										<th>新文件名</th>
+										<th>大小</th>
+										<th>类型</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<div class="am-tab-panel am-fade" id="tab2">
+							<div class="am-g am-g-fixed">
+								<div class="am-u-sm-6">当前未引用的首页图片共<span id="indexPicCount" class="am-badge am-badge-warning am-round am-animation-slide-top">0</span>条</div>
+								<div class="am-u-sm-6">
+									<button id="cleanIndexPic" class="am-btn-xs am-btn-danger am-round am-animation-fade">
+										<i class="am-icon-trash-o"></i> 清理
+									</button>
+								</div>
+							</div>
+							<hr>
+							<table class="am-table am-table-striped am-table-hover table-main am-table-bordered am-table-compact am-text-nowrap dataTable no-footer">
+								<thead>
+									<tr>
+										<th>缩略图</th>
+										<th>名称</th>
+									</tr>
+								</thead>
+								<tbody></tbody>
+							</table>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="am-u-sm-12 am-u-md-3">
-				<div class="am-form-group">
-					<select data-am-selected="{btnSize: 'sm'}">
-						<option value="id">组 ID</option>
-						<option value="name">组名称</option>
-					</select>
-				</div>
-			</div>
-			<div class="am-u-sm-12 am-u-md-3">
-				<div class="am-input-group am-input-group-sm">
-					<input type="text" class="am-form-field"> <span class="am-input-group-btn">
-						<button class="am-btn am-btn-default" type="button">搜索</button>
-					</span>
-				</div>
-			</div>
-		</div>
-		<div class="am-u-sm-12">
-			<table class="am-table am-table-striped  am-table-hover table-main am-table-bordered am-table-compact am-text-nowrap" width="100%" id="example">
-				<thead>
-					<tr>
-						<th><input type="checkbox" id='checkAll'></th>
-						<th>组 ID</th>
-						<th>组名称</th>
-						<th>组描述</th>
-					</tr>
-				</thead>
-			</table>
 		</div>
 	</div>
 	<!-- footer start -->
@@ -62,39 +75,4 @@
 	<!-- footer end -->
 </div>
 <!-- content end -->
-<div id="add-modal">
-	<form class="am-form am-form-horizontal" id="add-form">
-		<br>
-		<div class="am-form-group">
-			<label class="am-u-sm-2 am-form-label">组名称</label>
-			<div class="am-u-sm-10">
-				<input type="text" id="" name="name" placeholder="用户组名称(必填)" minlength="3" required>
-			</div>
-		</div>
-		<div class="am-form-group">
-			<label class="am-u-sm-2 am-form-label">组描述</label>
-			<div class="am-u-sm-10">
-				<textarea id="" name="descr" placeholder="用户组的描述信息" maxlength="100"></textarea>
-			</div>
-		</div>
-	</form>
-</div>
-<div id="edit-modal">
-	<form class="am-form am-form-horizontal" id="edit-form">
-		<br> <input type="hidden" name="id">
-		<div class="am-form-group">
-			<label class="am-u-sm-2 am-form-label">组名称</label>
-			<div class="am-u-sm-10">
-				<input type="text" name="name" placeholder="用户组名称(必填)" required>
-			</div>
-		</div>
-		<div class="am-form-group">
-			<label class="am-u-sm-2 am-form-label">组描述</label>
-			<div class="am-u-sm-10">
-				<textarea name="descr" placeholder="用户组的描述信息" maxlength="100"></textarea>
-			</div>
-		</div>
-	</form>
-</div>
-
-<script src="<%=request.getContextPath()%>/resources/js/admin/group.js"></script>
+<script src="<%=request.getContextPath()%>/resources/js/admin/system/clean.js"></script>

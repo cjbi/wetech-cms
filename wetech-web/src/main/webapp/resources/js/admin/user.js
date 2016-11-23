@@ -76,7 +76,7 @@ $(function() {
     
     // draw event 事件
     $('#example').on( 'draw.dt', function () {
-	    console.log( 'Redraw occurred at: '+new Date().getTime() );
+	    /*console.log( 'Redraw occurred at: '+new Date().getTime() );*/
      } );
 
     /*------------ 修改 ------------*/
@@ -108,18 +108,20 @@ $(function() {
 	$('#edit-modal [name=groupIds]').each(function() {
 	    // alert($(this).val());
 	    if (groupIds.indexOf($(this).val()) != -1) {
-		$(this).attr('checked', true);
+		console.log('--------->'+$(this).val());
+		$(this).prop('checked', true);
 	    } else {
-		$(this).attr('checked', false);
+		$(this).prop('checked', false);
 	    }
 	});
 
 	$('#edit-modal [name=roleIds]').each(function() {
 	    // alert($(this).val());
 	    if (roleIds.indexOf($(this).val()) != -1) {
-		$(this).attr('checked', true);
+		console.log('---------<'+$(this).val());
+		$(this).prop('checked', true);
 	    } else {
-		$(this).attr('checked', false);
+		$(this).prop('checked', false);
 	    }
 	});
 	// 将数据填充到模态框 结束
@@ -137,12 +139,12 @@ $(function() {
 			data.push($(this).val());
 		    });
 		    $('#edit-modal [name=roleIds]').each(function(e) {
-			if ($(this).attr('checked')) {
+			if ($(this).prop('checked')) {
 			    roleIds.push($(this).val());
 			}
 		    });
 		    $('#edit-modal [name=groupIds]').each(function(e) {
-			if ($(this).attr('checked')) {
+			if ($(this).prop('checked')) {
 			    groupIds.push($(this).val());
 			}
 		    });
@@ -211,12 +213,12 @@ $(function() {
 			data.push($(this).val());
 		    });
 		    $('#add-modal [name=roleIds]').each(function(e) {
-			if ($(this).attr('checked')) {
+			if ($(this).prop('checked')) {
 			    roleIds.push($(this).val());
 			}
 		    });
 		    $('#add-modal [name=groupIds]').each(function(e) {
-			if ($(this).attr('checked')) {
+			if ($(this).prop('checked')) {
 			    groupIds.push($(this).val());
 			}
 		    });

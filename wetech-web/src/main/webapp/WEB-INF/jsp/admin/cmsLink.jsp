@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/assets/css/amazeui.datatables.css" />
-
 <!-- content start -->
 <div class="admin-content">
 	<div class="admin-content-body">
@@ -53,6 +51,7 @@
 						<th>标题</th>
 						<th>超链接</th>
 						<th>类型</th>
+						<th>打开方式</th>
 						<th>排序</th>
 					</tr>
 				</thead>
@@ -68,35 +67,100 @@
 	<form class="am-form am-form-horizontal" id="add-form">
 		<br>
 		<div class="am-form-group">
-			<label class="am-u-sm-2 am-form-label">组名称</label>
+			<label class="am-u-sm-2 am-form-label">超链接标题</label>
 			<div class="am-u-sm-10">
-				<input type="text" id="" name="name" placeholder="用户组名称(必填)" minlength="3" required>
+				<input type="text" name="title" placeholder="请输入超链接标题(必填)" required>
 			</div>
 		</div>
 		<div class="am-form-group">
-			<label class="am-u-sm-2 am-form-label">组描述</label>
+			<label class="am-u-sm-2 am-form-label">超链接地址</label>
 			<div class="am-u-sm-10">
-				<textarea id="" name="descr" placeholder="用户组的描述信息" maxlength="100"></textarea>
+				<input type="text" name="url" placeholder="请输入超链接地址">
 			</div>
 		</div>
+		<div class="am-form-group">
+			<label class="am-u-sm-2 am-form-label">超链接类别</label>
+			<div class="am-u-sm-10">
+				<div class="am-padding-0  am-u-sm-3">
+					<select id="add-type">
+						<option value="0">请选择类型</option>
+					</select>
+					</div>
+					<div class="am-padding-right-0  am-u-sm-9">
+						<input type="text" id="" name="type" placeholder="输入超链接类别" required readonly>
+					</div>
+				</div>
+			</div>
+			<div class="am-form-group">
+				<label class="am-u-sm-2 am-form-label">打开方式</label>
+				<div class="am-u-sm-10">
+					<label class="am-radio-inline"> <input type="radio" value="0" name="newWin" checked>本窗口
+					</label> <label class="am-radio-inline"> <input type="radio" value="1" name="newWin">新窗口
+					</label>
+				</div>
+			</div>
+			<div class="am-form-group">
+				<label class="am-u-sm-2 am-form-label">链接标签ID</label>
+				<div class="am-u-sm-10">
+					<input type="text" name="urlId" placeholder="请输入链接标签ID">
+				</div>
+			</div>
+			<div class="am-form-group">
+				<label class="am-u-sm-2 am-form-label">链接标签类别</label>
+				<div class="am-u-sm-10">
+					<input type="text" name="urlClass" placeholder="请输入链接标签类别">
+				</div>
+			</div>
 	</form>
 </div>
 <div id="edit-modal">
 	<form class="am-form am-form-horizontal" id="edit-form">
-		<br> <input type="hidden" name="id">
+		<br> <input type="hidden" name="id"><input type="hidden" name="pos">
 		<div class="am-form-group">
-			<label class="am-u-sm-2 am-form-label">组名称</label>
+			<label class="am-u-sm-2 am-form-label">超链接标题</label>
 			<div class="am-u-sm-10">
-				<input type="text" name="name" placeholder="用户组名称(必填)" required>
+				<input type="text" name="title" placeholder="请输入超链接标题(必填)" required>
 			</div>
 		</div>
 		<div class="am-form-group">
-			<label class="am-u-sm-2 am-form-label">组描述</label>
+			<label class="am-u-sm-2 am-form-label">超链接地址</label>
 			<div class="am-u-sm-10">
-				<textarea name="descr" placeholder="用户组的描述信息" maxlength="100"></textarea>
+				<input type="text" name="url" placeholder="请输入超链接地址">
 			</div>
 		</div>
+		<div class="am-form-group">
+			<label class="am-u-sm-2 am-form-label">超链接类别</label>
+			<div class="am-u-sm-10">
+				<div class="am-padding-0  am-u-sm-3">
+					<select id="edit-type">
+						<option value="0">请选择类型</option>
+					</select>
+					</div>
+					<div class="am-padding-right-0  am-u-sm-9">
+						<input type="text" name="type" placeholder="输入超链接类别" required readonly>
+					</div>
+				</div>
+			</div>
+			<div class="am-form-group">
+				<label class="am-u-sm-2 am-form-label">打开方式</label>
+				<div class="am-u-sm-10">
+					<label class="am-radio-inline"> <input type="radio" value="0" name="newWin" checked>本窗口
+					</label> <label class="am-radio-inline"> <input type="radio" value="1" name="newWin">新窗口
+					</label>
+				</div>
+			</div>
+			<div class="am-form-group">
+				<label class="am-u-sm-2 am-form-label">链接标签ID</label>
+				<div class="am-u-sm-10">
+					<input type="text" name="urlId" placeholder="请输入链接标签ID">
+				</div>
+			</div>
+			<div class="am-form-group">
+				<label class="am-u-sm-2 am-form-label">链接标签类别</label>
+				<div class="am-u-sm-10">
+					<input type="text" name="urlClass" placeholder="请输入链接标签类别">
+				</div>
+			</div>
 	</form>
 </div>
-
 <script src="<%=request.getContextPath()%>/resources/js/admin/cmsLink.js"></script>
