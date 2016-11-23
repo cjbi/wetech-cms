@@ -190,5 +190,9 @@
 		</div>
 	</form>
 </div>
-
-<script src="<%=request.getContextPath()%>/resources/js/admin/user.js"></script>
+<!-- 直接在标签内加载js资源会阻塞浏览器主线程，最终影响用户体验，不推荐这么用 -->
+<!-- 主线程中同步的 XMLHttpRequest 已不推荐使用，因其对终端用户的用户体验存在负面影响。更多帮助请见 http://xhr.spec.whatwg.org/ -->
+<!-- Synchronous XMLHttpRequest on the main thread is deprecated because of its detrimental effects to the end user's experience. For more help, check https://xhr.spec.whatwg.org/.  -->
+<script type="text/javascript">
+	$.getScript("<%=request.getContextPath()%>/resources/js/admin/user.js");
+</script>

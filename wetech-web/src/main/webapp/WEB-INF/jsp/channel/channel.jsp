@@ -255,5 +255,6 @@ div#rMenu ul {
 		<li><a href="#" id="rDel">删除节点</a></li>
 	</ul>
 </div>
-
-<script src="<%=request.getContextPath()%>/resources/js/channel/channel.js"></script>
+<script type="text/javascript">
+	$.getScript("<%=request.getContextPath()%>/resources/js/channel/channel.js");
+</script>

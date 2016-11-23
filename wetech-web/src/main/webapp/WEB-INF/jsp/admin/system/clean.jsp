@@ -75,4 +75,6 @@
 	<!-- footer end -->
 </div>
 <!-- content end -->
-<script src="<%=request.getContextPath()%>/resources/js/admin/system/clean.js"></script>
+<script type="text/javascript">
+	$.getScript("<%=request.getContextPath()%>/resources/js/admin/system/clean.js");
+</script>

@@ -128,6 +128,6 @@
 		</div>
 	</form>
 </div>
-
-
-<script src="<%=request.getContextPath()%>/resources/js/admin/system/baseInfo.js"></script>
+<script type="text/javascript">
+	$.getScript("<%=request.getContextPath()%>/resources/js/admin/system/baseInfo.js");
+</script>

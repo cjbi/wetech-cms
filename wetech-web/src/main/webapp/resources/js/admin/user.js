@@ -1,15 +1,15 @@
 $(function() {
     /*------------ 填充dataTables ------------*/
-    var url ={
-            'url': contextPath+'/admin/user/list.do',
-            'data': function ( d ) {
-        	if($('#searchValue').val() != '') {
-        	    d.searchCode = $('#searchCode').val();
-        	    d.searchValue = $('#searchValue').val();
-        	}
-            }
-        };
-    
+    var url = {
+	'url' : contextPath + '/admin/user/list.do',
+	'data' : function(d) {
+	    if ($('#searchValue').val() != '') {
+		d.searchCode = $('#searchCode').val();
+		d.searchValue = $('#searchValue').val();
+	    }
+	}
+    };
+
     var gridTable = [ {
 	'data' : 'id',
 	'sWidth' : '2%',
@@ -36,27 +36,28 @@ $(function() {
 	}
     }, {
 	'data' : 'email'
-    },{'data' : 'phone'}, {
+    }, {
+	'data' : 'phone'
+    }, {
 	'data' : 'createDate',
 	"mRender" : function(data) {
 	    return dateFormat(data);
 	}
     } ];
 
-/*
- * // 上方btnPlugin DIV中追加HTML function initComplete(data) { var btnPlugin = '<div
- * class="am-btn-group am-btn-group-xs"><button type="button" class="am-btn
- * am-btn-default" id="btn-add" onclick="add()"> <span class="am-icon-plus"></span>
- * 新增 </button> <button type="button" class="am-btn am-btn-default"
- * onclick="edit()"> <span class="am-icon-edit"></span> 修改 </button> <button
- * type="button" class="am-btn am-btn-default" onclick="del()"> <span
- * class="am-icon-trash-o"></span> 删除 </button> <button type="button"
- * class="am-btn am-btn-default" id="test" onclick="test()"> <span
- * class="am-icon-refresh"></span> 测试 </button></div>'; // <button
- * class="am-btn am-btn-default" id="expCsv">导 出全部</button>
- * $("#btnPlugin").append(btnPlugin);// 在表格上方btnPlugin DIV中追加HTML
- *  }
- */
+    /*
+     * // 上方btnPlugin DIV中追加HTML function initComplete(data) { var btnPlugin = '<div
+     * class="am-btn-group am-btn-group-xs"><button type="button" class="am-btn
+     * am-btn-default" id="btn-add" onclick="add()"> <span class="am-icon-plus"></span>
+     * 新增 </button> <button type="button" class="am-btn am-btn-default"
+     * onclick="edit()"> <span class="am-icon-edit"></span> 修改 </button>
+     * <button type="button" class="am-btn am-btn-default" onclick="del()">
+     * <span class="am-icon-trash-o"></span> 删除 </button> <button type="button"
+     * class="am-btn am-btn-default" id="test" onclick="test()"> <span
+     * class="am-icon-refresh"></span> 测试 </button></div>'; // <button
+     * class="am-btn am-btn-default" id="expCsv">导 出全部</button>
+     * $("#btnPlugin").append(btnPlugin);// 在表格上方btnPlugin DIV中追加HTML }
+     */
     // 页面数据加载
     var table = initTable(url, gridTable);
 
@@ -65,7 +66,7 @@ $(function() {
 	var data = [];
 	$.ajax({
 	    type : "GET",
-	    url : contextPath+'/admin/user/load/' + id,
+	    url : contextPath + '/admin/user/load/' + id,
 	    async : false,
 	    success : function(d) {
 		data = d;
@@ -73,11 +74,11 @@ $(function() {
 	});
 	return data;
     }
-    
+
     // draw event 事件
-    $('#example').on( 'draw.dt', function () {
-	    /*console.log( 'Redraw occurred at: '+new Date().getTime() );*/
-     } );
+    $('#example').on('draw.dt', function() {
+	/* console.log( 'Redraw occurred at: '+new Date().getTime() ); */
+    });
 
     /*------------ 修改 ------------*/
     edit = function() {
@@ -99,33 +100,32 @@ $(function() {
 	// 将数据填充到模态框 开始
 	initData();
 	var data = table.rows('.selected').data()[0];
-	var userData = load(data.id);
-	console.log(userData.groupIds.join());
+	$.ajax({
+	    url : contextPath + '/admin/user/load/' + data.id,
+	    success : function(d) {
+		var groupIds = d.groupIds.join();
+		var roleIds = d.roleIds.join();
 
-	var groupIds = userData.groupIds.join();
-	var roleIds = userData.roleIds.join();
-
-	$('#edit-modal [name=groupIds]').each(function() {
-	    // alert($(this).val());
-	    if (groupIds.indexOf($(this).val()) != -1) {
-		console.log('--------->'+$(this).val());
-		$(this).prop('checked', true);
-	    } else {
-		$(this).prop('checked', false);
-	    }
-	});
-
-	$('#edit-modal [name=roleIds]').each(function() {
-	    // alert($(this).val());
-	    if (roleIds.indexOf($(this).val()) != -1) {
-		console.log('---------<'+$(this).val());
-		$(this).prop('checked', true);
-	    } else {
-		$(this).prop('checked', false);
+		$('#edit-modal [name=groupIds]').each(function() {
+		    // alert($(this).val());
+		    if (groupIds.indexOf($(this).val()) != -1) {
+			$(this).prop('checked', true);
+		    } else {
+			$(this).prop('checked', false);
+		    }
+		});
+		$('#edit-modal [name=roleIds]').each(function() {
+		    // alert($(this).val());
+		    if (roleIds.indexOf($(this).val()) != -1) {
+			$(this).prop('checked', true);
+		    } else {
+			$(this).prop('checked', false);
+		    }
+		});
 	    }
 	});
 	// 将数据填充到模态框 结束
-	
+
 	var opts = {
 	    title : '修改用户',
 	    yes : function(index, layero) {
@@ -151,7 +151,7 @@ $(function() {
 		    console.log(data);
 		    $.ajax({
 			type : 'post',
-			url : contextPath+'/admin/user/edit.do',
+			url : contextPath + '/admin/user/edit.do',
 			dataType : 'json',
 			data : {
 			    'id' : data[0],
@@ -189,12 +189,12 @@ $(function() {
 		}
 	    }
 	};
-	 $('#edit-modal').layerOpen(opts);
+	$('#edit-modal').layerOpen(opts);
     }
 
     /*------------ 删除 ------------*/
     del = function() {
-	var url = contextPath+'/admin/user/delete.do';
+	var url = contextPath + '/admin/user/delete.do';
 	deleteBatch(url, 'id');
     }
 
@@ -224,7 +224,7 @@ $(function() {
 		    });
 		    $.ajax({
 			type : 'post',
-			url : contextPath+'/admin/user/add.do',
+			url : contextPath + '/admin/user/add.do',
 			dataType : 'json',
 			data : {
 			    'username' : data[0],

@@ -56,4 +56,6 @@
 		</div>
 	</form>
 </div>
-<script src="<%=request.getContextPath()%>/resources/js/admin/backup.js"></script>
+<script type="text/javascript">
+	$.getScript("<%=request.getContextPath()%>/resources/js/admin/backup.js");
+</script>

@@ -99,5 +99,6 @@
 		</div>
 	</form>
 </div>
-
-<script src="<%=request.getContextPath()%>/resources/js/admin/pic/indexPic.js"></script>
+<script type="text/javascript">
+	$.getScript("<%=request.getContextPath()%>/resources/js/admin/pic/indexPic.js");
+</script>
