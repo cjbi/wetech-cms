@@ -134,6 +134,13 @@ $(function() {
 			id : $('#add-form [name="pId"]').val()
 		    },
 		    success : function(data) {
+			if (data.success == false) {
+			    layer.msg(data.message, {
+				time : '2000',
+				icon : 5
+			    });
+			    return;
+			}
 			layer.msg(data.message, {
 			    time : '2000',
 			    icon : 6

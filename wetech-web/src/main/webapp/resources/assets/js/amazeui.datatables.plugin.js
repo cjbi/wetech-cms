@@ -21,7 +21,7 @@ var tableName = 'example';
 /*------------ 初始化table ------------*/
 initTable = function(url, gridTable, ServerParams, initComplete, tableNames) {
     tableName = tableNames == undefined ? 'example' : tableNames;
-    var table = $('#' + tableName).DataTable({
+    table = $('#' + tableName).DataTable({
 	'aLengthMenu' : [ 10, 15, 20, 40, 60 ],
 	'searching' : false,// 开启搜索框
 	'lengthChange' : true,
@@ -66,6 +66,7 @@ initTable = function(url, gridTable, ServerParams, initComplete, tableNames) {
     });
     return table;
 }
+
 /*------------ checkbox全选,必须用prop方法设置 ------------*/
 checkAll = function() {
     if ($('input[id="checkAll"]').is(':checked')) {
@@ -122,7 +123,6 @@ deleteBatch = function(url, pk) {
 	    title : '系统提示',
 	    yes : function(index, layero) {
 		// 从rowData中获得主键id数组
-		console.log(rowData);
 		$.ajax({
 		    type : 'post',
 		    url : url,
@@ -217,17 +217,16 @@ reloadTable = function() {
 	var dataValue = {};
 	var __modalDom = $(this);
 	__modalDom.children('form').find('[name]').each(function() {
-	    //如果是单选框
+	    // 如果是单选框
 	    if ($(this).attr('type') == 'radio') {
-		//如果已经选中
-		if($(this).is(':checked')) {
+		// 如果已经选中
+		if ($(this).is(':checked')) {
 		    dataValue[$(this).attr('name')] = $(this).val();
 		}
 	    } else {
 		dataValue[$(this).attr('name')] = $(this).val();
 	    }
 	});
-	console.log(dataValue);
 	$.ajax({
 	    type : "post",
 	    url : url,
@@ -238,7 +237,6 @@ reloadTable = function() {
 		    time : '2000',
 		    icon : 6
 		});
-		console.log(data.message);
 		table.ajax.reload();
 	    },
 	    error : function(data) {
@@ -248,7 +246,6 @@ reloadTable = function() {
 		});
 	    }
 	});
-
     };
 
     // 封装layer.open ，暴露部分参数
@@ -289,6 +286,9 @@ reloadTable = function() {
 			} else {
 			    $(this).prop('checked', false);
 			}
+			// 2016/11/24更新 默认 select 选中第一个
+		    } else if ($(this).is('select')) {
+			$(this).find("option:first").prop("selected", 'selected');
 		    }
 		    // 否则如果不等于空，就清空
 		    else if ($(this).val() != '') {
@@ -300,7 +300,6 @@ reloadTable = function() {
 	    },
 	    success : function(layero, index) {
 		// 层弹出后的成功回调方法
-		console.log(layero, index);
 	    }
 	}, opts || {});
 

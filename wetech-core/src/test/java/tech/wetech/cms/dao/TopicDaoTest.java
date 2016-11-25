@@ -26,6 +26,7 @@ import org.springframework.transaction.support.TransactionSynchronizationManager
 
 import tech.wetech.basic.model.Pager;
 import tech.wetech.basic.util.AbstractDbUnitTestCase;
+import tech.wetech.basic.util.JsonUtil;
 import tech.wetech.basic.util.TestUtil;
 import tech.wetech.cms.model.Topic;
 
@@ -47,6 +48,13 @@ public class TopicDaoTest extends AbstractDbUnitTestCase{
 		this.backupAllTable();
 		IDataSet ds = createDateSet("topic");
 		DatabaseOperation.CLEAN_INSERT.execute(dbunitCon,ds);
+	}
+	
+	@Test
+	public void testListTopicByChannelAndNumber() {
+		List<Topic> topics =  topicDao.listTopicByChannelAndNumber(13, 8);
+		String json = JsonUtil.getInstance().obj2json(topics);
+		System.out.println(json);
 	}
 	
 	@Test

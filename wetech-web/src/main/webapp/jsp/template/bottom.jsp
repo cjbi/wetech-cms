@@ -11,7 +11,7 @@
 					<p>Copyright 2013-2017</p>
 				</td>
 				<td style="text-align:right">
-					技术支持:<a href="mailto:ynkonghao@gmail.com" class="main_nav_link">ynkonghao@gmail.com</a>
+					技术支持:<a href="mailto:cjbi@outlook.com" class="main_nav_link">cjbi@outlook.com</a>
 				</td>
 			</tr>
 		</table>

@@ -4,6 +4,7 @@ import org.apache.commons.io.FilenameUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -19,6 +20,7 @@ import tech.wetech.cms.model.Topic;
 import tech.wetech.cms.model.User;
 import tech.wetech.cms.service.*;
 import tech.wetech.cms.web.DataTableMap;
+import tech.wetech.cms.web.ResponseData;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletResponse;
@@ -53,16 +55,16 @@ public class TopicController {
 	@AuthMethod(role = "ROLE_PUBLISH,ROLE_AUDIT")
 	@ResponseBody
 	public Map<String, Object> list(@RequestParam(required = false) String con,
-			@RequestParam(required = false) Integer cid, Model model, HttpSession session) {
+			@RequestParam(required = false) Integer cid, Model model, HttpSession session, Integer status) {
 		System.out.println(model);
 		boolean isAdmin = (boolean) session.getAttribute("isAdmin");
 		SystemContext.setSort("t.publishDate");
 		SystemContext.setOrder("desc");
 		if (isAdmin) {
-			return DataTableMap.getMapData(topicService.find(cid, con, 1));
+			return DataTableMap.getMapData(topicService.find(cid, con, status));
 		} else {
 			User loginUser = (User) session.getAttribute("loginUser");
-			return DataTableMap.getMapData(topicService.find(loginUser.getId(), cid, con, 1));
+			return DataTableMap.getMapData(topicService.find(loginUser.getId(), cid, con, status));
 		}
 	}
 
@@ -71,7 +73,7 @@ public class TopicController {
 		initChannel(model);
 		return "topic/topic";
 	}
-	
+
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	@AuthMethod(role = "ROLE_PUBLISH")
 	public String add(Model model) {
@@ -79,9 +81,48 @@ public class TopicController {
 	}
 
 	private void initChannel(Model model) {
-//		model.addAttribute("con", con);
-//		model.addAttribute("cid", cid);
+		// model.addAttribute("con", con);
+		// model.addAttribute("cid", cid);
 		model.addAttribute("cs", channelService.listPublishChannel());
+	}
+
+	@ResponseBody
+	@RequestMapping(value = "/add", method = RequestMethod.POST)
+	public ResponseData add(@Validated TopicDto topicDto, BindingResult br, String[] aks, Integer[] aids,
+			HttpSession session) {
+		if (br.hasErrors()) {
+			return new ResponseData("操作失败" + br.getFieldError().toString());
+		}
+		Topic t = topicDto.getTopic();
+		User loginUser = (User) session.getAttribute("loginUser");
+		StringBuffer keys = new StringBuffer();
+		if (aks != null) {
+			for (String k : aks) {
+				keys.append(k).append("|");
+				keywordService.addOrUpdate(k);
+			}
+		}
+		t.setKeyword(keys.toString());
+		topicService.add(t, topicDto.getCid(), loginUser.getId(), aids);
+		if (topicDto.getStatus() == 1 && topicService.isUpdateIndex(topicDto.getCid())) {
+			indexService.generateBody();
+		}
+		return ResponseData.SUCCESS_NO_DATA;
+	}
+
+	@ResponseBody
+	@RequestMapping(value = "/delete")
+	@AuthMethod(role = "ROLE_PUBLISH")
+	public ResponseData delete(Long[] ids) {
+		for (Long id : ids) {
+			Topic t = topicService.load(id.intValue());
+			topicService.delete(id.intValue());
+			// 判断是否更新首页
+			if (topicService.isUpdateIndex(t.getChannel().getId())) {
+				indexService.generateBody();
+			}
+		}
+		return ResponseData.SUCCESS_NO_DATA;
 	}
 
 	/*------------------------------------------------------------------------------------------------*/
@@ -162,28 +203,20 @@ public class TopicController {
 		return "topic/add2";
 	}
 
-	@RequestMapping(value = "/add", method = RequestMethod.POST)
-	public String add(@Validated TopicDto topicDto, BindingResult br, String[] aks, Integer[] aids,
-			HttpSession session) {
-		if (br.hasErrors()) {
-			return "topic/add";
-		}
-		Topic t = topicDto.getTopic();
-		User loginUser = (User) session.getAttribute("loginUser");
-		StringBuffer keys = new StringBuffer();
-		if (aks != null) {
-			for (String k : aks) {
-				keys.append(k).append("|");
-				keywordService.addOrUpdate(k);
-			}
-		}
-		t.setKeyword(keys.toString());
-		topicService.add(t, topicDto.getCid(), loginUser.getId(), aids);
-		if (topicDto.getStatus() == 1 && topicService.isUpdateIndex(topicDto.getCid())) {
-			indexService.generateBody();
-		}
-		return "redirect:/jsp/common/addSuc.jsp";
-	}
+	/*
+	 * @RequestMapping(value = "/add", method = RequestMethod.POST) public
+	 * String add(@Validated TopicDto topicDto, BindingResult br, String[] aks,
+	 * Integer[] aids, HttpSession session) { if (br.hasErrors()) { return
+	 * "topic/add"; } Topic t = topicDto.getTopic(); User loginUser = (User)
+	 * session.getAttribute("loginUser"); StringBuffer keys = new
+	 * StringBuffer(); if (aks != null) { for (String k : aks) {
+	 * keys.append(k).append("|"); keywordService.addOrUpdate(k); } }
+	 * t.setKeyword(keys.toString()); topicService.add(t, topicDto.getCid(),
+	 * loginUser.getId(), aids); if (topicDto.getStatus() == 1 &&
+	 * topicService.isUpdateIndex(topicDto.getCid())) {
+	 * indexService.generateBody(); } return "redirect:/jsp/common/addSuc.jsp";
+	 * }
+	 */
 
 	@RequestMapping(value = "/update/{id}", method = RequestMethod.GET)
 	@AuthMethod(role = "ROLE_PUBLISH")

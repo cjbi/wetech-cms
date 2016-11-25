@@ -64,6 +64,7 @@ public class ChannelController {
 			return new ResponseData("操作失败" + br.getFieldError().toString());
 		}
 		channelService.add(c, pId);
+		indexService.generateTop();
 		return ResponseData.SUCCESS_NO_DATA;
 	}
 
@@ -89,6 +90,7 @@ public class ChannelController {
 		oc.setType(c.getType());
 		System.out.println(oc);
 		channelService.update(oc);
+		indexService.generateTop();
 		return ResponseData.SUCCESS_NO_DATA;
 	}
 	

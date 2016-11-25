@@ -6,54 +6,12 @@
 		<div id="notice_rollpic">
 	<div id='notice'>
 		<dl>
-				<dt>				<span><a href="channel/10" class="index_title_href">校园快讯</a></span>
+				<dt>				<span><a href="channel/18" class="index_title_href">军事</a></span>
 </dt>
 				<dd>
-					<a title="校园快讯4" href="topic/28" class='index_link'>
-						[10/21]
-							校园快讯4
-					</a>
-				</dd>
-				<dd>
-					<a title="校园快讯测试3" href="topic/37" class='index_link'>
-						[10/21]
-							校园快讯测试3
-					</a>
-				</dd>
-				<dd>
-					<a title="校园快讯测试2" href="topic/21" class='index_link'>
-						[10/21]
-							校园快讯测试2
-					</a>
-				</dd>
-				<dd>
-					<a title="校园快讯测试1" href="topic/9" class='index_link'>
-						[10/21]
-							校园快讯测试1
-					</a>
-				</dd>
-				<dd>
-					<a title="校园快讯测试5" href="topic/33" class='index_link'>
-						[10/21]
-							校园快讯测试5
-					</a>
-				</dd>
-				<dd>
-					<a title="文章测试2" href="topic/18" class='index_link'>
-						[10/21]
-							文章测试2
-					</a>
-				</dd>
-				<dd>
-					<a title="测试文章1" href="topic/14" class='index_link'>
-						[10/21]
-							测试文章1
-					</a>
-				</dd>
-				<dd>
-					<a title="测试图片" href="topic/3" class='index_link'>
-						[10/21]
-							测试图片
+					<a title="英国突击步枪堪称一代巨坑，每打四个弹匣就会卡壳" href="topic/56" class='index_link'>
+						[11/11]
+							英国突击步枪堪称一代巨坑，...
 					</a>
 				</dd>
 		</dl>
@@ -61,135 +19,60 @@
 			<div id="rollpic">
 				<div id="rollCaption"><span></span></div>
 				<div id="rollPager"></div>
-					<a href="http://localhost:8888/cms/channel/1" title="撒娇开发莱卡三角的法律框架撒旦浪费空间啊"><img src="<%=request.getContextPath()%>/resources/indexPic/1382579211062.png" border="0"/></a>
-					<a href="" title="阿斯利康的激发了深刻地激发了开市大吉法拉可适当加分"><img src="<%=request.getContextPath()%>/resources/indexPic/1382362791899.png" border="0"/></a>
 					<a href="http://www" title="测试首页现场图片"><img src="<%=request.getContextPath()%>/resources/indexPic/1382362170787.png" border="0"/></a>
 					<a href="" title="测试图片"><img src="<%=request.getContextPath()%>/resources/indexPic/1381632767234.png" border="0"/></a>
+					<a href="http://localhost:8888/cms/channel/1" title="撒娇开发莱卡三角的法律框架撒旦浪费空间啊"><img src="<%=request.getContextPath()%>/resources/indexPic/1382579211062.png" border="0"/></a>
+					<a href="" title="阿斯利康的激发了深刻地激发了开市大吉法拉可适当加分"><img src="<%=request.getContextPath()%>/resources/indexPic/1382362791899.png" border="0"/></a>
 			</div>
 		</div>
 		<div id="split_line"></div>
+		<!-- 从这里开始 -->
 		<div id="xwgk_xxgk">
 	<div id='xwgk'>
-				<h3><a href="channel/11" class="index_title_href">校务公开</a></h3>
-				<div id="xwgk_bg"></div>
+					<h3><a href="channel/13" class="index_title_href">基金</a></h3>
+					<div id="xwgk_bg"></div>
 		<dl>
 				<dd>
-					<a title="校务公开测试111111111" href="topic/42" class='index_link'>
-						[10/21]
-							校务公开测试111111111
-					</a>
-				</dd>
-				<dd>
-					<a title="测试校务公开" href="topic/40" class='index_link'>
-						[10/21]
-							测试校务公开
-					</a>
-				</dd>
-				<dd>
-					<a title="片段" href="topic/35" class='index_link'>
-						[10/21]
-							片段
-					</a>
-				</dd>
-				<dd>
-					<a title="历史最牛演讲" href="topic/15" class='index_link'>
-						[10/21]
-							历史最牛演讲
-					</a>
-				</dd>
-				<dd>
-					<a title="看不懂" href="topic/26" class='index_link'>
-						[10/21]
-							看不懂
-					</a>
-				</dd>
-				<dd>
-					<a title="正则表达式" href="topic/5" class='index_link'>
-						[10/21]
-							正则表达式
+					<a title="习近平拉美行：7天50场活动 中拉友好巨轮扬帆远航" href="topic/59" class='index_link'>
+						[11/25]
+							习近平拉美行：7天50场活动 中拉友好巨轮扬帆远航
 					</a>
 				</dd>
 		</dl>
 	</div>
 			<div id="xxgk">
-				<h3><a href="channel/7" class="index_title_href">学校概况</a></h3>
+				<h3><a href="channel/7" class="index_title_href">网站介绍1</a></h3>
 				<div id="xxgk_bg"></div>
-				阿斯兰多夫金啊十六大会计法路上看到激发了斯柯达积分拉开设计的法兰克阿斯利康地方哈萨克决定活法可接受的合法
-学校概况学校概况学校概况学校概况
-学校概况学校概况学校概况学校概况学校概况
-学校概况学校概况学校概况学校概况学校概况学校概况学
-校概况学校概况学校概况学校概况学校概况学校概况拉开大家法拉盛科技的法拉盛科技的法拉克设计的福利卡数据的福利卡建设的风口浪尖啊数据的法律卡机市地方垃圾回收地方学校概况学校概况学
-校概况学校概况学校概况学校概况学校概况学校概况学校概况学校概况学校概况
-学校概况学校概况学校概况学校概况学校概况学校概况学校概况学校概况学校概况学校
-概况学校概况学校概况学校概况学校概况学校概况学校概况学校概况学校
-概况学校概况学校概况学校概况学校概况学校概况学校概况学校概况学校概况
-学校概况
+				在中低收入国家则是另一幅情景。新鲜水果和蔬菜并不是他们的优先选择，高盐的饮食和营养的缺乏的都会对血压产生负面作用。此外，由于没有明显的症状，许多患有高血压疾病的人并不知道自己患病，即使发现了病情，有限的医疗资源和落后的卫生保健计划也无法提供充分的治疗。何况高昂的治疗费用还可能让整个家庭都陷入贫困，许多人不得已对自己的病情选择了无视。在中低收入国家则是另一幅情景。新鲜水果和蔬菜并不是他们的优先选择，高盐的饮食和营养的缺乏的都会对血压产生负面作用。此外，由于没有明显的症状，许多患有高血压疾病的人并不知道自己患病，即使发现了病情，有限的医疗资源和落后的卫生保健计划也无法提供充分的治疗。何况高昂的治疗费用还可能让整个家庭都陷入贫困，许多人不得已对自己的病情选择了无视。在中低收入国家则是另一幅情景。新鲜水果和蔬菜并不是他们
 			</div>
 		</div>
 		<div id="hdjx_jyky">
 	<div id='hdjx'>
 		<dl>
-				<dt>				<span class="t_title">教科信息</span><span class="more"><a href="channel/15">更多</a></span>
+				<dt>				<span class="t_title">商业</span><span class="more"><a href="channel/14">更多</a></span>
 </dt>
 				<dd>
-					<a title="测试文章" href="topic/43" class='index_link'>
-						[10/21]
-							测试文章
+					<a title="为了让妹子在冬天穿迷你裙露大腿，日本人足足用了100多年|浪潮工作室" href="topic/62" class='index_link'>
+						[11/25]
+							为了让妹子在冬天穿迷你裙露大腿，日本人足足用了100多年|浪潮工...
 					</a>
 				</dd>
 				<dd>
-					<a title="freemarker" href="topic/38" class='index_link'>
-						[10/21]
-							freemarker
-					</a>
-				</dd>
-				<dd>
-					<a title="昭通师专附中教科信息工作方案" href="topic/25" class='index_link'>
-						[10/21]
-							昭通师专附中教科信息工作方案
+					<a title="习近平主席拉美行：7天50余场活动紧锣密鼓" href="topic/60" class='index_link'>
+						[11/25]
+							习近平主席拉美行：7天50余场活动紧锣密鼓
 					</a>
 				</dd>
 		</dl>
 	</div>
-			
 	<div id='jyky'>
 		<dl>
-				<dt>				<span class="t_title">德育建设</span><span class="more"><a href="channel/20">更多</a></span>
+				<dt>				<span class="t_title">智能</span><span class="more"><a href="channel/49">更多</a></span>
 </dt>
 				<dd>
-					<a title="德育测试03" href="topic/20" class='index_link'>
-						[10/21]
-							德育测试03
-					</a>
-				</dd>
-				<dd>
-					<a title="德育测试04" href="topic/24" class='index_link'>
-						[10/21]
-							德育测试04
-					</a>
-				</dd>
-				<dd>
-					<a title="德育测试02" href="topic/16" class='index_link'>
-						[10/21]
-							德育测试02
-					</a>
-				</dd>
-				<dd>
-					<a title="百家讲台01" href="topic/30" class='index_link'>
-						[10/21]
-							百家讲台01
-					</a>
-				</dd>
-				<dd>
-					<a title="德育测试01" href="topic/11" class='index_link'>
-						[10/21]
-							德育测试01
-					</a>
-				</dd>
-				<dd>
-					<a title="德育测试" href="topic/7" class='index_link'>
-						[10/21]
-							德育测试
+					<a title="阿尔妮塔创投机器人发布 真能解放投资人？" href="topic/61" class='index_link'>
+						[11/25]
+							阿尔妮塔创投机器人发布 真能解放投资人？
 					</a>
 				</dd>
 		</dl>
@@ -197,19 +80,12 @@
 		</div>
 		<div id="chief_keyword">
 			<div>
-					<span class="keyword" href="keyword/回家睡觉去">回家睡觉去</span>
-					<span class="keyword" href="keyword/降温了">降温了</span>
-					<span class="keyword" href="keyword/好好学习">好好学习</span>
-					<span class="keyword" href="keyword/演讲">演讲</span>
-					<span class="keyword" href="keyword/大学">大学</span>
-					<span class="keyword" href="keyword/人生">人生</span>
-					<span class="keyword" href="keyword/学校">学校</span>
-					<span class="keyword" href="keyword/01">01</span>
-					<span class="keyword" href="keyword/02">02</span>
-					<span class="keyword" href="keyword/神一样的存在">神一样的存在</span>
-					<span class="keyword" href="keyword/学校基本情况">学校基本情况</span>
-					<span class="keyword" href="keyword/笑容">笑容</span>
-					<span class="keyword" href="keyword/开心">开心</span>
+					<span class="keyword" href="keyword/基金的">基金的</span>
+					<span class="keyword" href="keyword/习近平">习近平</span>
+					<span class="keyword" href="keyword/关键字">关键字</span>
+					<span class="keyword" href="keyword/网站介绍">网站介绍</span>
+					<span class="keyword" href="keyword/商业">商业</span>
+					<span class="keyword" href="keyword/智能">智能</span>
 			</div>
 		</div>
 	</div>

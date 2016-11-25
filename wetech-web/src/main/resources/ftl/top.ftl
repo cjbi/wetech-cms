@@ -6,7 +6,7 @@
 		<div id="logo"></div>
 		<div id="main_nav">
 			<ul>
-				<li><a class="main_nav_link" href="http://www.ztu.edu.cn">昭通学院首页</a></li>
+				<li><a class="main_nav_link" href="http://www.baidu.com">百度首页</a></li>
 				<li><a class="main_nav_link" href="<%=request.getContextPath()%>/channel/5">勤耕园</a></li>
 				<li><a class="main_nav_link" href="<%=request.getContextPath()%>/admin">后台管理</a></li>
 				<li><a class="main_nav_link" href="mailto:${baseInfo.email}">联系我们</a></li>
@@ -21,7 +21,7 @@
 <div id="nav">
 	<div id="nav_con">
 		<ul>
-			<li><span href="<%=request.getContextPath()%>/index">附中首页</span></li>
+			<li><span href="<%=request.getContextPath()%>/index">首页</span></li>
 			<#list navs as nav>
 				<li>
 				<#if nav.customLink==0>

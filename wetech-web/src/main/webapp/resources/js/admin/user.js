@@ -148,7 +148,6 @@ $(function() {
 			    groupIds.push($(this).val());
 			}
 		    });
-		    console.log(data);
 		    $.ajax({
 			type : 'post',
 			url : contextPath + '/admin/user/edit.do',

@@ -123,6 +123,7 @@ public class IndexService implements IIndexService {
 		root.put("ts", topics);
 		root.put("pics", indexPicService.listIndexPicByNum(picnum));
 		root.put("keywords", keyworkService.getMaxTimesKeyword(12));
+		//学校概括，从数据库取出
 		root.put("xxgk", topicService.loadLastedTopicByColumn(7));
 		util.fprint(root, "/body.ftl", outfile);
 	}

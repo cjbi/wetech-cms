@@ -6,7 +6,7 @@
 		<div id="logo"></div>
 		<div id="main_nav">
 			<ul>
-				<li><a class="main_nav_link" href="http://www.ztu.edu.cn">昭通学院首页</a></li>
+				<li><a class="main_nav_link" href="http://www.baidu.com">百度首页</a></li>
 				<li><a class="main_nav_link" href="<%=request.getContextPath()%>/channel/5">勤耕园</a></li>
 				<li><a class="main_nav_link" href="<%=request.getContextPath()%>/admin">后台管理</a></li>
 				<li><a class="main_nav_link" href="mailto:cjbi@outlook.com">联系我们</a></li>
@@ -21,27 +21,24 @@
 <div id="nav">
 	<div id="nav_con">
 		<ul>
-			<li><span href="<%=request.getContextPath()%>/index">附中首页</span></li>
+			<li><span href="<%=request.getContextPath()%>/index">首页</span></li>
 				<li>
-					<span href="<%=request.getContextPath()%>/channel/2">校园之窗</span>
+					<span href="<%=request.getContextPath()%>/channel/7">网站介绍</span>
 				</li>
 				<li>
-					<span href="<%=request.getContextPath()%>/channel/3">教育科研</span>
+					<span href="">军事</span>
 				</li>
 				<li>
-					<span href="<%=request.getContextPath()%>/channel/4">德育园地</span>
+					<span href="<%=request.getContextPath()%>/channel/2">财经</span>
 				</li>
 				<li>
-					<span href="<%=request.getContextPath()%>/channel/8">师生风采</span>
+					<span href="<%=request.getContextPath()%>/channel/3">新闻</span>
 				</li>
 				<li>
-					<span href="<%=request.getContextPath()%>/channel/22">学生工作</span>
+					<span href="http://163.com">网易</span>
 				</li>
 				<li>
-					<span href="<%=request.getContextPath()%>/channel/28">校园文化</span>
-				</li>
-				<li>
-					<span href="<%=request.getContextPath()%>/channel/13">党团工作</span>
+					<span href="<%=request.getContextPath()%>/channel/30">测试</span>
 				</li>
 		</ul>
 	</div>

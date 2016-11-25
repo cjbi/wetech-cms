@@ -40,25 +40,29 @@
 			</div>
 		</div>
 		<div id="split_line"></div>
+		<!-- 从这里开始 -->
 		<div id="xwgk_xxgk">
-			<@indexTopicList indexTopic=ts["2"] hasH=true hasDt=false titleSize=37 divId="xwgk" hrefClz="index_link">
-				<h3><a href="channel/${ts["2"].cid}" class="index_title_href">${ts["2"].cname}</a></h3>
-				<div id="xwgk_bg"></div>
-			</@indexTopicList>
+				<@indexTopicList indexTopic=ts["2"] hasH=true hasDt=false titleSize=37 divId="xwgk" hrefClz="index_link">
+					<h3><a href="channel/${ts["2"].cid}" class="index_title_href">${ts["2"].cname}</a></h3>
+					<div id="xwgk_bg"></div>
+				</@indexTopicList>
 			<div id="xxgk">
-				<h3><a href="channel/7" class="index_title_href">学校概况</a></h3>
+				<h3><a href="channel/7" class="index_title_href">网站介绍1</a></h3>
 				<div id="xxgk_bg"></div>
 				${xxgk.summary[0..360]}
 			</div>
 		</div>
 		<div id="hdjx_jyky">
+			<#if ts["3"]??>
 			<@indexTopicList indexTopic=ts["3"] titleSize=31 divId="hdjx" hrefClz="index_link">
 				<span class="t_title">${ts["3"].cname}</span><span class="more"><a href="channel/${ts['3'].cid}">更多</a></span>
 			</@indexTopicList>
-			
+			</#if>
+			<#if ts["4"]??>
 			<@indexTopicList indexTopic=ts["4"] titleSize=31 divId="jyky" hrefClz="index_link">
 				<span class="t_title">${ts["4"].cname}</span><span class="more"><a href="channel/${ts['4'].cid}">更多</a></span>
 			</@indexTopicList>
+			</#if>
 		</div>
 		<div id="chief_keyword">
 			<div>

@@ -61,19 +61,20 @@ $(function() {
 
     /*------------ 删除 ------------*/
     del = function() {
-	var url = contextPath + '/admin/group/delete.do';
+	var url = contextPath + '/admin/topic/delete.do';
 	deleteBatch(url, 'id');
     }
 
     /*------------ 新增 ------------*/
     $('#add').on('click', function() {
-	layer.open({
+	var index = layer.open({
 	    type : 2,
 	    title : '发表文章',
 	    maxmin : true, // 开启最大化最小化按钮
-	    area: ['80%', '95%'],
+	    area: ['100%', '100%'],
 	    /*btn : [ '发表', '关闭' ],*/
 	    content : contextPath + '/admin/topic/add'
 	});
+	layer.full(index);
     });
 });
