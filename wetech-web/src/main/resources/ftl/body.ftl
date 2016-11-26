@@ -1,75 +1,69 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<#macro indexTopicList indexTopic titleSize showDate=true hasH=false hasDt=true showDot=true df="MM/dd" divId="" hrefClz="">
-	<div ${(divId=="")?string("","id='${divId}'")}>
-		<#if hasH>
-			<#nested/>
-		</#if>
-		<dl>
-			<#if hasDt>
-				<dt><#nested/></dt>
-			</#if>
-			<#list indexTopic.topics as topic>
-				<dd>
-					<a title="${topic.title}" href="topic/${topic.id}" ${(hrefClz=="")?string("","class='${hrefClz}'")}>
-						<#if showDate>[${(topic.publishDate)?string("${df}")}]</#if>
-						<#if topic.title?length gt titleSize>
-							${topic.title[0..titleSize]}<#if showDot>...</#if>
-						<#else>
-							${topic.title}
-						</#if>
-					</a>
-				</dd>
-			</#list>
-		</dl>
+<#macro indexChannelTopicList indexTopics dateFormat="yyyy-MM-dd" grid=6>
+<#assign gridSum =0>
+<#list indexTopics as channelTopic>
+<#if gridSum=0>
+<div class="am-g am-g-fixed  cms-fixed">
+</#if>
+	<div class="am-u-md-${grid} am-u-sm-${grid}">
+		<div data-am-widget="titlebar" class="am-titlebar am-titlebar-default">
+			<h2 class="am-titlebar-title ">${channelTopic.cname}</h2>
+			<nav class="am-titlebar-nav">
+				<a href="channel/${channelTopic.cid}" class="">more &raquo;</a>
+			</nav>
+		</div>
+		<div data-am-widget="list_news" class="am-list-news am-list-news-default">
+			<!--列表标题-->
+			<ul class="am-list">
+				<#list channelTopic.topics as topic>
+				<li class="am-g am-list-item-dated"><a href="topic/${topic.id}" class="am-list-item-hd ">${topic.title}</a> <span class="am-list-date">${(topic.publishDate)?string("yyyy-MM-dd")}</span></li>
+				</#list>
+			</ul>
+		</div>
 	</div>
+	<#-- 网格总长度累加  -->
+	<#assign gridSum = gridSum+grid>
+	<#-- 如果大于等于12，就换行 -->
+	<#if gridSum gte 12>
+		<#-- 统计清零 -->
+		<#assign gridSum = 0>
+</div>
+	</#if>
+</#list>
 </#macro>
-<div id="content">
-	<div id="content_con">
-		<div id="xiaoxun"></div>
-		<div id="notice_rollpic">
-			<@indexTopicList indexTopic=ts["1"] titleSize=12 divId="notice" hrefClz="index_link">
-				<span><a href="channel/${ts["1"].cid}" class="index_title_href">${ts["1"].cname}</a></span>
-			</@indexTopicList>
-			<div id="rollpic">
-				<div id="rollCaption"><span></span></div>
-				<div id="rollPager"></div>
-				<#list pics as pic>
-					<a href="${pic.linkUrl}" title="${pic.title}"><img src="<%=request.getContextPath()%>/resources/indexPic/${pic.newName}" border="0"/></a>
-				</#list>
+<div class="am-g am-g-fixed am-u-sm-centered">
+	<!-- banner start -->
+	<jsp:include page="/jsp/template/banner.jsp" />
+	<!-- banner end -->
+	<div class="am-u-sm-4">
+		<div data-am-widget="list_news" class="am-list-news am-list-news-default">
+			<!--列表标题-->
+			<div class="am-list-news-hd am-cf">
+				<!--带更多链接-->
+				<a href="#" class="">
+					<h2>最新动态</h2> <span class="am-list-news-more am-fr">更多 &raquo;</span>
+				</a>
 			</div>
-		</div>
-		<div id="split_line"></div>
-		<!-- 从这里开始 -->
-		<div id="xwgk_xxgk">
-				<@indexTopicList indexTopic=ts["2"] hasH=true hasDt=false titleSize=37 divId="xwgk" hrefClz="index_link">
-					<h3><a href="channel/${ts["2"].cid}" class="index_title_href">${ts["2"].cname}</a></h3>
-					<div id="xwgk_bg"></div>
-				</@indexTopicList>
-			<div id="xxgk">
-				<h3><a href="channel/7" class="index_title_href">网站介绍1</a></h3>
-				<div id="xxgk_bg"></div>
-				${xxgk.summary[0..360]}
-			</div>
-		</div>
-		<div id="hdjx_jyky">
-			<#if ts["3"]??>
-			<@indexTopicList indexTopic=ts["3"] titleSize=31 divId="hdjx" hrefClz="index_link">
-				<span class="t_title">${ts["3"].cname}</span><span class="more"><a href="channel/${ts['3'].cid}">更多</a></span>
-			</@indexTopicList>
-			</#if>
-			<#if ts["4"]??>
-			<@indexTopicList indexTopic=ts["4"] titleSize=31 divId="jyky" hrefClz="index_link">
-				<span class="t_title">${ts["4"].cname}</span><span class="more"><a href="channel/${ts['4'].cid}">更多</a></span>
-			</@indexTopicList>
-			</#if>
-		</div>
-		<div id="chief_keyword">
-			<div>
-				<#list keywords as kw>
-					<span class="keyword" href="keyword/${kw.name}">${kw.name}</span>
+			<div class="am-list-news-bd">
+				<ul class="am-list">
+				<#list news as new>
+					<li class="am-g am-list-item-dated"><a href="topic/${new.id}" class="am-list-item-hd ">${new.title}</a> <span class="am-list-date">${(new.publishDate)?string("yyyy-MM-dd")}</span></li>
 				</#list>
+				</ul>
 			</div>
 		</div>
 	</div>
 </div>
+<!-- channel start -->
+<@indexChannelTopicList indexTopics=channelTopics/>
+<!-- channel end -->
+<!-- keyword start -->
+<div class="am-g am-g-fixed  cms-fixed">
+	<div class="am-u-sm-12" style="margin-top: 2rem;">
+		<#list keywords as kw>
+		<a href="keyword/${kw.name}" class="am-badge am-badge-primary am-text-sm am-radius ${keywordClzs[kw_index]}">${kw.name}</a>
+		</#list>
+	</div>
+</div>
+<!-- keyword end -->

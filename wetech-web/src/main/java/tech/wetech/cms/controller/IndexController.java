@@ -26,43 +26,15 @@ import tech.wetech.cms.web.BaseInfoUtil;
 
 @Controller
 public class IndexController {
+	
+	@Inject
 	private IChannelService channelService;
+	@Inject
 	private ITopicService topicService;
+	@Inject
 	private IAttachmentService attachmentService;
+	@Inject
 	private IKeywordService keywordService;
-	
-
-	public IKeywordService getKeywordService() {
-		return keywordService;
-	}
-	@Inject
-	public void setKeywordService(IKeywordService keywordService) {
-		this.keywordService = keywordService;
-	}
-
-	public IAttachmentService getAttachmentService() {
-		return attachmentService;
-	}
-	
-	@Inject
-	public void setAttachmentService(IAttachmentService attachmentService) {
-		this.attachmentService = attachmentService;
-	}
-	public IChannelService getChannelService() {
-		return channelService;
-	}
-	@Inject
-	public void setChannelService(IChannelService channelService) {
-		this.channelService = channelService;
-	}
-
-	public ITopicService getTopicService() {
-		return topicService;
-	}
-	@Inject
-	public void setTopicService(ITopicService topicService) {
-		this.topicService = topicService;
-	}
 
 	@RequestMapping({"/","/index"})
 	public String index(Model model) {
@@ -82,8 +54,6 @@ public class IndexController {
 		} else {
 			pc = c.getParent();
 		}
-//		System.out.println(c.getType()==ChannelType.TOPIC_LIST);
-//		System.out.println(c.getType());
 		if(c.getType()==ChannelType.TOPIC_CONTENT) {
 			resp.sendRedirect(req.getContextPath()+"/topic/"+topicService.loadLastedTopicByColumn(cid).getId());
 		} else if(c.getType()==ChannelType.TOPIC_IMG){

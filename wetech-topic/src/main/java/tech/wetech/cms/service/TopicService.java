@@ -20,41 +20,15 @@ import tech.wetech.cms.model.User;
 
 @Service("topicService")
 public class TopicService implements ITopicService {
-	private ITopicDao topicDao;
-	private IAttachmentDao attachmentDao;
-	private IChannelDao channelDao;
-	private IUserDao userDao;
-	
-	
-	public IChannelDao getChannelDao() {
-		return channelDao;
-	}
-	@Inject
-	public void setChannelDao(IChannelDao channelDao) {
-		this.channelDao = channelDao;
-	}
-	public IUserDao getUserDao() {
-		return userDao;
-	}
-	@Inject
-	public void setUserDao(IUserDao userDao) {
-		this.userDao = userDao;
-	}
-	public ITopicDao getTopicDao() {
-		return topicDao;
-	}
-	@Inject
-	public void setTopicDao(ITopicDao topicDao) {
-		this.topicDao = topicDao;
-	}
 
-	public IAttachmentDao getAttachmentDao() {
-		return attachmentDao;
-	}
 	@Inject
-	public void setAttachmentDao(IAttachmentDao attachmentDao) {
-		this.attachmentDao = attachmentDao;
-	}
+	private ITopicDao topicDao;
+	@Inject
+	private IAttachmentDao attachmentDao;
+	@Inject
+	private IChannelDao channelDao;
+	@Inject
+	private IUserDao userDao;
 	
 	private void addTopicAtts(Topic topic,Integer[] aids) {
 		if(aids!=null) {

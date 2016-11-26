@@ -25,4 +25,17 @@ public class IndexServiceTest {
 		SystemContext.setRealPath(rp);
 		indexService.generateBody();
 	}
+	
+	@Test
+	public void testGenerateBottom() {
+		SystemContext.setRealPath(rp);
+		indexService.generateBottom();
+	}
+	
+	@Test
+	public void testGenerateBanner() {
+		SystemContext.setRealPath(rp);
+		indexService.generateBanner();
+	}
+	
 }
