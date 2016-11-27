@@ -69,6 +69,14 @@ public class TopicDao extends BaseDao<Topic> implements ITopicDao {
 		return this.getSession().createQuery(hql).setParameter(0, cid).setFirstResult(0).setMaxResults(num).list();
 
 	}
+	
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Topic> listTopicsByNumber( int num) {
+		String hql = getTopicSelect() + " from Topic t where t.status=1 order by t.publishDate desc";
+		return this.getSession().createQuery(hql).setFirstResult(0).setMaxResults(num).list();
+		
+	}
 
 	@Override
 	public List<Topic> listTopicsByChannel(int cid) {

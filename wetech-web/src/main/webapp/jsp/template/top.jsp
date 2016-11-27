@@ -1,9 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <input type="hidden" id="ctx" value="<%=request.getContextPath()%>" />
 <header class="am-topbar am-topbar-fixed-top am-topbar-inverse">
 	<div class="am-container">
 		<h1 class="am-topbar-brand">
-			<a href="#">WETECH CMS</a>
+			<a href="<%=request.getContextPath()%>/index">WETECH CMS</a>
 		</h1>
 		<button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only" data-am-collapse="{target: '#collapse-head'}">
 			<span class="am-sr-only">导航切换</span><span class="am-icon-bars"></span>
@@ -11,7 +13,7 @@
 		<div class="am-collapse am-topbar-collapse" id="collapse-head">
 			<ul class="am-nav am-nav-pills am-topbar-nav">
 				<li class="am-active"><a href="<%=request.getContextPath()%>/index">首页</a></li>
-								<li><a href="">军事</a></li>
+				<li><a href="">军事</a></li>
 				<li><a href="<%=request.getContextPath()%>/channel/2">财经</a></li>
 				<li><a href="<%=request.getContextPath()%>/channel/3">新闻</a></li>
 				<li><a href="http://163.com">网易</a></li>
@@ -33,7 +35,14 @@
 			</form>
 			<div class="am-topbar-right">
 				<button class="am-btn am-btn-primary am-topbar-btn am-btn-sm">
-					<span class="am-icon-user"></span> <a href="<%=request.getContextPath()%>/login">登录</a>
+					<c:if test="${loginUser!=null}">
+						<span class="am-icon-user"></span>
+						<a href="<%=request.getContextPath()%>/admin">${loginUser.nickname }</a>
+					</c:if>
+					<c:if test="${loginUser==null}">
+						<span class="am-icon-user"></span>
+						<a href="<%=request.getContextPath()%>/login"> 登录</a>
+					</c:if>
 				</button>
 			</div>
 		</div>

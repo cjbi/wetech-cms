@@ -12,7 +12,6 @@
 <link rel="alternate icon" type="image/png" href="<%=request.getContextPath()%>/resources/assets/i/favicon.png">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/assets/css/amazeui.min.css" />
 <style>
-
 .cms-footer {
 	padding: 3rem 0 2rem 0;
 	margin-top: 5rem;
@@ -26,16 +25,34 @@
 	padding: 0.5rem;
 	color: #fff;
 }
+
 .cms-footer a {
-    color: #fff;
+	color: #fff;
 }
+
 .cms-text-center {
 	color: #7f8c8d;
 	text-align: center;
 }
+
+.am-container {
+	max-width: 1200px;
+}
+
+.am-g-fixed {
+	max-width: 1200px;
+}
+
+.am-article {
+	padding: 30px 0;
+}
+
+.am-panel-group {
+	padding-top: 20px;
+}
 </style>
 </head>
-<body>
+<body class="am-with-topbar-fixed-top">
 	<!-- top start -->
 	<jsp:include page="/jsp/template/top.jsp" />
 	<!-- top end -->
@@ -43,24 +60,7 @@
 	<jsp:include page="/jsp/template/body.jsp" />
 	<!-- content end -->
 	<!-- Link start-->
-	<div class="am-g am-g-fixed  cms-fixed">
-		<div class="am-u-sm-12">
-			<div data-am-widget="titlebar" class="am-titlebar am-titlebar-default">
-				<h2 class="am-titlebar-title ">友情链接</h2>
-			</div>
-			<div class="am-u-sm-12" style="margin-top: 2rem;">
-				<ul class="am-avg-sm-3 am-avg-md-4 am-avg-lg-5">
-					<li><a href="http://www.baidu.com">百度</a></li>
-					<li><a href="http://www.baidu.com">新浪</a></li>
-					<li><a href="http://www.baidu.com">腾讯</a></li>
-					<li><a href="http://www.baidu.com">淘宝</a></li>
-					<li><a href="http://www.baidu.com">京东</a></li>
-					<li><a href="http://www.baidu.com">百度</a></li>
-					<li><a href="http://www.baidu.com">百度</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
+	<jsp:include page="/jsp/template/cmsLink.jsp" />
 	<!-- Link end-->
 	<!-- Footer start -->
 	<jsp:include page="/jsp/template/bottom.jsp" />

@@ -15,7 +15,7 @@ $(function() {
 	'data' : 'title',
 	'sWidth' : '30%',
 	"mRender" : function(data, type, full) {
-	    return '<a href="#">' + data + '</a>';
+	    return '<a href="http://localhost:8888/topic/'+full.id+'" target="_blank">' + data + '</a>';
 	}
     }, {
 	'data' : 'author'

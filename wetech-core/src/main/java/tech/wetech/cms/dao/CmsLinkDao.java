@@ -50,7 +50,14 @@ public class CmsLinkDao extends BaseDao<CmsLink> implements ICmsLinkDao {
 
 	@Override
 	public List<CmsLink> listByType(String type) {
-		return this.list("from CmsLink where type=? order by pos",type);
+		String hql = null;
+		if(type==null||"".equals(type.trim())) {
+			hql = "from CmsLink";
+		} else {
+			hql = "from CmsLink where type='"+type+"'";
+		}
+		hql+=" order by pos";
+		return this.list(hql);
 	}
 
 	@SuppressWarnings("unchecked")

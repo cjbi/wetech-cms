@@ -56,6 +56,10 @@ $(function() {
             }
         });
         
+        
+        //获取当前日期
+        $('#publishDate').val(dateFormat(new Date()));        
+        
         // 生成tree
         var t = $("#mytree").mytree({mine:{listChild:0},
 	callback:{

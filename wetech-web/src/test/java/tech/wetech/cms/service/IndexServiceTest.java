@@ -38,4 +38,10 @@ public class IndexServiceTest {
 		indexService.generateBanner();
 	}
 	
+	@Test
+	public void testGenerateCmsLink() {
+		SystemContext.setRealPath(rp);
+		indexService.generateCmsLink();
+	}
+	
 }

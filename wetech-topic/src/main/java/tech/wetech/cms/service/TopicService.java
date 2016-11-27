@@ -127,6 +127,10 @@ public class TopicService implements ITopicService {
 		return topicDao.listTopicByChannelAndNumber(cid, num);
 	}
 	@Override
+	public List<Topic> listTopicsByNumber(int num) {
+		return topicDao.listTopicsByNumber(num);
+	}
+	@Override
 	public List<Topic> listTopicByChannel(int cid) {
 		return topicDao.listTopicsByChannel(cid);
 	}

@@ -92,4 +92,6 @@ public interface ITopicService {
 	public boolean isUpdateIndex(int cid);
 	
 	public Topic loadLastedTopicByColumn(int cid);
+	
+	public List<Topic> listTopicsByNumber(int num);
 }

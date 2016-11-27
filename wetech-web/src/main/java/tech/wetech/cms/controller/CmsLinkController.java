@@ -19,6 +19,7 @@ import tech.wetech.cms.auth.AuthClass;
 import tech.wetech.cms.model.CmsLink;
 import tech.wetech.cms.model.Group;
 import tech.wetech.cms.service.ICmsLinkService;
+import tech.wetech.cms.service.IIndexService;
 import tech.wetech.cms.web.DataTableMap;
 import tech.wetech.cms.web.ResponseData;
 
@@ -29,6 +30,8 @@ public class CmsLinkController {
 
 	@Inject
 	private ICmsLinkService cmsLinkService;
+	@Inject
+	private IIndexService indexService;
 
 	@RequestMapping({ "/cmsLink", "/", "" })
 	public String cmsLink(Model model) {
@@ -62,6 +65,8 @@ public class CmsLinkController {
 			return new ResponseData("操作失败" + br.getFieldError().toString());
 		}
 		cmsLinkService.add(cl);
+		//生成首页静态化
+		indexService.generateCmsLink();
 		return ResponseData.SUCCESS_NO_DATA;
 	}
 
@@ -80,8 +85,9 @@ public class CmsLinkController {
 		ocl.setUrl(cl.getUrl());
 		ocl.setUrlClass(cl.getUrlClass());
 		ocl.setUrlId(cl.getUrlId());
-		
 		cmsLinkService.update(ocl);
+		//生成首页静态化
+		indexService.generateCmsLink();
 		return ResponseData.SUCCESS_NO_DATA;
 	}
 	

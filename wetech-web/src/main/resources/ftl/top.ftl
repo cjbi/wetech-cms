@@ -3,7 +3,7 @@
 <header class="am-topbar am-topbar-fixed-top am-topbar-inverse">
 	<div class="am-container">
 		<h1 class="am-topbar-brand">
-			<a href="#">WETECH CMS</a>
+			<a href="<%=request.getContextPath()%>/index">WETECH CMS</a>
 		</h1>
 		<button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only" data-am-collapse="{target: '#collapse-head'}">
 			<span class="am-sr-only">导航切换</span><span class="am-icon-bars"></span>
@@ -35,7 +35,14 @@
 			</form>
 			<div class="am-topbar-right">
 				<button class="am-btn am-btn-primary am-topbar-btn am-btn-sm">
-					<span class="am-icon-user"></span> <a href="<%=request.getContextPath()%>/login">登录</a>
+					<c:if test="${loginUser!=null}">
+						<span class="am-icon-user"></span>
+						<a href="<%=request.getContextPath()%>/admin">${loginUser.nickname }</a>
+					</c:if>
+					<c:if test="${loginUser==null}">
+						<span class="am-icon-user"></span>
+						<a href="<%=request.getContextPath()%>/login"> 登录</a>
+					</c:if>
 				</button>
 			</div>
 		</div>

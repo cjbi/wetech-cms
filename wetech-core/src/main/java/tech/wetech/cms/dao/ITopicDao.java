@@ -63,4 +63,10 @@ public interface ITopicDao extends IBaseDao<Topic>{
 	 * @return
 	 */
 	public Topic loadLastedTopicByColumn(int cid);
+	/**
+	 * 根据数目获取最新的可用文章
+	 * @param num
+	 * @return
+	 */
+	public List<Topic> listTopicsByNumber( int num);
 }

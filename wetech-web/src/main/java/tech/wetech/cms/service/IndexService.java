@@ -19,6 +19,7 @@ import tech.wetech.basic.util.PropertiesUtil;
 import tech.wetech.cms.model.BaseInfo;
 import tech.wetech.cms.model.Channel;
 import tech.wetech.cms.model.ChannelType;
+import tech.wetech.cms.model.CmsLink;
 import tech.wetech.cms.model.IndexTopic;
 import tech.wetech.cms.model.Topic;
 import tech.wetech.cms.web.BaseInfoUtil;
@@ -46,6 +47,8 @@ public class IndexService implements IIndexService {
 	private IIndexPicService indexPicService;
 	@Inject
 	private IKeywordService keyworkService;
+	@Inject
+	private ICmsLinkService cmsLinkService;
 
 	@Override
 	public void generateBanner() {
@@ -93,7 +96,7 @@ public class IndexService implements IIndexService {
 			it.setCid(cid);
 			it.setCname(c.getName());
 			// TODO 显示8条，暂时固定写死。
-			int num = 8;
+			int num = 6;
 			List<Topic> tops = topicService.listTopicByChannelAndNumber(cid, num);
 			// System.out.println(cid+"--"+tops);
 			it.setTopics(tops);
@@ -105,20 +108,25 @@ public class IndexService implements IIndexService {
 		BaseInfo bi = BaseInfoUtil.getInstacne().read();
 		int picnum = bi.getIndexPicNumber();
 
-		// 从数据库取出最新的文章
-		SystemContext.setPageOffset(1);
-		SystemContext.setPageSize(5);
-		Pager<Topic> pager = topicService.find(null, null, 1);
-		SystemContext.removePageOffset();
-		SystemContext.removePageSize();
-
 		Map<String, Object> root = new HashMap<String, Object>();
-		root.put("news", pager.getDatas());
+		// 从数据库取出最新的文章 暂时显示6篇
+		root.put("news", topicService.listTopicsByNumber(6));
 		root.put("channelTopics", channelTopics);
 		root.put("pics", indexPicService.listIndexPicByNum(picnum));
-		root.put("keywords", keyworkService.getMaxTimesKeyword(24));
-		randomKeywordClz(root, 24);
+		root.put("keywords", keyworkService.getMaxTimesKeyword(50));
+		randomKeywordClz(root, 50);
 		util.fprint(root, "/body.ftl", outfile);
+	}
+	
+	@Override
+	public void generateCmsLink() {
+		System.out.println("=========重新生成首页的链接信息==============");
+		Map<String, Object> root = new HashMap<String, Object>();
+		//获取所有链接地址
+		root.put("links",  cmsLinkService.listByType(null));
+		String outfile = SystemContext.getRealPath() + outPath + "/cmsLink.jsp";
+		util.fprint(root, "/cmsLink.ftl", outfile);
+		
 	}
 
 	private void randomKeywordClz(Map<String, Object> root, int loopTimes) {

@@ -26,9 +26,9 @@
     var contextPath = "${pageContext.request.contextPath}";
 </script>
 </head>
-<input type="hidden" id="sid" value="<%=session.getId()%>"/>
-<div id="menuContent" class="menuContent" style="display:none; position: absolute;background:#fff;z-index: 999;border:1px solid #999">
-	<ul id="mytree" class="ztree" style="margin-top:0;"></ul>
+<input type="hidden" id="sid" value="<%=session.getId()%>" />
+<div id="menuContent" class="menuContent" style="display: none; position: absolute; background: #fff; z-index: 999; border: 1px solid #999">
+	<ul id="mytree" class="ztree" style="margin-top: 0;"></ul>
 </div>
 <body>
 	<input type="hidden" id="sid" value="<%=session.getId()%>" />
@@ -65,14 +65,14 @@
 					<div class="am-form-group">
 						<label class="am-u-sm-2 am-form-label">文章状态</label>
 						<div class="am-u-sm-8">
-							<label class="am-checkbox-line"> <input type="radio" name="status" value="0" checked />未发布
-							</label> <br> <label class="am-checkbox-line"> <input type="radio" name="status" value="1" />已发布
+							<label class="am-checkbox-line"> <input type="radio" name="status" value="0"/>未发布
+							</label> <br> <label class="am-checkbox-line"> <input type="radio" name="status" value="1" checked/>已发布
 							</label>
 						</div>
 						<div class="am-u-sm-2"></div>
 					</div>
 					<div class="am-form-group">
-						<label class="am-u-sm-2 am-form-label">是否推荐改文章</label>
+						<label class="am-u-sm-2 am-form-label">是否推荐该文章</label>
 						<div class="am-u-sm-8">
 							<label class="am-checkbox-line"> <input type="radio" name="recommend" value="0" checked />不推荐
 							</label> <br> <label class="am-checkbox-line"> <input type="radio" name="recommend" value="1" />推荐
@@ -83,7 +83,7 @@
 					<div class="am-form-group">
 						<label class="am-u-sm-2 am-form-label">发布时间</label>
 						<div class="am-u-sm-8">
-							<input type="text" class="am-form-field" name="publishDate" placeholder="日历组件" data-am-datepicker readonly required/>
+							<input type="text" class="am-form-field" value="" id="publishDate" name="publishDate" placeholder="日历组件" data-am-datepicker readonly required />
 						</div>
 						<div class="am-u-sm-2"></div>
 					</div>
@@ -163,6 +163,7 @@
 	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/assets/js/app.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/js/core/jquery.cms.keywordinput.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/uploadify/jquery.uploadify.min.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/assets/js/dateFormat.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/js/topic/add.js"></script>
 </body>
 </html>
