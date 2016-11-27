@@ -11,46 +11,7 @@
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 <link rel="alternate icon" type="image/png" href="<%=request.getContextPath()%>/resources/assets/i/favicon.png">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/assets/css/amazeui.min.css" />
-<style>
-.cms-footer {
-	padding: 3rem 0 2rem 0;
-	margin-top: 5rem;
-	background-color: #2d3e50;
-	color: #fff !important;
-}
-
-.cms-icon {
-	width: 3.4rem;
-	border: 1px solid #e5e5e5;
-	padding: 0.5rem;
-	color: #fff;
-}
-
-.cms-footer a {
-	color: #fff;
-}
-
-.cms-text-center {
-	color: #7f8c8d;
-	text-align: center;
-}
-
-.am-container {
-	max-width: 1200px;
-}
-
-.am-g-fixed {
-	max-width: 1200px;
-}
-
-.am-article {
-	padding: 30px 0;
-}
-
-.am-panel-group {
-	padding-top: 20px;
-}
-</style>
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/index/web.cms.css" />
 </head>
 <body class="am-with-topbar-fixed-top">
 	<!-- top start -->

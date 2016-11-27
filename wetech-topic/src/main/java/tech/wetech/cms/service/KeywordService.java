@@ -47,7 +47,7 @@ public class KeywordService implements IKeywordService {
 		List<Keyword> ks = keywordDao.findUseKeyword();
 		List<Keyword> kks = new ArrayList<Keyword>();
 		if(ks.size()<=num) return ks;
-		for(int i=0;i<=num;i++) {
+		for(int i=0;i<num;i++) {
 			kks.add(ks.get(i));
 		}
 		return kks;

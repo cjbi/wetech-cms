@@ -114,7 +114,7 @@ public class IndexService implements IIndexService {
 		root.put("channelTopics", channelTopics);
 		root.put("pics", indexPicService.listIndexPicByNum(picnum));
 		root.put("keywords", keyworkService.getMaxTimesKeyword(50));
-		randomKeywordClz(root, 50);
+		randomKeywordClz(root, 100);
 		util.fprint(root, "/body.ftl", outfile);
 	}
 	
