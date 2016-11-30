@@ -40,12 +40,12 @@
 					<!-- <button type="button" class="am-btn am-btn-danger am-btn-xs am-radius">
 						<i class="am-icon-heart"></i> 赞一下
 					</button> -->
-					<c:if test="${!hasAtts}">该文章没有附件</c:if>
+					<%-- <c:if test="${!hasAtts}">该文章没有附件</c:if>
 					<c:if test="${hasAtts }">
 						<c:forEach items="${atts }" var="att">
 							<span><a href="<%=request.getContextPath()%>/resources/upload/${att.newName}" class="article_att_link">${att.oldName }</a></span>
 						</c:forEach>
-					</c:if>
+					</c:if> --%>
 				</div>
 				<!-- baidu share start -->
 				<div class="am-fr">

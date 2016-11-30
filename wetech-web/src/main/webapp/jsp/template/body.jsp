@@ -15,12 +15,12 @@
 			</div>
 			<div class="am-list-news-bd">
 				<ul class="am-list">
+					<li class="am-g am-list-item-dated"><a href="topic/82" class="am-list-item-hd ">你好，这个是测试文章</a> <span class="am-list-date">2016-11-30</span></li>
 					<li class="am-g am-list-item-dated"><a href="topic/81" class="am-list-item-hd ">是不是很环保？环保神器让你的垃圾变废为肥</a> <span class="am-list-date">2016-11-27</span></li>
 					<li class="am-g am-list-item-dated"><a href="topic/80" class="am-list-item-hd ">被传裁员 英特尔可穿戴设备或遇滑铁卢</a> <span class="am-list-date">2016-11-27</span></li>
 					<li class="am-g am-list-item-dated"><a href="topic/79" class="am-list-item-hd ">人工智能为什么是奥巴马毕业前的最后答卷？</a> <span class="am-list-date">2016-11-27</span></li>
 					<li class="am-g am-list-item-dated"><a href="topic/78" class="am-list-item-hd ">用VR模拟手术 这个程序员要用代码救人命</a> <span class="am-list-date">2016-11-27</span></li>
 					<li class="am-g am-list-item-dated"><a href="topic/77" class="am-list-item-hd ">史上最大屏幕！牛人打造“苹果智能镜子”</a> <span class="am-list-date">2016-11-27</span></li>
-					<li class="am-g am-list-item-dated"><a href="topic/76" class="am-list-item-hd ">火焰之纹章</a> <span class="am-list-date">2016-11-27</span></li>
 				</ul>
 			</div>
 		</div>
@@ -113,54 +113,54 @@
 	<div class="am-u-sm-12" style="margin-top: 2rem;">
 		<a href="keyword/智能" class="am-badge am-badge-primary am-text-sm am-radius am-badge-primary">智能</a>
 		<a href="keyword/基金" class="am-badge am-badge-primary am-text-sm am-radius am-badge-success">基金</a>
-		<a href="keyword/商业" class="am-badge am-badge-primary am-text-sm am-radius am-badge-warning">商业</a>
-		<a href="keyword/推荐" class="am-badge am-badge-primary am-text-sm am-radius am-badge-success">推荐</a>
+		<a href="keyword/商业" class="am-badge am-badge-primary am-text-sm am-radius am-badge-primary">商业</a>
+		<a href="keyword/变废为宝" class="am-badge am-badge-primary am-text-sm am-radius am-badge-warning">变废为宝</a>
+		<a href="keyword/推荐" class="am-badge am-badge-primary am-text-sm am-radius am-badge-danger">推荐</a>
 		<a href="keyword/平衡车" class="am-badge am-badge-primary am-text-sm am-radius am-badge-success">平衡车</a>
-		<a href="keyword/尝试" class="am-badge am-badge-primary am-text-sm am-radius am-badge-primary">尝试</a>
-		<a href="keyword/军事" class="am-badge am-badge-primary am-text-sm am-radius am-badge-secondary">军事</a>
-		<a href="keyword/纸上谈兵" class="am-badge am-badge-primary am-text-sm am-radius am-badge-warning">纸上谈兵</a>
-		<a href="keyword/生活" class="am-badge am-badge-primary am-text-sm am-radius am-badge">生活</a>
-		<a href="keyword/A股" class="am-badge am-badge-primary am-text-sm am-radius am-badge-danger">A股</a>
-		<a href="keyword/3ds" class="am-badge am-badge-primary am-text-sm am-radius am-badge-primary">3ds</a>
-		<a href="keyword/示范" class="am-badge am-badge-primary am-text-sm am-radius am-badge-success">示范</a>
-		<a href="keyword/任天堂" class="am-badge am-badge-primary am-text-sm am-radius am-badge-primary">任天堂</a>
-		<a href="keyword/是我的" class="am-badge am-badge-primary am-text-sm am-radius am-badge-danger">是我的</a>
-		<a href="keyword/禁入" class="am-badge am-badge-primary am-text-sm am-radius am-badge-success">禁入</a>
-		<a href="keyword/美联储" class="am-badge am-badge-primary am-text-sm am-radius am-badge-danger">美联储</a>
-		<a href="keyword/飞机" class="am-badge am-badge-primary am-text-sm am-radius am-badge-warning">飞机</a>
-		<a href="keyword/基金的" class="am-badge am-badge-primary am-text-sm am-radius am-badge-warning">基金的</a>
-		<a href="keyword/关键" class="am-badge am-badge-primary am-text-sm am-radius am-badge-danger">关键</a>
-		<a href="keyword/习近平" class="am-badge am-badge-primary am-text-sm am-radius am-badge-danger">习近平</a>
-		<a href="keyword/低风险" class="am-badge am-badge-primary am-text-sm am-radius am-badge-primary">低风险</a>
-		<a href="keyword/原标题" class="am-badge am-badge-primary am-text-sm am-radius am-badge-danger">原标题</a>
+		<a href="keyword/尝试" class="am-badge am-badge-primary am-text-sm am-radius am-badge">尝试</a>
+		<a href="keyword/军事" class="am-badge am-badge-primary am-text-sm am-radius am-badge-warning">军事</a>
+		<a href="keyword/纸上谈兵" class="am-badge am-badge-primary am-text-sm am-radius am-badge-danger">纸上谈兵</a>
+		<a href="keyword/生活" class="am-badge am-badge-primary am-text-sm am-radius am-badge-secondary">生活</a>
+		<a href="keyword/A股" class="am-badge am-badge-primary am-text-sm am-radius am-badge-warning">A股</a>
+		<a href="keyword/3ds" class="am-badge am-badge-primary am-text-sm am-radius am-badge-danger">3ds</a>
+		<a href="keyword/示范" class="am-badge am-badge-primary am-text-sm am-radius am-badge-primary">示范</a>
+		<a href="keyword/任天堂" class="am-badge am-badge-primary am-text-sm am-radius am-badge-secondary">任天堂</a>
+		<a href="keyword/是我的" class="am-badge am-badge-primary am-text-sm am-radius am-badge-success">是我的</a>
+		<a href="keyword/禁入" class="am-badge am-badge-primary am-text-sm am-radius am-badge-primary">禁入</a>
+		<a href="keyword/美联储" class="am-badge am-badge-primary am-text-sm am-radius am-badge-primary">美联储</a>
+		<a href="keyword/飞机" class="am-badge am-badge-primary am-text-sm am-radius am-badge-primary">飞机</a>
+		<a href="keyword/基金的" class="am-badge am-badge-primary am-text-sm am-radius am-badge-secondary">基金的</a>
+		<a href="keyword/关键" class="am-badge am-badge-primary am-text-sm am-radius am-badge-primary">关键</a>
+		<a href="keyword/习近平" class="am-badge am-badge-primary am-text-sm am-radius am-badge-secondary">习近平</a>
+		<a href="keyword/低风险" class="am-badge am-badge-primary am-text-sm am-radius am-badge-danger">低风险</a>
+		<a href="keyword/原标题" class="am-badge am-badge-primary am-text-sm am-radius am-badge-warning">原标题</a>
 		<a href="keyword/生存" class="am-badge am-badge-primary am-text-sm am-radius am-badge-primary">生存</a>
-		<a href="keyword/七八百" class="am-badge am-badge-primary am-text-sm am-radius am-badge">七八百</a>
+		<a href="keyword/七八百" class="am-badge am-badge-primary am-text-sm am-radius am-badge-warning">七八百</a>
 		<a href="keyword/师生" class="am-badge am-badge-primary am-text-sm am-radius am-badge">师生</a>
 		<a href="keyword/学生工作" class="am-badge am-badge-primary am-text-sm am-radius am-badge">学生工作</a>
 		<a href="keyword/火纹" class="am-badge am-badge-primary am-text-sm am-radius am-badge-success">火纹</a>
-		<a href="keyword/变废为宝" class="am-badge am-badge-primary am-text-sm am-radius am-badge-primary">变废为宝</a>
-		<a href="keyword/内地和香港" class="am-badge am-badge-primary am-text-sm am-radius am-badge-success">内地和香港</a>
-		<a href="keyword/孵化器" class="am-badge am-badge-primary am-text-sm am-radius am-badge-primary">孵化器</a>
-		<a href="keyword/美女" class="am-badge am-badge-primary am-text-sm am-radius am-badge-danger">美女</a>
-		<a href="keyword/逆回购" class="am-badge am-badge-primary am-text-sm am-radius am-badge-warning">逆回购</a>
-		<a href="keyword/创业者" class="am-badge am-badge-primary am-text-sm am-radius am-badge-warning">创业者</a>
-		<a href="keyword/核动力" class="am-badge am-badge-primary am-text-sm am-radius am-badge-danger">核动力</a>
-		<a href="keyword/网站介绍" class="am-badge am-badge-primary am-text-sm am-radius am-badge">网站介绍</a>
+		<a href="keyword/内地和香港" class="am-badge am-badge-primary am-text-sm am-radius am-badge-danger">内地和香港</a>
+		<a href="keyword/孵化器" class="am-badge am-badge-primary am-text-sm am-radius am-badge-danger">孵化器</a>
+		<a href="keyword/美女" class="am-badge am-badge-primary am-text-sm am-radius am-badge">美女</a>
+		<a href="keyword/逆回购" class="am-badge am-badge-primary am-text-sm am-radius am-badge-success">逆回购</a>
+		<a href="keyword/创业者" class="am-badge am-badge-primary am-text-sm am-radius am-badge-success">创业者</a>
+		<a href="keyword/核动力" class="am-badge am-badge-primary am-text-sm am-radius am-badge-primary">核动力</a>
+		<a href="keyword/网站介绍" class="am-badge am-badge-primary am-text-sm am-radius am-badge-success">网站介绍</a>
 		<a href="keyword/正式启" class="am-badge am-badge-primary am-text-sm am-radius am-badge-success">正式启</a>
-		<a href="keyword/靠谱" class="am-badge am-badge-primary am-text-sm am-radius am-badge-warning">靠谱</a>
-		<a href="keyword/驱动" class="am-badge am-badge-primary am-text-sm am-radius am-badge-secondary">驱动</a>
-		<a href="keyword/新闻" class="am-badge am-badge-primary am-text-sm am-radius am-badge">新闻</a>
-		<a href="keyword/开心" class="am-badge am-badge-primary am-text-sm am-radius am-badge-success">开心</a>
-		<a href="keyword/美国总统大选" class="am-badge am-badge-primary am-text-sm am-radius am-badge">美国总统大选</a>
-		<a href="keyword/特朗普" class="am-badge am-badge-primary am-text-sm am-radius am-badge-success">特朗普</a>
-		<a href="keyword/需求" class="am-badge am-badge-primary am-text-sm am-radius am-badge-danger">需求</a>
-		<a href="keyword/经济" class="am-badge am-badge-primary am-text-sm am-radius am-badge">经济</a>
+		<a href="keyword/靠谱" class="am-badge am-badge-primary am-text-sm am-radius am-badge-secondary">靠谱</a>
+		<a href="keyword/驱动" class="am-badge am-badge-primary am-text-sm am-radius am-badge-success">驱动</a>
+		<a href="keyword/新闻" class="am-badge am-badge-primary am-text-sm am-radius am-badge-warning">新闻</a>
+		<a href="keyword/开心" class="am-badge am-badge-primary am-text-sm am-radius am-badge-danger">开心</a>
+		<a href="keyword/美国总统大选" class="am-badge am-badge-primary am-text-sm am-radius am-badge-danger">美国总统大选</a>
+		<a href="keyword/特朗普" class="am-badge am-badge-primary am-text-sm am-radius am-badge-danger">特朗普</a>
+		<a href="keyword/需求" class="am-badge am-badge-primary am-text-sm am-radius am-badge-warning">需求</a>
+		<a href="keyword/经济" class="am-badge am-badge-primary am-text-sm am-radius am-badge-success">经济</a>
 		<a href="keyword/创业" class="am-badge am-badge-primary am-text-sm am-radius am-badge">创业</a>
 		<a href="keyword/深港通" class="am-badge am-badge-primary am-text-sm am-radius am-badge-primary">深港通</a>
-		<a href="keyword/关键字" class="am-badge am-badge-primary am-text-sm am-radius am-badge">关键字</a>
-		<a href="keyword/过期奶粉" class="am-badge am-badge-primary am-text-sm am-radius am-badge-secondary">过期奶粉</a>
-		<a href="keyword/棋子" class="am-badge am-badge-primary am-text-sm am-radius am-badge-danger">棋子</a>
-		<a href="keyword/字数" class="am-badge am-badge-primary am-text-sm am-radius am-badge-secondary">字数</a>
+		<a href="keyword/关键字" class="am-badge am-badge-primary am-text-sm am-radius am-badge-primary">关键字</a>
+		<a href="keyword/过期奶粉" class="am-badge am-badge-primary am-text-sm am-radius am-badge-danger">过期奶粉</a>
+		<a href="keyword/棋子" class="am-badge am-badge-primary am-text-sm am-radius am-badge">棋子</a>
+		<a href="keyword/字数" class="am-badge am-badge-primary am-text-sm am-radius am-badge-success">字数</a>
 	</div>
 </div>
 <!-- keyword end -->

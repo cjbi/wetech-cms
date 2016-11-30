@@ -10,7 +10,7 @@
 		<ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
 			<li><a href="<%=request.getContextPath()%>/index"><span class="am-icon-home"></span> 网站首页 </a></li>
 			<li class="am-dropdown" data-am-dropdown><a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;"> <span
-					class="am-icon-users"></span> 管理员 <span class="am-icon-caret-down"></span>
+					class="am-icon-users"></span> ${loginUser.nickname } <span class="am-icon-caret-down"></span>
 			</a>
 				<ul class="am-dropdown-content">
 					<li><a href="#"><span class="am-icon-user"></span> 资料</a></li>

@@ -36,7 +36,7 @@ $(function() {
 		indexPicCount = data.length;
 		$('#indexPicCount').text(indexPicCount);
 		for ( var i in data) {
-		    var img = '<a href="#"><img class="am-thumbnail am-thumbnail am-animation-scale-up" src="/resources/indexPic/thumbnail/' + data[i] + '" alt=""></a>';
+		    var img = '<a href="'+contextPath+'/resources/indexPic/' + data[i] + '" target="_blank"><img class="am-thumbnail am-thumbnail am-animation-scale-up" src="'+contextPath+'/resources/indexPic/thumbnail/' + data[i] + '" title="点击查看大图"></a>';
 		    $('tbody').append('<tr>');
 		    $('tr:last').append('<td>' + img + '</td>');
 		    $('tr:last').append('<td>' + data[i] + ' </td>');

@@ -69,6 +69,7 @@ public class TopicController {
 	}
 
 	@RequestMapping({ "/topic", "/", "" })
+	@AuthMethod(role = "ROLE_PUBLISH,ROLE_AUDIT")
 	public String topic(Model model) {
 		initChannel(model);
 		return "admin/topic/topic";
