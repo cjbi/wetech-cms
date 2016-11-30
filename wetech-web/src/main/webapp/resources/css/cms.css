@@ -36,3 +36,7 @@
 .am-panel-group {
 	padding-top: 20px;
 }
+
+.am-dropdown-search {
+	min-width: 560px;
+}

@@ -13,7 +13,7 @@
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 <link rel="alternate icon" type="image/png" href="<%=request.getContextPath()%>/resources/assets/i/favicon.png">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/assets/css/amazeui.min.css" />
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/index/web.cms.css" />
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/cms.css" />
 </head>
 <body class="am-with-topbar-fixed-top">
 	<jsp:include page="/jsp/template/top.jsp" />
@@ -141,5 +141,6 @@
 	<script src="<%=request.getContextPath()%>/resources/assets/js/amazeui.min.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/dwr/engine.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/dwr/interface/dwrService.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/js/cms.js"></script>
 </body>
 </html>

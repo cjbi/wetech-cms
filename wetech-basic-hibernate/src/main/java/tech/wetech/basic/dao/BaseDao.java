@@ -20,10 +20,6 @@ import org.hibernate.transform.Transformers;
 import tech.wetech.basic.model.Pager;
 import tech.wetech.basic.model.SystemContext;
 
-/**
- * @author cjb
- *
- */
 @SuppressWarnings("unchecked")
 public class BaseDao<T> implements IBaseDao<T> {
 	

@@ -11,6 +11,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import tech.wetech.basic.model.Pager;
 import tech.wetech.basic.model.SystemContext;
@@ -23,10 +25,11 @@ import tech.wetech.cms.service.IChannelService;
 import tech.wetech.cms.service.IKeywordService;
 import tech.wetech.cms.service.ITopicService;
 import tech.wetech.cms.web.BaseInfoUtil;
+import tech.wetech.cms.web.ResponseData;
 
 @Controller
 public class IndexController {
-	
+
 	@Inject
 	private IChannelService channelService;
 	@Inject
@@ -36,104 +39,115 @@ public class IndexController {
 	@Inject
 	private IKeywordService keywordService;
 
-	@RequestMapping({"/","/index"})
+	@RequestMapping({ "/", "/index" })
 	public String index(Model model) {
 		model.addAttribute("baseInfo", BaseInfoUtil.getInstacne().read());
 		return "index/index";
 	}
-	
+
+	@ResponseBody
+	@RequestMapping(value = "/search/{con}", method = RequestMethod.GET)
+	public List<Topic> search(@PathVariable String con, Model model) {
+		SystemContext.setOrder("asc");
+		SystemContext.setSort("c.orders");
+		SystemContext.setOrder("desc");
+		SystemContext.setSort("t.publishDate");
+		Pager<Topic> topics = topicService.searchTopic(con);
+		//将关键字着色
+		focus(topics, con);
+		return topics.getDatas();
+	}
+
 	@RequestMapping("/channel/{cid}")
-	public String showChannel(@PathVariable int cid,Model model,HttpServletResponse resp,HttpServletRequest req) throws IOException {
+	public String showChannel(@PathVariable int cid, Model model, HttpServletResponse resp, HttpServletRequest req)
+			throws IOException {
 		Channel c = channelService.load(cid);
-		//System.out.println(c.getType());
+		// System.out.println(c.getType());
 		Channel pc = null;
-		if(c.getType()==ChannelType.NAV_CHANNEL) {
+		if (c.getType() == ChannelType.NAV_CHANNEL) {
 			pc = c;
-			//如果是导航栏目，需要获取该栏目中的第一个栏目
+			// 如果是导航栏目，需要获取该栏目中的第一个栏目
 			c = channelService.loadFirstChannelByNav(c.getId());
 		} else {
 			pc = c.getParent();
 		}
-		if(c.getType()==ChannelType.TOPIC_CONTENT) {
-			resp.sendRedirect(req.getContextPath()+"/topic/"+topicService.loadLastedTopicByColumn(cid).getId());
-		} else if(c.getType()==ChannelType.TOPIC_IMG){
+		if (c.getType() == ChannelType.TOPIC_CONTENT) {
+			resp.sendRedirect(req.getContextPath() + "/topic/" + topicService.loadLastedTopicByColumn(cid).getId());
+		} else if (c.getType() == ChannelType.TOPIC_IMG) {
 			SystemContext.setPageSize(16);
 			SystemContext.setSort("a.topic.publishDate");
 			SystemContext.setOrder("desc");
 			Pager<Attachment> atts = attachmentService.findChannelPic(cid);
 			model.addAttribute("datas", atts);
-		} else if(c.getType()==ChannelType.TOPIC_LIST) {
+		} else if (c.getType() == ChannelType.TOPIC_LIST) {
 			SystemContext.setSort("t.publishDate");
 			SystemContext.setOrder("desc");
-			//System.out.println(c.getType());
-			model.addAttribute("datas", topicService.find(c.getId(),null,1));
+			// System.out.println(c.getType());
+			model.addAttribute("datas", topicService.find(c.getId(), null, 1));
 		}
 		SystemContext.removeSort();
 		SystemContext.removeOrder();
 		model.addAttribute("pc", pc);
 		model.addAttribute("cs", channelService.listUseChannelByParent(pc.getId()));
 		model.addAttribute("channel", c);
-		if(c.getType()==ChannelType.TOPIC_LIST) {
+		if (c.getType() == ChannelType.TOPIC_LIST) {
 			return "index/channel";
 		} else {
 			return "index/channel_pic";
 		}
 	}
-	
+
 	@RequestMapping("/topic/{tid}")
-	public String showTopic(@PathVariable int tid,Model model) {
+	public String showTopic(@PathVariable int tid, Model model) {
 		Topic t = topicService.load(tid);
 		String keywords = t.getKeyword();
 		model.addAttribute("topic", t);
-		if(keywords==null||"".equals(keywords.trim())||"\\|".equals(keywords.trim())) {
+		if (keywords == null || "".equals(keywords.trim()) || "\\|".equals(keywords.trim())) {
 			model.addAttribute("hasKey", false);
 		} else {
 			String[] kws = keywords.split("\\|");
 			model.addAttribute("hasKey", true);
-			model.addAttribute("kws",kws);
+			model.addAttribute("kws", kws);
 		}
 		List<Attachment> atts = attachmentService.listAttachByTopic(tid);
-		if(atts.size()>0) {
+		if (atts.size() > 0) {
 			model.addAttribute("hasAtts", true);
 			model.addAttribute("atts", atts);
 		} else {
-			model.addAttribute("hasAtts",false);
+			model.addAttribute("hasAtts", false);
 		}
-		model.addAttribute("recommendTopics",topicService.listRecommendTopicByNumber(8));
+		model.addAttribute("recommendTopics", topicService.listRecommendTopicByNumber(8));
 		model.addAttribute("channelTopics", topicService.listTopicByChannelAndNumber(t.getChannel().getId(), 8));
 		return "index/topic";
 	}
-	
-	@RequestMapping("/search/{con}")
-	public String search(@PathVariable String con,Model model) {
-		SystemContext.setOrder("asc");
-		SystemContext.setSort("c.orders");
-		model.addAttribute("cs", channelService.listChannelByType(ChannelType.NAV_CHANNEL));
-		SystemContext.setOrder("desc");
-		SystemContext.setSort("t.publishDate");
-		Pager<Topic> topics = topicService.searchTopic(con);
-		emp(topics,con);
-		model.addAttribute("datas", topics);
-		model.addAttribute("con", con);
-		return "index/search";
-	}
-	
+
+	/*
+	 * @RequestMapping("/search/{con}") public String search(@PathVariable
+	 * String con,Model model) { SystemContext.setOrder("asc");
+	 * SystemContext.setSort("c.orders"); model.addAttribute("cs",
+	 * channelService.listChannelByType(ChannelType.NAV_CHANNEL));
+	 * SystemContext.setOrder("desc"); SystemContext.setSort("t.publishDate");
+	 * Pager<Topic> topics = topicService.searchTopic(con); emp(topics,con);
+	 * model.addAttribute("datas", topics); model.addAttribute("con", con);
+	 * return "index/search"; }
+	 */
+
 	@RequestMapping("/keyword/{con}")
-	public String keyword(@PathVariable String con,Model model) {
+	public String keyword(@PathVariable String con, Model model) {
 		model.addAttribute("kws", keywordService.getMaxTimesKeyword(9));
 		SystemContext.setOrder("desc");
 		SystemContext.setSort("t.publishDate");
 		Pager<Topic> topics = topicService.searchTopicByKeyword(con);
-		emp(topics,con);
+		focus(topics, con);
 		model.addAttribute("datas", topics);
 		model.addAttribute("con", con);
 		return "index/keyword";
 	}
 
-	private void emp(Pager<Topic> topics, String con) {
-		for(Topic t:topics.getDatas()) {
-			if(t.getTitle().contains(con)) {
-				String tt = t.getTitle().replaceAll(con, "<span class='emp'>"+con+"</span>");
+	private void focus(Pager<Topic> topics, String con) {
+		for (Topic t : topics.getDatas()) {
+			if (t.getTitle().contains(con)) {
+				String tt = t.getTitle().replaceAll(con, "<mark>" + con + "</mark>");
 				t.setTitle(tt);
 			}
 		}

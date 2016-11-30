@@ -72,12 +72,12 @@
 
 			<form method="post" id="myForm" class="am-form am-form-inline">
 				<label for="username">登录用户:</label> <input type="text"
-					name="username" id="username"> <br> <label
+					name="username" id="username" required> <br> <label
 					for="password">登录密码:</label> <input type="password" name="password"
-					id="password"> <br>
+					id="password" required> <br>
 				<label for="password">验证码:</label><br>
 				<div class="am-form-group">
-				<input type="text" name="checkcode" id="validateCode" placeholder="请输入验证码">
+				<input type="text" name="checkcode" id="validateCode" placeholder="请输入验证码" required>
 				
 				</div>
 				<div class="am-form-group"><img src="drawCheckCode" onclick="reCheckcode(this)"></div>

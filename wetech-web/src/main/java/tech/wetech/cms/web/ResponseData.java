@@ -31,6 +31,14 @@ public class ResponseData {
 		this.message = message;
 	}
 	
+	public ResponseData(boolean success, String type, String message, Object data) {
+		super();
+		this.success = success;
+		this.type = type;
+		this.message = message;
+		this.data = data;
+	}
+
 	public ResponseData(String message){
 		this.message = message;
 	}

@@ -28,17 +28,23 @@
 			</ul>
 			<form class="am-topbar-form am-topbar-left  am-form-inline" role="search">
 				<div class="am-form-group am-form-icon">
-					<i class="am-icon-search"></i> <input type="text" class="am-form-field am-input-sm" placeholder=" 搜索你感兴趣的内容...">
+					<div class="am-dropdown" id='dropdown-search'>
+						<i class="am-icon-search"></i> <input type="text" id="dropdown-search-input" class="am-form-field am-input-sm" placeholder=" 搜索你感兴趣的内容...">
+						<ul class="am-dropdown-content am-dropdown-search" id="dropdown-search-ul"></ul>
+					</div>
 				</div>
 			</form>
 			<div class="am-topbar-right">
-					<c:if test="${loginUser!=null}">
-						<a href="<%=request.getContextPath()%>/admin"><button class="am-btn am-btn-primary am-topbar-btn am-btn-sm"><span class="am-icon-user"></span> ${loginUser.nickname }</button></a>
-					</c:if>
-					<c:if test="${loginUser==null}">
-						<a href="<%=request.getContextPath()%>/login"><button class="am-btn am-btn-primary am-topbar-btn am-btn-sm"><span class="am-icon-user"></span> 登录</button></a>
-					</c:if>
+				<c:if test="${loginUser!=null}">
+					<a href="<%=request.getContextPath()%>/admin"><button class="am-btn am-btn-primary am-topbar-btn am-btn-sm"><span class="am-icon-user"></span> ${loginUser.nickname }</button></a>
+				</c:if>
+				<c:if test="${loginUser==null}">
+					<a href="<%=request.getContextPath()%>/login"><button class="am-btn am-btn-primary am-topbar-btn am-btn-sm"><span class="am-icon-user"></span> 登录</button></a>
+				</c:if>
 			</div>
 		</div>
 	</div>
+	<script>
+		var contextPath = "${pageContext.request.contextPath}";
+    </script>
 </header>
