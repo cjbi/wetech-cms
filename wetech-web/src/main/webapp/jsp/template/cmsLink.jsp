@@ -11,6 +11,7 @@
 				<li><a href="http://www.jd.com">京东</a></li>
 				<li><a href="http://www.163.com">网易</a></li>
 				<li><a href="http://www.cnbeta.com">cnBeta</a></li>
+				<li><a href="http://amazeui.org">Amaze UI</a></li>
 			</ul>
 		</div>
 	</div>

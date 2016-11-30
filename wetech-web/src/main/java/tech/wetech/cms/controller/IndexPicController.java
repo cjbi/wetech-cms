@@ -26,6 +26,7 @@ import org.springframework.web.multipart.MultipartFile;
 import net.coobird.thumbnailator.Thumbnails;
 import net.coobird.thumbnailator.Thumbnails.Builder;
 import tech.wetech.basic.util.JsonUtil;
+import tech.wetech.cms.auth.AuthMethod;
 import tech.wetech.cms.dto.AjaxObj;
 import tech.wetech.cms.dto.IndexPicDto;
 import tech.wetech.cms.model.BaseInfo;
@@ -59,12 +60,19 @@ public class IndexPicController {
 	@RequestMapping("/indexPic")
 	public String indexPic(Model model) {
 		initIndexPic( model);
-		return "admin/pic/indexPic";
+		return "admin/indexPic/indexPic";
 	}
+	
 	@ResponseBody
 	@RequestMapping("/listIndexPic")
 	public Map<String, Object> listIndexPic() {
 		return DataTableMap.getMapData(indexPicService.findIndexPic());
+	}
+	
+	@RequestMapping(value = "/add", method = RequestMethod.GET)
+	@AuthMethod(role = "ROLE_PUBLISH")
+	public String add(Model model) {
+		return "admin/indexPic/add";
 	}
 	
 	/*-----------------------------------------------------*/

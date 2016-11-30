@@ -17,7 +17,7 @@ public class TopicDao extends BaseDao<Topic> implements ITopicDao {
 	}
 
 	private String getTopicSelect() {
-		return "select new Topic(t.id,t.title,t.keyword,t.status,t.recommend,t.publishDate,t.author,t.cname)";
+		return "select new Topic(t.id,t.title,t.keyword,t.status,t.recommend,t.publishDate,t.author,t.cname,t.summary)";
 	}
 
 	@Override
@@ -53,7 +53,7 @@ public class TopicDao extends BaseDao<Topic> implements ITopicDao {
 
 	@Override
 	public Pager<Topic> findRecommendTopic(Integer cid) {
-		String hql = getTopicSelect() + " from Topic t where t.status=1 and t.recommend=1";
+		String hql = getTopicSelect() + " from Topic t where t.status=1 and t.recommend=1 order by t.publishDate ';";
 		if (cid == null || cid == 0) {
 			return this.find(hql);
 		} else {
@@ -64,18 +64,24 @@ public class TopicDao extends BaseDao<Topic> implements ITopicDao {
 
 	@SuppressWarnings("unchecked")
 	@Override
+	public List<Topic> listRecommendTopicByNumber(int num) {
+		String hql = getTopicSelect() + " from Topic t where t.status=1 and t.recommend=1 order by t.publishDate desc";
+		return this.getSession().createQuery(hql).setFirstResult(0).setMaxResults(num).list();
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
 	public List<Topic> listTopicByChannelAndNumber(int cid, int num) {
 		String hql = getTopicSelect() + " from Topic t where t.status=1 and t.channel.id=? order by t.publishDate desc";
 		return this.getSession().createQuery(hql).setParameter(0, cid).setFirstResult(0).setMaxResults(num).list();
 
 	}
-	
+
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Topic> listTopicsByNumber( int num) {
+	public List<Topic> listTopicsByNumber(int num) {
 		String hql = getTopicSelect() + " from Topic t where t.status=1 order by t.publishDate desc";
 		return this.getSession().createQuery(hql).setFirstResult(0).setMaxResults(num).list();
-		
 	}
 
 	@Override

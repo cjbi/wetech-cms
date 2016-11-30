@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<input type="hidden" id="ctx" value="<%=request.getContextPath()%>" />
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <header class="am-topbar am-topbar-fixed-top am-topbar-inverse">
 	<div class="am-container">
 		<h1 class="am-topbar-brand">
@@ -10,7 +11,7 @@
 		</button>
 		<div class="am-collapse am-topbar-collapse" id="collapse-head">
 			<ul class="am-nav am-nav-pills am-topbar-nav">
-				<li class="am-active"><a href="<%=request.getContextPath()%>/index">首页</a></li>
+				<li class=""><a href="<%=request.getContextPath()%>/index">首页</a></li>
 				<#list navs as nav>
 				<#if nav.customLink==0>
 				<li><a href="<%=request.getContextPath()%>/channel/${nav.id}">${nav.name}</a></li>
@@ -34,16 +35,12 @@
 				</div>
 			</form>
 			<div class="am-topbar-right">
-				<button class="am-btn am-btn-primary am-topbar-btn am-btn-sm">
-					<c:if test="${loginUser!=null}">
-						<span class="am-icon-user"></span>
-						<a href="<%=request.getContextPath()%>/admin">${loginUser.nickname }</a>
+					<c:if test="${r"${loginUser!=null}"}">
+						<a href="<%=request.getContextPath()%>/admin"><button class="am-btn am-btn-primary am-topbar-btn am-btn-sm"><span class="am-icon-user"></span> ${r"${loginUser.nickname }"}</button></a>
 					</c:if>
-					<c:if test="${loginUser==null}">
-						<span class="am-icon-user"></span>
-						<a href="<%=request.getContextPath()%>/login"> 登录</a>
+					<c:if test="${r"${loginUser==null}"}">
+						<a href="<%=request.getContextPath()%>/login"><button class="am-btn am-btn-primary am-topbar-btn am-btn-sm"><span class="am-icon-user"></span> 登录</button></a>
 					</c:if>
-				</button>
 			</div>
 		</div>
 	</div>

@@ -303,6 +303,6 @@ reloadTable = function() {
 	    }
 	}, opts || {});
 
-	layer.open(__defaultOpts);
+	return layer.open(__defaultOpts);
     };
 })(jQuery);

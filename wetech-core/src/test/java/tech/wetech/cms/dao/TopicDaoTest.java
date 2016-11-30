@@ -50,6 +50,16 @@ public class TopicDaoTest extends AbstractDbUnitTestCase{
 		DatabaseOperation.CLEAN_INSERT.execute(dbunitCon,ds);
 	}
 	
+	
+	@After
+	public void tearDown() throws DatabaseUnitException, SQLException, IOException {
+		SessionHolder holder = (SessionHolder) TransactionSynchronizationManager.getResource(sessionFactory);
+		Session s = holder.getSession(); 
+		s.flush();
+		TransactionSynchronizationManager.unbindResource(sessionFactory);
+		this.resumeTable();
+	}
+	
 	@Test
 	public void testListTopicByChannelAndNumber() {
 		List<Topic> topics =  topicDao.listTopicByChannelAndNumber(13, 8);
@@ -101,13 +111,12 @@ public class TopicDaoTest extends AbstractDbUnitTestCase{
 			"createDate","cname","channel","channelPicId"});
 	}
 	
-	
-	@After
-	public void tearDown() throws DatabaseUnitException, SQLException, IOException {
-		SessionHolder holder = (SessionHolder) TransactionSynchronizationManager.getResource(sessionFactory);
-		Session s = holder.getSession(); 
-		s.flush();
-		TransactionSynchronizationManager.unbindResource(sessionFactory);
-		this.resumeTable();
+	@Test
+	public void testListRecommendTopicByNumber() {
+		List<Topic> list = topicDao.listRecommendTopicByNumber(8);
+		String json = JsonUtil.getInstance().obj2json(list);
+		Assert.assertNotNull(json);
+		System.out.println(json);
 	}
+	
 }

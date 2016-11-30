@@ -49,7 +49,11 @@ public interface ITopicDao extends IBaseDao<Topic>{
 	 * @return
 	 */
 	public List<Topic> listTopicByChannelAndNumber(int cid,int num);
-	
+	/**
+	 * 通过栏目获取文章
+	 * @param cid
+	 * @return
+	 */
 	public List<Topic> listTopicsByChannel(int cid);
 	/**
 	 * 判断所添加文章的栏目是否需要进行更新
@@ -69,4 +73,10 @@ public interface ITopicDao extends IBaseDao<Topic>{
 	 * @return
 	 */
 	public List<Topic> listTopicsByNumber( int num);
+	/**
+	 * 根据数目获取最新的推荐文章
+	 * @param num
+	 * @return
+	 */
+	public List<Topic> listRecommendTopicByNumber(int num);
 }

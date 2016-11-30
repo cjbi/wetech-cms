@@ -92,6 +92,16 @@ public interface ITopicService {
 	public boolean isUpdateIndex(int cid);
 	
 	public Topic loadLastedTopicByColumn(int cid);
-	
+	/**
+	 * 通过数量获取最新的文章
+	 * @param num
+	 * @return
+	 */
 	public List<Topic> listTopicsByNumber(int num);
+	/**
+	 * 通过数量获取推荐的文章
+	 * @param num
+	 * @return
+	 */
+	public List<Topic> listRecommendTopicByNumber(int num);
 }

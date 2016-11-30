@@ -5,7 +5,7 @@
 <html>
 <head lang="en">
 <meta charset="UTF-8">
-<title>Landing Page | Amaze UI Example</title>
+<title>Topic Page | ${baseInfo.name}</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="format-detection" content="telephone=no">
@@ -25,8 +25,8 @@
 					<h1 class="am-article-title">${topic.title}</h1>
 					<p class="am-article-meta">
 						作者&nbsp;&nbsp;<a href="#">${topic.author }</a>&nbsp;&nbsp;发布于
-						<fmt:formatDate value="${topic.publishDate }" pattern="yyyy-MM-dd HH:mm:ss" />|
-						发表在<a href="<%=request.getContextPath() %>/channel/${topic.channel.id}">${topic.channel.name}</a>栏目
+						<fmt:formatDate value="${topic.publishDate }" pattern="yyyy-MM-dd HH:mm:ss" />
+						| 发表在<a href="<%=request.getContextPath() %>/channel/${topic.channel.id}">${topic.channel.name}</a>栏目
 					</p>
 				</div>
 				<div class="am-article-bd">
@@ -94,23 +94,17 @@
 				<section class="am-panel am-panel-default">
 					<div class="am-panel-hd">推荐阅读</div>
 					<ul class="am-list blog-list">
-						<li><a href="#">Google fonts 的字體（sans-serif 篇）</a></li>
-						<li><a href="#">[but]服貿最前線？－再訪桃園機場</a></li>
-						<li><a href="#">到日星鑄字行學字型</a></li>
-						<li><a href="#">glyph font vs. 漢字（上）</a></li>
-						<li><a href="#">浙江民間書刻體上線</a></li>
-						<li><a href="#">[極短篇] Android v.s iOS，誰的字體好讀？</a></li>
+						<c:forEach items="${recommendTopics }" var="rt">
+							<li><a href="<%=request.getContextPath()%>/topic/${rt.id }">${rt.title }</a></li>
+						</c:forEach>
 					</ul>
 				</section>
 				<section class="am-panel am-panel-default">
 					<div class="am-panel-hd">相关文章</div>
 					<ul class="am-list blog-list">
-						<li><a href="#">Google fonts 的字體（sans-serif 篇）</a></li>
-						<li><a href="#">[but]服貿最前線？－再訪桃園機場</a></li>
-						<li><a href="#">到日星鑄字行學字型</a></li>
-						<li><a href="#">glyph font vs. 漢字（上）</a></li>
-						<li><a href="#">浙江民間書刻體上線</a></li>
-						<li><a href="#">[極短篇] Android v.s iOS，誰的字體好讀？</a></li>
+						<c:forEach items="${channelTopics }" var="ct">
+							<li><a href="<%=request.getContextPath()%>/topic/${ct.id }">${ct.title }</a></li>
+						</c:forEach>
 					</ul>
 				</section>
 				<section class="am-panel am-panel-default">

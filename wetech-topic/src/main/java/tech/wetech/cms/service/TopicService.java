@@ -144,4 +144,11 @@ public class TopicService implements ITopicService {
 		return topicDao.loadLastedTopicByColumn(cid);
 	}
 
+	@Override
+	public List<Topic> listRecommendTopicByNumber(int num) {
+		return topicDao.listRecommendTopicByNumber(num);
+	}
+	
+	
+
 }

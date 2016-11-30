@@ -99,6 +99,8 @@ public class IndexController {
 		} else {
 			model.addAttribute("hasAtts",false);
 		}
+		model.addAttribute("recommendTopics",topicService.listRecommendTopicByNumber(8));
+		model.addAttribute("channelTopics", topicService.listTopicByChannelAndNumber(t.getChannel().getId(), 8));
 		return "index/topic";
 	}
 	

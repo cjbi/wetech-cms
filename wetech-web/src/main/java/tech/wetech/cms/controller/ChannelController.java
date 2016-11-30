@@ -41,7 +41,7 @@ public class ChannelController {
 	@RequestMapping({ "/channel", "/", "" })
 	public String channel(Model model) {
 		model.addAttribute("types", EnumUtils.enumProp2NameMap(ChannelType.class, "name"));
-		return "channel/channel";
+		return "admin/channel";
 	}
 
 	@ResponseBody

@@ -71,13 +71,13 @@ public class TopicController {
 	@RequestMapping({ "/topic", "/", "" })
 	public String topic(Model model) {
 		initChannel(model);
-		return "topic/topic";
+		return "admin/topic/topic";
 	}
 
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	@AuthMethod(role = "ROLE_PUBLISH")
 	public String add(Model model) {
-		return "topic/add";
+		return "admin/topic/add";
 	}
 
 	private void initChannel(Model model) {
