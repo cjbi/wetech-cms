@@ -3,8 +3,8 @@
   <ul class="am-slides">
   	<#list pics as pic>
       <li data-thumb="<%=request.getContextPath()%>/resources/indexPic/thumbnail/${pic.newName}">
-        	<img src="<%=request.getContextPath()%>/resources/indexPic/${pic.newName}">
-          <div class="am-slider-desc"><h2 class="am-slider-title">${pic.title}</h2><p>${pic.title}</p></div>
+        	<a href="${pic.linkUrl}"><img src="<%=request.getContextPath()%>/resources/indexPic/${pic.newName}"></a>
+          <div class="am-slider-desc"><h2 class="am-slider-title">${pic.title}</h2><p>$${pic.subTitle}</p></div>
       </li>
      </#list> 
   </ul>

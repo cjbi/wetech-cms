@@ -103,16 +103,13 @@ public class IndexService implements IIndexService {
 			channelTopics.add(it);
 		}
 		String outfile = SystemContext.getRealPath() + outPath + "/body.jsp";
-
-		// 3、更新首页图片
-		BaseInfo bi = BaseInfoUtil.getInstacne().read();
-		int picnum = bi.getIndexPicNumber();
+		
+		generateBanner();
 
 		Map<String, Object> root = new HashMap<String, Object>();
 		// 从数据库取出最新的文章 暂时显示6篇
 		root.put("news", topicService.listTopicsByNumber(6));
 		root.put("channelTopics", channelTopics);
-		root.put("pics", indexPicService.listIndexPicByNum(picnum));
 		root.put("keywords", keyworkService.getMaxTimesKeyword(50));
 		randomKeywordClz(root, 100);
 		util.fprint(root, "/body.ftl", outfile);

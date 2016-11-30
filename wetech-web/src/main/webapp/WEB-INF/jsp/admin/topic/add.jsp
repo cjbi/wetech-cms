@@ -65,8 +65,8 @@
 					<div class="am-form-group">
 						<label class="am-u-sm-2 am-form-label">文章状态</label>
 						<div class="am-u-sm-8">
-							<label class="am-checkbox-line"> <input type="radio" name="status" value="0"/>未发布
-							</label> <br> <label class="am-checkbox-line"> <input type="radio" name="status" value="1" checked/>已发布
+							<label class="am-checkbox-line"> <input type="radio" name="status" value="0" />未发布
+							</label> <br> <label class="am-checkbox-line"> <input type="radio" name="status" value="1" checked />已发布
 							</label>
 						</div>
 						<div class="am-u-sm-2"></div>
@@ -142,9 +142,8 @@
 					</div>
 					<div class="am-form-group">
 						<label class="am-u-sm-2 am-form-label"></label>
-						<div class="am-u-sm-8 am-text-right">
-							<button type="button" id="submit" class="am-btn am-btn-primary am-radius">发表文章</button>
-							<button type="reset" class="am-btn am-btn-warning am-radius">重置</button>
+						<div class="am-u-sm-8 am-cf">
+							<button type="button" id="submit" class="am-btn am-btn-primary am-radius am-fr">发表文章</button>
 						</div>
 						<div class="am-u-sm-2"></div>
 					</div>

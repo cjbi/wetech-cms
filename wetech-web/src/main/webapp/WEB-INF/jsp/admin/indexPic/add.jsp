@@ -19,17 +19,13 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/assets/css/admin.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/layer/skin/default/layer.css">
 <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/resources/js/base/jquery.ui.all.css" />
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/resources/jcrop/css/jquery.Jcrop.css" />
 <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/resources/uploadify/uploadify.css" />
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/resources/css/zTree/zTreeStyle.css" />
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/assets/css/app.css">
 <script>
     var contextPath = "${pageContext.request.contextPath}";
 </script>
 </head>
-<input type="hidden" id="sid" value="<%=session.getId()%>" />
-<div id="menuContent" class="menuContent" style="display: none; position: absolute; background: #fff; z-index: 999; border: 1px solid #999">
-	<ul id="mytree" class="ztree" style="margin-top: 0;"></ul>
-</div>
 <body>
 	<input type="hidden" id="sid" value="<%=session.getId()%>" />
 	<div class="admin-content">
@@ -41,18 +37,23 @@
 			</div>
 			<div class="am-u-sm-12">
 				<form class="am-form am-form-horizontal" id="add-form">
-					<input type="hidden" id="sid" value="<%=session.getId()%>" /> <br>
 					<div class="am-form-group">
-						<label class="am-u-sm-2 am-form-label">首页图片标题</label>
+						<label class="am-u-sm-2 am-form-label">上传图片</label>
 						<div class="am-u-sm-10">
-							<input type="file" id="indexPic" name="indexPic" /> <input id="newName" name="newName" readonly />
+							<input type="file" id="indexPic" name="indexPic" />
 						</div>
 					</div>
-					<div id="indexPicView"></div>
+					<div class="am-form-group">
+						<label class="am-u-sm-2 am-form-label">图片预览</label>
+						<div class="am-u-sm-10">
+							<div id="indexPicView"></div>
+							<input id="newName" name="newName" readonly required /> <br>
+						</div>
+					</div>
 					<div class="am-form-group">
 						<label class="am-u-sm-2 am-form-label">首页图片标题</label>
 						<div class="am-u-sm-10">
-							<input type="text" id="" name="title" placeholder="请输入图片标题" minlength="3" required>
+							<input type="text" id="" name="title" placeholder="请输入图片标题(必填)" minlength="3" required>
 						</div>
 					</div>
 					<div class="am-form-group">
@@ -79,21 +80,24 @@
 							<input type="text" id="" name="linkUrl" placeholder="请输入链接地址(必填)"></input>
 						</div>
 					</div>
+					<div class="am-form-group">
+						<label class="am-u-sm-2 am-form-label"></label>
+						<div class="am-u-sm-10 am-cf">
+							<button type="button" id="submit" class="am-btn am-btn-primary am-radius am-fr">发表文章</button>
+						</div>
+					</div>
 				</form>
 			</div>
 		</div>
 	</div>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/xheditor/jquery/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/js/ui/jquery-ui-1.10.0.custom.min.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/assets/js/amazeui.min.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/layer/layer.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/xheditor/xheditor-1.1.14-zh-cn.min.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/js/tree/jquery.ztree.core-3.5.min.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/uploadify/jquery.uploadify.min.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/jcrop/js/jquery.Jcrop.min.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/dwr/engine.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/dwr/interface/dwrService.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/assets/js/app.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/js/core/jquery.cms.keywordinput.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/uploadify/jquery.uploadify.min.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/assets/js/dateFormat.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/js/admin/indexPic/add.js"></script>
 </body>

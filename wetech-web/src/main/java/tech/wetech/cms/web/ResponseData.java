@@ -5,29 +5,27 @@ package tech.wetech.cms.web;
  *
  */
 public class ResponseData {
-	//~ Static fields ==================================================================================================
+	
 	public static final ResponseData SUCCESS_NO_DATA = new ResponseData(true,"操作成功");
-	public static final ResponseData FAILED_NO_DATA = new ResponseData(false);
+	public static final ResponseData FAILED_NO_DATA = new ResponseData(false,"操作失败");
 	public static final ResponseData FAILED_DEL_OWNROLE = new ResponseData(false,"当前用户不能删除自己被授于的角色");
 	
-	//~ Instance fields ================================================================================================
 	private boolean success;
 	private String type;
-	private Object message;
 	private String requestURI;
 	private String execptionTrace;
-	private String mess;
+	private String message;
+	private Object data;
 	
-	//~ Constructors ===================================================================================================
 	public ResponseData(boolean success) {
 		this(success, null, null);
 	}
 	
-	public ResponseData(boolean success, Object message) {
+	public ResponseData(boolean success, String message) {
 		this(success, null, message);
 	}
 	
-	public ResponseData(boolean success, String type, Object message) {
+	public ResponseData(boolean success, String type, String message) {
 		this.success = success;
 		this.type = type;
 		this.message = message;
@@ -37,7 +35,6 @@ public class ResponseData {
 		this.message = message;
 	}
 
-	//~ Methods ========================================================================================================
 	public boolean isSuccess() {
 		return success;
 	}
@@ -50,7 +47,7 @@ public class ResponseData {
 		return message;
 	}
 
-	public void setMessage(Object message) {
+	public void setMessage(String message) {
 		this.message = message;
 	}
 
@@ -78,11 +75,12 @@ public class ResponseData {
 		this.execptionTrace = execptionTrace;
 	}
 
-	public String getMess() {
-		return mess;
+	public Object getData() {
+		return data;
 	}
-
-	public void setMess(String mess) {
-		this.mess = mess;
+	
+	public void setData(Object data) {
+		this.data = data;
 	}
+	
 }

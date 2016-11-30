@@ -35,6 +35,7 @@ import tech.wetech.cms.service.IAttachmentService;
 import tech.wetech.cms.service.IIndexPicService;
 import tech.wetech.cms.service.IIndexService;
 import tech.wetech.cms.web.DataTableMap;
+import tech.wetech.cms.web.ResponseData;
 
 @Controller
 @RequestMapping("/admin/pic")
@@ -69,10 +70,33 @@ public class IndexPicController {
 		return DataTableMap.getMapData(indexPicService.findIndexPic());
 	}
 	
-	@RequestMapping(value = "/add", method = RequestMethod.GET)
+	@RequestMapping(value = "/indexPic/add", method = RequestMethod.GET)
 	@AuthMethod(role = "ROLE_PUBLISH")
 	public String add(Model model) {
 		return "admin/indexPic/add";
+	}
+	
+	@ResponseBody
+	@RequestMapping(value = "/indexPic/add", method = RequestMethod.POST)
+	public ResponseData add(@Validated IndexPic indexPic, BindingResult br) {
+		if (br.hasFieldErrors()) {
+			return ResponseData.FAILED_NO_DATA;
+		}
+		indexPicService.add(indexPic);
+		if (indexPic.getStatus() != 0) {
+			indexService.generateBody();
+		}
+		return ResponseData.SUCCESS_NO_DATA;
+	}
+	
+	@ResponseBody
+	@RequestMapping(value = "/indexPic/delete")
+	public ResponseData delete(Long[] ids) {
+		for (Long id : ids) {
+			indexPicService.delete(id.intValue());
+		}
+		indexService.generateBody();
+		return ResponseData.SUCCESS_NO_DATA;
 	}
 	
 	/*-----------------------------------------------------*/

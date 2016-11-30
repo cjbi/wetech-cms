@@ -94,10 +94,10 @@ $(function() {
     }
 
     /*------------ 删除 ------------*/
-    del = function() {
-	var url = contextPath + '/admin/group/delete.do';
+    $('#del').on('click', function() {
+	var url = contextPath + '/admin/pic/indexPic/delete.do';
 	deleteBatch(url, 'id');
-    }
+    });
 
     /*------------ 新增 ------------*/
     $('#add').on('click', function() {
@@ -107,7 +107,7 @@ $(function() {
 	    maxmin : true, // 开启最大化最小化按钮
 	    area: ['100%', '100%'],
 	    /*btn : [ '发表', '关闭' ],*/
-	    content : contextPath + '/admin/pic/add.do'
+	    content : contextPath + '/admin/pic/indexPic/add.do'
 	});
 	layer.full(index);
     });

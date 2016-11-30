@@ -78,7 +78,7 @@ public class UserController {
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public ResponseData add(@Valid UserDto userDto, BindingResult br) {
 		if (br.hasErrors()) {
-			return new ResponseData(false , br.getFieldErrors());
+			return ResponseData.FAILED_NO_DATA;
 		}
 		userService.add(userDto.getUser(), userDto.getRoleIds(), userDto.getGroupIds());
 		return ResponseData.SUCCESS_NO_DATA;
