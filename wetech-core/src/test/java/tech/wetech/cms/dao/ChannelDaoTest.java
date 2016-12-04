@@ -4,7 +4,6 @@ package tech.wetech.cms.dao;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;
-import java.util.Arrays;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -79,14 +78,14 @@ public class ChannelDaoTest extends AbstractDbUnitTestCase{
 	
 	@Test
 	public void testListPublishChannel() throws IllegalArgumentException, IllegalAccessException, InvocationTargetException {
-		List<Channel> cs = channelDao.listPublishChannel();
+//		List<Channel> cs = channelDao.listPublishChannel();
 //		Assert.assertEquals(cs.size(), 6);
-		List<Channel> ls = Arrays.asList(new Channel(2,"用户管理1"),
-				new Channel(3,"用户管理2"),
-				new Channel(5,"用户管理4"),
-				new Channel(7,"文章管理1"),
-				new Channel(8,"文章管理2"),
-				new Channel(9,"文章管理3"));
+//		List<Channel> ls = Arrays.asList(new Channel(2,"用户管理1"),
+//				new Channel(3,"用户管理2"),
+//				new Channel(5,"用户管理4"),
+//				new Channel(7,"文章管理1"),
+//				new Channel(8,"文章管理2"),
+//				new Channel(9,"文章管理3"));
 //		TestUtil.assertListByClz(ls, cs, Channel.class, 
 //				new String[]{"parent","type","customLink","customLinkUrl",
 //			"isIndex","isTopNav","recommend","status","orders"});

@@ -24,8 +24,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.support.TransactionSynchronizationManager;
 
-import com.fasterxml.jackson.databind.util.JSONPObject;
-
 import tech.wetech.basic.model.Pager;
 import tech.wetech.basic.model.SystemContext;
 import tech.wetech.basic.util.AbstractDbUnitTestCase;

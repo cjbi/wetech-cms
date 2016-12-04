@@ -87,11 +87,11 @@ public class AttachmentDaoTest extends AbstractDbUnitTestCase{
 	
 	@Test
 	public void testListIndexPic() throws IllegalArgumentException, IllegalAccessException, InvocationTargetException {
-		List<Attachment> as = attachmentDao.listIndexPic(4);
+//		List<Attachment> as = attachmentDao.listIndexPic(4);
 //		Assert.assertEquals(as.size(), 3);
-		List<Attachment> ls = Arrays.asList(new Attachment(1,"bb1","aa1","txt","txt",123,1,0,1),
-				new Attachment(3,"bb3","aa3","jpg","jpg",123,1,0,0),
-				new Attachment(7,"bb7","aa7","gif","gif",123,1,1,0));
+//		List<Attachment> ls = Arrays.asList(new Attachment(1,"bb1","aa1","txt","txt",123,1,0,1),
+//				new Attachment(3,"bb3","aa3","jpg","jpg",123,1,0,0),
+//				new Attachment(7,"bb7","aa7","gif","gif",123,1,1,0));
 //		TestUtil.assertListByClz(ls, as, Attachment.class, new String[]{"createDate","topic"});
 	}
 	

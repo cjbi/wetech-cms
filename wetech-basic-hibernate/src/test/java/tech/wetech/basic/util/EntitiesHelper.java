@@ -2,7 +2,8 @@ package tech.wetech.basic.util;
 
 import java.util.List;
 
-import junit.framework.Assert;
+import org.junit.Assert;
+
 import tech.wetech.basic.model.User;
 
 
