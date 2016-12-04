@@ -32,6 +32,7 @@ public class JsonUtil {
 		return jf;
 	}
 	
+	@SuppressWarnings("deprecation")
 	public String obj2json(Object obj) {
 		JsonGenerator jg = null;
 		try {

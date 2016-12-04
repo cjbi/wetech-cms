@@ -4,9 +4,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.List;
 
-import junit.framework.Assert;
-
 import org.apache.commons.lang.ArrayUtils;
+import org.junit.Assert;
 
 @SuppressWarnings("rawtypes")
 public class TestUtil {

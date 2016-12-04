@@ -97,7 +97,7 @@ public class LoginController {
 	@RequestMapping("/drawCheckCode")
 	public void drawCheckCode(HttpServletResponse resp, HttpSession session) throws IOException {
 		resp.setContentType("image/jpg");
-		int width = 200;
+		int width = 150;
 		int height = 30;
 		Captcha c = Captcha.getInstance();
 		c.set(width, height);

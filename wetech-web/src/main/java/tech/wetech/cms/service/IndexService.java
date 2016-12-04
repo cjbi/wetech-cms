@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Properties;
 import java.util.Random;
 
 import javax.inject.Inject;
@@ -12,14 +11,11 @@ import javax.inject.Inject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import tech.wetech.basic.model.Pager;
 import tech.wetech.basic.model.SystemContext;
 import tech.wetech.basic.util.FreemarkerUtil;
-import tech.wetech.basic.util.PropertiesUtil;
 import tech.wetech.cms.model.BaseInfo;
 import tech.wetech.cms.model.Channel;
 import tech.wetech.cms.model.ChannelType;
-import tech.wetech.cms.model.CmsLink;
 import tech.wetech.cms.model.IndexTopic;
 import tech.wetech.cms.model.Topic;
 import tech.wetech.cms.web.BaseInfoUtil;

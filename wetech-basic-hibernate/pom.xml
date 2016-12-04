@@ -10,6 +10,12 @@
 	</parent>
 	<artifactId>wetech-basic-hibernate</artifactId>
 
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>5.1.24</version>
+	</dependency>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.hibernate</groupId>
@@ -17,6 +23,11 @@
 			<version>4.2.0.Final</version>
 		</dependency>
 	</dependencies>
-	
+
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-validator</artifactId>
+		<version>4.3.1.Final</version>
+	</dependency>
 
 </project>

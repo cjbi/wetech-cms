@@ -20,11 +20,9 @@ import org.dbunit.dataset.xml.FlatXmlDataSet;
 import org.dbunit.dataset.xml.FlatXmlProducer;
 import org.dbunit.operation.DatabaseOperation;
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.xml.sax.InputSource;
-
-import junit.framework.Assert;
-import tech.wetech.basic.util.DbUtil;
 
 public class AbstractDbUnitTestCase {
 	public static IDatabaseConnection dbunitCon;
