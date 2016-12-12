@@ -16,7 +16,7 @@ div>ul>li>ul>li>a:hover, div>ul>li>a:hover {
 			<li><a href="#" class="am-cf"><span class="am-icon-dashboard"></span> 仪表盘</a></li>
 			<c:if test="${isAdmin }">
 			<li class="am-panel"><a class="am-cf" data-am-collapse="{parent:'#collapase-nav-1', target: '#collapse-nav'}"><span class="am-icon-user"></span>
-					用户管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a> <!-- ul class add am-in to open sidebar item. -->
+					用户管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a> <%-- ul class add am-in to open sidebar item. --%>
 				<ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav">
 					<li><a href="<%=request.getContextPath()%>/admin/user" class="am-cf"><span class="am-icon-info"></span> 用户信息管理<span
 							class="am-fr am-margin-right admin-icon-yellow"></span></a></li>
@@ -56,5 +56,5 @@ div>ul>li>ul>li>a:hover, div>ul>li>a:hover {
 		</ul>
 	</div>
 </div>
-<!-- 自适应菜单按钮 -->
+<%-- 自适应菜单按钮 --%>
 <a href="#" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu" data-am-offcanvas="{target: '#admin-offcanvas'}"></a>

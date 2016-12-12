@@ -3,8 +3,6 @@ package tech.wetech.cms.dao;
 import java.util.List;
 
 import org.apache.commons.lang.StringUtils;
-import org.hibernate.Criteria;
-import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
 import tech.wetech.basic.dao.BaseDao;

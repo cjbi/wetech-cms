@@ -41,6 +41,7 @@ public class BaseInfoUtil {
 		bi.setZipCode(prop.getProperty("zipCode"));
 		bi.setDomainName(prop.getProperty("domainName"));
 		bi.setIndexPicNumber(Integer.parseInt(prop.getProperty("indexPicNumber")));
+		bi.setDesc(prop.getProperty("desc"));
 		String w = prop.getProperty("indexPicSize");
 		
 		String[] ws = w.split("\\*");
@@ -60,6 +61,7 @@ public class BaseInfoUtil {
 			prop.setProperty("zipCode",bi.getZipCode());
 			prop.setProperty("indexPicNum", String.valueOf(bi.getIndexPicNumber()));
 			prop.setProperty("domainName",bi.getDomainName());
+            prop.setProperty("desc",bi.getDesc());
 			prop.setProperty("indexPicSize", bi.getIndexPicWidth()+"*"+bi.getIndexPicHeight());
 			String path = BaseInfoUtil.class.getClassLoader().getResource("baseinfo.properties").getPath();
 //			System.out.println(path);

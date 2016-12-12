@@ -5,7 +5,7 @@
 				<div class="am-u-sm-12 am-u-md-4- am-u-lg-4">
 					<h3>关于本站</h3>
 					<p>
-						我们追求卓越，然时间、经验、能力有限。Amaze UI 有很多不足的地方，希望大家包容、不吝赐教，给我们提意见、建议。感谢你们！
+						${baseInfo.desc}
 					</p>
 				</div>
 				<div class="am-u-sm-12 am-u-md-4- am-u-lg-4">
@@ -22,7 +22,7 @@
 					<h3>&nbsp;&nbsp;更多</h3>
 						<ul>
 							<li>
-								<a href="<%=request.getContextPath()%>/login">后台管理</a>
+								<a href="<%=request.getContextPath()%>/admin">后台管理</a>
 							</li>
 							<li>
 								<a href="mailto:${baseInfo.email}">联系我们</a>

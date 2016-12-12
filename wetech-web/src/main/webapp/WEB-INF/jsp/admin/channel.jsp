@@ -29,7 +29,7 @@ div#rMenu ul {
 	font-family: inherit;
 }
 </style>
-<!-- content start -->
+<%-- content start --%>
 <div class="admin-content">
 	<div class="admin-content-body">
 		<div class="am-cf am-padding am-padding-bottom-0">
@@ -153,13 +153,13 @@ div#rMenu ul {
 			</div>
 		</div>
 	</div>
-	<!-- footer start -->
+	<%-- footer start --%>
 	<jsp:include page="/jsp/admin/footer.jsp" />
-	<!-- footer end -->
+	<%-- footer end --%>
 </div>
-<!-- content end -->
+<%-- content end --%>
 
-<!-- 隐藏的模态框 -->
+<%-- 隐藏的模态框 --%>
 <div id="rAdd-modal">
 	<form class="am-form am-form-horizontal" id="add-form">
 		<br> <input type="hidden" name="pId">
@@ -247,7 +247,7 @@ div#rMenu ul {
 		</div>
 	</form>
 </div>
-<!-- 隐藏的右键菜单 -->
+<%-- 隐藏的右键菜单 --%>
 <div id="rMenu">
 	<ul class="am-dropdown-content">
 		<li><a href="#" id="rAdd-curr">新增同级节点</a></li>

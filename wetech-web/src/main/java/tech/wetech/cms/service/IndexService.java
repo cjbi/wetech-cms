@@ -15,6 +15,7 @@ import tech.wetech.basic.model.SystemContext;
 import tech.wetech.basic.util.FreemarkerUtil;
 import tech.wetech.cms.model.BaseInfo;
 import tech.wetech.cms.model.Channel;
+import tech.wetech.cms.model.ChannelTree;
 import tech.wetech.cms.model.ChannelType;
 import tech.wetech.cms.model.IndexTopic;
 import tech.wetech.cms.model.Topic;
@@ -62,8 +63,17 @@ public class IndexService implements IIndexService {
 	public void generateTop() {
 		System.out.println("=============重新生成了顶部信息====================");
 		List<Channel> cs = channelService.listTopNavChannel();
+		List<ChannelTree> cts = new ArrayList<>();
+		for(Channel c :cs) {
+			ChannelTree ct = new ChannelTree();
+			ct.setId(c.getId());
+			ct.setName(c.getName());
+			ct.setChannel(c);
+			ct.setChild(channelService.listByParent(c.getId()));
+			cts.add(ct);
+		}
 		Map<String, Object> root = new HashMap<String, Object>();
-		root.put("navs", cs);
+		root.put("navs", cts);
 		root.put("baseInfo", BaseInfoUtil.getInstacne().read());
 		String outfile = SystemContext.getRealPath() + outPath + "/top.jsp";
 		util.fprint(root, "/top.ftl", outfile);

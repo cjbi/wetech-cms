@@ -19,13 +19,13 @@ import tech.wetech.basic.model.SystemContext;
 import tech.wetech.cms.model.Attachment;
 import tech.wetech.cms.model.Channel;
 import tech.wetech.cms.model.ChannelType;
+import tech.wetech.cms.model.CmsException;
 import tech.wetech.cms.model.Topic;
 import tech.wetech.cms.service.IAttachmentService;
 import tech.wetech.cms.service.IChannelService;
 import tech.wetech.cms.service.IKeywordService;
 import tech.wetech.cms.service.ITopicService;
 import tech.wetech.cms.web.BaseInfoUtil;
-import tech.wetech.cms.web.ResponseData;
 
 @Controller
 public class IndexController {
@@ -46,21 +46,34 @@ public class IndexController {
 	}
 
 	@ResponseBody
-	@RequestMapping(value = "/search/{con}", method = RequestMethod.GET)
-	public List<Topic> search(@PathVariable String con, Model model) {
+	@RequestMapping(value = "/search", method = RequestMethod.POST)
+	public List<Topic> search(String con) {
 		SystemContext.setOrder("asc");
 		SystemContext.setSort("c.orders");
 		SystemContext.setOrder("desc");
 		SystemContext.setSort("t.publishDate");
 		Pager<Topic> topics = topicService.searchTopic(con);
-		//将关键字着色
+		// 将关键字着色
 		focus(topics, con);
 		return topics.getDatas();
 	}
+	
+	@RequestMapping(value = "/search/{con}", method = RequestMethod.GET)
+	public String search(@PathVariable String con,Model model) {
+		SystemContext.setOrder("asc");
+		SystemContext.setSort("c.orders");
+		model.addAttribute("cs", channelService.listChannelByType(ChannelType.NAV_CHANNEL));
+		SystemContext.setOrder("desc");
+		SystemContext.setSort("t.publishDate");
+		Pager<Topic> topics = topicService.searchTopic(con);
+		focus(topics,con);
+		model.addAttribute("datas", topics);
+		model.addAttribute("con", con);
+		return "index/search";
+	}
 
 	@RequestMapping("/channel/{cid}")
-	public String showChannel(@PathVariable int cid, Model model, HttpServletResponse resp, HttpServletRequest req)
-			throws IOException {
+	public String showChannel(@PathVariable int cid, Model model, HttpServletResponse resp, HttpServletRequest req) throws IOException {
 		Channel c = channelService.load(cid);
 		// System.out.println(c.getType());
 		Channel pc = null;
@@ -71,8 +84,13 @@ public class IndexController {
 		} else {
 			pc = c.getParent();
 		}
+		//如果是文章内容栏目，就获取最后发表的文章
 		if (c.getType() == ChannelType.TOPIC_CONTENT) {
-			resp.sendRedirect(req.getContextPath() + "/topic/" + topicService.loadLastedTopicByColumn(cid).getId());
+			Topic t = topicService.loadLastedTopicByColumn(cid);
+			if(t == null) {
+				throw new CmsException("该栏目还没有文章");
+			}
+			resp.sendRedirect(req.getContextPath() + "/topic/" + t.getId());
 		} else if (c.getType() == ChannelType.TOPIC_IMG) {
 			SystemContext.setPageSize(16);
 			SystemContext.setSort("a.topic.publishDate");
@@ -88,7 +106,9 @@ public class IndexController {
 		SystemContext.removeSort();
 		SystemContext.removeOrder();
 		model.addAttribute("pc", pc);
-		model.addAttribute("cs", channelService.listUseChannelByParent(pc.getId()));
+		if (pc != null) {
+			model.addAttribute("cs", channelService.listUseChannelByParent(pc.getId()));
+		}
 		model.addAttribute("channel", c);
 		if (c.getType() == ChannelType.TOPIC_LIST) {
 			return "index/channel";
@@ -121,16 +141,15 @@ public class IndexController {
 		return "index/topic";
 	}
 
-	/*
-	 * @RequestMapping("/search/{con}") public String search(@PathVariable
-	 * String con,Model model) { SystemContext.setOrder("asc");
-	 * SystemContext.setSort("c.orders"); model.addAttribute("cs",
-	 * channelService.listChannelByType(ChannelType.NAV_CHANNEL));
-	 * SystemContext.setOrder("desc"); SystemContext.setSort("t.publishDate");
-	 * Pager<Topic> topics = topicService.searchTopic(con); emp(topics,con);
-	 * model.addAttribute("datas", topics); model.addAttribute("con", con);
-	 * return "index/search"; }
-	 */
+	@RequestMapping("/topics")
+	public String topics(String title, Model model) {
+		SystemContext.setSort("t.publishDate");
+		SystemContext.setOrder("desc");
+		SystemContext.setPageSize(10);
+		model.addAttribute("recommendTopics", topicService.listRecommendTopicByNumber(8));
+		model.addAttribute("datas", topicService.find(title, 1));
+		return "index/topics";
+	}
 
 	@RequestMapping("/keyword/{con}")
 	public String keyword(@PathVariable String con, Model model) {

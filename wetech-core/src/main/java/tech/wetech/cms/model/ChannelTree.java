@@ -1,8 +1,10 @@
 package tech.wetech.cms.model;
 
+import java.util.List;
+
 /**
  * 系统栏目树对象
- * @author Administrator
+ * @author cjbi
  *
  */
 public class ChannelTree {
@@ -10,7 +12,8 @@ public class ChannelTree {
 	private Integer id;
 	private String name;
 	private Integer pid;
-	
+	private Channel channel;
+	private List<Channel> child;
 	public Integer getId() {
 		return id;
 	}
@@ -37,6 +40,22 @@ public class ChannelTree {
 
 	public ChannelTree() {
 	}
+	
+	public Channel getChannel() {
+		return channel;
+	}
+
+	public void setChannel(Channel channel) {
+		this.channel = channel;
+	}
+
+	public List<Channel> getChild() {
+		return child;
+	}
+
+	public void setChild(List<Channel> child) {
+		this.child = child;
+	}
 
 	public ChannelTree(Integer id, String name, Integer pid) {
 		super();
@@ -47,7 +66,7 @@ public class ChannelTree {
 
 	@Override
 	public String toString() {
-		return "ChannelTree [id=" + id + ", name=" + name + ", pid=" + pid
+		return "ChannelTree [id=" + id + ", name=" + name + ", pid=" + pid + ", channel=" + channel + ", child=" + child
 				+ "]";
 	}
 	

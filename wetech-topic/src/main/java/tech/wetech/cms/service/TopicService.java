@@ -89,6 +89,11 @@ public class TopicService implements ITopicService {
 	public Topic load(int id) {
 		return topicDao.load(id);
 	}
+	
+	@Override
+	public Pager<Topic> find(String title, Integer status) {
+		return topicDao.find(title, status);
+	}
 
 	@Override
 	public Pager<Topic> find(Integer cid, String title, Integer status) {
@@ -148,7 +153,5 @@ public class TopicService implements ITopicService {
 	public List<Topic> listRecommendTopicByNumber(int num) {
 		return topicDao.listRecommendTopicByNumber(num);
 	}
-	
-	
 
 }

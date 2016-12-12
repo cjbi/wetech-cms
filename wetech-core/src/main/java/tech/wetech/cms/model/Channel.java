@@ -184,6 +184,7 @@ public class Channel {
 		this.name = name;
 		this.type = ct;
 	}
+	
 	public Channel(int id, String name, int customLink, String customLinkUrl) {
 		super();
 		this.id = id;

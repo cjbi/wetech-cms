@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!-- content start -->
+<%-- content start --%>
 <div class="admin-content">
 	<div class="admin-content-body">
 		<div class="am-cf am-padding am-padding-bottom-0">
@@ -55,11 +55,11 @@
 			</table>
 		</div>
 	</div>
-	<!-- footer start -->
+	<%-- footer start --%>
 	<jsp:include page="/jsp/admin/footer.jsp" />
-	<!-- footer end -->
+	<%-- footer end --%>
 </div>
-<!-- content end -->
+<%-- content end --%>
 <div id="add-modal">
 	<form class="am-form am-form-horizontal" id="add-form">
 		<br>

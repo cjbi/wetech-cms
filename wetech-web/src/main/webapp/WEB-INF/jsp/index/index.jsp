@@ -16,18 +16,18 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/cms.css" />
 </head>
 <body class="am-with-topbar-fixed-top">
-	<!-- top start -->
+	<%-- top start --%>
 	<jsp:include page="/jsp/template/top.jsp" />
-	<!-- top end -->
-	<!-- content start -->
+	<%-- top end --%>
+	<%-- content start --%>
 	<jsp:include page="/jsp/template/body.jsp" />
-	<!-- content end -->
-	<!-- Link start-->
+	<%-- content end --%>
+	<%-- Link start--%>
 	<jsp:include page="/jsp/template/cmsLink.jsp" />
-	<!-- Link end-->
-	<!-- Footer start -->
+	<%-- Link end--%>
+	<%-- Footer start --%>
 	<jsp:include page="/jsp/template/bottom.jsp" />
-	<!-- Footer end -->
+	<%-- Footer end --%>
 	<script src="<%=request.getContextPath()%>/resources/assets/js/jquery.min.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/assets/js/amazeui.min.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/js/cms.js"></script>

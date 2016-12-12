@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<!-- content start -->
+<%-- content start --%>
 <div class="admin-content">
 	<div class="admin-content-body">
 		<div class="am-cf am-padding am-padding-bottom-0">
@@ -60,11 +60,11 @@
 			</table>
 		</div>
 	</div>
-	<!-- footer start -->
+	<%-- footer start --%>
 	<jsp:include page="/jsp/admin/footer.jsp" />
-	<!-- footer end -->
+	<%-- footer end --%>
 </div>
-<!-- content end -->
+<%-- content end --%>
 <div id="add-modal">
 	<form class="am-form am-form-horizontal" id="add-form">
 		<br>
@@ -190,9 +190,9 @@
 		</div>
 	</form>
 </div>
-<!-- 直接在标签内加载js资源会阻塞浏览器主线程，最终影响用户体验，不推荐这么用 -->
-<!-- 主线程中同步的 XMLHttpRequest 已不推荐使用，因其对终端用户的用户体验存在负面影响。更多帮助请见 http://xhr.spec.whatwg.org/ -->
-<!-- Synchronous XMLHttpRequest on the main thread is deprecated because of its detrimental effects to the end user's experience. For more help, check https://xhr.spec.whatwg.org/.  -->
+<%-- 直接在标签内加载js资源会阻塞浏览器主线程，最终影响用户体验，不推荐这么用 --%>
+<%-- 主线程中同步的 XMLHttpRequest 已不推荐使用，因其对终端用户的用户体验存在负面影响。更多帮助请见 http://xhr.spec.whatwg.org/ --%>
+<%-- Synchronous XMLHttpRequest on the main thread is deprecated because of its detrimental effects to the end user's experience. For more help, check https://xhr.spec.whatwg.org/.  --%>
 <script type="text/javascript">
 	$.getScript("<%=request.getContextPath()%>/resources/js/admin/user.js");
 </script>

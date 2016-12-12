@@ -3,6 +3,7 @@ package tech.wetech.cms.controller;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.xml.ws.Response;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +17,7 @@ import tech.wetech.basic.model.SystemContext;
 import tech.wetech.basic.util.BackupFileUtil;
 import tech.wetech.cms.auth.AuthClass;
 import tech.wetech.cms.service.IIndexService;
+import tech.wetech.cms.web.ResponseData;
 
 @AuthClass
 @Controller
@@ -36,45 +38,32 @@ public class BackupController {
 		BackupFileUtil bfu = BackupFileUtil.getInstance(SystemContext.getRealPath());
 		return bfu.listBackups();
 	}
-	
-	
-	
-	/*---------------------------------------------------*/
-	
-	@RequestMapping(value="/backup/add",method=RequestMethod.GET)
-	public String backup() {
-		return "backup/add";
+
+	@ResponseBody
+    @RequestMapping("/delete")
+	public ResponseData delete(String name) {
+        BackupFileUtil bfu = BackupFileUtil.getInstance(SystemContext.getRealPath());
+        bfu.delete(name);
+		return ResponseData.SUCCESS_NO_DATA;
 	}
-	
-	@RequestMapping(value="/backup/add",method=RequestMethod.POST)
-	public String backup(String backupFilename) {
-		BackupFileUtil bfu = BackupFileUtil.getInstance(SystemContext.getRealPath());
-		bfu.backup(backupFilename);
-		return "redirect:/admin/backups";
-	}
-	
-	@RequestMapping(value="/backups")
-	public String list(Model model) {
-		BackupFileUtil bfu = BackupFileUtil.getInstance(SystemContext.getRealPath());
-		model.addAttribute("backups",bfu.listBackups());
-		return "backup/list";
-	}
-	
-	@RequestMapping("delete/{name}")
-	public String delete(@PathVariable String name,String type) {
-		BackupFileUtil bfu = BackupFileUtil.getInstance(SystemContext.getRealPath());
-		bfu.delete(name+"."+type);
-		return "redirect:/admin/backups";
-	}
-	
-	@RequestMapping("resume/{name}")
-	public String resume(@PathVariable String name,String type) {
-		BackupFileUtil bfu = BackupFileUtil.getInstance(SystemContext.getRealPath());
-		bfu.resume(name+"."+type);
-		indexService.generateTop();
-		indexService.generateBody();
-		indexService.generateBottom();
-		return "redirect:/admin/backups";
-	}
-	
+
+    @ResponseBody
+    @RequestMapping("/resume")
+	public ResponseData resume(String name) {
+        BackupFileUtil bfu = BackupFileUtil.getInstance(SystemContext.getRealPath());
+        bfu.resume(name);
+        indexService.generateTop();
+        indexService.generateBody();
+        indexService.generateBottom();
+        return ResponseData.SUCCESS_NO_DATA;
+    }
+
+    @ResponseBody
+    @RequestMapping("/add")
+    public ResponseData add(String name) {
+        BackupFileUtil bfu = BackupFileUtil.getInstance(SystemContext.getRealPath());
+        bfu.backup(name);
+        return ResponseData.SUCCESS_NO_DATA;
+    }
+
 }

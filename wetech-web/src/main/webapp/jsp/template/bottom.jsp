@@ -22,7 +22,7 @@
 					<h3>&nbsp;&nbsp;更多</h3>
 						<ul>
 							<li>
-								<a href="<%=request.getContextPath()%>/login">后台管理</a>
+								<a href="<%=request.getContextPath()%>/admin">后台管理</a>
 							</li>
 							<li>
 								<a href="mailto:cjbi@outlook.com">联系我们</a>

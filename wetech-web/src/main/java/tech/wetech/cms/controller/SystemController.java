@@ -73,7 +73,7 @@ public class SystemController {
 		session.getServletContext().setAttribute("baseInfo", bi);
 		indexService.generateBottom();
 		indexService.generateTop();
-		return new ResponseData("操作成功，正在重新生成静态化网页...");
+		return ResponseData.SUCCESS_NO_DATA;
 	}
 	
 	@ResponseBody
@@ -88,28 +88,6 @@ public class SystemController {
 	}
 	
 	/*----------------------------------------------------------------*/
-	@RequestMapping("/baseinfo")
-	public String showBaseInfo() {
-		return "system/showBaseInfo";
-	}
-
-	@RequestMapping(value = "/baseinfo/update", method = RequestMethod.GET)
-	public String updateBaseInfo(HttpSession session, Model model) {
-		model.addAttribute("baseInfo", session.getServletContext().getAttribute("baseInfo"));
-		return "system/updateBaseInfo";
-	}
-
-	@RequestMapping(value = "/baseinfo/update", method = RequestMethod.POST)
-	public String updateBaseInfo(@Validated BaseInfo baseInfo, BindingResult br, HttpSession session) {
-		if (br.hasErrors()) {
-			return "system/updateBaseInfo";
-		}
-		BaseInfo bi = BaseInfoUtil.getInstacne().write(baseInfo);
-		session.getServletContext().setAttribute("baseInfo", bi);
-		indexService.generateBottom();
-		indexService.generateTop();
-		return "redirect:/admin/system/baseinfo";
-	}
 
 	@RequestMapping("/cleans")
 	public String listCleans(Model model) {

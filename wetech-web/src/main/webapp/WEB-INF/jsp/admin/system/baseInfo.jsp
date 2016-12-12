@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!-- content start -->
+<%-- content start --%>
 <div class="admin-content">
 	<div class="admin-content-body">
 		<div class="am-cf am-padding am-padding-bottom-0">
@@ -52,6 +52,10 @@
 							<td class="am-text-right">首页图片高度：</td>
 							<td>${baseInfo.indexPicHeight }</td>
 						</tr>
+                        <tr>
+							<td class="am-text-right">关于本站：</td>
+							<td>${baseInfo.desc }</td>
+						</tr>
 					</tbody>
 				</table>
 				<div class="am-panel-footer">
@@ -62,13 +66,13 @@
 			</div>
 		</div>
 	</div>
-	<!-- footer start -->
+	<%-- footer start --%>
 	<jsp:include page="/jsp/admin/footer.jsp" />
-	<!-- footer end -->
+	<%-- footer end --%>
 </div>
-<!-- content end -->
+<%-- content end --%>
 
-<!-- 隐藏的模态框 -->
+<%-- 隐藏的模态框 --%>
 <div id="edit-modal">
 	<form class="am-form am-form-horizontal" id="edit-form">
 		<br>
@@ -124,6 +128,11 @@
 			<label class="am-u-sm-2 am-form-label">首页图片高度</label>
 			<div class="am-u-sm-10">
 				<input type="text" name="indexPicHeight" value="${baseInfo.indexPicHeight }" placeholder="请输入首页图片高度(必填)" required>
+			</div>
+		</div><div class="am-form-group">
+			<label class="am-u-sm-2 am-form-label">关于本站</label>
+			<div class="am-u-sm-10">
+				<textarea  name="desc" placeholder="请输入网站说明(必填)" required>${baseInfo.desc }</textarea>
 			</div>
 		</div>
 	</form>

@@ -12,19 +12,24 @@
 		<div class="am-collapse am-topbar-collapse" id="collapse-head">
 			<ul class="am-nav am-nav-pills am-topbar-nav">
 				<li class=""><a href="<%=request.getContextPath()%>/index">首页</a></li>
-								<li><a href="<%=request.getContextPath()%>/channel/2">财经</a></li>
-				<li><a href="<%=request.getContextPath()%>/channel/3">新闻</a></li>
-				<li><a href="http://163.com">网易</a></li>
-				<li><a href="<%=request.getContextPath()%>/channel/30">测试</a></li>
-				<li class="am-dropdown" data-am-dropdown><a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;"> 下拉菜单 <span
-						class="am-icon-caret-down"></span>
-				</a>
+				<li class="am-dropdown" data-am-dropdown><a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;"> 财经 <span class="am-icon-caret-down"></span></a>
 					<ul class="am-dropdown-content">
-						<li><a href="#">1. 默认样式</a></li>
-						<li><a href="#">2. 基础设置</a></li>
-						<li><a href="#">3. 文字排版</a></li>
-						<li><a href="#">4. 网格系统</a></li>
-					</ul></li>
+						<li><a href="<%=request.getContextPath()%>/channel/15">股票</a></li>
+						<li><a href="<%=request.getContextPath()%>/channel/13">基金</a></li>
+						<li><a href="<%=request.getContextPath()%>/channel/14">商业</a></li>
+					</ul>
+				</li>
+				<li class="am-dropdown" data-am-dropdown><a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;"> 新闻 <span class="am-icon-caret-down"></span></a>
+					<ul class="am-dropdown-content">
+						<li><a href="<%=request.getContextPath()%>/channel/18">军事</a></li>
+						<li><a href="<%=request.getContextPath()%>/channel/16">评论</a></li>
+						<li><a href="<%=request.getContextPath()%>/channel/17">图片</a></li>
+					</ul>
+				</li>
+				<li><a href="http://163.com">网易</a></li>
+				<li><a href="<%=request.getContextPath()%>/channel/56">文章内容</a></li>
+				<li><a href="<%=request.getContextPath()%>/channel/17">图片</a></li>
+				<li><a href="<%=request.getContextPath()%>/channel/14">商业</a></li>
 			</ul>
 			<form class="am-topbar-form am-topbar-left  am-form-inline" role="search">
 				<div class="am-form-group am-form-icon">

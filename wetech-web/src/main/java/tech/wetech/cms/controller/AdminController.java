@@ -14,8 +14,8 @@ public class AdminController {
 
 	@RequestMapping("/admin")
 	@AuthMethod
-	public String index() {
-		return "admin/index";
+	public String main() {
+		return "admin/main";
 	}
 	
 	@AuthMethod

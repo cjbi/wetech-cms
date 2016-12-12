@@ -47,6 +47,14 @@ public interface ITopicService {
 	public Topic load(int id);
 	
 	/**
+	 * 根据标题和状态进行文章的检索
+	 * @param title
+	 * @param status
+	 * @return
+	 */
+	public Pager<Topic> find(String title, Integer status);
+	
+	/**
 	 * 根据栏目和标题和状态进行文章的检索
 	 * @param cid
 	 * @param title
@@ -54,7 +62,7 @@ public interface ITopicService {
 	 */
 	public Pager<Topic> find(Integer cid,String title,Integer status);
 	/**
-	 * 根据用户，栏目和标题和状态进行检索
+	 * 根据用户、栏目、标题题和状态进行检索
 	 * @param uid
 	 * @param cid
 	 * @param title

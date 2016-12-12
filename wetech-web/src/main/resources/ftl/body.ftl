@@ -41,7 +41,7 @@
 			<!--列表标题-->
 			<div class="am-list-news-hd am-cf">
 				<!--带更多链接-->
-				<a href="#" class="">
+				<a href="topics" class="">
 					<h2>最新动态</h2> <span class="am-list-news-more am-fr">更多 &raquo;</span>
 				</a>
 			</div>

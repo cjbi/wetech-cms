@@ -17,7 +17,7 @@
 </head>
 <body class="am-with-topbar-fixed-top">
 	<jsp:include page="/jsp/template/top.jsp" />
-	<!-- topic start -->
+	<%-- topic start --%>
 	<div class="am-g am-g-fixed blog-g-fixed">
 		<div class="am-u-md-8">
 			<article class="am-article">
@@ -37,9 +37,9 @@
 			<hr class="am-article-divider blog-hr">
 			<div class="am-cf">
 				<div class="am-fl">
-					<!-- <button type="button" class="am-btn am-btn-danger am-btn-xs am-radius">
+					<%-- <button type="button" class="am-btn am-btn-danger am-btn-xs am-radius">
 						<i class="am-icon-heart"></i> 赞一下
-					</button> -->
+					</button> --%>
 					<%-- <c:if test="${!hasAtts}">该文章没有附件</c:if>
 					<c:if test="${hasAtts }">
 						<c:forEach items="${atts }" var="att">
@@ -47,7 +47,7 @@
 						</c:forEach>
 					</c:if> --%>
 				</div>
-				<!-- baidu share start -->
+				<%-- baidu share start --%>
 				<div class="am-fr">
 					<div class="bdsharebuttonbox">
 						<a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#"
@@ -81,13 +81,13 @@
 				    + ~(-new Date() / 36e5)];
 		    </script>
 				</div>
-				<!-- baidu share end -->
+				<%-- baidu share end --%>
 			</div>
-			<!-- duoshuo start -->
+			<%-- duoshuo start --%>
 			<div data-am-widget="duoshuo" class="am-duoshuo am-duoshuo-default" data-ds-short-name="cjbi">
 				<div class="ds-thread" data-thread-key="${topic.title}"></div>
 			</div>
-			<!-- duoshuo end -->
+			<%-- duoshuo end --%>
 		</div>
 		<div class="am-u-md-4 blog-sidebar">
 			<div class="am-panel-group">
@@ -135,7 +135,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- topic end-->
+	<%-- topic end--%>
 	<jsp:include page="/jsp/template/bottom.jsp" />
 	<script src="<%=request.getContextPath()%>/resources/assets/js/jquery.min.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/assets/js/amazeui.min.js"></script>

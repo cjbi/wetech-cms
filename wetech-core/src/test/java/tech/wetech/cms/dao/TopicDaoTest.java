@@ -119,4 +119,11 @@ public class TopicDaoTest extends AbstractDbUnitTestCase{
 		System.out.println(json);
 	}
 	
+	@Test
+	public void testFindByTitileAndStatus() {
+		Pager<Topic> ts = topicDao.find("", 1);
+		String json = JsonUtil.getInstance().obj2json(ts);
+		Assert.assertNotNull(json);
+	}
+	
 }

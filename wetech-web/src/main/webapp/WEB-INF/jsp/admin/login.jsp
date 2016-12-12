@@ -83,8 +83,8 @@
 				<div class="am-form-group"><img src="drawCheckCode" onclick="reCheckcode(this)"></div>
 				 <br>
 				 ${error}
-				 <!-- <br> 
-				<label for="remember-me"> <input id="remember-me" type="checkbox"> 记住密码 </label> -->
+				 <%-- <br> 
+				<label for="remember-me"> <input id="remember-me" type="checkbox"> 记住密码 </label> --%>
 				<br>
 				<div class="am-cf">
 					<input type="submit" name="" value="登 录"

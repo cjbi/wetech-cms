@@ -20,7 +20,7 @@
 		</mvc:interceptor>
 	</mvc:interceptors>
 	<context:component-scan base-package="tech.wetech.cms.controller" />
-	<dwr:controller id="dwrController" debug="true"/>
+	<dwr:controller id="dwrController" debug="false"/>
 	<dwr:annotation-config id="dwrAnnotationConfig" />
   	<dwr:annotation-scan base-package="tech.wetech.cms" scanDataTransferObject="true"/>
   	
