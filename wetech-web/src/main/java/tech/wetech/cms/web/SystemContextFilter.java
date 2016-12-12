@@ -21,7 +21,7 @@ public class SystemContextFilter implements Filter {
 		try {
 			// pager.offset是pager-taglib的默认分页偏移量，start是datatables的默认分页偏移量，目前两种都用到了，所以这块要判断下
 			offset = Integer.parseInt(req.getParameter("pager.offset") != null ? req.getParameter("pager.offset") : req.getParameter("start"));
-			pageSize = Integer.parseInt(req.getParameter("order") != null ? "" : req.getParameter("length"));
+			pageSize = Integer.parseInt(req.getParameter("pageSize") != null ? "" : req.getParameter("length"));
 		} catch (NumberFormatException e) {
 		}
 		try {
