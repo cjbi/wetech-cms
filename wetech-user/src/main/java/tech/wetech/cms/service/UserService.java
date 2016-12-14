@@ -154,6 +154,11 @@ public class UserService implements IUserService {
 	}
 
 	@Override
+	public Pager<User> findUser(String gId, String rId, String searchCode, String searchValue) {
+		return userDao.findUser(gId, rId, searchCode, searchValue);
+	}
+	
+	@Override
 	public User load(int id) {
 		return userDao.load(id);
 	}
@@ -223,6 +228,7 @@ public class UserService implements IUserService {
 			throw new CmsException("更新密码失败:" + e.getMessage());
 		}
 	}
+
 
 
 }

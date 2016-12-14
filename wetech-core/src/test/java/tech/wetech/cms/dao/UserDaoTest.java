@@ -213,6 +213,15 @@ public class UserDaoTest extends AbstractDbUnitTestCase{
 	}
 	
 	@Test
+	public void destFindUserByGIdAndRId() {
+		SystemContext.setPageOffset(0);
+		SystemContext.setPageSize(15);
+		Pager<User> pages = userDao.findUser("3", "3", "", "");
+		assertNotNull(pages);
+		System.out.println(JsonUtil.getInstance().obj2json(pages));
+	}
+	
+	@Test
 	public void testFindUser() {
 		SystemContext.setPageOffset(0);
 		SystemContext.setPageSize(15);

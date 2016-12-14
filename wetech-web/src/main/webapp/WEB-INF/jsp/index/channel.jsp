@@ -13,14 +13,14 @@
 <meta name="renderer" content="webkit">
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 <link rel="alternate icon" type="image/png"
-	href="<%=request.getContextPath()%>/resources/assets/i/favicon.png">
+	href="<%=request.getContextPath()%>/resources/amazeui/assets/i/favicon.png">
 <link rel="stylesheet"
-	href="<%=request.getContextPath()%>/resources/assets/css/amazeui.min.css" />
+	href="<%=request.getContextPath()%>/resources/amazeui/assets/css/amazeui.min.css" />
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/resources/css/cms.css" />
 </head>
 <body class="am-with-topbar-fixed-top">
-	<jsp:include page="/jsp/template/top.jsp" />
+	<jsp:include page="/jsp/template/header.jsp" />
 	<%-- channel start --%>
 	<div class="am-g am-g-fixed">
 		<div>
@@ -32,7 +32,7 @@
 			</ol>
 		</div>
 	</div>
-	<div class="am-g am-g-fixed">
+	<div class="am-g am-g-fixed admin-content-body">
 		<div class="am-u-md-3">
 			<div class="am-panel-group">
 				<section class="am-panel am-panel-default">
@@ -97,11 +97,11 @@
 		</div>
 	</div>
 	<%-- channel end--%>
-	<jsp:include page="/jsp/template/bottom.jsp" />
+	<jsp:include page="/jsp/template/footer.jsp" />
 	<script
-		src="<%=request.getContextPath()%>/resources/assets/js/jquery.min.js"></script>
+		src="<%=request.getContextPath()%>/resources/amazeui/assets/js/jquery.min.js"></script>
 	<script
-		src="<%=request.getContextPath()%>/resources/assets/js/amazeui.min.js"></script>
+		src="<%=request.getContextPath()%>/resources/amazeui/assets/js/amazeui.min.js"></script>
 	<script type="text/javascript"
 		src="<%=request.getContextPath()%>/dwr/engine.js"></script>
 	<script type="text/javascript"

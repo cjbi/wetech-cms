@@ -11,7 +11,7 @@
 		</div>
 		<hr>
 		<div class="am-g">
-			<div class="am-u-sm-12 am-u-md-6">
+			<div class="am-u-sm-12 am-u-md-5">
 				<div class="am-btn-toolbar">
 					<div class="am-btn-group am-btn-group-xs">
 						<button type="button" class="am-btn am-btn-default" onclick="add()">
@@ -26,19 +26,40 @@
 					</div>
 				</div>
 			</div>
-			<div class="am-u-sm-12 am-u-md-3">
+			<div class="am-u-sm-12 am-u-md-2">
 				<div class="am-form-group">
-					<select name="searchCode" id="searchCode" data-am-selected="{btnSize: 'sm'}">
-						<option value="id">用户 ID</option>
-						<option value="username">用户名称</option>
-						<option value="nickname">用户昵称</option>
+					<label>组</label>
+					<select name=gId id="gId" data-am-selected="{btnSize: 'sm'}">
+						<option></option>
+					<c:forEach var="group" items="${groups }">
+						<option value="${group.id }">${group.name }</option>
+					</c:forEach>
+					</select>
+				</div>
+			</div>
+			<div class="am-u-sm-12 am-u-md-2">
+				<div class="am-form-group">
+					<label>角色</label>
+					<select name="rId" id="rId" data-am-selected="{btnSize: 'sm'}">
+						<option></option>
+					<c:forEach var="role" items="${roles }">
+						<option value="${role.id }">${role.name }</option>
+					</c:forEach>
 					</select>
 				</div>
 			</div>
 			<div class="am-u-sm-12 am-u-md-3">
-				<div class="am-input-group am-input-group-sm">
-					<input type="text" name="searchValue" id="searchValue" class="am-form-field"> <span class="am-input-group-btn">
-						<button class="am-btn am-btn-default" onclick="reloadTable();" type="button">搜索</button>
+				<div class="am-input-group am-input-group-sm am-input-group-default">
+					<span class="am-input-group-btn">
+						<select name="searchCode" id="searchCode" data-am-selected="{btnWidth: '100%',btnSize: 'sm',btnStyle:'default'}">
+								<option value="id">用户 ID</option>
+								<option value="username">用户名称</option>
+								<option value="nickname">用户昵称</option>
+						</select>
+					</span>
+						<input type="text" name="searchValue" id="searchValue" class="am-form-field">
+					<span class="am-input-group-btn">
+						<button class="am-btn am-btn-default" onclick="reloadTable();" type="button"><span class="am-icon-search"></span></button>
 					</span>
 				</div>
 			</div>

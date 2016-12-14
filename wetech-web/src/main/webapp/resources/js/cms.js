@@ -1,7 +1,8 @@
 $(function() {
+	$.AMUI.progress.start();
 	/*------------ search ------------*/
 	$("#dropdown-search-input").keyup(function() {
-		if ($('#dropdown-search-input').val().trim() !== '') {
+		if ($(this).val().trim() !== '') {
 			$('#dropdown-search').dropdown('open');
 			var url = contextPath + '/search.do';
 			var con = $('#dropdown-search-input').val().trim();
@@ -32,4 +33,5 @@ $(function() {
 			$('#dropdown-search').dropdown('close');
 		}
 	});
+	$.AMUI.progress.done();
 });

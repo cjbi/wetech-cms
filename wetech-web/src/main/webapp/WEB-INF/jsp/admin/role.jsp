@@ -70,7 +70,7 @@
 			</div>
 		</div>
 		<div class="am-form-group">
-			<label class="am-u-sm-2 am-form-label">角色名称</label>
+			<label class="am-u-sm-2 am-form-label">角色类型</label>
 			<div class="am-u-sm-10">
 				<select name="roleType">
 					<label class="am-checkbox-line"> <c:forEach var="type" items="${types }">
@@ -92,7 +92,7 @@
 			</div>
 		</div>
 		<div class="am-form-group">
-			<label class="am-u-sm-2 am-form-label">角色名称</label>
+			<label class="am-u-sm-2 am-form-label">角色类型</label>
 			<div class="am-u-sm-10">
 				<select name="roleType">
 					<label class="am-checkbox-line"> <c:forEach var="type" items="${types }">

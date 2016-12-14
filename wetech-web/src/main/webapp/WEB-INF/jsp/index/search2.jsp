@@ -28,7 +28,7 @@ $(function(){
 </script>
 </head>
 <body>
-<jsp:include page="/jsp/template/top.jsp"/>	
+<jsp:include page="/jsp/template/header.jsp"/>	
 <div id="content">
 	<div id="content_con">
 		<div id="breadcrumb">
@@ -80,6 +80,6 @@ $(function(){
 		</div>
 	</div>
 </div>
-<jsp:include page="/jsp/template/bottom.jsp"/>
+<jsp:include page="/jsp/template/footer.jsp"/>
 </body>
 </html>

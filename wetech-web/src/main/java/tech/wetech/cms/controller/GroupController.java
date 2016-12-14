@@ -73,6 +73,13 @@ public class GroupController {
 		}
 		return ResponseData.SUCCESS_NO_DATA;
 	}
+	
+	@ResponseBody
+	@RequestMapping("/clearUsers")
+	public ResponseData clearGroupUsers(int id) {
+		groupService.deleteGroupUsers(id);
+		return ResponseData.SUCCESS_NO_DATA;
+	}
 
 	/*-------------------------------------------------------------------*/
 
@@ -117,12 +124,6 @@ public class GroupController {
 		model.addAttribute(groupService.load(id));
 		model.addAttribute("us", userService.listGroupUsers(id));
 		return "group/show";
-	}
-
-	@RequestMapping("/clearUsers/{id}")
-	public String clearGroupUsers(@PathVariable int id) {
-		groupService.deleteGroupUsers(id);
-		return "redirect:/admin/group/groups";
 	}
 
 	@RequestMapping("/listChannels/{gid}")

@@ -54,6 +54,10 @@ public interface IUserService {
 	 */
 	public Pager<User> findUser(String searchCode, String searchValue);
 	/**
+	 * 列表用户
+	 */
+	public Pager<User> findUser(String gId, String rId, String searchCode, String searchValue);
+	/**
 	 * 获取用户信息
 	 * @param id
 	 * @return

@@ -137,7 +137,7 @@ $(function() {
 			if (data.success == false) {
 			    layer.msg(data.message, {
 				time : '2000',
-				icon : 5
+				icon : 0
 			    });
 			    return;
 			}

@@ -75,8 +75,8 @@ public class IndexService implements IIndexService {
 		Map<String, Object> root = new HashMap<String, Object>();
 		root.put("navs", cts);
 		root.put("baseInfo", BaseInfoUtil.getInstacne().read());
-		String outfile = SystemContext.getRealPath() + outPath + "/top.jsp";
-		util.fprint(root, "/top.ftl", outfile);
+		String outfile = SystemContext.getRealPath() + outPath + "/header.jsp";
+		util.fprint(root, "/header.ftl", outfile);
 	}
 
 	@Override
@@ -84,8 +84,8 @@ public class IndexService implements IIndexService {
 		System.out.println("=============重新生成了底部信息====================");
 		Map<String, Object> root = new HashMap<String, Object>();
 		root.put("baseInfo", BaseInfoUtil.getInstacne().read());
-		String outfile = SystemContext.getRealPath() + outPath + "/bottom.jsp";
-		util.fprint(root, "/bottom.ftl", outfile);
+		String outfile = SystemContext.getRealPath() + outPath + "/footer.jsp";
+		util.fprint(root, "/footer.ftl", outfile);
 	}
 
 	@Override

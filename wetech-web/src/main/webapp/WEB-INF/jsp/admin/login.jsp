@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -10,10 +9,9 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="renderer" content="webkit">
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-<link rel="alternate icon" type="image/png"
-	href="<%=request.getContextPath()%>/resources/assets/i/favicon.png">
-<link rel="stylesheet"
-	href="<%=request.getContextPath()%>/resources/assets/css/amazeui.min.css" />
+<link rel="alternate icon" type="image/png" href="<%=request.getContextPath()%>/resources/amazeui/assets/i/favicon.png">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/amazeui/assets/css/amazeui.min.css" />
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/layer/skin/default/layer.css">
 <style>
 .header {
 	text-align: center;
@@ -28,23 +26,31 @@
 .header p {
 	font-size: 14px;
 }
+#vld-tooltip {
+	position: absolute;
+	z-index: 1000;
+	padding: 5px 10px;
+	background: #F37B1D;
+	min-width: 150px;
+	color: #fff;
+	transition: all 0.15s;
+	box-shadow: 0 0 5px rgba(0, 0, 0, .15);
+	display: none;
+}
+
+#vld-tooltip:before {
+	position: absolute;
+	top: -8px;
+	left: 50%;
+	width: 0;
+	height: 0;
+	margin-left: -8px;
+	content: "";
+	border-width: 0 8px 8px;
+	border-color: transparent transparent #F37B1D;
+	border-style: none inset solid;
+}
 </style>
-<script type="text/javascript"
-	src="<%=request.getContextPath()%>/resources/js/jquery-1.7.2.min.js"></script>
-<script type="text/javascript"
-	src="<%=request.getContextPath()%>/resources/js/jquery.validate.js"></script>
-<script type="text/javascript"
-	src="<%=request.getContextPath()%>/resources/js/core/jquery.cms.validate.js"></script>
-<script type="text/javascript">
-	$(function() {
-		$("#myForm").cmsvalidate();
-	});
-</script>
-<script type="text/javascript">
-	function reCheckcode(img) {
-		img.src = "drawCheckCode?" + Math.random();
-	}
-</script>
 </head>
 <body>
 	<div class="header">
@@ -58,44 +64,48 @@
 	</div>
 	<div class="am-g">
 		<div class="am-u-lg-6 am-u-md-8 am-u-sm-centered">
-			<h3>登录</h3>
-			<hr>
-			<div class="am-btn-group">
-				<a href="#" class="am-btn am-btn-secondary am-btn-sm"><i
-					class="am-icon-github am-icon-sm"></i> Github</a> <a href="#"
-					class="am-btn am-btn-success am-btn-sm"><i
-					class="am-icon-google-plus-square am-icon-sm"></i> Google+</a> <a
-					href="#" class="am-btn am-btn-primary am-btn-sm"><i
-					class="am-icon-stack-overflow am-icon-sm"></i> stackOverflow</a>
-			</div>
-			<br> <br>
+			<input type="hidden" name="error" id="error" value="${error}" />
+			<form action="<%=request.getContextPath()%>/login" method="post" class="am-form" id="loginForm">
+				<fieldset>
+					<legend> 登录/Login </legend>
+					<div class="am-btn-group">
+						<a href="#" class="am-btn am-btn-secondary am-btn-sm"><i class="am-icon-github am-icon-sm"></i> Github</a> <a href="#" class="am-btn am-btn-success am-btn-sm"><i
+							class="am-icon-google-plus-square am-icon-sm"></i> Google+</a> <a href="#" class="am-btn am-btn-primary am-btn-sm"><i class="am-icon-stack-overflow am-icon-sm"></i>
+							stackOverflow</a>
+					</div>
+					<br> <br>
+					<div class="am-form-group">
+						<label for="username">用户名：</label> <input type="text" name="username" id="username" minlength="3" placeholder="请输入用户名" required />
+					</div>
 
-			<form method="post" id="myForm" class="am-form am-form-inline">
-				<label for="username">登录用户:</label> <input type="text"
-					name="username" id="username" required> <br> <label
-					for="password">登录密码:</label> <input type="password" name="password"
-					id="password" required> <br>
-				<label for="password">验证码:</label><br>
-				<div class="am-form-group">
-				<input type="text" name="checkcode" id="validateCode" placeholder="请输入验证码" required>
-				
-				</div>
-				<div class="am-form-group"><img src="drawCheckCode" onclick="reCheckcode(this)"></div>
-				 <br>
-				 ${error}
-				 <%-- <br> 
-				<label for="remember-me"> <input id="remember-me" type="checkbox"> 记住密码 </label> --%>
-				<br>
-				<div class="am-cf">
-					<input type="submit" name="" value="登 录"
-						class="am-btn am-btn-primary am-btn-sm am-fl"> <input
-						type="submit" name="" value="忘记密码 ^_^? "
-						class="am-btn am-btn-default am-btn-sm am-fr">
-				</div>
+					<div class="am-form-group">
+						<label for="password">密码：</label> <input type="password" name="password" id="password" minlength="6" placeholder="请输入密码" required data-foolish-msg="至少 6 位数字或字符的密码" />
+					</div>
+					<div class="am-form-group">
+						<label for="checkcode">验证码：</label>
+						<div class="am-u-md-12 am-padding-0">
+							<div class="am-u-md-3 am-padding-0">
+								<input type="password" name="checkcode" id="checkcode" placeholder="请输入验证码" pattern="^\d{4}$" minlength="4" required />
+							</div>
+							<div class="am-u-md-3">
+								<img src="drawCheckCode" onclick="reCheckcode(this)">
+							</div>
+							<div class="am-u-md-6 am-padding-0"></div>
+						</div>
+					</div>
+					<div class="am-cf">
+						<button class="am-btn am-btn-primary am-margin-vertical am-fl" type="submit">提交</button>
+						<button class="am-btn am-btn-default am-margin-vertical am-fr" type="submit">忘记密码 ^_^?</button>
+					</div>
+				</fieldset>
 			</form>
 			<hr>
 			<p>© 2014 AllMobilize, Inc. Licensed under MIT license.</p>
 		</div>
 	</div>
+	<script src="<%=request.getContextPath()%>/resources/amazeui/assets/js/jquery.min.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/amazeui/assets/js/amazeui.min.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/layer/layer.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/js/admin/login.js"></script>
 </body>
 </html>

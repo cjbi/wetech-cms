@@ -11,17 +11,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="renderer" content="webkit">
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-<link rel="icon" type="image/png" href="<%=request.getContextPath()%>/resources/assets/i/favicon.png">
-<link rel="apple-touch-icon-precomposed" href="<%=request.getContextPath()%>/resources/assets/i/app-icon72x72@2x.png">
+<link rel="icon" type="image/png" href="<%=request.getContextPath()%>/resources/amazeui/assets/i/favicon.png">
+<link rel="apple-touch-icon-precomposed" href="<%=request.getContextPath()%>/resources/amazeui/assets/i/app-icon72x72@2x.png">
 <meta name="apple-mobile-web-app-title" content="Amaze UI" />
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/assets/css/amazeui.min.css" />
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/assets/css/amazeui.datatables.css" />
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/assets/css/admin.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/amazeui/assets/css/amazeui.min.css" />
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/amazeui/assets/css/amazeui.datatables.css" />
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/amazeui/assets/css/admin.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/layer/skin/default/layer.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/js/base/jquery.ui.all.css" />
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/uploadify/uploadify.css" />
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/zTree/zTreeStyle.css" />
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/assets/css/app.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/admin/main.css">
 <script>
     var contextPath = "${pageContext.request.contextPath}";
 </script>
@@ -153,16 +153,16 @@
 	</div>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/xheditor/jquery/jquery-1.7.2.min.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/js/ui/jquery-ui-1.10.0.custom.min.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/assets/js/amazeui.min.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/amazeui/assets/js/amazeui.min.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/layer/layer.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/xheditor/xheditor-1.1.14-zh-cn.min.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/js/tree/jquery.ztree.core-3.5.min.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/js/ztree/jquery.ztree.core-3.5.min.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/dwr/engine.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/dwr/interface/dwrService.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/assets/js/app.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/js/admin/main.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/js/core/jquery.cms.keywordinput.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/uploadify/jquery.uploadify.min.js"></script>
-	<script src="<%=request.getContextPath()%>/resources/assets/js/dateFormat.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/js/common/dateFormat.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/js/admin/topic/add.js"></script>
 </body>
 </html>

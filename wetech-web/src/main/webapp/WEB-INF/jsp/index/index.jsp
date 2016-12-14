@@ -11,13 +11,13 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="renderer" content="webkit">
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-<link rel="alternate icon" type="image/png" href="<%=request.getContextPath()%>/resources/assets/i/favicon.png">
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/assets/css/amazeui.min.css" />
+<link rel="alternate icon" type="image/png" href="<%=request.getContextPath()%>/resources/amazeui/assets/i/favicon.png">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/amazeui/assets/css/amazeui.min.css" />
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/cms.css" />
 </head>
 <body class="am-with-topbar-fixed-top">
 	<%-- top start --%>
-	<jsp:include page="/jsp/template/top.jsp" />
+	<jsp:include page="/jsp/template/header.jsp" />
 	<%-- top end --%>
 	<%-- content start --%>
 	<jsp:include page="/jsp/template/body.jsp" />
@@ -26,10 +26,10 @@
 	<jsp:include page="/jsp/template/cmsLink.jsp" />
 	<%-- Link end--%>
 	<%-- Footer start --%>
-	<jsp:include page="/jsp/template/bottom.jsp" />
+	<jsp:include page="/jsp/template/footer.jsp" />
 	<%-- Footer end --%>
-	<script src="<%=request.getContextPath()%>/resources/assets/js/jquery.min.js"></script>
-	<script src="<%=request.getContextPath()%>/resources/assets/js/amazeui.min.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/amazeui/assets/js/jquery.min.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/amazeui/assets/js/amazeui.min.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/js/cms.js"></script>
 </body>
 </html>

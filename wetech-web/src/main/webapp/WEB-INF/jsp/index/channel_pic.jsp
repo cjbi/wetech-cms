@@ -11,12 +11,12 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="renderer" content="webkit">
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-<link rel="alternate icon" type="image/png" href="<%=request.getContextPath()%>/resources/assets/i/favicon.png">
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/assets/css/amazeui.min.css" />
+<link rel="alternate icon" type="image/png" href="<%=request.getContextPath()%>/resources/amazeui/assets/i/favicon.png">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/amazeui/assets/css/amazeui.min.css" />
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/cms.css" />
 </head>
 <body class="am-with-topbar-fixed-top">
-	<jsp:include page="/jsp/template/top.jsp" />
+	<jsp:include page="/jsp/template/header.jsp" />
 	<%-- channel start --%>
 	<div class="am-g am-g-fixed">
 		<div>
@@ -104,9 +104,9 @@
 		</div>
 	</div>
 	<%-- channel end--%>
-	<jsp:include page="/jsp/template/bottom.jsp" />
-	<script src="<%=request.getContextPath()%>/resources/assets/js/jquery.min.js"></script>
-	<script src="<%=request.getContextPath()%>/resources/assets/js/amazeui.min.js"></script>
+	<jsp:include page="/jsp/template/footer.jsp" />
+	<script src="<%=request.getContextPath()%>/resources/amazeui/assets/js/jquery.min.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/amazeui/assets/js/amazeui.min.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/dwr/engine.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/dwr/interface/dwrService.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/js/cms.js"></script>

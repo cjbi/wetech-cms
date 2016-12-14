@@ -69,9 +69,11 @@ public class UserController {
 	@ResponseBody
 	@RequestMapping("/list")
 	public Map<String, Object> list(HttpServletRequest req) {
+		String gId = req.getParameter("gId");
+		String rId = req.getParameter("rId");
 		String searchCode = req.getParameter("searchCode");
 		String searchValue = req.getParameter("searchValue");
-		return DataTableMap.getMapData(userService.findUser(searchCode, searchValue));
+		return DataTableMap.getMapData(userService.findUser(gId,rId,searchCode, searchValue));
 	}
 
 	@ResponseBody

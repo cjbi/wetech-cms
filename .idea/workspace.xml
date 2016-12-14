@@ -2,30 +2,157 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc7aa2e7-b14e-4b68-aa62-5e1901991a9a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/backup/1476807146558_111111.tar.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/backup/1479700154498_20161121进行备份.tar.gz" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/wetech_web_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/wetech_web_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/jsp/front_pager.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/jsp/pager.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/admin/01.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/admin/background.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/admin/css/img/admin_welcome.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/admin/css/img/nav_child_icon.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/admin/css/img/nav_title_bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/admin/css/img/nav_title_icon.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/admin/css/img/nav_title_icon_selected.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/admin/css/img/top_bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/admin/css/img/top_remind_bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/admin/css/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/admin/top.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/admin/article.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/admin/authError.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/admin/error.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/admin/img/admin_error_bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/admin/img/admin_login_error_bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/admin/img/admin_welcome.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/admin/img/down1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/admin/img/down2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/admin/img/login_bar.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/admin/img/login_content.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/admin/img/login_top.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/admin/img/nav_child_icon.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/admin/img/nav_title_bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/admin/img/nav_title_icon.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/admin/img/nav_title_icon_selected.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/admin/img/top_bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/admin/img/top_logo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/admin/img/top_remind_bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/admin/img/up1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/admin/img/up2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/admin/login.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/admin/loginError.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/index/img/01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/index/img/bottom_bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/index/img/breadcrumb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/index/img/channel_left_bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/index/img/channel_left_bg1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/index/img/channel_nav.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/index/img/channel_right_dotted.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/index/img/hdjx_title_bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/index/img/header_bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/index/img/jyky_title_bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/index/img/logo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/index/img/search_bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/index/img/topic_bottom.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/index/img/topic_dot.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/index/img/xiaoxun.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/index/img/xwgk_bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/index/img/xxgk_bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/validate/css/chili.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/validate/css/cmxform.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/validate/css/cmxformTemplate.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/validate/css/core.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/validate/css/reset.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/validate/css/screen.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/validate/images/bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/validate/images/checked.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/validate/images/cmxform-divider.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/validate/images/cmxform-fieldset.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/validate/images/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/validate/images/unchecked.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/validate/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/jquery-1.7.2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/jquery.validate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/psd/admin_welcome.psd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/psd/admin_welcome_2.psd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/psd/login_content.psd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/psd/login_top.psd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/psd/top_logo.psd" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/resources/ftl/bottom.ftl" afterPath="$PROJECT_DIR$/wetech-web/src/main/resources/ftl/footer.ftl" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/resources/ftl/top.ftl" afterPath="$PROJECT_DIR$/wetech-web/src/main/resources/ftl/header.ftl" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/jsp/template/bottom.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/jsp/template/footer.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/jsp/template/top.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/jsp/template/header.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/css/admin.css" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/css/admin.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/css/amazeui.css" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/css/amazeui.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/css/amazeui.datatables.css" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/css/amazeui.datatables.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/css/amazeui.flat.css" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/css/amazeui.flat.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/css/amazeui.flat.min.css" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/css/amazeui.flat.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/css/amazeui.min.css" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/css/amazeui.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/css/app.css" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/admin/main.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/fonts/FontAwesome.otf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/fonts/fontawesome-webfont.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/fonts/fontawesome-webfont.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/fonts/fontawesome-webfont.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/fonts/fontawesome-webfont.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/i/app-icon72x72@2x.png" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/i/app-icon72x72@2x.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/i/examples/admin-chrome.png" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/i/examples/admin-chrome.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/i/examples/admin-firefox.png" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/i/examples/admin-firefox.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/i/examples/admin-ie.png" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/i/examples/admin-ie.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/i/examples/admin-opera.png" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/i/examples/admin-opera.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/i/examples/admin-safari.png" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/i/examples/admin-safari.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/i/examples/adminPage.png" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/i/examples/adminPage.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/i/examples/blogPage.png" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/i/examples/blogPage.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/i/examples/landing.png" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/i/examples/landing.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/i/examples/landingPage.png" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/i/examples/landingPage.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/i/examples/loginPage.png" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/i/examples/loginPage.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/i/examples/sidebarPage.png" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/i/examples/sidebarPage.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/i/favicon.png" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/i/favicon.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/i/startup-640x1096.png" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/i/startup-640x1096.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/js/amazeui.datatables.min.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/js/amazeui.datatables.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/js/amazeui.datatables.plugin.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/js/amazeui.datatables.plugin.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/js/amazeui.ie8polyfill.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/js/amazeui.ie8polyfill.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/js/amazeui.ie8polyfill.min.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/js/amazeui.ie8polyfill.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/js/amazeui.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/js/amazeui.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/js/amazeui.min.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/js/amazeui.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/js/amazeui.widgets.helper.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/js/amazeui.widgets.helper.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/js/amazeui.widgets.helper.min.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/js/amazeui.widgets.helper.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/js/app.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/main.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/js/dateFormat.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/common/dateFormat.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/js/handlebars.min.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/js/handlebars.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/js/jquery.min.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/js/jquery.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/tree/jquery.ztree.all-3.5.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/ztree/jquery.ztree.all-3.5.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/tree/jquery.ztree.all-3.5.min.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/ztree/jquery.ztree.all-3.5.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/tree/jquery.ztree.core-3.5.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/ztree/jquery.ztree.core-3.5.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/tree/jquery.ztree.core-3.5.min.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/ztree/jquery.ztree.core-3.5.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/tree/jquery.ztree.excheck-3.5.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/ztree/jquery.ztree.excheck-3.5.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/tree/jquery.ztree.excheck-3.5.min.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/ztree/jquery.ztree.excheck-3.5.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/tree/jquery.ztree.exedit-3.5.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/ztree/jquery.ztree.exedit-3.5.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/tree/jquery.ztree.exedit-3.5.min.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/ztree/jquery.ztree.exedit-3.5.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/tree/jquery.ztree.exhide-3.5.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/ztree/jquery.ztree.exhide-3.5.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/tree/jquery.ztree.exhide-3.5.min.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/ztree/jquery.ztree.exhide-3.5.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-basic-hibernate/pom.xml" afterPath="$PROJECT_DIR$/wetech-basic-hibernate/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-core/pom.xml" afterPath="$PROJECT_DIR$/wetech-core/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" afterPath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/UserDao.java" afterPath="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/UserDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/model/BaseInfo.java" afterPath="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/model/BaseInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-user/pom.xml" afterPath="$PROJECT_DIR$/wetech-user/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/.settings/org.eclipse.core.resources.prefs" afterPath="$PROJECT_DIR$/wetech-web/.settings/org.eclipse.core.resources.prefs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/BackupController.java" afterPath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/BackupController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/IndexController.java" afterPath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/IndexController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/LoginController.java" afterPath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/SystemController.java" afterPath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/SystemController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/TopicController.java" afterPath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/TopicController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/web/BaseInfoUtil.java" afterPath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/web/BaseInfoUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/resources/baseinfo.properties" afterPath="$PROJECT_DIR$/wetech-web/src/main/resources/baseinfo.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/system/baseInfo.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/system/baseInfo.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/backup.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/backup.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/RoleController.java" afterPath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/RoleController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/service/IndexService.java" afterPath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/service/IndexService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/cmsLink.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/cmsLink.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/indexPic/add.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/indexPic/add.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/login.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/main.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/main.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/system/clean.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/system/clean.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/topic/add.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/topic/add.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/user.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/user.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/channel.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/channel.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/channel_pic.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/channel_pic.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/index.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/keyword.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/keyword.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/search.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/search.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/search2.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/search2.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/topic.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/topic.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/topics.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/topics.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/cms.css" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/cms.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/channel.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/channel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/role.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/role.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/user.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/user.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/cms.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/cms.js" />
     </list>
     <ignored path="$PROJECT_DIR$/wetech-basic-common/target/" />
     <ignored path="$PROJECT_DIR$/wetech-basic-hibernate/target/" />
@@ -61,7 +188,7 @@
       <file leaf-file-name="baseInfo.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/system/baseInfo.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
+            <state relative-caret-position="2660">
               <caret line="140" column="81" lean-forward="false" selection-start-line="140" selection-start-column="73" selection-end-line="140" selection-end-column="81" />
               <folding />
             </state>
@@ -74,7 +201,7 @@
             <state relative-caret-position="209">
               <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
               <folding>
-                <element signature="e#466#474#0" expanded="true" />
+                <element signature="e#51#590#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,8 +210,8 @@
       <file leaf-file-name="SystemController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/SystemController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="67" column="53" lean-forward="true" selection-start-line="67" selection-start-column="53" selection-end-line="67" selection-end-column="53" />
+            <state relative-caret-position="608">
+              <caret line="67" column="53" lean-forward="false" selection-start-line="67" selection-start-column="53" selection-end-line="67" selection-end-column="53" />
               <folding>
                 <element signature="e#1397#1398#0" expanded="true" />
                 <element signature="e#1434#1435#0" expanded="true" />
@@ -122,7 +249,7 @@
       <file leaf-file-name="BaseInfoUtil.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/web/BaseInfoUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
+            <state relative-caret-position="266">
               <caret line="52" column="29" lean-forward="true" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
               <folding>
                 <element signature="method#read#0;class#BaseInfoUtil#0" expanded="true" />
@@ -236,7 +363,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -329,44 +455,6 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wetech-parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wetech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wetech-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -445,50 +533,13 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wetech-parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wetech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wetech-core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cms" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -502,7 +553,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/wetech-web" />
-    <property name="SearchEverywhereHistoryKey" value="baseinfo.js&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/resources/js/admin/system/baseInfo.js&#10;initS&#9;PSI&#9;JAVA://tech.wetech.cms.web.InitServlet&#10;systemController&#9;PSI&#9;JAVA://tech.wetech.cms.controller.SystemController&#10;baseinfo.jsp&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/WEB-INF/jsp/admin/system/baseInfo.jsp&#10;group.js&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/resources/js/admin/group.js&#10;channel.js&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/resources/js/admin/channel.js&#10;user.js&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/resources/js/admin/user.js&#10;backup.jsp&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/WEB-INF/jsp/admin/backup.jsp&#10;app.js&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/resources/assets/js/app.js&#10;user&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/java/tech/wetech/cms/controller/UserController.java&#10;userCont&#9;PSI&#9;JAVA://tech.wetech.cms.controller.UserController&#10;backup&#9;PSI&#9;JAVA://tech.wetech.cms.controller.BackupController&#10;*.plugin&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/resources/assets/js/amazeui.datatables.plugin.js&#10;backup.js&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/resources/js/admin/backup.js" />
+    <property name="SearchEverywhereHistoryKey" value="baseinfo.js&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/resources/js/admin/system/baseInfo.js&#10;initS&#9;PSI&#9;JAVA://tech.wetech.cms.web.InitServlet&#10;systemController&#9;PSI&#9;JAVA://tech.wetech.cms.controller.SystemController&#10;baseinfo.jsp&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/WEB-INF/jsp/admin/system/baseInfo.jsp&#10;group.js&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/resources/js/admin/group.js&#10;channel.js&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/resources/js/admin/channel.js&#10;user.js&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/resources/js/admin/user.js&#10;backup.jsp&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/WEB-INF/jsp/admin/backup.jsp&#10;app.js&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/resources/js/admin/main.js&#10;user&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/java/tech/wetech/cms/controller/UserController.java&#10;userCont&#9;PSI&#9;JAVA://tech.wetech.cms.controller.UserController&#10;backup&#9;PSI&#9;JAVA://tech.wetech.cms.controller.BackupController&#10;*.plugin&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/resources/amazeui/assets/js/amazeui.datatables.plugin.js&#10;backup.js&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/resources/js/admin/backup.js" />
   </component>
   <component name="RunManager" selected="Maven.jetty:run">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -953,11 +1004,12 @@
       <workItem from="1481259539448" duration="137000" />
       <workItem from="1481262030494" duration="43000" />
       <workItem from="1481262133483" duration="6485000" />
+      <workItem from="1481690133567" duration="7000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6665000" />
+    <option name="totallyTimeSpent" value="6672000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -970,40 +1022,40 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996634" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20875421" sideWeight="0.50319827" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.141258" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996634" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996634" sideWeight="0.4968017" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32996634" sideWeight="0.50319827" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18123667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40852973" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996634" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996634" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996634" sideWeight="0.4968017" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18406285" sideWeight="0.4978678" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32996634" sideWeight="0.50319827" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17963752" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32995737" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40852973" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18406285" sideWeight="0.4978678" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32995737" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1021,6 +1073,68 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/system/baseInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2660">
+          <caret line="140" column="81" lean-forward="false" selection-start-line="140" selection-start-column="73" selection-end-line="140" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/system/baseInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding>
+            <element signature="e#51#590#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/SystemController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1273">
+          <caret line="67" column="53" lean-forward="true" selection-start-line="67" selection-start-column="53" selection-end-line="67" selection-end-column="53" />
+          <folding>
+            <element signature="e#1397#1398#0" expanded="true" />
+            <element signature="e#1434#1435#0" expanded="true" />
+            <element signature="method#editBaseInfo#0;class#SystemController#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/model/BaseInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1121">
+          <caret line="99" column="29" lean-forward="true" selection-start-line="99" selection-start-column="29" selection-end-line="99" selection-end-column="29" />
+          <folding>
+            <element signature="e#2094#2095#0" expanded="true" />
+            <element signature="e#2134#2135#0" expanded="true" />
+            <element signature="e#2166#2167#0" expanded="true" />
+            <element signature="method#toString#0;class#BaseInfo#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/web/InitServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="26" column="87" lean-forward="true" selection-start-line="26" selection-start-column="87" selection-end-line="26" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/web/BaseInfoUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="52" column="29" lean-forward="true" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+          <folding>
+            <element signature="method#read#0;class#BaseInfoUtil#0" expanded="true" />
+            <element signature="method#write#0;class#BaseInfoUtil#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2128">
@@ -1033,7 +1147,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1049,7 +1162,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1057,7 +1169,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1065,7 +1176,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1081,7 +1191,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1089,9 +1198,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
           <caret line="147" column="16" lean-forward="false" selection-start-line="147" selection-start-column="16" selection-end-line="147" selection-end-column="16" />
-          <folding>
-            <element signature="method#delete#0;class#BackupFileUtil#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1099,7 +1205,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="946" column="0" lean-forward="false" selection-start-line="946" selection-start-column="0" selection-end-line="946" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1107,9 +1212,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#ResponseData#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1117,34 +1219,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="893">
           <caret line="66" column="5" lean-forward="true" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
-          <folding>
-            <element signature="method#list#0;class#BackupController#0" expanded="true" />
-            <element signature="method#delete#0;class#BackupController#0" expanded="true" />
-            <element signature="method#resume#0;class#BackupController#0" expanded="true" />
-            <element signature="method#add#0;class#BackupController#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="119" column="39" lean-forward="true" selection-start-line="119" selection-start-column="8" selection-end-line="119" selection-end-column="39" />
-          <folding>
-            <element signature="e#13#1979#0" expanded="false" />
-            <element signature="e#2995#3601#0" expanded="false" />
-            <element signature="e#3058#3436#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/main.js" />
     <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/user.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1024">
           <caret line="263" column="17" lean-forward="true" selection-start-line="263" selection-start-column="7" selection-end-line="263" selection-end-column="17" />
-          <folding>
-            <element signature="e#5183#6518#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1152,9 +1234,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-724">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#13#7394#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1162,29 +1241,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
           <caret line="71" column="28" lean-forward="true" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
-          <folding>
-            <element signature="e#1616#1904#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/resources/assets/js/amazeui.datatables.plugin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="226" column="30" lean-forward="true" selection-start-line="226" selection-start-column="30" selection-end-line="226" selection-end-column="30" />
-          <folding>
-            <element signature="e#152#500#0" expanded="false" />
-            <element signature="e#2570#4104#0" expanded="false" />
-            <element signature="e#3670#4091#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/js/amazeui.datatables.plugin.js" />
     <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/backup.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="53" column="66" lean-forward="false" selection-start-line="53" selection-start-column="62" selection-end-line="53" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1192,24 +1256,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-515">
           <caret line="52" column="82" lean-forward="false" selection-start-line="52" selection-start-column="82" selection-end-line="52" selection-end-column="82" />
-          <folding>
-            <element signature="e#2492#2685#0" expanded="true" />
-            <element signature="e#3027#4096#0" expanded="true" />
-            <element signature="e#3199#4078#0" expanded="true" />
-            <element signature="e#3526#3828#0" expanded="true" />
-            <element signature="e#3873#4044#0" expanded="true" />
-            <element signature="e#4127#5196#0" expanded="true" />
-            <element signature="e#4299#5178#0" expanded="true" />
-            <element signature="e#4626#4928#0" expanded="true" />
-            <element signature="e#4973#5144#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/SystemController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="67" column="53" lean-forward="true" selection-start-line="67" selection-start-column="53" selection-end-line="67" selection-end-column="53" />
+        <state relative-caret-position="608">
+          <caret line="67" column="53" lean-forward="false" selection-start-line="67" selection-start-column="53" selection-end-line="67" selection-end-column="53" />
           <folding>
             <element signature="e#1397#1398#0" expanded="true" />
             <element signature="e#1434#1435#0" expanded="true" />
@@ -1230,13 +1283,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/system/baseInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
+        <state relative-caret-position="2660">
           <caret line="140" column="81" lean-forward="false" selection-start-line="140" selection-start-column="73" selection-end-line="140" selection-end-column="81" />
           <folding />
         </state>
@@ -1247,14 +1299,14 @@
         <state relative-caret-position="209">
           <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
           <folding>
-            <element signature="e#466#474#0" expanded="true" />
+            <element signature="e#51#590#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/web/BaseInfoUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
+        <state relative-caret-position="266">
           <caret line="52" column="29" lean-forward="true" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
           <folding>
             <element signature="method#read#0;class#BaseInfoUtil#0" expanded="true" />
