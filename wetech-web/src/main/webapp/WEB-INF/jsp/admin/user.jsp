@@ -138,7 +138,7 @@
 			<label class="am-u-sm-2 am-form-label">角色</label>
 			<div class="am-u-sm-10">
 				<c:forEach var="role" items="${roles }">
-					<label class="am-checkbox-line"> <input type="checkbox" name="roleIds" value="${role.id }" />${role.name }
+					<label class="am-checkbox-inline"> <input type="checkbox" name="roleIds" value="${role.id }" />${role.name }
 					</label>
 				</c:forEach>
 			</div>
@@ -147,7 +147,7 @@
 			<label class="am-u-sm-2 am-form-label">用户组</label>
 			<div class="am-u-sm-10">
 				<c:forEach var="group" items="${groups }">
-					<label class="am-checkbox-line"> <input type="checkbox" name="groupIds" value="${group.id }" />${group.name }
+					<label class="am-checkbox-inline"> <input type="checkbox" name="groupIds" value="${group.id }" />${group.name }
 					</label>
 				</c:forEach>
 			</div>
@@ -157,7 +157,7 @@
 
 <div id="edit-modal">
 	<form class="am-form am-form-horizontal" id="edit-form">
-		<br> <input type="hidden" name="id"> <input type="hidden" name="password">
+		<br> <input type="hidden" name="id"> <input type="hidden" name="password"><input type="hidden" name="username">
 		<div class="am-form-group">
 			<label class="am-u-sm-2 am-form-label">用户名</label>
 			<div class="am-u-sm-10">
@@ -195,7 +195,7 @@
 			<label class="am-u-sm-2 am-form-label">角色</label>
 			<div class="am-u-sm-10">
 				<c:forEach var="role" items="${roles }">
-					<label class="am-checkbox-line"> <input type="checkbox" name="roleIds" value="${role.id }" readonly />${role.name }
+					<label class="am-checkbox-inline"> <input type="checkbox" name="roleIds" value="${role.id }" readonly />${role.name }
 					</label>
 				</c:forEach>
 			</div>
@@ -204,7 +204,7 @@
 			<label class="am-u-sm-2 am-form-label">用户组</label>
 			<div class="am-u-sm-10">
 				<c:forEach var="group" items="${groups }">
-					<label class="am-checkbox-line"> <input type="checkbox" name="groupIds" value="${group.id }" readonly />${group.name }
+					<label class="am-checkbox-inline"> <input type="checkbox" name="groupIds" value="${group.id }" readonly />${group.name }
 					</label>
 				</c:forEach>
 			</div>

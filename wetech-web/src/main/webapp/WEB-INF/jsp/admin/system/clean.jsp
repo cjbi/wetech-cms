@@ -27,7 +27,7 @@
 									当前未引用的垃圾附件共<span id="attaCount" class="am-badge am-badge-warning am-round am-animation-slide-top">0</span>条
 								</div>
 								<div class="am-u-sm-6">
-									<button id="cleanAtta" class="am-btn-xs am-btn-danger am-round am-animation-fade">
+									<button id="cleanAtta" class="am-btn am-btn-xs am-btn-danger am-round am-animation-fade">
 										<i class="am-icon-trash-o"></i> 清理
 									</button>
 								</div>
@@ -49,7 +49,7 @@
 							<div class="am-g am-g-fixed">
 								<div class="am-u-sm-6">当前未引用的首页图片共<span id="indexPicCount" class="am-badge am-badge-warning am-round am-animation-slide-top">0</span>条</div>
 								<div class="am-u-sm-6">
-									<button id="cleanIndexPic" class="am-btn-xs am-btn-danger am-round am-animation-fade">
+									<button id="cleanIndexPic" class="am-btn am-btn-xs am-btn-danger am-round am-animation-fade">
 										<i class="am-icon-trash-o"></i> 清理
 									</button>
 								</div>

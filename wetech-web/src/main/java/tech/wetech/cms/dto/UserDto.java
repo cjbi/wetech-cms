@@ -6,6 +6,8 @@ import java.util.List;
 
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.web.bind.annotation.RequestParam;
+
 import tech.wetech.cms.model.User;
 
 public class UserDto {
@@ -37,11 +39,11 @@ public class UserDto {
 	/**
 	 * 角色id
 	 */
-	private Integer[] roleIds;
+	private Integer[] roleIds = new Integer[]{};
 	/**
 	 * 组id
 	 */
-	private Integer[] groupIds;
+	private Integer[] groupIds = new Integer[]{};
 	
 	
 	public int getId() {
@@ -119,7 +121,7 @@ public class UserDto {
 	}
 
 
-	public void setRoleIds(Integer[] roleIds) {
+	public void setRoleIds(@RequestParam(value = "roleIds") Integer[] roleIds) {
 		this.roleIds = roleIds;
 	}
 
@@ -129,7 +131,7 @@ public class UserDto {
 	}
 
 
-	public void setGroupIds(Integer[] groupIds) {
+	public void setGroupIds(@RequestParam(value = "groupIds") Integer[] groupIds) {
 		this.groupIds = groupIds;
 	}
 

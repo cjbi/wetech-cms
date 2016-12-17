@@ -134,7 +134,7 @@ $(function() {
 			id : $('#add-form [name="pId"]').val()
 		    },
 		    success : function(data) {
-			if (data.success == false) {
+			if (data.status == false) {
 			    layer.msg(data.message, {
 				time : '2000',
 				icon : 0
@@ -232,22 +232,7 @@ $(function() {
     $('#edit-form [type="submit"]').on('click', function() {
 	var isFormValid = $('#edit-form').validator('isFormValid');
 	if (isFormValid) {
-	    var dataValue = {
-		id : $('#edit-form [name="id"]').val(),
-		pId : $('#edit-form [name="pId"]').val(),
-		name : $('#edit-form [name="name"]').val(),
-		isLeaf : $('#edit-form [name="isLeaf"]:checked').val(),
-		orders : $('#edit-form [name="orders"]').val(),
-		type : $('#edit-form [name="type"]').val(),
-		customLink : $('#edit-form [name="customLink"]:checked').val(),
-		customLinkUrl : $('#edit-form [name="customLinkUrl"]').val(),
-		isIndex : $('#edit-form [name="isIndex"]:checked').val(),
-		isTopNav : $('#edit-form [name="isTopNav"]:checked').val(),
-		recommend : $('#edit-form [name="recommend"]:checked').val(),
-		status : $('#edit-form [name="status"]:checked').val(),
-		navOrder : $('#edit-form [name="navOrder"]').val(),
-		descn : $('#edit-form [name="descn"]').val()
-	    };
+		var dataValue = $('#edit-form').serialize();
 	    console.log(dataValue);
 	    // 发送异步请求
 	    $.ajax({

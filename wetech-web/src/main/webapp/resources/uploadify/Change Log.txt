@@ -1,6 +1,9 @@
 Uploadify Change Log
 Copyright (c) 2012 by Reactive Apps, Ronnie Garcia
 
+v3.2.1
+- Updated uploadify.swf with security updates from secure swfupload.
+
 v3.2
 - Added a new option for itemTemplate where you can create an HTML template for the items that are added to the queue
 

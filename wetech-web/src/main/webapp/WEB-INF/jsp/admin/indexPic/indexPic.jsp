@@ -63,24 +63,6 @@
 	<%-- footer end --%>
 </div>
 <%-- content end --%>
-
-<div id="edit-modal">
-	<form class="am-form am-form-horizontal" id="edit-form">
-		<br> <input type="hidden" name="id">
-		<div class="am-form-group">
-			<label class="am-u-sm-2 am-form-label">组名称</label>
-			<div class="am-u-sm-10">
-				<input type="text" name="name" placeholder="用户组名称(必填)" required>
-			</div>
-		</div>
-		<div class="am-form-group">
-			<label class="am-u-sm-2 am-form-label">组描述</label>
-			<div class="am-u-sm-10">
-				<textarea name="descr" placeholder="用户组的描述信息" maxlength="100"></textarea>
-			</div>
-		</div>
-	</form>
-</div>
 <script type="text/javascript">
 	$.getScript("<%=request.getContextPath()%>/resources/js/admin/indexPic/indexPic.js");
 </script>

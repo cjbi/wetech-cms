@@ -112,7 +112,7 @@ $(function() {
 	/*------------ 清空用户 ------------*/
 	$("#example").on("click", '.am-btn[name=clearUser]', function(event) {
 		var gId = $(this).val();
-		layer.confirm('确定要清空 [' + gId + '] 下所有用户吗？', {
+		layer.confirm('确定要清空组 [' + gId + '] 下所有用户吗？', {
 			icon : 3,
 			title : '系统提示',
 			yes : function(index, layero) {
@@ -130,7 +130,7 @@ $(function() {
 							icon : 6
 						});
 						layer.close(index);
-						$('#admin-content').load(contextPath + "/admin/group");
+						loadContent(contextPath + "/admin/group");
 					},
 					error : function(data) {
 						layer.msg('操作失败', {

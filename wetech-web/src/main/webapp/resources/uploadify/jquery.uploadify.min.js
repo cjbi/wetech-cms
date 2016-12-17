@@ -1,5 +1,5 @@
 /*
-Uploadify v3.2
+Uploadify v3.2.1
 Copyright (c) 2012 Reactive Apps, Ronnie Garcia
 Released under the MIT License <http://www.opensource.org/licenses/mit-license.php>
 

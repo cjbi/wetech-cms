@@ -65,7 +65,7 @@ $(function() {
 								time : '2000',
 								icon : 6
 							});
-							$('#admin-content').load(
+							loadContent(
 									contextPath + "/admin/backup");
 						},
 						error : function(data) {
@@ -108,7 +108,7 @@ $(function() {
 									icon : 6
 								});
 								layer.close(index);
-								$('#admin-content').load(
+								loadContent(
 										contextPath + "/admin/backup");
 							},
 							error : function(data) {
@@ -143,7 +143,7 @@ $(function() {
 									icon : 6
 								});
 								layer.close(index);
-								$('#admin-content').load(
+								loadContent(
 										contextPath + "/admin/backup");
 							},
 							error : function(data) {

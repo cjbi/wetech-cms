@@ -8,7 +8,7 @@ $(function() {
 				if (isFormValid) {
 					$('#edit-modal').submit(contextPath + '/admin/system/baseInfo/edit.do');
 					layer.close(index);
-					$('#admin-content').load(contextPath + "/admin/system/baseInfo");
+					loadContent(contextPath + "/admin/system/baseInfo");
 				} else {
 					layer.msg('数据验证失败', {
 						time : 2000,

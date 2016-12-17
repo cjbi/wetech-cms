@@ -44,7 +44,7 @@ div>ul>li>ul>li>a:hover, div>ul>li>a:hover {
 								class="am-fr am-margin-right admin-icon-yellow"></span></a></li>
 						<li><a href="<%=request.getContextPath()%>/admin/system/baseInfo" class="am-cf"><span class="am-icon-sitemap"></span> 网站信息管理<span
 								class="am-fr am-margin-right admin-icon-yellow"></span></a></li>
-						<li><a href="<%=request.getContextPath()%>/admin/pic/indexPic" class="am-cf"><span class="am-icon-picture-o"></span> 轮播图片管理<span
+						<li><a href="<%=request.getContextPath()%>/admin/pic/indexPic" class="am-cf"><span class="am-icon-picture-o"></span> 首页图片管理<span
 								class="am-fr am-margin-right admin-icon-yellow"></span></a></li>
 						<li><a href="<%=request.getContextPath()%>/admin/backup" class="am-cf"><span class="am-icon-database"></span> 网站数据备份<span
 								class="am-fr am-margin-right admin-icon-yellow"></span></a></li>

@@ -58,6 +58,5 @@
 	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/js/ztree/jquery.ztree.core-3.5.min.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/js/common/dateFormat.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/js/admin/main.js"></script>
-	
 </body>
 </html>

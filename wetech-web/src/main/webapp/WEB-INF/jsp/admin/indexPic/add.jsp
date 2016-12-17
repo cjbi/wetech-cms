@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>新增文章</title>
+<title>新增首页图片</title>
 <meta name="description" content="这是一个 index 页面">
 <meta name="keywords" content="index">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,12 +18,15 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/amazeui/assets/css/amazeui.datatables.css" />
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/amazeui/assets/css/admin.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/layer/skin/default/layer.css">
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/resources/js/base/jquery.ui.all.css" />
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/resources/jcrop/css/jquery.Jcrop.css" />
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/resources/uploadify/uploadify.css" />
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/admin/main.css">
+<style type="text/css">
+#clip {
+	width: 100%;
+	height: 400px;
+}
+</style>
 <script>
-    var contextPath = "${pageContext.request.contextPath}";
+	var contextPath = "${pageContext.request.contextPath}";
 </script>
 </head>
 <body>
@@ -35,19 +38,20 @@
 					<strong class="am-text-primary am-text-lg">文章信息管理</strong> / <small>新增文章</small>
 				</div>
 			</div>
+			<br>
+			<div class="am-center">
+				<div id="clip"></div>
+				<div class="am-margin-sm">
+					<button type="button" class="am-btn am-btn-primary" id="toggle-file">上传图片</button>
+					<button type="button" class="am-btn am-btn-primary" id="clipBtn">裁剪</button>
+				</div>
+			</div>
 			<div class="am-u-sm-12">
 				<form class="am-form am-form-horizontal" id="add-form">
 					<div class="am-form-group">
-						<label class="am-u-sm-2 am-form-label">上传图片</label>
-						<div class="am-u-sm-10">
-							<input type="file" id="indexPic" name="indexPic" />
-						</div>
-					</div>
-					<div class="am-form-group">
 						<label class="am-u-sm-2 am-form-label">图片预览</label>
 						<div class="am-u-sm-10">
-							<div id="indexPicView"></div>
-							<input id="newName" name="newName" readonly required /> <br>
+							<input class="am-hide" type="file" id="file"> <img class="am-img-circle am-img-thumbnail" src="" id="img-view" />
 						</div>
 					</div>
 					<div class="am-form-group">
@@ -59,7 +63,7 @@
 					<div class="am-form-group">
 						<label class="am-u-sm-2 am-form-label">首页图片子标题</label>
 						<div class="am-u-sm-10">
-							<input type="text" id="" name="subTitle" placeholder="请输入图片子标题"></input>
+							<input type="text" name="subTitle" placeholder="请输入图片子标题"></input>
 						</div>
 					</div>
 					<div class="am-form-group">
@@ -77,28 +81,30 @@
 					<div class="am-form-group">
 						<label class="am-u-sm-2 am-form-label">链接地址</label>
 						<div class="am-u-sm-10">
-							<input type="text" id="" name="linkUrl" placeholder="请输入链接地址(必填)"></input>
+							<input type="text" id="" name="linkUrl" placeholder="请输入链接地址(必填)" required></input>
 						</div>
 					</div>
 					<div class="am-form-group">
 						<label class="am-u-sm-2 am-form-label"></label>
 						<div class="am-u-sm-10 am-cf">
-							<button type="button" id="submit" class="am-btn am-btn-primary am-radius am-fr">发表文章</button>
+							<button type="button" id="submit" class="am-btn am-btn-primary am-radius am-fr">提交</button>
 						</div>
 					</div>
 				</form>
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/xheditor/jquery/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/amazeui/assets/js/amazeui.min.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/layer/layer.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/uploadify/jquery.uploadify.min.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/jcrop/js/jquery.Jcrop.min.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/dwr/engine.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/dwr/interface/dwrService.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/js/admin/main.js"></script>
-	<script src="<%=request.getContextPath()%>/resources/js/common/dateFormat.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/js/admin/indexPic/add.js"></script>
+
+	<script src="<%=request.getContextPath()%>/resources/amazeui/assets/js/photoClip/jquery.min.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/amazeui/assets/js/amazeui.min.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/amazeui/assets/js/amazeui.min.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/layer/layer.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/amazeui/assets/js/photoClip/iscroll-zoom.min.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/amazeui/assets/js/photoClip/hammer.min.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/amazeui/assets/js/photoClip/photoClip.min.js"></script>
+	<script src="<%=request.getContextPath()%>/dwr/engine.js"></script>
+	<script src="<%=request.getContextPath()%>/dwr/interface/dwrService.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/js/admin/main.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/js/admin/indexPic/edit.js"></script>
 </body>
 </html>

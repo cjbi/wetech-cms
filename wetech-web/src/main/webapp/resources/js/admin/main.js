@@ -117,10 +117,7 @@ $(function() {
 		var href = $(this).attr('href');
 		if (href != undefined && href != "" && href != "#") {
 			// 初始化插件
-			$('#admin-content').load(href, function() {
-				//callback重新注册组件
-				$('[data-am-selected]').selected();
-			});
+			loadContent(href);
 			e.preventDefault();
 		}
 	});
@@ -128,6 +125,15 @@ $(function() {
 	// 初始化CollapaseNav状态
 	initCollapaseNavStatus();
 });
+
+// 加载Content
+function loadContent(href) {
+	$('#admin-content').load(href, function() {
+		// callback重新注册组件
+		$('[data-am-selected]').selected();
+	});
+}
+
 // ajax全局事件 modified on 2016/11/22
 $(function() {
 	$(document).ajaxError(function(event, request, settings) {

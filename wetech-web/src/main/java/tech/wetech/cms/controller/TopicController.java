@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Map;
 
 import javax.inject.Inject;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.apache.commons.io.FilenameUtils;
@@ -23,10 +22,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import tech.wetech.basic.model.SystemContext;
-import tech.wetech.basic.util.JsonUtil;
 import tech.wetech.cms.auth.AuthClass;
 import tech.wetech.cms.auth.AuthMethod;
-import tech.wetech.cms.dto.AjaxObj;
 import tech.wetech.cms.dto.TopicDto;
 import tech.wetech.cms.model.Attachment;
 import tech.wetech.cms.model.ChannelTree;
@@ -64,8 +61,7 @@ public class TopicController {
 	@RequestMapping("/list")
 	@AuthMethod(role = "ROLE_PUBLISH,ROLE_AUDIT")
 	@ResponseBody
-	public Map<String, Object> list(@RequestParam(required = false) String con,
-			@RequestParam(required = false) Integer cid, Model model, HttpSession session, Integer status) {
+	public Map<String, Object> list(@RequestParam(required = false) String con, @RequestParam(required = false) Integer cid, Model model, HttpSession session, Integer status) {
 		System.out.println(model);
 		boolean isAdmin = (boolean) session.getAttribute("isAdmin");
 		SystemContext.setSort("t.publishDate");
@@ -99,8 +95,7 @@ public class TopicController {
 
 	@ResponseBody
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
-	public ResponseData add(@Validated TopicDto topicDto, BindingResult br, String[] aks, Integer[] aids,
-			HttpSession session) {
+	public ResponseData add(@Validated TopicDto topicDto, BindingResult br, String[] aks, Integer[] aids, HttpSession session) {
 		if (br.hasErrors()) {
 			return new ResponseData("操作失败" + br.getFieldError().toString());
 		}
@@ -168,8 +163,7 @@ public class TopicController {
 
 	@RequestMapping("/unaudits")
 	@AuthMethod(role = "ROLE_PUBLISH,ROLE_AUDIT")
-	public String unauditList(@RequestParam(required = false) String con, @RequestParam(required = false) Integer cid,
-			Model model, HttpSession session) {
+	public String unauditList(@RequestParam(required = false) String con, @RequestParam(required = false) Integer cid, Model model, HttpSession session) {
 		initList(con, cid, model, session, 0);
 		return "topic/list";
 	}
@@ -214,21 +208,6 @@ public class TopicController {
 		return "topic/add2";
 	}
 
-	/*
-	 * @RequestMapping(value = "/add", method = RequestMethod.POST) public
-	 * String add(@Validated TopicDto topicDto, BindingResult br, String[] aks,
-	 * Integer[] aids, HttpSession session) { if (br.hasErrors()) { return
-	 * "topic/add"; } Topic t = topicDto.getTopic(); User loginUser = (User)
-	 * session.getAttribute("loginUser"); StringBuffer keys = new
-	 * StringBuffer(); if (aks != null) { for (String k : aks) {
-	 * keys.append(k).append("|"); keywordService.addOrUpdate(k); } }
-	 * t.setKeyword(keys.toString()); topicService.add(t, topicDto.getCid(),
-	 * loginUser.getId(), aids); if (topicDto.getStatus() == 1 &&
-	 * topicService.isUpdateIndex(topicDto.getCid())) {
-	 * indexService.generateBody(); } return "redirect:/jsp/common/addSuc.jsp";
-	 * }
-	 */
-
 	@RequestMapping(value = "/update/{id}", method = RequestMethod.GET)
 	@AuthMethod(role = "ROLE_PUBLISH")
 	public String update(@PathVariable int id, Model model) {
@@ -244,8 +223,7 @@ public class TopicController {
 	}
 
 	@RequestMapping(value = "/update/{id}", method = RequestMethod.POST)
-	public String update(@PathVariable int id, @Validated TopicDto topicDto, BindingResult br, String[] aks,
-			Integer[] aids, HttpSession session) {
+	public String update(@PathVariable int id, @Validated TopicDto topicDto, BindingResult br, String[] aks, Integer[] aids, HttpSession session) {
 		if (br.hasErrors()) {
 			return "topic/update";
 		}
@@ -286,33 +264,31 @@ public class TopicController {
 		return keywordService.listKeywordStringByCon(term);
 	}
 
+	@ResponseBody
 	@RequestMapping(value = "/upload", method = RequestMethod.POST) // 返回的是json类型的值，而uploadify只能接受字符串
 	@AuthMethod(role = "ROLE_PUBLISH")
-	public void upload(MultipartFile attach, HttpServletResponse resp) throws IOException {
-		resp.setContentType("text/plain;charset=utf-8");
-		AjaxObj ao = null;
+	public ResponseData upload(MultipartFile file) throws IOException {
 		try {
 			Attachment att = new Attachment();
-			String ext = FilenameUtils.getExtension(attach.getOriginalFilename());
+			String ext = FilenameUtils.getExtension(file.getOriginalFilename());
 			// System.out.println(ext);
 			att.setIsAttach(0);
-			if (imgTypes.contains(ext))
+			if (imgTypes.contains(ext.toLowerCase()))
 				att.setIsImg(1);
 			else
 				att.setIsImg(0);
 			att.setIsIndexPic(0);
 			att.setNewName(String.valueOf(new Date().getTime()) + "." + ext);
-			att.setOldName(FilenameUtils.getBaseName(attach.getOriginalFilename()));
+			att.setOldName(FilenameUtils.getBaseName(file.getOriginalFilename()));
 			att.setSuffix(ext);
-			att.setType(attach.getContentType());
+			att.setType(file.getContentType());
 			att.setTopic(null);
-			att.setSize(attach.getSize());
-			attachmentService.add(att, attach.getInputStream());
-			ao = new AjaxObj(1, null, att);
+			att.setSize(file.getSize());
+			attachmentService.add(att, file.getInputStream());
+			return new ResponseData(true, "操作成功", att);
 		} catch (IOException e) {
-			ao = new AjaxObj(0, e.getMessage());
+			return ResponseData.FAILED_NO_DATA;
 		}
-		resp.getWriter().write(JsonUtil.getInstance().obj2json(ao));
 	}
 
 	@ResponseBody

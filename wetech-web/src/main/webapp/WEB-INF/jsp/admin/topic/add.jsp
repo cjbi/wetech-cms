@@ -15,15 +15,14 @@
 <link rel="apple-touch-icon-precomposed" href="<%=request.getContextPath()%>/resources/amazeui/assets/i/app-icon72x72@2x.png">
 <meta name="apple-mobile-web-app-title" content="Amaze UI" />
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/amazeui/assets/css/amazeui.min.css" />
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/amazeui/assets/css/amazeui.datatables.css" />
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/amazeui/assets/css/amazeui.upload.css" />
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/amazeui/assets/css/admin.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/layer/skin/default/layer.css">
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/js/base/jquery.ui.all.css" />
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/uploadify/uploadify.css" />
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/zTree/zTreeStyle.css" />
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/wangEditor/css/wangEditor.css" />
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/admin/main.css">
 <script>
-    var contextPath = "${pageContext.request.contextPath}";
+	var contextPath = "${pageContext.request.contextPath}";
 </script>
 </head>
 <input type="hidden" id="sid" value="<%=session.getId()%>" />
@@ -51,13 +50,8 @@
 					<div class="am-form-group">
 						<label class="am-u-sm-2 am-form-label">文章栏目</label>
 						<div class="am-u-sm-8 am-padding-0">
-							<div class="am-u-sm-12 am-padding-0">
-								<div class="am-u-sm-6">
-									<input type="text" name="cname" id="cname" placeholder="指定你的文章所属栏目(必填)" required readonly>
-								</div>
-								<div class="am-u-sm-6">
-									<input type="text" name="cid" id="cid" required readonly>
-								</div>
+							<div class="am-u-sm-12">
+								<input type="text" name="cname" id="cname" placeholder="指定你的文章所属栏目(必填)" required readonly><input type="hidden" name="cid" id="cid">
 							</div>
 						</div>
 						<div class="am-u-sm-2"></div>
@@ -65,18 +59,16 @@
 					<div class="am-form-group">
 						<label class="am-u-sm-2 am-form-label">文章状态</label>
 						<div class="am-u-sm-8">
-							<label class="am-checkbox-line"> <input type="radio" name="status" value="0" />未发布
-							</label> <br> <label class="am-checkbox-line"> <input type="radio" name="status" value="1" checked />已发布
-							</label>
+							<label class="am-radio-inline"><input type="radio" name="status" value="0" />未发布</label>
+							<label class="am-radio-inline"><input type="radio" name="status" value="1" checked />已发布</label>
 						</div>
 						<div class="am-u-sm-2"></div>
 					</div>
 					<div class="am-form-group">
 						<label class="am-u-sm-2 am-form-label">是否推荐该文章</label>
 						<div class="am-u-sm-8">
-							<label class="am-checkbox-line"> <input type="radio" name="recommend" value="0" checked />不推荐
-							</label> <br> <label class="am-checkbox-line"> <input type="radio" name="recommend" value="1" />推荐
-							</label>
+							<label class="am-radio-inline"><input type="radio" name="recommend" value="0" checked />不推荐</label>
+							<label class="am-radio-inline"><input type="radio" name="recommend" value="1" />推荐</label>
 						</div>
 						<div class="am-u-sm-2"></div>
 					</div>
@@ -90,46 +82,24 @@
 					<div class="am-form-group">
 						<label class="am-u-sm-2 am-form-label">文章关键字</label>
 						<div class="am-u-sm-8">
-							<input type="text" id="keyword" name="keyword" placeholder="请输入关键字，通过逗号或者回车确认(最多五个关键字，不能重复)">
+							<div class="am-u-sm-12 am-padding-0 am-dropdown" id="dropdown-search">
+								<input type="text" id="dropdown-search-input" placeholder="请输入关键字进行检索，通过回车确认(最多五个关键字，不能重复)" required>
+								<ul class="am-dropdown-content am-dropdown-search" id="dropdown-search-ul"></ul>
+							</div>
 						</div>
 						<div class="am-u-sm-2"></div>
 					</div>
 					<div class="am-form-group">
 						<label class="am-u-sm-2 am-form-label">文章附件</label>
-						<div class="am-u-sm-4">
-							<div id="attachs"></div>
-							<input type="file" id="attach" name="attach" />
-							<button type="button" class="am-btn am-btn-secondary am-btn-xs am-round" id="uploadFile">
-								<span class="am-icon-cloud-upload"></span>&nbsp;上传文件
-							</button>
-						</div>
-						<div class="am-u-sm-2"></div>
-					</div>
-					<div class="am-form-group">
-						<label class="am-u-sm-2 am-form-label">已传附件</label>
-						<div class="am-u-sm-8">
-							<table id="ok_attach" class="am-table am-table-bordered  am-table-striped am-table-hover" width="890px" cellpadding="0" cellspacing="0">
-								<thead>
-									<tr>
-										<Td>文件名缩略图</Td>
-										<td width="180">文件名</td>
-										<td>文件大小</td>
-										<td>主页图片</td>
-										<td>栏目图片</td>
-										<td>附件信息</td>
-										<td width="160">操作</td>
-									</tr>
-								</thead>
-								<tbody>
-								</tbody>
-							</table>
+						<div class="am-u-sm-8" id="ok_attach">
+							<div id="event"></div>
 						</div>
 						<div class="am-u-sm-2"></div>
 					</div>
 					<div class="am-form-group">
 						<label class="am-u-sm-2 am-form-label">文章内容</label>
 						<div class="am-u-sm-8">
-							<textarea id="content" name="content" rows="10" required></textarea>
+							<textarea id="content" rows="30" name="content"></textarea>
 						</div>
 						<div class="am-u-sm-2"></div>
 					</div>
@@ -151,18 +121,19 @@
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/xheditor/jquery/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/js/ui/jquery-ui-1.10.0.custom.min.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/amazeui/assets/js/amazeui.min.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/layer/layer.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/xheditor/xheditor-1.1.14-zh-cn.min.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/js/ztree/jquery.ztree.core-3.5.min.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/dwr/engine.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/dwr/interface/dwrService.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/js/admin/main.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/js/core/jquery.cms.keywordinput.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/uploadify/jquery.uploadify.min.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/amazeui/assets/js/jquery.min.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/amazeui/assets/js/amazeui.min.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/amazeui/assets/js/amazeui.upload.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/amazeui/assets/js/amazeui.upload.template.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/amazeui/assets/js/amazeui.upload.event.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/layer/layer.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/js/ztree/jquery.ztree.core-3.5.min.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/js/admin/main.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/js/core/jquery.cms.keywordinput.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/wangEditor/js/wangEditor.min.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/js/common/dateFormat.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/js/admin/topic/add.js"></script>
+	<script src="<%=request.getContextPath()%>/dwr/engine.js"></script>
+	<script src="<%=request.getContextPath()%>/dwr/interface/dwrService.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/js/admin/topic/add.js"></script>
 </body>
 </html>

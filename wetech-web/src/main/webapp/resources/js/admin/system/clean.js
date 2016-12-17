@@ -75,7 +75,8 @@ $(function() {
 			    icon : 6
 			});
 			layer.close(index);
-			$('#admin-content').load(contextPath + '/admin/system/clean');
+			loadContent(contextPath + '/admin/system/clean');
+			
 		    },
 		    error : function(data) {
 			layer.msg('操作失败', {
@@ -104,7 +105,7 @@ $(function() {
 			    icon : 6
 			});
 			layer.close(index);
-			$('#admin-content').load(contextPath + '/admin/system/clean');
+			loadContent(contextPath + '/admin/system/clean');
 		    },
 		    error : function(data) {
 			layer.msg('操作失败', {

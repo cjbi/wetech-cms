@@ -26,7 +26,7 @@ initTable = function(ajax, gridTable, ServerParams, initComplete, tableNames) {
 		'searching' : false,// 开启搜索框
 		'lengthChange' : true,
 		'paging' : true,// 开启表格分页
-		'bProcessing' : true,
+		'bProcessing' : false,
 		'bServerSide' : true,
 		'bAutoWidth' : true,
 		'sort' : 'position',
@@ -129,7 +129,7 @@ deleteBatch = function(url, pk) {
 					dataType : 'json',
 					data : 'ids=' + rowData[pk].join(),
 					success : function(data) {
-						if(data.success==false) {
+						if (data.status == false) {
 							layer.msg(data.message, {
 								time : '2000',
 								icon : 0
@@ -174,7 +174,6 @@ initData = function() {// 将值填充到表单中
 	}
 	var data = table.rows('.selected').data()[0];
 	$.each(data, function(key, value) {
-
 		// 如果类型为单选框
 		if ($('#edit-form [name="' + key + '"]').attr('type') == 'radio') {
 			$('#edit-form [name="' + key + '"][value="' + value + '"]').prop('checked', true);
@@ -210,30 +209,21 @@ rowActive = function() {
 };
 
 /*------------ 查询数据 ------------*/
-reloadTable = function() {
+function reloadTable() {
 	$('#example').DataTable().ajax.reload();
 };
 
 /*------------ 对象级别的插件开发 ------------*/
 (function($) {
-
-	// 点确定时提交表单，目前只支持文本框和单选框提交
+	//重置表单
+	$.fn.clear = function() {
+		$(this).get(0).reset();
+	}
 	// url 链接地址
 	$.fn.submit = function(url) {
 		var table = $('#' + tableName).DataTable();
-		var dataValue = {};
-		var __modalDom = $(this);
-		__modalDom.children('form').find('[name]').each(function() {
-			// 如果是单选框
-			if ($(this).attr('type') == 'radio') {
-				// 如果已经选中
-				if ($(this).is(':checked')) {
-					dataValue[$(this).attr('name')] = $(this).val();
-				}
-			} else {
-				dataValue[$(this).attr('name')] = $(this).val();
-			}
-		});
+		var $form = $(this).children("form");
+		var dataValue = $form.serialize();
 		$.ajax({
 			type : "post",
 			url : url,
@@ -258,7 +248,7 @@ reloadTable = function() {
 	// 封装layer.open ，暴露部分参数
 	$.fn.layerOpen = function(opts) {
 		// Our plugin implementation code goes here.
-		var __modalDom = $(this);
+		var $form = $(this).children("form");
 		var __title = $.extend({}, opts ? (opts.title || {}) : {});
 		var __yes = $.extend(function(index, layero) {
 			layer.msg('请定义参数yes');
@@ -282,28 +272,10 @@ reloadTable = function() {
 			},
 			end : function() {
 				// 无论是确认还是取消，只要层被销毁了，end都会执行
-				__modalDom.children('form').find('[name]').each(function() {
-					// 如果类型是checkbox，就取消选中
-					if ($(this).attr('type') == 'checkbox') {
-						$(this).prop('checked', false);
-					} else if ($(this).attr('type') == 'radio') {
-						// 2016-11-21 更新 默认radio为 0 选中
-						if ($(this).attr('value') == '0') {
-							$(this).prop('checked', true);
-						} else {
-							$(this).prop('checked', false);
-						}
-						// 2016/11/24更新 默认 select 选中第一个
-					} else if ($(this).is('select')) {
-						$(this).find("option:first").prop("selected", 'selected');
-					}
-					// 否则如果不等于空，就清空
-					else if ($(this).val() != '') {
-						$(this).val('');
-					}
-				});
+				// 重置表单
+				$form.clear();
 				// 销毁表格验证
-				__modalDom.children("form").validator('destroy');
+				$form.validator('destroy');
 			},
 			success : function(layero, index) {
 				// 层弹出后的成功回调方法

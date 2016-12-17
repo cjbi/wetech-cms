@@ -117,7 +117,7 @@ $(function() {
 	/*------------ 清空用户 ------------*/
 	$("#example").on("click", '.am-btn[name=clearUser]', function(event) {
 		var rId = $(this).val();
-		layer.confirm('确定要清空 ['+rId+'] 下所有用户吗？', {
+		layer.confirm('确定要清空角色 ['+rId+'] 下所有用户吗？', {
 			icon : 3,
 			title : '系统提示',
 			yes : function(index, layero) {
@@ -135,7 +135,7 @@ $(function() {
 							icon : 6
 						});
 						layer.close(index);
-						$('#admin-content').load(contextPath + "/admin/role");
+						loadContent(contextPath + "/admin/role");
 					},
 					error : function(data) {
 						layer.msg('操作失败', {

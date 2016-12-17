@@ -51,7 +51,6 @@ public class SystemContextFilter implements Filter {
 
 	@Override
 	public void destroy() {
-
 	}
 
 }
