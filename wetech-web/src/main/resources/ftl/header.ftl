@@ -30,7 +30,7 @@
 				</#if>
 				</#list>
 			</ul>
-			<form class="am-topbar-form am-topbar-left  am-form-inline" action="<%=request.getContextPath()%>/search/" role="search">
+			<form class="am-topbar-form am-topbar-left  am-form-inline" role="search">
 				<div class="am-form-group am-form-icon">
 					<div class="am-dropdown" id='dropdown-search'>
 						<i class="am-icon-search"></i> <input type="text" id="dropdown-search-input" class="am-form-field am-input-sm" placeholder=" 搜索你感兴趣的内容...">

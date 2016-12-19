@@ -1,14 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <style>
-div>ul>li>ul>li>a:hover, div>ul>li>a:hover {
+/* div>ul>li>ul>li>a:hover, div>ul>li>a:hover {
 	-webkit-transition: background-color .3s ease;
 	-moz-transition: background-color .3s ease;
 	-ms-transition: background-color .3s ease;
 	-o-transition: background-color .3s ease;
 	transition: background-color .3s ease;
 	background: #E4E4E4;
-}
+} */
 </style>
 <div class="admin-sidebar am-offcanvas admin-sidebar-list" id="admin-offcanvas">
 	<div class="am-offcanvas-bar admin-offcanvas-bar">
@@ -17,7 +17,7 @@ div>ul>li>ul>li>a:hover, div>ul>li>a:hover {
 			<c:if test="${isAdmin }">
 			<li class="am-panel"><a class="am-cf" data-am-collapse="{parent:'#collapase-nav-1', target: '#collapse-nav'}"><span class="am-icon-user"></span>
 					用户管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a> <%-- ul class add am-in to open sidebar item. --%>
-				<ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav">
+				<ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav" onclick="return false;">
 					<li><a href="<%=request.getContextPath()%>/admin/user" class="am-cf"><span class="am-icon-info"></span> 用户信息管理<span
 							class="am-fr am-margin-right admin-icon-yellow"></span></a></li>
 					<li><a href="<%=request.getContextPath()%>/admin/group" class="am-cf"><span class="am-icon-group"></span> 用户组管理<span
@@ -28,7 +28,7 @@ div>ul>li>ul>li>a:hover, div>ul>li>a:hover {
 			</c:if>
 			<li class="am-panel"><a class="am-cf" data-am-collapse="{parent:'#collapase-nav-1', target: '#collapse-nav1'}"><span
 					class="am-icon-file-text"></span> 文章管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
-				<ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav1">
+				<ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav1" onclick="return false;">
 				<c:if test="${isAdmin }">
 					<li><a href="<%=request.getContextPath()%>/admin/channel" class="am-cf"><span class="am-icon-navicon"></span> 栏目信息管理<span
 							class="am-fr am-margin-right admin-icon-yellow"></span></a></li>
@@ -39,7 +39,7 @@ div>ul>li>ul>li>a:hover, div>ul>li>a:hover {
 			<c:if test="${isAdmin }">
 				<li class="am-panel"><a class="am-cf" data-am-collapse="{parent:'#collapase-nav-1', target: '#collapse-nav2'}"><span class="am-icon-cogs"></span>
 						系统配置 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
-					<ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav2">
+					<ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav2" onclick="return false;">
 						<li><a href="<%=request.getContextPath()%>/admin/cmsLink" class="am-cf"><span class="am-icon-link"></span> 超级链接管理<span
 								class="am-fr am-margin-right admin-icon-yellow"></span></a></li>
 						<li><a href="<%=request.getContextPath()%>/admin/system/baseInfo" class="am-cf"><span class="am-icon-sitemap"></span> 网站信息管理<span

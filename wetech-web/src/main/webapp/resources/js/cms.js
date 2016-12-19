@@ -1,11 +1,15 @@
 $(function() {
 	$.AMUI.progress.start();
 	/*------------ search ------------*/
-	$("#dropdown-search-input").keyup(function() {
+	var $dropdownSearch = $('#dropdown-search');
+	var $dropdownInput = $("#dropdown-search-input");
+	var $dropdownUl = $('#dropdown-search-ul');
+	var $dropdownForm = $('#search-form');
+	$dropdownInput.keyup(function() {
 		if ($(this).val().trim() !== '') {
-			$('#dropdown-search').dropdown('open');
+			$dropdownSearch.dropdown('open');
 			var url = contextPath + '/search.do';
-			var con = $('#dropdown-search-input').val().trim();
+			var con = $dropdownInput.val().trim();
 			$.ajax({
 				type : "post",
 				url : url,
@@ -14,23 +18,25 @@ $(function() {
 				},
 				dataType : "json",
 				success : function(data) {
-					$('#dropdown-search-ul').children().remove();
+					$dropdownUl.children().remove();
 					if (data == '') {
-						$('#dropdown-search-ul').append('<li class="am-disabled"><a href="#">没有找到相关的搜索结果</a></li>');
+						$dropdownUl.append('<li class="am-disabled"><a href="#">没有找到相关的搜索结果</a></li>');
 						return;
 					}
-					$('#dropdown-search-ul').append('<li class="am-dropdown-header">主题</li>');
+					$dropdownUl.append('<li class="am-dropdown-header">主题</li>');
 					for ( var i in data) {
-						$('#dropdown-search-ul').append('<li><a href="' + contextPath + '/topic/' + data[i].id + '">' + data[i].title + '</a></li>');
+						$dropdownUl.append('<li><a href="' + contextPath + '/topic/' + data[i].id + '">' + data[i].title + '</a></li>');
 					}
-					$('#dropdown-search-ul').append(' <li class="am-divider"></li><li><a href="'+contextPath+'/search/'+con+'?order=10" class="am-text-center">查看全部搜索结果</a></li>');
+					var url = contextPath + '/search/' + con;
+					$dropdownForm.attr('action', url);
+					$dropdownUl.append(' <li class="am-divider"></li><li><a href="' + url + '" class="am-text-center">查看全部搜索结果</a></li>');
 				},
 				error : function(data) {
 					console.log(data);
 				}
 			});
 		} else {
-			$('#dropdown-search').dropdown('close');
+			$dropdownSearch.dropdown('close');
 		}
 	});
 	$.AMUI.progress.done();
