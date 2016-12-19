@@ -81,7 +81,7 @@ $('#submit').click(function() {
 				}
 			});
 		} else {
-			layer.msg('数据验证失败', {
+			parent.layer.msg('数据验证失败', {
 				time : 2000,
 				icon : 5
 			});

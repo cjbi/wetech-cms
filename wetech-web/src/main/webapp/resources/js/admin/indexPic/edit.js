@@ -1,4 +1,3 @@
-
 /*------------ 初始化图片裁剪 ------------*/
 $(function() {
 	var $clip = $("#clip");
@@ -51,25 +50,25 @@ $('#submit').click(function() {
 				});
 				return;
 			}
-			if(dataUrl.indexOf('.jpg')>-1){
+			var url = contextPath + '/admin/pic/indexPic/edit.do';
+			if (dataUrl.indexOf('.jpg') > -1) {
 				var dataValue = $('#edit-form').serialize();
-				var url = '/admin/pic/indexPic/edit.do';
 				$.ajax({
 					type : "post",
 					url : url,
 					dataType : "json",
 					data : dataValue,
 					success : function(data) {
-						layer.msg(data.message, {
+						parent.layer.msg(data.message, {
 							time : '2000',
 							icon : 6
 						});
-						//如果成功了，就刷新父页面的表格
-						parent.loadContent(contextPath+'/admin/pic/indexPic');
+						// 如果成功了，就刷新父页面的表格
+						parent.loadContent(contextPath + '/admin/pic/indexPic');
 						parent.layer.close(index);
 					},
 					error : function(data) {
-						layer.msg('操作失败', {
+						parent.layer.msg('操作失败', {
 							time : 2000,
 							icon : 5
 						});
@@ -81,7 +80,6 @@ $('#submit').click(function() {
 			// 使用ajax发送
 			var formData = new FormData($('#edit-form')[0]);
 			formData.append("image", blob, "image.jpg");
-			url = contextPath + '/admin/pic/indexPic/edit.do';
 			$.ajax({
 				url : url,
 				type : 'POST',
@@ -95,8 +93,8 @@ $('#submit').click(function() {
 						time : '2000',
 						icon : 6
 					});
-					//如果成功了，就刷新父页面的表格
-					parent.loadContent(contextPath+'/admin/pic/indexPic');
+					// 如果成功了，就刷新父页面的表格
+					parent.loadContent(contextPath + '/admin/pic/indexPic');
 					parent.layer.close(index);
 				},
 				error : function(data) {
@@ -107,7 +105,7 @@ $('#submit').click(function() {
 				}
 			});
 		} else {
-			layer.msg('数据验证失败', {
+			parent.layer.msg('数据验证失败', {
 				time : 2000,
 				icon : 5
 			});
