@@ -105,6 +105,6 @@
 	<script src="<%=request.getContextPath()%>/dwr/engine.js"></script>
 	<script src="<%=request.getContextPath()%>/dwr/interface/dwrService.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/js/admin/main.js"></script>
-	<script src="<%=request.getContextPath()%>/resources/js/admin/indexPic/edit.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/js/admin/indexPic/add.js"></script>
 </body>
 </html>
