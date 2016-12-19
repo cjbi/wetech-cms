@@ -1,6 +1,9 @@
 ### wetech-cms
 
 ---
+Demo:
+
+> [点击跳转][1] 用户名：admin 密码：123456
 
  此项目为Maven聚合项目，主要分为以下子模块：
 >   1. wetech-parent 是所有子模块的父类，同时也是项目聚合器，无实质代码
@@ -21,4 +24,4 @@
 >   3. mvn jetty:run
 
 
-
+  [1]: http://www.wetech.tech:8080/wetech/index
