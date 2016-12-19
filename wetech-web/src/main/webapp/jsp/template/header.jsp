@@ -4,7 +4,7 @@
 <header class="am-topbar am-topbar-fixed-top am-topbar-inverse">
 	<div class="am-container">
 		<h1 class="am-topbar-brand">
-			<a href="<%=request.getContextPath()%>/index">WETECH CMS</a>
+			<a href="<%=request.getContextPath()%>/index">WETECH </a>
 		</h1>
 		<button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only" data-am-collapse="{target: '#collapse-head'}">
 			<span class="am-sr-only">导航切换</span><span class="am-icon-bars"></span>
@@ -31,7 +31,7 @@
 				<li><a href="<%=request.getContextPath()%>/channel/17">图片</a></li>
 				<li><a href="<%=request.getContextPath()%>/channel/14">商业</a></li>
 			</ul>
-			<form class="am-topbar-form am-topbar-left  am-form-inline" method="post" role="search" id="search-form">
+			<form class="am-topbar-form am-topbar-left  am-form-inline" role="search">
 				<div class="am-form-group am-form-icon">
 					<div class="am-dropdown" id='dropdown-search'>
 						<i class="am-icon-search"></i> <input type="text" id="dropdown-search-input" class="am-form-field am-input-sm" placeholder=" 搜索你感兴趣的内容...">

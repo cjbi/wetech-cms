@@ -32,6 +32,6 @@
 				</div>
 			</div>
 			<div class="cms-text-center">
-				© 2016 WETECH CMS, Inc. Licensed Apache-2.0 license.
+				© 2016 WETECH , Inc. Licensed Apache-2.0 license.
 			</div>
 		</footer>
