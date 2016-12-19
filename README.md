@@ -12,12 +12,13 @@
     7.  wetech-user  服务层用户相关
     6.  wetech-web  用来放前台页面，以及控制层相关代码   
 
+如何配置数据源：
+	在/wetech-core/src/main/resources/jdbc.properties中配置数据源
 如何启动项目：
    
     1. 打开终端 
     2. cd wetech-web
     3. mvn jetty:run
-
 
 
 
