@@ -215,7 +215,7 @@ function reloadTable() {
 
 /*------------ 对象级别的插件开发 ------------*/
 (function($) {
-	//重置表单
+	// 重置表单
 	$.fn.clear = function() {
 		$(this).get(0).reset();
 	}

@@ -83,7 +83,7 @@
 						<label class="am-u-sm-2 am-form-label">文章关键字</label>
 						<div class="am-u-sm-8">
 							<div class="am-u-sm-12 am-padding-0 am-dropdown" id="dropdown-search">
-								<input type="text" id="dropdown-search-input" placeholder="请输入关键字进行检索，通过回车确认(最多五个关键字，不能重复)" required>
+								<input type="text" id="dropdown-search-input" placeholder="请输入关键字进行检索，通过回车确认(最多五个关键字，不能重复)">
 								<ul class="am-dropdown-content am-dropdown-search" id="dropdown-search-ul"></ul>
 							</div>
 						</div>
@@ -127,9 +127,9 @@
 	<script src="<%=request.getContextPath()%>/resources/amazeui/assets/js/amazeui.upload.template.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/amazeui/assets/js/amazeui.upload.event.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/layer/layer.js"></script>
-	<script src="<%=request.getContextPath()%>/resources/js/ztree/jquery.ztree.core-3.5.min.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/zTree/jquery.ztree.core-3.5.min.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/js/admin/main.js"></script>
-	<script src="<%=request.getContextPath()%>/resources/js/core/jquery.cms.keywordinput.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/js/common/jquery.cms.keywordinput.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/wangEditor/js/wangEditor.min.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/js/common/dateFormat.js"></script>
 	<script src="<%=request.getContextPath()%>/dwr/engine.js"></script>

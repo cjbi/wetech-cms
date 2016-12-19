@@ -87,10 +87,19 @@ public class TopicController {
 		return "admin/topic/add";
 	}
 
-	private void initChannel(Model model) {
-		// model.addAttribute("con", con);
-		// model.addAttribute("cid", cid);
-		model.addAttribute("cs", channelService.listPublishChannel());
+	@RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
+	@AuthMethod(role = "ROLE_PUBLISH")
+	public String edit(@PathVariable int id, Model model) {
+		Topic t = topicService.load(id);
+		String keyword = t.getKeyword();
+		if (keyword != null && !"".equals(keyword.trim())) {
+			model.addAttribute("keywords", keyword.split("\\|"));
+		}
+		model.addAttribute("atts", attachmentService.listByTopic(id));
+		TopicDto td = new TopicDto(t, t.getChannel().getId());
+		model.addAttribute("topicDto", td);
+		model.addAttribute("cname", t.getChannel().getName());
+		return "admin/topic/edit";
 	}
 
 	@ResponseBody
@@ -115,6 +124,37 @@ public class TopicController {
 		}
 		return ResponseData.SUCCESS_NO_DATA;
 	}
+	
+	@ResponseBody
+	@RequestMapping(value = "/edit", method = RequestMethod.POST)
+	public ResponseData edit(int id, @Validated TopicDto topicDto, BindingResult br, String[] aks, Integer[] aids, HttpSession session) {
+		if (br.hasErrors()) {
+			return ResponseData.FAILED_NO_DATA;
+		}
+		Topic tt = topicService.load(id);
+		Topic t = topicDto.getTopic();
+		StringBuffer keys = new StringBuffer();
+		if (aks != null) {
+			for (String k : aks) {
+				keys.append(k).append("|");
+				keywordService.addOrUpdate(k);
+			}
+		}
+		tt.setKeyword(keys.toString());
+		tt.setChannelPicId(t.getChannelPicId());
+		tt.setContent(t.getContent());
+		tt.setPublishDate(t.getPublishDate());
+		tt.setRecommend(t.getRecommend());
+		tt.setStatus(t.getStatus());
+		tt.setSummary(t.getSummary());
+		tt.setTitle(t.getTitle());
+		topicService.update(tt, topicDto.getCid(), aids);
+		/*if (topicService.isUpdateIndex(topicDto.getCid())) {
+			indexService.generateBody();
+		}*/
+		indexService.generateBody();
+		return ResponseData.SUCCESS_NO_DATA;
+	}
 
 	@ResponseBody
 	@RequestMapping(value = "/delete")
@@ -124,13 +164,19 @@ public class TopicController {
 			Topic t = topicService.load(id.intValue());
 			topicService.delete(id.intValue());
 			// 判断是否更新首页
-			if (topicService.isUpdateIndex(t.getChannel().getId())) {
+			/*if (topicService.isUpdateIndex(t.getChannel().getId())) {
 				indexService.generateBody();
-			}
+			}*/
+			indexService.generateBody();
 		}
 		return ResponseData.SUCCESS_NO_DATA;
 	}
 
+	private void initChannel(Model model) {
+		// model.addAttribute("con", con);
+		// model.addAttribute("cid", cid);
+		model.addAttribute("cs", channelService.listPublishChannel());
+	}
 	/*------------------------------------------------------------------------------------------------*/
 
 	private void initList(String con, Integer cid, Model model, HttpSession session, Integer status) {

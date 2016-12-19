@@ -25,8 +25,10 @@ var serialize = function(form) {
 	});
 	return result;
 };
+(function($) {
 
-// 重置表单
-$.fn.clear = function() {
-	$(this).get(0).reset();
-}
+	// 重置表单
+	$.fn.clear = function() {
+		$(this).get(0).reset();
+	}
+})(jQuery);
