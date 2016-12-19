@@ -26,7 +26,7 @@ initTable = function(ajax, gridTable, ServerParams, initComplete, tableNames) {
 		'searching' : false,// 开启搜索框
 		'lengthChange' : true,
 		'paging' : true,// 开启表格分页
-		'bProcessing' : false,
+		'bProcessing' : true,
 		'bServerSide' : true,
 		'bAutoWidth' : true,
 		'sort' : 'position',
@@ -35,9 +35,10 @@ initTable = function(ajax, gridTable, ServerParams, initComplete, tableNames) {
 		'iDisplayLength' : 15,
 		'iDisplayStart' : 0,
 		'ordering' : false,// 全局禁用排序
-		'scrollX' : true,
+		'scrollX' : false,
 		'ajax' : ajax,
-		"dom" : '<"am-g am-g-collapse"rt<"am-padding am-padding-horizontal-0"<"am-datatable-hd am-u-sm-4"l><"am-u-sm-4 am-text-center"i><"am-u-sm-4"p>><"clear">>',
+//		表格开启scrollX row会覆盖bProcessing样式，算是个BUG，"am-padding am-padding-horizontal-0"
+		"dom" : '<"am-g am-g-collapse"rt<<"am-datatable-hd am-u-sm-4"l><"am-u-sm-4 am-text-center"i><"am-u-sm-4"p>><"clear">>',
 		// "dom" : '<"am-g am-g-collapse"<"am-g
 		// am-datatable-hd"<"am-u-sm-6"<"#btnPlugin">><"am-u-sm-4"<"#regexPlugin">><"am-u-sm-2"f>>rt<<"am-datatable-hd
 		// am-u-sm-4"l><"am-u-sm-4"i><"am-u-sm-4"p>><"clear">>',
