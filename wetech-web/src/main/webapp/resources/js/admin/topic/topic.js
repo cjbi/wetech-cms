@@ -15,7 +15,7 @@ $(function() {
 		'data' : 'title',
 		'sWidth' : '30%',
 		"mRender" : function(data, type, full) {
-			return '<a href="http://localhost:8888/topic/' + full.id + '" target="_blank">' + data + '</a>';
+			return '<a href="' + contextPath + '/topic/' + full.id + '" target="_blank">' + data + '</a>';
 		}
 	}, {
 		'data' : 'author'
@@ -54,7 +54,7 @@ $(function() {
 
 	/*------------ 修改 ------------*/
 	$('#edit').on('click', function() {
-		//只能选择一条数据
+		// 只能选择一条数据
 		var rowLength = table.rows('.selected').data().length;
 		if (rowLength == 0) {
 			layer.msg('请选择一条记录！', {
@@ -76,7 +76,7 @@ $(function() {
 			maxmin : true, // 开启最大化最小化按钮
 			area : [ '100%', '100%' ],
 			/* btn : [ '发表', '关闭' ], */
-			content : contextPath + '/admin/topic/edit/'+data.id
+			content : contextPath + '/admin/topic/edit/' + data.id
 		});
 		layer.full(index);
 	});
