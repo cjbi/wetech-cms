@@ -58,7 +58,7 @@ public class IndexController {
 		return topics.getDatas();
 	}
 	
-	@RequestMapping(value = "/search/{con}", method = RequestMethod.GET)
+	@RequestMapping(value = "/search", method = RequestMethod.GET)
 	public String search(@PathVariable String con,Model model) {
 		SystemContext.setOrder("asc");
 		SystemContext.setSort("c.orders");
