@@ -13,3 +13,13 @@ buildNumber.properties
 .tern-project
 /bin/
 .tar.gz
+.idea
+/.idea
+/.idea/codeStyleSettings.xml
+/.idea/compiler.xml
+/.idea/copyright/profiles_settings.xml
+/.idea/dataSources.local.xml
+/.idea/dataSources.xml
+/.idea/dataSources/c712cb59-1efb-4402-9727-861466c7b3ac.xml
+/.idea/dataSources/c712cb59-1efb-4402-9727-861466c7b3ac/storage.xml
+/.idea/inspectionProfiles/profiles_settings.xml

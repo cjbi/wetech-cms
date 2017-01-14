@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: org.directwebremoting:dwr:3.0.1-RELEASE">
     <CLASSES>
-      <root url="jar://D:/Java/maven/repository/org/directwebremoting/dwr/3.0.1-RELEASE/dwr-3.0.1-RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/.m2/repository/org/directwebremoting/dwr/3.0.1-RELEASE/dwr-3.0.1-RELEASE.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://D:/Java/maven/repository/org/directwebremoting/dwr/3.0.1-RELEASE/dwr-3.0.1-RELEASE-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/.m2/repository/org/directwebremoting/dwr/3.0.1-RELEASE/dwr-3.0.1-RELEASE-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://D:/Java/maven/repository/org/directwebremoting/dwr/3.0.1-RELEASE/dwr-3.0.1-RELEASE-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.m2/repository/org/directwebremoting/dwr/3.0.1-RELEASE/dwr-3.0.1-RELEASE-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

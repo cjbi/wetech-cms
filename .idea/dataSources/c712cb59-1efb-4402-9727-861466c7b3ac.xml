@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="wetech_cms@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="wetech_cms">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="allinhub"/>
+    <schema id="4" parent="1" name="approval"/>
+    <schema id="5" parent="1" name="approvalmanager"/>
+    <schema id="6" parent="1" name="base"/>
+    <schema id="7" parent="1" name="businesscommon"/>
+    <schema id="8" parent="1" name="cim_liuye"/>
+    <schema id="9" parent="1" name="cjbi_webapp"/>
+    <schema id="10" parent="1" name="cl_client"/>
+    <schema id="11" parent="1" name="cms-1"/>
+    <schema id="12" parent="1" name="cms_study"/>
+    <schema id="13" parent="1" name="cms_test"/>
+    <schema id="14" parent="1" name="comframe"/>
+    <schema id="15" parent="1" name="customer"/>
+    <schema id="16" parent="1" name="customerorder"/>
+    <schema id="17" parent="1" name="eddyms"/>
+    <schema id="18" parent="1" name="eddymste"/>
+    <schema id="19" parent="1" name="erp-1"/>
+    <schema id="20" parent="1" name="eshop"/>
+    <schema id="21" parent="1" name="ht"/>
+    <schema id="22" parent="1" name="imooc"/>
+    <schema id="23" parent="1" name="information_schema"/>
+    <schema id="24" parent="1" name="integration"/>
+    <schema id="25" parent="1" name="lanyuan_v_3"/>
+    <schema id="26" parent="1" name="log"/>
+    <schema id="27" parent="1" name="market"/>
+    <schema id="28" parent="1" name="mybatis"/>
+    <schema id="29" parent="1" name="mysql"/>
+    <schema id="30" parent="1" name="paashub"/>
+    <schema id="31" parent="1" name="performance_schema"/>
+    <schema id="32" parent="1" name="prodoffer"/>
+    <schema id="33" parent="1" name="product"/>
+    <schema id="34" parent="1" name="res"/>
+    <schema id="35" parent="1" name="saashub"/>
+    <schema id="36" parent="1" name="sec"/>
+    <schema id="37" parent="1" name="spring4"/>
+    <schema id="38" parent="1" name="spring4-1"/>
+    <schema id="39" parent="1" name="spring5"/>
+    <schema id="40" parent="1" name="spring6"/>
+    <schema id="41" parent="1" name="ssmcrud"/>
+    <schema id="42" parent="1" name="test"/>
+    <schema id="43" parent="1" name="testssm"/>
+    <schema id="44" parent="1" name="wetech"/>
+    <schema id="45" parent="1" name="wetech_webapp"/>
+    <schema id="46" parent="1" name="wjw_cheny"/>
+    <table id="47" parent="2" name="t_attachment"/>
+    <table id="48" parent="2" name="t_channel"/>
+    <table id="49" parent="2" name="t_cms_link"/>
+    <table id="50" parent="2" name="t_group"/>
+    <table id="51" parent="2" name="t_group_channel"/>
+    <table id="52" parent="2" name="t_index_pic"/>
+    <table id="53" parent="2" name="t_keyword"/>
+    <table id="54" parent="2" name="t_role"/>
+    <table id="55" parent="2" name="t_topic"/>
+    <table id="56" parent="2" name="t_user"/>
+    <table id="57" parent="2" name="t_user_group"/>
+    <table id="58" parent="2" name="t_user_role"/>
+    <column id="59" parent="47" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="60" parent="47" name="is_attach">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="61" parent="47" name="is_img">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="62" parent="47" name="is_index_pic">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="63" parent="47" name="new_name">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="64" parent="47" name="old_name">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="65" parent="47" name="size">
+      <Position>7</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="66" parent="47" name="suffix">
+      <Position>8</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="67" parent="47" name="type">
+      <Position>9</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="68" parent="47" name="tid">
+      <Position>10</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="69" parent="47" name="create_date">
+      <Position>11</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <index id="70" parent="47" name="FK48549DCEEFDD7FD5">
+      <ColNames>tid</ColNames>
+    </index>
+    <key id="71" parent="47" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="72" parent="47" name="FK48549DCEEFDD7FD5">
+      <ColNames>tid</ColNames>
+      <RefSchemaName>wetech_cms</RefSchemaName>
+      <RefTableName>t_topic</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="73" parent="48" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="74" parent="48" name="custom_link">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="75" parent="48" name="custom_link_url">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="76" parent="48" name="is_index">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="77" parent="48" name="is_top_nav">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="78" parent="48" name="name">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="79" parent="48" name="orders">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="80" parent="48" name="recommend">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="81" parent="48" name="status">
+      <Position>9</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="82" parent="48" name="type">
+      <Position>10</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="83" parent="48" name="pid">
+      <Position>11</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="84" parent="48" name="show_index">
+      <Position>12</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="85" parent="48" name="nav_order">
+      <Position>13</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="86" parent="48" name="is_leaf">
+      <Position>14</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="87" parent="48" name="descn">
+      <Position>15</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="88" parent="48" name="FKE79D7038D7DDF6E5">
+      <ColNames>pid</ColNames>
+    </index>
+    <key id="89" parent="48" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="90" parent="48" name="FKE79D7038D7DDF6E5">
+      <ColNames>pid</ColNames>
+      <RefSchemaName>wetech_cms</RefSchemaName>
+      <RefTableName>t_channel</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="91" parent="49" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="92" parent="49" name="link_id">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="93" parent="49" name="link_url">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="94" parent="49" name="new_win">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="95" parent="49" name="title">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="96" parent="49" name="type">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="97" parent="49" name="url">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="98" parent="49" name="link_clz">
+      <Position>8</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="99" parent="49" name="pos">
+      <Position>9</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="100" parent="49" name="url_class">
+      <Position>10</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="101" parent="49" name="url_id">
+      <Position>11</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="102" parent="49" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="103" parent="50" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="104" parent="50" name="descr">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="105" parent="50" name="name">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="106" parent="50" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="107" parent="51" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="108" parent="51" name="c_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="109" parent="51" name="g_id">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="110" parent="51" name="FKB7D322B8D80AB7D1">
+      <ColNames>c_id</ColNames>
+    </index>
+    <index id="111" parent="51" name="FKB7D322B8EF562C89">
+      <ColNames>g_id</ColNames>
+    </index>
+    <key id="112" parent="51" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="113" parent="51" name="FKB7D322B8D80AB7D1">
+      <ColNames>c_id</ColNames>
+      <RefSchemaName>wetech_cms</RefSchemaName>
+      <RefTableName>t_channel</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="114" parent="51" name="FKB7D322B8EF562C89">
+      <ColNames>g_id</ColNames>
+      <RefSchemaName>wetech_cms</RefSchemaName>
+      <RefTableName>t_group</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="115" parent="52" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="116" parent="52" name="create_date">
+      <Position>2</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="117" parent="52" name="link_type">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="118" parent="52" name="link_url">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="119" parent="52" name="pic">
+      <Position>5</Position>
+      <DataType>longblob|0</DataType>
+    </column>
+    <column id="120" parent="52" name="status">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="121" parent="52" name="sub_title">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="122" parent="52" name="thumbnail_pic">
+      <Position>8</Position>
+      <DataType>longblob|0</DataType>
+    </column>
+    <column id="123" parent="52" name="title">
+      <Position>9</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="124" parent="52" name="new_name">
+      <Position>10</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="125" parent="52" name="old_name">
+      <Position>11</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="126" parent="52" name="pos">
+      <Position>12</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="127" parent="52" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="128" parent="53" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="129" parent="53" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="130" parent="53" name="name_full_py">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="131" parent="53" name="name_short_py">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="132" parent="53" name="times">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="133" parent="53" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="134" parent="54" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="135" parent="54" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="136" parent="54" name="role_type">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="137" parent="54" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="138" parent="55" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="139" parent="55" name="author">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="140" parent="55" name="channel_pic_id">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="141" parent="55" name="content">
+      <Position>4</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="142" parent="55" name="create_date">
+      <Position>5</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="143" parent="55" name="keyword">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="144" parent="55" name="publish_date">
+      <Position>7</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="145" parent="55" name="recommend">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="146" parent="55" name="status">
+      <Position>9</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="147" parent="55" name="summary">
+      <Position>10</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="148" parent="55" name="title">
+      <Position>11</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="149" parent="55" name="cid">
+      <Position>12</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="150" parent="55" name="uid">
+      <Position>13</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="151" parent="55" name="cname">
+      <Position>14</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <index id="152" parent="55" name="FKA10609A452119F24">
+      <ColNames>uid</ColNames>
+    </index>
+    <index id="153" parent="55" name="FKA10609A4D7DDC618">
+      <ColNames>cid</ColNames>
+    </index>
+    <key id="154" parent="55" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="155" parent="55" name="FKA10609A4D7DDC618">
+      <ColNames>cid</ColNames>
+      <RefSchemaName>wetech_cms</RefSchemaName>
+      <RefTableName>t_channel</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="156" parent="55" name="FKA10609A452119F24">
+      <ColNames>uid</ColNames>
+      <RefSchemaName>wetech_cms</RefSchemaName>
+      <RefTableName>t_user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="157" parent="56" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="158" parent="56" name="create_date">
+      <Position>2</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="159" parent="56" name="email">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="160" parent="56" name="nickname">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="161" parent="56" name="password">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="162" parent="56" name="phone">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="163" parent="56" name="status">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="164" parent="56" name="username">
+      <Position>8</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="165" parent="56" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="166" parent="57" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="167" parent="57" name="g_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="168" parent="57" name="u_id">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="169" parent="57" name="FK300645B652467BF9">
+      <ColNames>u_id</ColNames>
+    </index>
+    <index id="170" parent="57" name="FK300645B6EF562C89">
+      <ColNames>g_id</ColNames>
+    </index>
+    <key id="171" parent="57" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="172" parent="57" name="FK300645B6EF562C89">
+      <ColNames>g_id</ColNames>
+      <RefSchemaName>wetech_cms</RefSchemaName>
+      <RefTableName>t_group</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="173" parent="57" name="FK300645B652467BF9">
+      <ColNames>u_id</ColNames>
+      <RefSchemaName>wetech_cms</RefSchemaName>
+      <RefTableName>t_user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="174" parent="58" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="175" parent="58" name="r_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="176" parent="58" name="u_id">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="177" parent="58" name="FK331DEE5F5243B387">
+      <ColNames>r_id</ColNames>
+    </index>
+    <index id="178" parent="58" name="FK331DEE5F52467BF9">
+      <ColNames>u_id</ColNames>
+    </index>
+    <key id="179" parent="58" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="180" parent="58" name="FK331DEE5F5243B387">
+      <ColNames>r_id</ColNames>
+      <RefSchemaName>wetech_cms</RefSchemaName>
+      <RefTableName>t_role</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="181" parent="58" name="FK331DEE5F52467BF9">
+      <ColNames>u_id</ColNames>
+      <RefSchemaName>wetech_cms</RefSchemaName>
+      <RefTableName>t_user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>

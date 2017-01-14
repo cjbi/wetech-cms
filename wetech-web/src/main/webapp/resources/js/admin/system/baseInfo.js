@@ -8,28 +8,23 @@ $(function() {
 				if (isFormValid) {
 					var url = contextPath + '/admin/system/baseInfo/edit.do'
 					$.ajax({
-						url : url,
-						type : 'POST',
-						data : formData,
-						async : false,
-						cache : false,
-						contentType : false,
-						processData : false,
-						success : function(data) {
-							parent.layer.msg(data.message, {
-								time : '2000',
-								icon : 6
-							});
-							// 如果成功了，就刷新表格
-							loadContent(contextPath + '/admin/system/baseInfo');
-							layer.close(index);
-						},
-						error : function(data) {
-							parent.layer.msg('操作失败', {
-								time : 2000,
-								icon : 5
-							});
-						}
+					    type : 'post',
+					    url : url,
+					    dataType : 'json',
+					    success : function(data) {
+						layer.msg(data.message, {
+						    time : '2000',
+						    icon : 6
+						});
+						layer.close(index);
+						loadContent(contextPath + '/admin/system/baseInfo');
+					    },
+					    error : function(data) {
+						layer.msg('操作失败', {
+						    time : 2000,
+						    icon : 5
+						});
+					    }
 					});
 					layer.close(index);
 					loadContent(contextPath + "/admin/system/baseInfo");

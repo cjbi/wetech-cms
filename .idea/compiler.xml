@@ -15,7 +15,6 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="wetech" target="1.8" />
       <module name="wetech-basic-common" target="1.8" />
       <module name="wetech-basic-hibernate" target="1.8" />
       <module name="wetech-core" target="1.8" />
