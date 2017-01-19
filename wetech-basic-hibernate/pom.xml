@@ -28,8 +28,6 @@
 			<version>4.2.0.Final</version>
 		</dependency>
 		
-		
-		
 		<!-- test -->
 		<dependency>
 			<groupId>commons-dbcp</groupId>

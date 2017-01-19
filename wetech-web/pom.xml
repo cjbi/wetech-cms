@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <project
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-	xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>tech.wetech</groupId>
@@ -15,17 +14,33 @@
 
 	<name>wetech-web Maven Webapp</name>
 	<url>http://maven.apache.org</url>
-	
+
 	<properties>
 		<jackson.version>2.8.4</jackson.version>
 	</properties>
-	
+
 	<dependencies>
 	
+		<!-- 日志相关依赖 -->
+		<!-- 使用slf4j-api来处理日志 -->
 		<dependency>
-			<groupId>${project.groupId}</groupId>
-			<artifactId>wetech-core</artifactId>
-			<version>${project.version}</version>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		
+		<!-- Logback-classic实现了SLF4j -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.1.3</version>
+		</dependency>
+		
+		<!-- 把JCL(Apache Commons Logging)的日志输出桥接到 SLF4J -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>1.7.12</version>
 		</dependency>
 		
 		<dependency>
@@ -33,37 +48,25 @@
 			<artifactId>wetech-basic-common</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>${project.groupId}</groupId>
 			<artifactId>wetech-topic</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>${project.groupId}</groupId>
 			<artifactId>wetech-user</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-core</artifactId>
 			<version>${jackson.version}</version>
 		</dependency>
-		
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>${slf4j.version}</version>
-		</dependency>
-		
-		<dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
-		
+
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
@@ -74,7 +77,7 @@
 			<artifactId>jackson-annotations</artifactId>
 			<version>${jackson.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
@@ -86,21 +89,21 @@
 			<artifactId>servlet-api</artifactId>
 			<version>2.5</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
 			<artifactId>jsp-api</artifactId>
 			<version>2.2</version>
-			<!-- 期望JDK、容器或使用者会提供这个依赖  -->
+			<!-- 期望JDK、容器或使用者会提供这个依赖 -->
 			<scope>provided</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>jsptags</groupId>
 			<artifactId>pager-taglib</artifactId>
@@ -123,12 +126,14 @@
 			<artifactId>commons-compress</artifactId>
 			<version>1.5</version>
 		</dependency>
-		<dependency>
+		
+		
+		<!-- <dependency>
 			<groupId>org.samba.jcifs</groupId>
 			<artifactId>jcifs</artifactId>
 			<version>1.3.3</version>
-		</dependency>
-		
+		</dependency> -->
+
 		<!-- 测试相关依赖 -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -154,8 +159,7 @@
 			<version>1.3.0</version>
 			<scope>test</scope>
 		</dependency>
-		
-		
+
 	</dependencies>
 	<build>
 		<pluginManagement>

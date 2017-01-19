@@ -6,7 +6,6 @@ import java.util.List;
 
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import tech.wetech.cms.model.User;
 
@@ -45,7 +44,31 @@ public class UserDto {
 	 */
 	private Integer[] groupIds = new Integer[]{};
 	
+	private Integer gid;
 	
+	private Integer rid;
+	
+	
+	public Integer getGid() {
+		return gid;
+	}
+
+
+	public void setGid(Integer gid) {
+		this.gid = gid;
+	}
+
+
+	public Integer getRid() {
+		return rid;
+	}
+
+
+	public void setRid(Integer rid) {
+		this.rid = rid;
+	}
+
+
 	public int getId() {
 		return id;
 	}
@@ -121,7 +144,7 @@ public class UserDto {
 	}
 
 
-	public void setRoleIds(@RequestParam(value = "roleIds") Integer[] roleIds) {
+	public void setRoleIds(Integer[] roleIds) {
 		this.roleIds = roleIds;
 	}
 
@@ -131,7 +154,7 @@ public class UserDto {
 	}
 
 
-	public void setGroupIds(@RequestParam(value = "groupIds") Integer[] groupIds) {
+	public void setGroupIds(Integer[] groupIds) {
 		this.groupIds = groupIds;
 	}
 

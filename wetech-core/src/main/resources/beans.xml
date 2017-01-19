@@ -24,24 +24,21 @@
 	<bean id="outPath" class="java.lang.String">
 		<constructor-arg value="/jsp/template"/>
 	</bean>
-	
-	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
-		destroy-method="close">
+
+	<!--配置DBCP连接池 -->
+	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
 		<property name="driverClassName" value="${jdbc.driverClassName}" />
 		<property name="url" value="${jdbc.url}" />
 		<property name="username" value="${jdbc.username}" />
 		<property name="password" value="${jdbc.password}" />
-		<!-- 配置连接池的初始值 -->
-		<property name="initialSize" value="1" />
-		<!-- 连接池的最大值 -->
-		<!-- <property name="maxActive" value="500"/> -->
-		<!-- 最大空闲时，当经过一个高峰之后，连接池可以将一些用不到的连接释放，一直减少到maxIdle为止 -->
-		<!-- <property name="maxIdle" value="2"/> -->
-		<!-- 当最小空闲时，当连接少于minIdle时会自动去申请一些连接 -->
-		<property name="minIdle" value="1" />
-		<property name="maxActive" value="100" />
-		<property name="maxIdle" value="20" />
-		<property name="maxWait" value="1000" />
+		<!-- 连接初始值，连接池启动时创建的连接数量的初始值  默认值是0 -->
+		<property name="initialSize" value="3" />
+		<!-- 最小空闲值.当空闲的连接数少于阀值时，连接池就会预申请去一些连接，以免洪峰来时来不及申请  默认值是0 -->
+		<property name="minIdle" value="3" />
+		<!-- 最大空闲值.当经过一个高峰时间后，连接池可以慢慢将已经用不到的连接慢慢释放一部分，一直减少到maxIdle为止 ，0时无限制  默认值是8 -->
+		<property name="maxIdle" value="5" />
+		<!-- 连接池的最大值，同一时间可以从池分配的最多连接数量，0时无限制   默认值是8 -->
+		<property name="maxTotal" value="15" />
 	</bean>
 	<!--创建Spring的SessionFactory工厂 -->
 	<context:property-placeholder location="classpath:jdbc.properties" />

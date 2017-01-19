@@ -110,14 +110,6 @@ public class UserController {
 		return ResponseData.SUCCESS_NO_DATA;
 	}
 
-	/*----------------------------------------------------------------------*/
-
-	/*
-	 * @RequestMapping("/users") public String list2(Model model) {
-	 * model.addAttribute("datas", userService.findUser()); return "user/list";
-	 * }
-	 */
-
 	@RequestMapping(value = "/update/{id}", method = RequestMethod.GET)
 	public String update(@PathVariable int id, Model model) {
 		User u = userService.load(id);

@@ -71,8 +71,8 @@ public class TopicDaoTest extends AbstractDbUnitTestCase{
 	public void testFindByCts() throws IllegalArgumentException, IllegalAccessException, InvocationTargetException {
 		Pager<Topic> ts = topicDao.find(7, null, 1);
 		Assert.assertEquals(ts.getTotal(), 2);
-		List<Topic> ls = Arrays.asList(new Topic(1,"abababab1","aa|aaa",1,1,"管理员"),
-					new Topic(4,"dededede1","",1,1,"文章发布人员"));
+		List<Topic> ls = Arrays.asList(new Topic(1,"abababab1","aa|aaa",1,1,"管理员",""),
+					new Topic(4,"dededede1","",1,1,"文章发布人员",""));
 		TestUtil.assertListByClz(ls, ts.getDatas(), Topic.class,
 				new String[]{"summary","content","user","publishDate",
 			"createDate","cname","channel","channelPicId"});
@@ -83,7 +83,7 @@ public class TopicDaoTest extends AbstractDbUnitTestCase{
 	public void testSearchTopicByKeyword() throws IllegalArgumentException, IllegalAccessException, InvocationTargetException {
 		Pager<Topic> ts = topicDao.searchTopicByKeyword("aa");
 		Assert.assertEquals(ts.getTotal(), 1);
-		List<Topic> ls = Arrays.asList(new Topic(1,"abababab1","aa|aaa",1,1,"管理员"));
+		List<Topic> ls = Arrays.asList(new Topic(1,"abababab1","aa|aaa",1,1,"管理员",""));
 		TestUtil.assertListByClz(ls, ts.getDatas(), Topic.class,
 				new String[]{"summary","content","user","publishDate",
 			"createDate","cname","channel","channelPicId"});
@@ -93,8 +93,8 @@ public class TopicDaoTest extends AbstractDbUnitTestCase{
 	public void testSearchTopic() throws IllegalArgumentException, IllegalAccessException, InvocationTargetException {
 		Pager<Topic> ts = topicDao.searchTopic("b");
 		Assert.assertEquals(ts.getTotal(), 2);
-		List<Topic> ls = Arrays.asList(new Topic(1,"abababab1","aa|aaa",1,1,"管理员"),
-				new Topic(3,"cdcdcdcd1","cd",1,0,"管理员"));
+		List<Topic> ls = Arrays.asList(new Topic(1,"abababab1","aa|aaa",1,1,"管理员",""),
+				new Topic(3,"cdcdcdcd1","cd",1,0,"管理员",""));
 		TestUtil.assertListByClz(ls, ts.getDatas(), Topic.class,
 				new String[]{"summary","content","user","publishDate",
 			"createDate","cname","channel","channelPicId"});
@@ -104,8 +104,8 @@ public class TopicDaoTest extends AbstractDbUnitTestCase{
 	public void testFindRecommendTopic() throws IllegalArgumentException, IllegalAccessException, InvocationTargetException {
 		Pager<Topic> ts = topicDao.findRecommendTopic(7);
 		Assert.assertEquals(ts.getTotal(), 2);
-		List<Topic> ls = Arrays.asList(new Topic(1,"abababab1","aa|aaa",1,1,"管理员"),
-					new Topic(4,"dededede1","",1,1,"文章发布人员"));
+		List<Topic> ls = Arrays.asList(new Topic(1,"abababab1","aa|aaa",1,1,"管理员",""),
+					new Topic(4,"dededede1","",1,1,"文章发布人员",""));
 		TestUtil.assertListByClz(ls, ts.getDatas(), Topic.class,
 				new String[]{"summary","content","user","publishDate",
 			"createDate","cname","channel","channelPicId"});

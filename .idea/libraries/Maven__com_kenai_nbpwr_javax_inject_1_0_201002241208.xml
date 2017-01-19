@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: com.kenai.nbpwr:javax-inject:1.0-201002241208">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.m2/repository/com/kenai/nbpwr/javax-inject/1.0-201002241208/javax-inject-1.0-201002241208.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/kenai/nbpwr/javax-inject/1.0-201002241208/javax-inject-1.0-201002241208.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/.m2/repository/com/kenai/nbpwr/javax-inject/1.0-201002241208/javax-inject-1.0-201002241208-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/kenai/nbpwr/javax-inject/1.0-201002241208/javax-inject-1.0-201002241208-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$USER_HOME$/.m2/repository/com/kenai/nbpwr/javax-inject/1.0-201002241208/javax-inject-1.0-201002241208-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/kenai/nbpwr/javax-inject/1.0-201002241208/javax-inject-1.0-201002241208-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

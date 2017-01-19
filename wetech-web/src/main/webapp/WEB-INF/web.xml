@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<web-app
-	version="3.0"
-	xmlns="http://java.sun.com/xml/ns/javaee"
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
-
+	
 	<!-- 配置DispatcherServlet -->
 	<servlet>
 		<servlet-name>cms</servlet-name>
@@ -48,7 +46,8 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath*:beans.xml</param-value>
 	</context-param>
-	<!-- Spring中提供了 org.springframework.orm.hibernate3.support.OpenSessionInViewFilter; 这个类来实现OpenSessionInViewer的操作 -->
+	<!-- Spring中提供了 org.springframework.orm.hibernate3.support.OpenSessionInViewFilter; 
+		这个类来实现OpenSessionInViewer的操作 -->
 	<filter>
 		<filter-name>openSessionInViewerFilter</filter-name>
 		<filter-class>org.springframework.orm.hibernate4.support.OpenSessionInViewFilter</filter-class>

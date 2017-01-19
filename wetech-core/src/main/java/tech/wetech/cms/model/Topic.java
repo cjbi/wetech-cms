@@ -11,7 +11,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="t_topic")
+@Table(name = "t_topic")
 public class Topic {
 	private int id;
 	private String title;
@@ -55,7 +55,7 @@ public class Topic {
 	 * 栏目名称冗余字段
 	 */
 	private String cname;
-	
+
 	/**
 	 * 文章所在的频道，多对一
 	 */
@@ -64,114 +64,144 @@ public class Topic {
 	 * 文章的发布者
 	 */
 	private User user;
-	
+
+	private String thumb;
+
+	public String getThumb() {
+		return thumb;
+	}
+
+	public void setThumb(String thumb) {
+		this.thumb = thumb;
+	}
+
 	@Id
 	@GeneratedValue
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
+
 	public String getTitle() {
 		return title;
 	}
+
 	public void setTitle(String title) {
 		this.title = title;
 	}
+
 	public String getKeyword() {
 		return keyword;
 	}
+
 	public void setKeyword(String keyword) {
 		this.keyword = keyword;
 	}
+
 	public int getStatus() {
 		return status;
 	}
+
 	public void setStatus(int status) {
 		this.status = status;
 	}
+
 	public int getRecommend() {
 		return recommend;
 	}
+
 	public void setRecommend(int recommend) {
 		this.recommend = recommend;
 	}
+
 	public String getContent() {
 		return content;
 	}
+
 	public void setContent(String content) {
 		this.content = content;
 	}
+
 	public String getSummary() {
 		return summary;
 	}
+
 	public void setSummary(String summary) {
 		this.summary = summary;
 	}
-	
-	@Column(name="publish_date")
+
+	@Column(name = "publish_date")
 	public Date getPublishDate() {
 		return publishDate;
 	}
+
 	public void setPublishDate(Date publishDate) {
 		this.publishDate = publishDate;
 	}
-	
-	@Column(name="create_date")
+
+	@Column(name = "create_date")
 	public Date getCreateDate() {
 		return createDate;
 	}
+
 	public void setCreateDate(Date createDate) {
 		this.createDate = createDate;
 	}
+
 	public String getAuthor() {
 		return author;
 	}
+
 	public void setAuthor(String author) {
 		this.author = author;
 	}
-	
+
 	@ManyToOne
-	@JoinColumn(name="cid")
+	@JoinColumn(name = "cid")
 	public Channel getChannel() {
 		return channel;
 	}
+
 	public void setChannel(Channel channel) {
 		this.channel = channel;
 	}
-	
+
 	@ManyToOne
-	@JoinColumn(name="uid")
+	@JoinColumn(name = "uid")
 	public User getUser() {
 		return user;
 	}
+
 	public void setUser(User user) {
 		this.user = user;
 	}
-	
-	@Column(name="channel_pic_id")
+
+	@Column(name = "channel_pic_id")
 	public int getChannelPicId() {
 		return channelPicId;
 	}
+
 	public void setChannelPicId(int channelPicId) {
 		this.channelPicId = channelPicId;
 	}
-	
-	
+
 	public String getCname() {
 		return cname;
 	}
+
 	public void setCname(String cname) {
 		this.cname = cname;
 	}
+
 	@Override
 	public String toString() {
 		return "Topic [id=" + id + ", title=" + title + "]";
 	}
-	
-	public Topic(int id, String title,String keyword, int status,
-			int recommend, Date publishDate, String author, String cname) {
+
+	public Topic(int id, String title, String keyword, int status, int recommend, Date publishDate, String author, String cname, String thumb) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -181,10 +211,10 @@ public class Topic {
 		this.publishDate = publishDate;
 		this.author = author;
 		this.cname = cname;
+		this.thumb = thumb;
 	}
-	
-	public Topic(int id, String title,String keyword, int status,
-			int recommend, Date publishDate, String author, String cname,String summary) {
+
+	public Topic(int id, String title, String keyword, int status, int recommend, Date publishDate, String author, String cname, String summary, String thumb) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -195,10 +225,10 @@ public class Topic {
 		this.author = author;
 		this.cname = cname;
 		this.summary = summary;
+		this.thumb = thumb;
 	}
-	
-	public Topic(int id, String title, String keyword, int status,
-			int recommend, String author) {
+
+	public Topic(int id, String title, String keyword, int status, int recommend, String author, String thumb) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -206,9 +236,9 @@ public class Topic {
 		this.status = status;
 		this.recommend = recommend;
 		this.author = author;
+		this.thumb = thumb;
 	}
-	
-	public Topic() {
-	}
-	
+
+	public Topic() {}
+
 }

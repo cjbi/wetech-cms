@@ -22,7 +22,7 @@ public class TopicDao extends BaseDao<Topic> implements ITopicDao {
 	}
 
 	private String getTopicSelect() {
-		return "select new Topic(t.id,t.title,t.keyword,t.status,t.recommend,t.publishDate,t.author,t.cname,t.summary)";
+		return "select new Topic(t.id,t.title,t.keyword,t.status,t.recommend,t.publishDate,t.author,t.cname,t.summary,t.thumb)";
 	}
 
 	@Override
@@ -106,7 +106,7 @@ public class TopicDao extends BaseDao<Topic> implements ITopicDao {
 
 	@Override
 	public Topic loadLastedTopicByColumn(int cid) {
-		String s = "select new Topic(t.id,t.title,t.keyword,t.status,t.recommend,t.publishDate,t.author,t.cname,t.summary)";
+		String s = "select new Topic(t.id,t.title,t.keyword,t.status,t.recommend,t.publishDate,t.author,t.cname,t.summary,t.thumb)";
 		String hql = s + " from Topic t where t.status=1 and t.channel.id=? order by t.publishDate desc";
 		Topic topic = (Topic) this.getSession().createQuery(hql).setFirstResult(0).setMaxResults(1).setParameter(0, cid)
 				.uniqueResult();
