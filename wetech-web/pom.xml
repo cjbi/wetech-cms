@@ -20,7 +20,7 @@
 	</properties>
 
 	<dependencies>
-	
+
 		<!-- 日志相关依赖 -->
 		<!-- 使用slf4j-api来处理日志 -->
 		<dependency>
@@ -28,21 +28,21 @@
 			<artifactId>slf4j-api</artifactId>
 			<version>${slf4j.version}</version>
 		</dependency>
-		
+
 		<!-- Logback-classic实现了SLF4j -->
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
 			<version>1.1.3</version>
 		</dependency>
-		
+
 		<!-- 把JCL(Apache Commons Logging)的日志输出桥接到 SLF4J -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>jcl-over-slf4j</artifactId>
 			<version>1.7.12</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>${project.groupId}</groupId>
 			<artifactId>wetech-basic-common</artifactId>
@@ -126,13 +126,10 @@
 			<artifactId>commons-compress</artifactId>
 			<version>1.5</version>
 		</dependency>
-		
-		
-		<!-- <dependency>
-			<groupId>org.samba.jcifs</groupId>
-			<artifactId>jcifs</artifactId>
-			<version>1.3.3</version>
-		</dependency> -->
+
+
+		<!-- <dependency> <groupId>org.samba.jcifs</groupId> <artifactId>jcifs</artifactId> 
+			<version>1.3.3</version> </dependency> -->
 
 		<!-- 测试相关依赖 -->
 		<dependency>
@@ -165,22 +162,20 @@
 		<pluginManagement>
 			<plugins>
 				<plugin>
-					<groupId>org.mortbay.jetty</groupId>
+					<groupId>org.eclipse.jetty</groupId>
 					<artifactId>jetty-maven-plugin</artifactId>
-					<version>8.1.5.v20120716</version>
+					<version>9.4.0.v20161208</version>
 					<configuration>
-						<scanIntervalSeconds>10</scanIntervalSeconds>
-						<webApp>
-							<contextPath>/</contextPath>
-						</webApp>
-						<!-- 每3秒的间隔扫描一次,实现热部署 -->
-						<scanIntervalSeconds>3</scanIntervalSeconds>
-						<connectors>
-							<connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
-								<port>8888</port>
-								<maxIdleTime>60000</maxIdleTime>
-							</connector>
-						</connectors>
+						<!-- 这是指定jetty扫描文件改变的时间间隔 -->
+						<scanIntervalSeconds>1</scanIntervalSeconds>
+						<httpConnector>
+							<!-- 指定端口 -->
+							<port>8888</port>
+						</httpConnector>
+						<webAppConfig>
+							<!-- 指定webapp contextpath -->
+							<contextPath>/${project.artifactId}</contextPath>
+						</webAppConfig>
 					</configuration>
 				</plugin>
 			</plugins>

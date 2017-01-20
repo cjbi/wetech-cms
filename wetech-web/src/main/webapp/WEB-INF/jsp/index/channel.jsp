@@ -68,9 +68,9 @@
 							<c:forEach items="${datas.datas}" var="topic">
 								<li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-bottom-left"><a href="<%=request.getContextPath() %>/topic/${topic.id}"
 									class="am-list-item-hd"><h2>${topic.title }</h2></a>
-									<c:if test="${not empty topic.thumb}">
-										<div class="am-u-sm-2 am-list-thumb">
-											<a href="<%=request.getContextPath() %>/topic/${topic.id}"><img src="${topic.thumb }" width="140" height="140" class="am-img-thumbnail"></a>
+									<c:if test="${not empty topic.thumb}">scale-up,
+										<div class="am-u-sm-2 am-list-thumb" data-am-scrollspy="{animation: 'scale-up',repeat: true}">
+											<a href="<%=request.getContextPath() %>/topic/${topic.id}"><img src="${topic.thumb }" data-am-scrollspy="{animation: 'fade',repeat: true}" class="am-img-thumbnail"></a>
 										</div>
 										<div class=" am-u-sm-10  am-list-main">
 											<div class="am-list-item-text">${topic.summary }</div>

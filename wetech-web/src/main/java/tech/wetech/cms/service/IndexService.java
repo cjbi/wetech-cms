@@ -101,8 +101,8 @@ public class IndexService implements IIndexService {
 			IndexTopic it = new IndexTopic();
 			it.setCid(cid);
 			it.setCname(c.getName());
-			// TODO 显示8条，暂时固定写死。
-			int num = 6;
+			// TODO 显示5条，暂时固定写死。
+			int num = 5;
 			List<Topic> tops = topicService.listTopicByChannelAndNumber(cid, num);
 			// System.out.println(cid+"--"+tops);
 			it.setTopics(tops);

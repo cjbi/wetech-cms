@@ -10,14 +10,14 @@
 		</encoder>
 	</appender>
 	<!-- 文件输出 -->
-	<appender name="LOGS"
+	<!-- <appender name="LOGS"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<file>${catalina.home}/logs/wetech-web.log</file>
-		<!-- 按天滚动 保存30天-->
+		按天滚动 保存30天
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<FileNamePattern>${catalina.home}/logs/wetech-web-%d{MMdd}-%i.log</FileNamePattern>
 			<MaxHistory>30</MaxHistory>
-			<!-- 超过指定大小滚动当天日志 -->
+			超过指定大小滚动当天日志
 			<TimeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
 				<MaxFileSize>50MB</MaxFileSize>
 			</TimeBasedFileNamingAndTriggeringPolicy>
@@ -25,7 +25,7 @@
 		<encoder>
 			<pattern>${pattern}</pattern>
 		</encoder>
-	</appender>
+	</appender> -->
 	<!-- 异步输出 -->
 	<appender name ="ASYNC" class= "ch.qos.logback.classic.AsyncAppender">
             <!-- 不丢失日志.默认的,如果队列的80%已满,则会丢弃TRACT、DEBUG、INFO级别的日志 -->
@@ -43,6 +43,13 @@
 	<logger name="com.cttq.cim" level="ALL" additivity="true">
 		<appender-ref ref="ASYNC" />
 	</logger> -->
+	<logger name="tech.wetech" level="ALL" additivity="true">
+		<appender-ref ref="ASYNC" />
+	</logger>
+	
+	<logger name="tech.wetech" level="ALL" additivity="true">
+		<appender-ref ref="ASYNC" />
+	</logger>
 
 	<root level="INFO">
 		<appender-ref ref="STDOUT" />

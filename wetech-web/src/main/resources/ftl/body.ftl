@@ -17,7 +17,18 @@
 			<!--列表标题-->
 			<ul class="am-list">
 				<#list channelTopic.topics as topic>
-				<li class="am-g am-list-item-dated"><a href="topic/${topic.id}" class="am-list-item-hd ">${topic.title}</a> <span class="am-list-date">${(topic.publishDate)?string("yyyy-MM-dd")}</span></li>
+				<li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left">
+					<div class="am-u-sm-3 am-list-thumb">
+						<a href="topic/${topic.id}"> <img src="${topic.thumb!'http://s.amazeui.org/media/i/demos/bing-1.jpg'}" alt="${topic.title}" />
+						</a>
+					</div>
+					<div class=" am-u-sm-9 am-list-main">
+						<h3 class="am-list-item-hd am-cf">
+							<a href="topic/${topic.id}" class="am-fl">${topic.title}</a> <span class="am-list-date am-fr">${(topic.publishDate)?string("yyyy-MM-dd")}</span>
+						</h3>
+						<div class="am-list-item-text">${topic.summary}</div>
+					</div>
+				</li>
 				</#list>
 			</ul>
 		</div>

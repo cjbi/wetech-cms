@@ -29,7 +29,7 @@ public class TopicService implements ITopicService {
 	/**
 	 * 日志对象
 	 */
-	private static final Logger log = LoggerFactory.getLogger(TopicService.class);
+	private static final Logger logger = LoggerFactory.getLogger(TopicService.class);
 
 	@Inject
 	private ITopicDao topicDao;
@@ -63,7 +63,7 @@ public class TopicService implements ITopicService {
 			list.add(m.group());
 		}
 		String thumb = list.size() > 0 ? list.get(0) : null;
-		log.info("缩略图：" + thumb);
+		logger.info("缩略图：" + thumb);
 		return thumb;
 	}
 

@@ -14,6 +14,14 @@
 <link rel="alternate icon" type="image/png" href="<%=request.getContextPath()%>/resources/amazeui/assets/i/favicon.png">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/amazeui/assets/css/amazeui.min.css" />
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/cms.css" />
+<style type="text/css">
+.am-list-item-text {
+    line-height: 1.4;
+    font-size: 1.4rem;
+    color: #999;
+    margin: 0;
+}
+</style>
 </head>
 <body class="am-with-topbar-fixed-top">
 	<%-- top start --%>
