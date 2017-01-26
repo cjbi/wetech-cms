@@ -2,20 +2,20 @@ package tech.wetech.cms.controller;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Properties;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import tech.wetech.basic.model.Pager;
 import tech.wetech.basic.model.SystemContext;
+import tech.wetech.basic.util.PropertiesUtil;
 import tech.wetech.cms.model.Attachment;
 import tech.wetech.cms.model.Channel;
 import tech.wetech.cms.model.ChannelType;
@@ -26,6 +26,7 @@ import tech.wetech.cms.service.IChannelService;
 import tech.wetech.cms.service.IKeywordService;
 import tech.wetech.cms.service.ITopicService;
 import tech.wetech.cms.web.BaseInfoUtil;
+import tech.wetech.cms.web.ResponseData;
 
 @Controller
 public class IndexController {
@@ -149,6 +150,14 @@ public class IndexController {
 		model.addAttribute("recommendTopics", topicService.listRecommendTopicByNumber(8));
 		model.addAttribute("datas", topicService.find(title, 1));
 		return "index/topics";
+	}
+
+	@RequestMapping("/scrollLoading")
+	public String listTopic(String title, Model model) {
+		SystemContext.setSort("t.publishDate");
+		SystemContext.setOrder("desc");
+		model.addAttribute("datas", topicService.find(title,1));
+		return "index/scrollLoading";
 	}
 
 	@RequestMapping("/keyword/{con}")

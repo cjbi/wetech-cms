@@ -42,9 +42,22 @@
 }
 
 .admin-content-body {
-    height: 100%;
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 0 auto;
-    -ms-flex: 1 0 auto;
-    flex: 1 0 auto;
+	height: 100%;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 0 auto;
+	-ms-flex: 1 0 auto;
+	flex: 1 0 auto;
+}
+
+.am-channel-title {
+	
+}
+
+.am-channel-date {
+	color: #999;
+	float: right;
+	/* top: -1.8rem; */
+	position: absolute;
+	right: 5px;
+	font-size: 1.3rem;
 }

@@ -50,8 +50,7 @@ public class ChannelController {
 		List<Channel> cs = channelService.listByParent(pId);
 		List<TreeDto> tds = new ArrayList<TreeDto>();
 		for (Channel c : cs) {
-			tds.add(new TreeDto(c.getId(), c.getParent() != null ? c.getParent().getId() : 0, c.getName(),
-					c.getIsLeaf() == 1 ? 0 : 1, c));
+			tds.add(new TreeDto(c.getId(), c.getParent() != null ? c.getParent().getId() : 0, c.getName(), c.getIsLeaf() == 1 ? 0 : 1, c));
 		}
 		return tds;
 	}
@@ -64,7 +63,14 @@ public class ChannelController {
 			return new ResponseData("操作失败" + br.getFieldError().toString());
 		}
 		channelService.add(c, pId);
-		indexService.generateTop();
+		// 如果添加的栏目是顶部栏目
+		if (c.getIsTopNav() == 1) {
+			indexService.generateTop();
+		}
+		// 如果添加的栏目是首页栏目
+		if (c.getIsIndex() == 1) {
+			indexService.generateBody();
+		}
 		return ResponseData.SUCCESS_NO_DATA;
 	}
 
@@ -76,6 +82,11 @@ public class ChannelController {
 			return new ResponseData("操作失败" + br.getFieldError().toString());
 		}
 		Channel oc = channelService.load(c.getId());
+		
+		//更新首页标识
+		boolean generateTopNav = oc.getIsTopNav() !=c.getIsTopNav();
+		boolean generateIndex = oc.getIsIndex() != c.getIsIndex();
+		
 		oc.setCustomLink(c.getCustomLink());
 		oc.setCustomLinkUrl(c.getCustomLinkUrl());
 		oc.setDescn(c.getDescn());
@@ -90,52 +101,36 @@ public class ChannelController {
 		oc.setType(c.getType());
 		System.out.println(oc);
 		channelService.update(oc);
-		indexService.generateTop();
+		
+		if (generateTopNav) {
+			indexService.generateTop();
+		}
+		if (generateIndex) {
+			indexService.generateBody();
+		}
+
 		return ResponseData.SUCCESS_NO_DATA;
 	}
-	
+
 	@ResponseBody
 	@RequestMapping("/delete")
-	public ResponseData delete( Integer id, Model model) {
+	public ResponseData delete(Integer id, Model model) {
 		try {
-			
-		channelService.delete(id);
-		indexService.generateTop();
+			Channel c = channelService.load(id);
+			channelService.delete(id);
+			if (c.getIsTopNav() == 1) {
+				indexService.generateTop();
+			}
+			if (c.getIsIndex() == 1) {
+				indexService.generateBody();
+			}
 		} catch (CmsException e) {
 			return new ResponseData(false, e.getMessage());
 		}
 		return ResponseData.SUCCESS_NO_DATA;
 	}
 
-	
-	
 	/*--------------------------------------------------------------------*/
-	@RequestMapping("/channels")
-	public String list(Model model) {
-		model.addAttribute("treeDatas", JsonUtil.getInstance().obj2json(channelService.generateTree()));
-		return "channel/list";
-	}
-
-	@Deprecated
-	@RequestMapping("/channels/{pid}")
-	public String listChild(@PathVariable Integer pid, @Param Integer refresh, Model model) {
-		Channel pc = null;
-		if (refresh == null) {
-			model.addAttribute("refresh", 0);
-		} else {
-			model.addAttribute("refresh", 1);
-		}
-		if (pid == null || pid <= 0) {
-			pc = new Channel();
-			pc.setName(Channel.ROOT_NAME);
-			pc.setId(Channel.ROOT_ID);
-		} else
-			pc = channelService.load(pid);
-		model.addAttribute("pc", pc);
-		model.addAttribute("channels", channelService.listByParent(pid));
-		return "channel/list_child";
-	}
-
 	@RequestMapping("/treeAll")
 	public @ResponseBody List<ChannelTree> tree() {
 		return channelService.generateTree();

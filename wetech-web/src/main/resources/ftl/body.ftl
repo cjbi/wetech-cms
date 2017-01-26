@@ -6,7 +6,7 @@
 <#if gridSum=0>
 <div class="am-g am-g-fixed  cms-fixed">
 </#if>
-	<div class="am-u-md-${grid} am-u-sm-${grid}">
+	<div class="am-u-md-${grid} am-u-sm-12">
 		<div data-am-widget="titlebar" class="am-titlebar am-titlebar-default">
 			<h2 class="am-titlebar-title ">${channelTopic.cname}</h2>
 			<nav class="am-titlebar-nav">
@@ -23,9 +23,8 @@
 						</a>
 					</div>
 					<div class=" am-u-sm-9 am-list-main">
-						<h3 class="am-list-item-hd am-cf">
-							<a href="topic/${topic.id}" class="am-fl">${topic.title}</a> <span class="am-list-date am-fr">${(topic.publishDate)?string("yyyy-MM-dd")}</span>
-						</h3>
+						<a class="am-channel-title" href="topic/${topic.id}">${topic.title}</a> 
+						<span class="am-channel-date">${(topic.publishDate)?string("yyyy-MM-dd")}</span>
 						<div class="am-list-item-text">${topic.summary}</div>
 					</div>
 				</li>
@@ -47,7 +46,7 @@
 	<!-- banner start -->
 	<jsp:include page="/jsp/template/banner.jsp" />
 	<!-- banner end -->
-	<div class="am-u-sm-4">
+	<div class="am-u-md-4 am-u-sm-12">
 		<div data-am-widget="list_news" class="am-list-news am-list-news-default">
 			<!--列表标题-->
 			<div class="am-list-news-hd am-cf">

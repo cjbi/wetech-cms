@@ -38,7 +38,7 @@ div#rMenu ul {
 			</div>
 		</div>
 		<hr>
-		<div class="am-u-sm-3">
+		<div class="am-u-md-3 am-u-sm-12">
 			<div class="am-panel am-panel-default am-animation-fade">
 				<div class="am-panel-hd">栏目树</div>
 				<div class="am-panel-bd">
@@ -54,7 +54,7 @@ div#rMenu ul {
 				</div>
 			</div>
 		</div>
-		<div class="am-u-sm-7 am-u-end">
+		<div class="am-u-md-7 am-u-sm-12 am-u-end">
 			<div class="am-panel am-panel-default am-animation-fade am-animation-shake">
 				<div class="am-panel-hd">栏目树管理</div>
 				<div class="am-panel-bd">

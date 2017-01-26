@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
- <div data-am-widget="slider" class="am-u-sm-8 am-slider am-slider-d3" data-am-slider='{&quot;controlNav&quot;:&quot;thumbnails&quot;,&quot;directionNav&quot;:false}' >
+ <div data-am-widget="slider" class="am-u-md-8 am-u-sm-12 am-slider am-slider-d3" data-am-slider='{&quot;controlNav&quot;:&quot;thumbnails&quot;,&quot;directionNav&quot;:false}' >
   <ul class="am-slides">
   	      <li data-thumb="<%=request.getContextPath()%>/resources/indexPic/thumbnail/1480490106822.jpg">
         	<a href="http://www.baidu.com"><img src="<%=request.getContextPath()%>/resources/indexPic/1480490106822.jpg"></a>

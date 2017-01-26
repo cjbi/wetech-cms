@@ -31,8 +31,6 @@ public class ResponseData {
 		this.message = message;
 	}
 	
-	
-	
 	public ResponseData(boolean status, String message, Object data) {
 		super();
 		this.status = status;
@@ -50,10 +48,6 @@ public class ResponseData {
 
 	public ResponseData(String message){
 		this.message = message;
-	}
-
-	public boolean isSuccess() {
-		return status;
 	}
 	
 	public boolean getStatus() {
