@@ -117,7 +117,7 @@ public class IndexService implements IIndexService {
         generateBanner();
         Map<String, Object> root = new HashMap<String, Object>();
         int newNum = Integer.valueOf(prop.getProperty("cms.index.news.num"));
-        root.put("news", topicService.listTopicsByNumber(newNum));
+        root.put("news", topicService.listRecommendTopicByNumber(newNum));
         root.put("channelTopics", channelTopics);
         root.put("keywords", keyworkService.getMaxTimesKeyword(50));
         randomKeywordClz(root, 100);

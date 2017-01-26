@@ -39,5 +39,6 @@
 	<script src="<%=request.getContextPath()%>/resources/amazeui/assets/js/jquery.min.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/amazeui/assets/js/amazeui.min.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/js/cms.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/js/index.js"></script>
 </body>
 </html>

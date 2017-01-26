@@ -2,43 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02b3b07a-bcc0-43fa-8014-5eb3081a4461" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wetech-web/src/main/resources/conf.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/scrollLoading.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_samba_jcifs_jcifs_1_3_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_4_3_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_3_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_3_RELEASE.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/wetech_web_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/wetech_web_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/index.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.project" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-basic-hibernate/wetech-basic-hibernate.iml" afterPath="$PROJECT_DIR$/wetech-basic-hibernate/wetech-basic-hibernate.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-core/wetech-core.iml" afterPath="$PROJECT_DIR$/wetech-core/wetech-core.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-topic/wetech-topic.iml" afterPath="$PROJECT_DIR$/wetech-topic/wetech-topic.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-user/wetech-user.iml" afterPath="$PROJECT_DIR$/wetech-user/wetech-user.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/catalina.home_IS_UNDEFINED/logs/wetech-web.log" afterPath="$PROJECT_DIR$/wetech-web/catalina.home_IS_UNDEFINED/logs/wetech-web.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/ChannelController.java" afterPath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/ChannelController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/IndexController.java" afterPath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/IndexController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/service/IndexService.java" afterPath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/service/IndexService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/web/ResponseData.java" afterPath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/web/ResponseData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/resources/ftl/banner.ftl" afterPath="$PROJECT_DIR$/wetech-web/src/main/resources/ftl/banner.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/resources/ftl/body.ftl" afterPath="$PROJECT_DIR$/wetech-web/src/main/resources/ftl/body.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/channel.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/channel.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/channel.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/channel.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/topics.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/topics.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/jsp/template/banner.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/jsp/template/banner.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/index.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/jsp/template/body.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/jsp/template/body.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/jsp/template/footer.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/jsp/template/footer.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/cms.css" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/cms.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/cms.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/cms.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/wetech-web.iml" afterPath="$PROJECT_DIR$/wetech-web/wetech-web.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/wetech-basic-hibernate/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -62,105 +34,7 @@
     <favorites_list name="wetech-parent" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="body.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/jsp/template/body.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="129" column="30" lean-forward="false" selection-start-line="129" selection-start-column="30" selection-end-line="129" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footer.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/jsp/template/footer.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scrollLoading.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/scrollLoading.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="21" column="82" lean-forward="false" selection-start-line="21" selection-start-column="82" selection-end-line="21" selection-end-column="82" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="topics.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/topics.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1064">
-              <caret line="56" column="36" lean-forward="false" selection-start-line="56" selection-start-column="36" selection-end-line="57" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IndexController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/IndexController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2527">
-              <caret line="159" column="28" lean-forward="false" selection-start-line="159" selection-start-column="28" selection-end-line="159" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wetech-web/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3211">
-              <caret line="169" column="46" lean-forward="false" selection-start-line="169" selection-start-column="45" selection-end-line="169" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="channel.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/channel.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2033">
-              <caret line="107" column="56" lean-forward="false" selection-start-line="107" selection-start-column="47" selection-end-line="107" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cms.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/cms.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-              <folding>
-                <marker date="1485356660197" expanded="true" signature="2312:2318" ph="&amp;nbsp;" />
-                <marker date="1485356660197" expanded="true" signature="2318:2324" ph="&amp;nbsp;" />
-                <marker date="1485356660197" expanded="true" signature="2327:2333" ph="&amp;nbsp;" />
-                <marker date="1485356660197" expanded="true" signature="2333:2339" ph="&amp;nbsp;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/jsp/admin/header.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -193,15 +67,19 @@
         <option value="$PROJECT_DIR$/wetech-core/src/main/resources/beans.xml" />
         <option value="$PROJECT_DIR$/wetech-core/pom.xml" />
         <option value="$PROJECT_DIR$/wetech-web/src/main/resources/index.properties" />
-        <option value="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/service/IndexService.java" />
         <option value="$PROJECT_DIR$/wetech-web/src/main/resources/conf.properties" />
         <option value="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/web/ResponseData.java" />
         <option value="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/index_scroll.jsp" />
         <option value="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/IndexController.java" />
         <option value="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/topics.jsp" />
         <option value="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/scrollLoading.jsp" />
-        <option value="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/cms.js" />
+        <option value="$PROJECT_DIR$/wetech-web/src/main/resources/ftl/body.ftl" />
         <option value="$PROJECT_DIR$/wetech-web/src/main/webapp/jsp/template/body.jsp" />
+        <option value="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/service/IndexService.java" />
+        <option value="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/scrollLoading.js" />
+        <option value="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/index.jsp" />
+        <option value="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/cms.js" />
+        <option value="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/index.js" />
       </list>
     </option>
   </component>
@@ -348,6 +226,112 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wetech-parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wetech" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wetech-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wetech-parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wetech" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wetech-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wetech-parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wetech" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wetech-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wetech-parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wetech" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wetech-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wetech-parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wetech" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wetech-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -362,7 +346,7 @@
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="SearchEverywhereHistoryKey" value="indexCon&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/java/tech/wetech/cms/controller/IndexController.java&#10;sys&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/java/tech/wetech/cms/web/SystemContextFilter.java&#10;*.js&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/resources/js/admin/topic/add.js&#10;index.jsp&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/WEB-INF/jsp/index/index.jsp&#10;channel.jsp&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/WEB-INF/jsp/index/channel.jsp&#10;init&#9;PSI&#9;JAVA://tech.wetech.cms.web.InitServlet&#10;Pager&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-basic-hibernate/src/main/java/tech/wetech/basic/model/Pager.java&#10;topicContro&#9;PSI&#9;JAVA://tech.wetech.cms.controller.TopicController&#10;Response&#9;PSI&#9;JAVA://tech.wetech.cms.web.ResponseData&#10;indexController&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/java/tech/wetech/cms/controller/IndexController.java&#10;body.jsp&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/jsp/template/body.jsp&#10;indexService&#9;PSI&#9;JAVA://tech.wetech.cms.service.IndexService&#10;indexCo&#9;PSI&#9;JAVA://tech.wetech.cms.controller.IndexController&#10;bea&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-core/src/main/resources/beans.xml" />
+    <property name="SearchEverywhereHistoryKey" value="index.js&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/resources/js/index.js&#10;index.jsp&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/WEB-INF/jsp/index/index.jsp&#10;body&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/jsp/template/body.jsp&#10;cms.js&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/resources/js/cms.js&#10;indexService&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/java/tech/wetech/cms/service/IndexService.java&#10;IndexSer&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/test/java/tech/wetech/cms/service/IndexServiceTest.java&#10;body.ftl&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/resources/ftl/body.ftl&#10;indexCon&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/java/tech/wetech/cms/controller/IndexController.java&#10;sys&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/java/tech/wetech/cms/web/SystemContextFilter.java&#10;*.js&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/resources/js/admin/topic/add.js&#10;channel.jsp&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/WEB-INF/jsp/index/channel.jsp&#10;init&#9;PSI&#9;JAVA://tech.wetech.cms.web.InitServlet&#10;Pager&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-basic-hibernate/src/main/java/tech/wetech/basic/model/Pager.java&#10;topicContro&#9;PSI&#9;JAVA://tech.wetech.cms.controller.TopicController&#10;Response&#9;PSI&#9;JAVA://tech.wetech.cms.web.ResponseData&#10;indexController&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/java/tech/wetech/cms/controller/IndexController.java&#10;body.jsp&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/jsp/template/body.jsp&#10;indexCo&#9;PSI&#9;JAVA://tech.wetech.cms.controller.IndexController&#10;bea&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-core/src/main/resources/beans.xml" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/wetech-core/pom.xml" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -386,10 +370,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\cjb\WetechWorkspace\wetech\wetech-web\src\main\webapp\jsp\template" />
       <recent name="C:\Users\cjb\WetechWorkspace\wetech\wetech-web\src\main\webapp\WEB-INF\jsp\index" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.wetech-web jetty:run">
+  <component name="RunManager" selected="JUnit.IndexServiceTest.testGenerateBody">
     <configuration default="false" name="IndexServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -404,6 +389,32 @@
       <option name="MAIN_CLASS_NAME" value="tech.wetech.cms.service.IndexServiceTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="IndexServiceTest.testGenerateBody" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="tech.wetech.cms.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="wetech-web" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="tech.wetech.cms.service" />
+      <option name="MAIN_CLASS_NAME" value="tech.wetech.cms.service.IndexServiceTest" />
+      <option name="METHOD_NAME" value="testGenerateBody" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -798,13 +809,15 @@
       </MavenSettings>
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Maven.wetech-web jetty:run" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.IndexServiceTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.IndexServiceTest.testGenerateBody" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.IndexServiceTest" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.IndexServiceTest.testGenerateBody" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.IndexServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -827,7 +840,7 @@
       <workItem from="1484977110259" duration="9916000" />
       <workItem from="1485045683885" duration="5895000" />
       <workItem from="1485296707503" duration="18751000" />
-      <workItem from="1485422757785" duration="54000" />
+      <workItem from="1485422757785" duration="3667000" />
     </task>
     <servers />
   </component>
@@ -838,9 +851,15 @@
     <history-entry file="IndexServiceTest - 2017.01.21 at 15h 19m 31s.xml">
       <configuration name="IndexServiceTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="IndexServiceTest_testGenerateBody - 2017.01.26 at 18h 02m 52s.xml">
+      <configuration name="IndexServiceTest.testGenerateBody" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IndexServiceTest_testGenerateBody - 2017.01.26 at 18h 14m 57s.xml">
+      <configuration name="IndexServiceTest.testGenerateBody" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39284000" />
+    <option name="totallyTimeSpent" value="42897000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -848,6 +867,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39955357" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
@@ -857,20 +877,19 @@
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4330357" sideWeight="0.30490404" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18123667" sideWeight="0.5006766" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16577825" sideWeight="0.5006766" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18176973" sideWeight="0.4993234" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45089287" sideWeight="0.69509596" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29129463" sideWeight="0.69509596" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23995535" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -888,50 +907,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wetech-user/src/test/java/tech/wetech/cms/service/GroupServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="105" column="35" lean-forward="false" selection-start-line="105" selection-start-column="35" selection-end-line="105" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/resources/beans.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-basic-common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-core/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/cms-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="54" column="33" lean-forward="false" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-topic/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="28" column="36" lean-forward="false" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wetech-user/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -968,6 +943,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-38">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -989,6 +965,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1010,13 +987,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-web/src/test/java/tech/wetech/cms/service/IndexServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1031,6 +1002,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
           <caret line="26" column="27" lean-forward="false" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1045,13 +1017,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-773">
           <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/service/IndexService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1501">
-          <caret line="99" column="60" lean-forward="false" selection-start-line="99" selection-start-column="60" selection-end-line="99" selection-end-column="60" />
         </state>
       </provider>
     </entry>
@@ -1097,13 +1062,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/js/amazeui.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/topic/add.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -1136,6 +1094,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-868">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1143,6 +1102,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2060">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1150,6 +1110,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1164,6 +1125,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1171,6 +1133,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1419">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1178,13 +1141,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="5572" column="0" lean-forward="true" selection-start-line="5572" selection-start-column="0" selection-end-line="5576" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="30" column="49" lean-forward="true" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1204,61 +1161,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/topics.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1064">
-          <caret line="56" column="36" lean-forward="false" selection-start-line="56" selection-start-column="36" selection-end-line="57" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/jsp/template/footer.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2527">
-          <caret line="159" column="28" lean-forward="false" selection-start-line="159" selection-start-column="28" selection-end-line="159" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/channel.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2033">
-          <caret line="107" column="56" lean-forward="false" selection-start-line="107" selection-start-column="47" selection-end-line="107" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-web/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3211">
-          <caret line="169" column="46" lean-forward="false" selection-start-line="169" selection-start-column="45" selection-end-line="169" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/cms.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-          <folding>
-            <marker date="1485356660197" expanded="true" signature="2312:2318" ph="&amp;nbsp;" />
-            <marker date="1485356660197" expanded="true" signature="2318:2324" ph="&amp;nbsp;" />
-            <marker date="1485356660197" expanded="true" signature="2327:2333" ph="&amp;nbsp;" />
-            <marker date="1485356660197" expanded="true" signature="2333:2339" ph="&amp;nbsp;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -1267,11 +1169,148 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-web/src/test/java/tech/wetech/cms/service/IndexServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/jsp/template/body2.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3471">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/jsp/authError.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/jsp/index_pager.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="48" lean-forward="false" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="169" column="46" lean-forward="false" selection-start-line="169" selection-start-column="45" selection-end-line="169" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/channel.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="107" column="56" lean-forward="false" selection-start-line="107" selection-start-column="47" selection-end-line="107" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/resources/ftl/body.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2299">
+          <caret line="121" column="4" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="127" selection-end-column="9" />
+          <folding>
+            <marker date="1485424873107" expanded="false" signature="4282:4299" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/cms.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="41" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="771">
+          <caret line="41" column="65" lean-forward="false" selection-start-line="41" selection-start-column="65" selection-end-line="41" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="122" column="7" lean-forward="true" selection-start-line="122" selection-start-column="7" selection-end-line="122" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/jsp/template/body.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="129" column="30" lean-forward="false" selection-start-line="129" selection-start-column="30" selection-end-line="129" selection-end-column="30" />
+        <state relative-caret-position="467">
+          <caret line="223" column="12" lean-forward="false" selection-start-line="223" selection-start-column="5" selection-end-line="223" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/service/IndexService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="119" column="64" lean-forward="false" selection-start-line="119" selection-start-column="38" selection-end-line="119" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="140" column="84" lean-forward="false" selection-start-line="140" selection-start-column="57" selection-end-line="140" selection-end-column="84" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/topics.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="56" column="36" lean-forward="false" selection-start-line="56" selection-start-column="36" selection-end-line="57" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/jsp/template/footer.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="42" lean-forward="false" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/js/amazeui.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-297211">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <marker date="1485426239954" expanded="true" signature="589:595" ph="&amp;nbsp;" />
+            <marker date="1485426239954" expanded="true" signature="595:601" ph="&amp;nbsp;" />
+            <marker date="1485426239954" expanded="true" signature="604:610" ph="&amp;nbsp;" />
+            <marker date="1485426239954" expanded="true" signature="610:616" ph="&amp;nbsp;" />
+          </folding>
         </state>
       </provider>
     </entry>

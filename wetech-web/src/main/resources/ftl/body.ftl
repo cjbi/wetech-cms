@@ -49,12 +49,10 @@
 	<div class="am-u-md-4 am-u-sm-12">
 		<div data-am-widget="list_news" class="am-list-news am-list-news-default">
 			<!--列表标题-->
-			<div class="am-list-news-hd am-cf">
-				<!--带更多链接-->
-				<a href="topics" class="">
-					<h2>最新动态</h2> <span class="am-list-news-more am-fr">更多 &raquo;</span>
-				</a>
-			</div>
+            <div class="am-list-news-hd am-cf">
+                <!--带更多链接-->
+                <h2><span class="am-icon-send-o"></span>&nbsp;&nbsp;置顶文章</h2>
+            </div>
 			<div class="am-list-news-bd">
 				<ul class="am-list">
 				<#list news as new>
@@ -68,12 +66,64 @@
 <!-- channel start -->
 <@indexChannelTopicList indexTopics=channelTopics/>
 <!-- channel end -->
+<!-- last topic start -->
+<div class="am-g am-g-fixed cms-fixed">
+    <div class="am-u-md-8">
+        <div data-am-widget="list_news" class="am-list-news am-list-news-default am-no-layout">
+
+            <div class="am-list-news-hd am-cf">
+
+                <h2>
+                    <span class="am-icon-list-ul"></span> 最新文章
+                </h2>
+            </div>
+            <div class="am-list-news-bd">
+
+                <ul class="am-list" id="topicList"></ul>
+                <div class="am-g am-text-middle" id="loading"></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="am-u-md-4">
+
+        <div class="am-panel-group">
+            <section class="am-panel am-panel-default">
+                <div class="am-panel-hd">推荐阅读</div>
+                <ul class="am-list blog-list">
+
+                    <li><a href="/wetech-web/topic/86">硅谷看到特朗普上台还有些好处：能省下一大笔税</a></li>
+
+                    <li><a href="/wetech-web/topic/82">你好，这个是测试文章</a></li>
+
+                    <li><a href="/wetech-web/topic/65">被禁入华澳乳企老板来自中国 被曝使用过期奶粉</a></li>
+
+                    <li><a href="/wetech-web/topic/63">孵化器倒闭潮来临？数量太多创业者不够用</a></li>
+
+                    <li><a href="/wetech-web/topic/64">四五百元平衡车靠谱吗？成本都要七八百！</a></li>
+
+                    <li><a href="/wetech-web/topic/62">为了让妹子在冬天穿迷你裙露大腿，日本人足足用了100多年</a></li>
+
+                </ul>
+            </section>
+            <section class="am-panel am-panel-default">
+                <div class="am-panel-hd">标签云</div>
+                <div class="am-panel-bd">
+				<#list keywords as kw>
+                    <a href="keyword/${kw.name}" class="am-badge am-badge-primary am-text-sm am-radius ${keywordClzs[kw_index]}">${kw.name}</a>
+				</#list>
+				</div>
+            </section>
+        </div>
+    </div>
+</div>
+<!-- last topic end -->
 <!-- keyword start -->
-<div class="am-g am-g-fixed  cms-fixed">
+<#--<div class="am-g am-g-fixed  cms-fixed">
 	<div class="am-u-sm-12" style="margin-top: 2rem;">
 		<#list keywords as kw>
 		<a href="keyword/${kw.name}" class="am-badge am-badge-primary am-text-sm am-radius ${keywordClzs[kw_index]}">${kw.name}</a>
 		</#list>
 	</div>
-</div>
+</div>-->
 <!-- keyword end -->
