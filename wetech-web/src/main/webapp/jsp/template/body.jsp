@@ -142,7 +142,7 @@
     </div>
     <div class="am-u-md-4">
 
-        <div class="am-panel-group">
+        <div class="am-panel-group am-hide-sm-only">
             <section class="am-panel am-panel-default">
                 <div class="am-panel-hd">推荐阅读</div>
                 <ul class="am-list blog-list">
