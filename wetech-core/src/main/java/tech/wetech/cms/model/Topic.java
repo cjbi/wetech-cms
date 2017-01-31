@@ -64,7 +64,9 @@ public class Topic {
 	 * 文章的发布者
 	 */
 	private User user;
-
+	/**
+	 * 文章缩略图
+	 */
 	private String thumb;
 
 	public String getThumb() {
