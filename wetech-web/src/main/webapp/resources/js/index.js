@@ -2,7 +2,7 @@ $(function () {
     /*------------ scroll loading ------------*/
     var range = 50;             //距下边界长度/单位px
     var elemt = 500;           //插入元素高度/单位px
-    var maxnum = 1000;            //设置加载最多次数
+    var maxnum = 100;            //设置加载最多次数
     var num = 0;
     var totalheight = 0;
     var $main = $('#topicList');                     //主体元素

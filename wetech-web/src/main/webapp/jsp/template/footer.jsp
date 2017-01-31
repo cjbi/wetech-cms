@@ -35,11 +35,9 @@
         © 2016 WETECH CMS, Inc. Licensed Apache-2.0 license.
     </div>
 </footer>
+<!-- gotop start -->
 <div data-am-widget="gotop" class="am-gotop am-gotop-fixed">
     <a href="#top" title="回到顶部" class="am-icon-btn am-icon-arrow-up"
        id="amz-go-top"></a>
-    <%--<a href="#top" title="回到顶部">
-        <span class="am-gotop-title">回到顶部</span>
-        <i class="am-gotop-icon am-icon-chevron-up"></i>
-    </a>--%>
 </div>
+<!-- gotop end -->
