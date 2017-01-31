@@ -61,3 +61,16 @@
 	right: 5px;
 	font-size: 1.3rem;
 }
+
+.am-gotop-fixed {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	z-index: 1010;
+	opacity: 0;
+	width: 48px;
+	min-height: 48px;
+	overflow: hidden;
+	border-radius: 0;
+	text-align: center;
+}
