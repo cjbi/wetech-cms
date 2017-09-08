@@ -84,11 +84,10 @@
 				</div>
 				<%-- baidu share end --%>
 			</div>
-			<%-- duoshuo start --%>
-			<div data-am-widget="duoshuo" class="am-duoshuo am-duoshuo-default" data-ds-short-name="cjbi">
-				<div class="ds-thread" data-thread-key="${topic.title}"></div>
-			</div>
-			<%-- duoshuo end --%>
+			<!-- UY BEGIN -->
+			<div id="uyan_frame"></div>
+			<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2143470"></script>
+			<!-- UY END -->
 		</div>
 		<div class="am-u-md-4 blog-sidebar">
 			<div class="am-panel-group">
