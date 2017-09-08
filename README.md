@@ -19,9 +19,9 @@ Demo:
 >   2. 在/wetech-core/src/main/resources/jdbc.properties中配置数据源
 
 如何启动项目：
->   1. 打开终端 
+>   1. 打开终端
 >   2. cd wetech-web
 >   3. mvn jetty:run
 
 
-  [1]: http://www.wetech.tech:8080/wetech/index
+  [1]: http://wetech.tech/wetech/
