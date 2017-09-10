@@ -24,4 +24,4 @@ Demo:
 >   3. mvn jetty:run
 
 
-  [1]: http://wetech.tech/wetech/
+  [1]: http://wetech.tech/wetech-cms/
