@@ -114,9 +114,8 @@ $(function() {
 	$('#collapase-nav-1 a[class="am-cf"]').on('click', function(e) {
 		var href = $(this).attr('href');
 		if (href != undefined && href != "" && href != "#") {
-			// 初始化插件
-			loadContent();//重写url，定位 admin-content
-           history.pushState('','测试',href);
+			// 加载Content
+			loadContent(href);
 			e.preventDefault();
 		}
 	});
@@ -126,10 +125,12 @@ $(function() {
 });
 
 // 加载Content
-function loadContent() {
+function loadContent(href) {
     var url = location.href;
+    //重写url，定位 admin-content
+    history.pushState('','测试',href);
 	if(url.indexOf('#')>0&&url.substr(url.indexOf('#')+1).length>0) {
-        var url = url.replace("#","/");
+		var url = url.replace("#","/");
         console.info(url);
         $('#admin-content').load(url, function() {
             // callback重新注册组件

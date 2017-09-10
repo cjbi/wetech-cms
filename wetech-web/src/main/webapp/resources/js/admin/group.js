@@ -109,6 +109,7 @@ $(function() {
 		var gId = $(this).val();
 		$('#admin-content').load(contextPath + '/admin/user', function() {
 			$('[data-am-selected][name="gId"]').find('option[value="' + gId + '"]').attr('selected', true);
+            history.pushState('','测试','#user');
 			// callback重新注册组件
 			$('[data-am-selected]').selected();
 		});

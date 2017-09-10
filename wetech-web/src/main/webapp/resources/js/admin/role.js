@@ -116,6 +116,8 @@ $(function() {
 		var rId = $(this).val();
 		$('#admin-content').load(contextPath + '/admin/user', function() {
 			$('[data-am-selected][name="rId"]').find('option[value="' + rId + '"]').attr('selected', true);
+            //重写url，定位 admin-content
+            history.pushState('','测试','#user');
 			// callback重新注册组件
 			$('[data-am-selected]').selected();
 		});
