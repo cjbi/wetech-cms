@@ -13,7 +13,7 @@
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 <link rel="alternate icon" type="image/png" href="<%=request.getContextPath()%>/resources/amazeui/assets/i/favicon.png">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/amazeui/assets/css/amazeui.min.css" />
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/cms.css" />
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/index/cms.css" />
 </head>
 <body class="am-with-topbar-fixed-top">
 	<jsp:include page="/jsp/template/header.jsp" />
