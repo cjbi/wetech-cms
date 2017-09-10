@@ -135,7 +135,6 @@ function loadContent(href,callback) {
     // document.title ='测试';
 	if(url.indexOf('#')>0&&url.substr(url.indexOf('#')+1).length>0) {
 		var url = url.replace("#","/");
-        console.info(url);
         $('#admin-content').load(url, function(){
         	if(callback!=undefined)
             	callback();
@@ -146,10 +145,10 @@ function loadContent(href,callback) {
 // ajax全局事件 modified on 2016/11/22
 $(function() {
 	$(document).ajaxError(function(event, request, settings) {
-		console.log('error log start:-------------------------------------->：');
-		console.log(request);
-		console.log(settings);
-		console.log('error log end:-------------------------------------->：');
+		console.warn('error log begin:-------------------------------------->：');
+		console.warn(request);
+		console.warn(settings);
+		console.warn('error log end:-------------------------------------->：');
 		layer.alert(request.status + '  (' + request.statusText + ')', {
 			title : '出错',
 			icon : 5,
