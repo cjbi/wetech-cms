@@ -6,10 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import tech.wetech.basic.dao.BaseDao;
 import tech.wetech.basic.model.Pager;
-import tech.wetech.cms.model.Channel;
-import tech.wetech.cms.model.ChannelTree;
-import tech.wetech.cms.model.Group;
-import tech.wetech.cms.model.GroupChannel;
+import tech.wetech.cms.model.*;
 
 @Repository("groupDao")
 public class GroupDao extends BaseDao<Group> implements IGroupDao {
@@ -20,8 +17,9 @@ public class GroupDao extends BaseDao<Group> implements IGroupDao {
 	}
 
 	@Override
-	public Pager<Group> findGroup() {
-		return this.find("from Group");
+	public Pager<GroupFindModel> findGroup() {
+		String sql = "select * from (select a.*,(select count(id) from t_user_group b where a.id=b.g_id) as userCount from t_group a) as t";
+		return this.findBySql(sql,GroupFindModel.class,false);
 	}
 
 	@Override

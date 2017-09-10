@@ -160,8 +160,8 @@ public class BaseDao<T> implements IBaseDao<T> {
 		query.setFirstResult(pageOffset).setMaxResults(pageSize);
 	}
 	
-	private String getCountHql(String hql,boolean isHql) {
-		String e = hql.substring(hql.indexOf("from"));
+	private String getCountHql(String queryString,boolean isHql) {
+		String e = queryString.substring(queryString.indexOf("from"));
 		String c = "select count(*) "+e;
 		if(isHql)
 			c.replaceAll("fetch", "");

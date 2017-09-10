@@ -10,7 +10,7 @@ public class DbUtil {
 	public static Connection getConnection() throws SQLException {
 		Connection con = null;
 		//sessionVariables=FOREIGN_KEY_CHECKS=0表示忽略外键关联
-		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cms_test?useunicode=true&characterEncoding=utf8&sessionVariables=FOREIGN_KEY_CHECKS=0", 
+		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/wetech_cms?useunicode=true&characterEncoding=utf8&sessionVariables=FOREIGN_KEY_CHECKS=0",
 				"root", "123456");
 		return con;
 	}

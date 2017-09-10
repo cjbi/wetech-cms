@@ -49,6 +49,7 @@
 						<th>组 ID</th>
 						<th>组名称</th>
 						<th>组描述</th>
+						<th>用户数</th>
 						<th>组操作</th>
 					</tr>
 				</thead>

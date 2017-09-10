@@ -1,6 +1,13 @@
 /* Write your styles */
-/*------------ �Զ��� Tooltip ------------ */
-/*------------ datatables ����޸� ------------*/
+/*------------ 自定义 Tooltip ------------ */
+/*自定义datatables checkbox大小 */
+td > input[type=checkbox], th >input[type=checkbox] {
+	width: 18px;
+	height: 18px;
+	position: relative;
+	left: 16px;
+}
+/*------------ datatables 间距修复 ------------*/
 .table-main {
 	font-size: 1.4rem;
 	padding: .0rem;
@@ -25,4 +32,14 @@ div.keyword-in {
 
 .am-input-group-sm>.am-form-field, .am-input-group-sm>.am-input-group-btn>.am-btn, .am-input-group-sm>.am-input-group-label {
 	height: 32px;
+}
+/*datatables数据对齐方式*/
+.dt-column-left {
+	text-align: left;
+}
+.dt-column-center {
+	text-align: center;
+}
+.dt-column-right {
+	text-align: right;
 }

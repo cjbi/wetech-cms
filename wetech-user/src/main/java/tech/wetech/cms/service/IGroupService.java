@@ -6,6 +6,7 @@ import tech.wetech.basic.model.Pager;
 import tech.wetech.cms.model.ChannelTree;
 import tech.wetech.cms.model.Group;
 import tech.wetech.cms.model.GroupChannel;
+import tech.wetech.cms.model.GroupFindModel;
 
 public interface IGroupService {
 	public void add(Group group);
@@ -14,13 +15,13 @@ public interface IGroupService {
 	public void update(Group group);
 	
 	public List<Group> listGroup();
-	public Pager<Group> findGroup();
+	public Pager<GroupFindModel> findGroup();
 	public void deleteGroupUsers(int gid);
 	
 	/**
 	 * 添加GroupChannel对象
-	 * @param group
-	 * @param channel
+	 * @param gid
+	 * @param cid
 	 */
 	public void addGroupChannel(int gid,int cid);
 	/**

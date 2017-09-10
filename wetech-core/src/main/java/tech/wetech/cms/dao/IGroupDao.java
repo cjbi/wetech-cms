@@ -4,15 +4,12 @@ import java.util.List;
 
 import tech.wetech.basic.dao.IBaseDao;
 import tech.wetech.basic.model.Pager;
-import tech.wetech.cms.model.Channel;
-import tech.wetech.cms.model.ChannelTree;
-import tech.wetech.cms.model.Group;
-import tech.wetech.cms.model.GroupChannel;
+import tech.wetech.cms.model.*;
 
 
 public interface IGroupDao extends IBaseDao<Group> {
 	public List<Group> listGroup();
-	public Pager<Group> findGroup();
+	public Pager<GroupFindModel> findGroup();
 	public void deleteGroupUsers(int gid);
 	/**
 	 * 添加GroupChannel对象

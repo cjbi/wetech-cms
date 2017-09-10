@@ -20,9 +20,14 @@ $(function() {
 			},
 			{
 				'data' : 'descr'
-			},
-			{
-				'data' : 'id',
+			},{
+            	'data' : 'userCount',
+				'sWidth' : "5%",
+            	"sClass" : "dt-column-center",
+            'mRender' : function(data,type,full) {
+            		return '<span style="color: green;">'+data +'人</span>';
+				}
+       		 },{'data' : 'id',
 				'mRender' : function(data, type, full) {
 					return '<div class="am-btn-group am-btn-group-xs"><button class="am-btn am-btn-default am-btn-xs am-text-secondary" name="qryUser" value="'
 							+ data

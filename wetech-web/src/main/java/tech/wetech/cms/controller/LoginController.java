@@ -49,7 +49,7 @@ public class LoginController {
 			model.addAttribute("error", "验证码出错，请重新输入");
 			return "admin/login";
 		}
-		User loginUser = null;
+		User loginUser;
 		//进行异常捕捉，捕捉到异常就返回给页面提示出错信息
 		try {
 			loginUser = userService.login(username, password);

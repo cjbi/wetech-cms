@@ -10,12 +10,7 @@ import tech.wetech.basic.model.Pager;
 import tech.wetech.cms.dao.IChannelDao;
 import tech.wetech.cms.dao.IGroupDao;
 import tech.wetech.cms.dao.IUserDao;
-import tech.wetech.cms.model.Channel;
-import tech.wetech.cms.model.ChannelTree;
-import tech.wetech.cms.model.CmsException;
-import tech.wetech.cms.model.Group;
-import tech.wetech.cms.model.GroupChannel;
-import tech.wetech.cms.model.User;
+import tech.wetech.cms.model.*;
 
 @Service("groupService")
 public class GroupService implements IGroupService{
@@ -75,7 +70,7 @@ public class GroupService implements IGroupService{
 	}
 
 	@Override
-	public Pager<Group> findGroup() {
+	public Pager<GroupFindModel> findGroup() {
 		return groupDao.findGroup();
 	}
 

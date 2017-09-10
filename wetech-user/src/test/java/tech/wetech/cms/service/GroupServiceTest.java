@@ -22,6 +22,7 @@ import tech.wetech.cms.dao.IGroupDao;
 import tech.wetech.cms.dao.IUserDao;
 import tech.wetech.cms.model.CmsException;
 import tech.wetech.cms.model.Group;
+import tech.wetech.cms.model.GroupFindModel;
 import tech.wetech.cms.model.User;
 import tech.wetech.cms.service.IGroupService;
 
@@ -103,7 +104,7 @@ public class GroupServiceTest {
 	@Test
 	public void testFindGroup() {
 		reset(groupDao);
-		expect(groupDao.findGroup()).andReturn(new Pager<Group>());
+		expect(groupDao.findGroup()).andReturn(new Pager<GroupFindModel>());
 		expectLastCall();
 		replay(groupDao);
 		groupService.findGroup();
