@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="wetech-web:war">
-    <output-path>$PROJECT_DIR$/wetech-web/target</output-path>
-    <root id="archive" name="wetech-web-0.0.1-SNAPSHOT.war">
-      <element id="artifact" artifact-name="wetech-web:war exploded" />
-    </root>
-  </artifact>
-</component>
