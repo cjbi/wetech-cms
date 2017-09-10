@@ -92,17 +92,17 @@
                 <div class="am-panel-hd">推荐阅读</div>
                 <ul class="am-list blog-list">
 
-                    <li><a href="/wetech-web/topic/86">硅谷看到特朗普上台还有些好处：能省下一大笔税</a></li>
+                    <li><a href="topic/86">硅谷看到特朗普上台还有些好处：能省下一大笔税</a></li>
 
-                    <li><a href="/wetech-web/topic/82">你好，这个是测试文章</a></li>
+                    <li><a href="topic/82">你好，这个是测试文章</a></li>
 
-                    <li><a href="/wetech-web/topic/65">被禁入华澳乳企老板来自中国 被曝使用过期奶粉</a></li>
+                    <li><a href="topic/65">被禁入华澳乳企老板来自中国 被曝使用过期奶粉</a></li>
 
-                    <li><a href="/wetech-web/topic/63">孵化器倒闭潮来临？数量太多创业者不够用</a></li>
+                    <li><a href="topic/63">孵化器倒闭潮来临？数量太多创业者不够用</a></li>
 
-                    <li><a href="/wetech-web/topic/64">四五百元平衡车靠谱吗？成本都要七八百！</a></li>
+                    <li><a href="topic/64">四五百元平衡车靠谱吗？成本都要七八百！</a></li>
 
-                    <li><a href="/wetech-web/topic/62">为了让妹子在冬天穿迷你裙露大腿，日本人足足用了100多年</a></li>
+                    <li><a href="topic/62">为了让妹子在冬天穿迷你裙露大腿，日本人足足用了100多年</a></li>
 
                 </ul>
             </section>
