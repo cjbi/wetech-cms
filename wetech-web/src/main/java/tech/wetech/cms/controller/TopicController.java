@@ -178,4 +178,16 @@ public class TopicController {
 		model.addAttribute("cs", channelService.listPublishChannel());
 	}
 
+	@ResponseBody
+	@RequestMapping("/treeAll")
+	@AuthMethod(role = "ROLE_PUBLISH")
+	public List<ChannelTree> tree(HttpSession session) {
+		boolean isAdmin = (Boolean) session.getAttribute("isAdmin");
+		User loginUser = (User) session.getAttribute("loginUser");
+		if (isAdmin)
+			return channelService.generateTree();
+		else
+			return groupService.generateUserChannelTree(loginUser.getId());
+	}
+
 }
