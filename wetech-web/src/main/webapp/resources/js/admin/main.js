@@ -115,8 +115,7 @@ $(function() {
 		var href = $(this).attr('href');
 		if (href != undefined && href != "" && href != "#") {
 			// 初始化插件
-			loadContent();
-            //重写url，定位 admin-content
+			loadContent();//重写url，定位 admin-content
            history.pushState('','测试',href);
 			e.preventDefault();
 		}
@@ -128,15 +127,15 @@ $(function() {
 
 // 加载Content
 function loadContent() {
-	if(location.href.indexOf('#')) {
-        var url = location.href.replace("#","/");
+    var url = location.href;
+	if(url.indexOf('#')>0&&url.substr(url.indexOf('#')+1).length>0) {
+        var url = url.replace("#","/");
         console.info(url);
         $('#admin-content').load(url, function() {
             // callback重新注册组件
             $('[data-am-selected]').selected();
         });
 	}
-
 }
 
 // ajax全局事件 modified on 2016/11/22
@@ -167,8 +166,6 @@ $(function() {
 	$(document).ajaxStop(function() {
 		$.AMUI.progress.done();
 	});
-
-    // 初始化插件
+    // 加载Content
     loadContent();
-
 });

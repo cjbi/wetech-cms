@@ -2,39 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02b3b07a-bcc0-43fa-8014-5eb3081a4461" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/example.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/system/comment.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/system/comment.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/.classpath" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/.project" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/.settings/.jsdtscope" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/.settings/org.eclipse.core.resources.prefs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/.settings/org.eclipse.jdt.core.prefs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/.settings/org.eclipse.jdt.ui.prefs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/.settings/org.eclipse.m2e.core.prefs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/.settings/org.eclipse.wst.common.component" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/.settings/org.eclipse.wst.common.project.facet.core.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/.settings/org.eclipse.wst.jsdt.core.prefs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/.settings/org.eclipse.wst.jsdt.ui.prefs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/.settings/org.eclipse.wst.jsdt.ui.superType.container" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/.settings/org.eclipse.wst.jsdt.ui.superType.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/.settings/org.eclipse.wst.validation.prefs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/.settings/org.hibernate.eclipse.console.prefs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/.springBeans" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/.tern-project" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/catalina.home_IS_UNDEFINED/logs/mgr-admin.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/catalina.home_IS_UNDEFINED/logs/wetech-web-0118-0.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/catalina.home_IS_UNDEFINED/logs/wetech-web-0119-0.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/catalina.home_IS_UNDEFINED/logs/wetech-web.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/search2.jsp" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/SystemController.java" afterPath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/SystemController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/TopicController.java" afterPath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/TopicController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/resources/conf.properties" afterPath="$PROJECT_DIR$/wetech-web/src/main/resources/conf.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/user.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/user.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/jsp/admin/sidebar.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/jsp/admin/sidebar.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/cms.css" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/cms.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/main.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/main.js" />
     </list>
     <ignored path="$PROJECT_DIR$/wetech-basic-hibernate/target/" />
@@ -97,8 +65,8 @@
       <file leaf-file-name="sidebar.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/jsp/admin/sidebar.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="49" column="68" lean-forward="true" selection-start-line="49" selection-start-column="68" selection-end-line="49" selection-end-column="68" />
+            <state relative-caret-position="22">
+              <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -107,8 +75,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="131" column="41" lean-forward="false" selection-start-line="131" selection-start-column="41" selection-end-line="131" selection-end-column="41" />
+            <state relative-caret-position="511">
+              <caret line="168" column="16" lean-forward="true" selection-start-line="168" selection-start-column="16" selection-end-line="168" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -1322,7 +1290,7 @@
       <workItem from="1504929931124" duration="2533000" />
       <workItem from="1504932606158" duration="8398000" />
       <workItem from="1504942148718" duration="1869000" />
-      <workItem from="1505031901291" duration="11974000" />
+      <workItem from="1505031901291" duration="13014000" />
     </task>
     <task id="LOCAL-00001" summary="提交">
       <created>1505034428264</created>
@@ -1338,7 +1306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1505037499445</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="修复地址栏的问题">
+      <created>1505043918375</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1505043918375</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1374,7 +1349,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70983000" />
+    <option name="totallyTimeSpent" value="72023000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1435,7 +1410,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="提交" />
     <MESSAGE value="修复问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复问题" />
+    <MESSAGE value="修复地址栏的问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复地址栏的问题" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1834,14 +1810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/main.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="12" column="39" lean-forward="false" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/jsp/admin/header.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -1850,18 +1818,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="12" column="39" lean-forward="false" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/jsp/admin/sidebar.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="49" column="68" lean-forward="true" selection-start-line="49" selection-start-column="68" selection-end-line="49" selection-end-column="68" />
+        <state relative-caret-position="22">
+          <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="131" column="41" lean-forward="false" selection-start-line="131" selection-start-column="41" selection-end-line="131" selection-end-column="41" />
+        <state relative-caret-position="511">
+          <caret line="168" column="16" lean-forward="true" selection-start-line="168" selection-start-column="16" selection-end-line="168" selection-end-column="16" />
           <folding />
         </state>
       </provider>
