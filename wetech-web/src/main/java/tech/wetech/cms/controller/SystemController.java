@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
@@ -52,6 +53,14 @@ public class SystemController {
 	}
 
 	@ResponseBody
+	@RequestMapping("/comment/edit")
+	public ResponseData editComment(HttpServletRequest request) {
+		String commentCode = request.getParameter("commentCode");
+
+		return ResponseData.SUCCESS_NO_DATA;
+	}
+
+	@ResponseBody
 	@RequestMapping("/clean/listNoUseAttachment")
 	public Map<String, Object> listNoUseAttachment() {
 		return DataTableMap.getMapData(attachmentService.findNoUseAttachment());
@@ -78,22 +87,13 @@ public class SystemController {
 	
 	@ResponseBody
 	@RequestMapping(value = "/clean/{name}")
-	public ResponseData clean(@PathVariable String name, Model model) throws IOException {
+	public ResponseData clean(@PathVariable String name) throws IOException {
 		if (name.equals("cleanAtta")) {
 			attachmentService.clearNoUseAttachment();
 		} else if (name.equals("cleanIndexPic")) {
 			indexPicService.cleanNoUseIndexPic(listNoUseIndexPic(indexPicService.listAllIndexPicName()));
 		}
 		return ResponseData.SUCCESS_NO_DATA;
-	}
-	
-	/*----------------------------------------------------------------*/
-
-	@RequestMapping("/cleans")
-	public String listCleans(Model model) {
-		model.addAttribute("attNums", attachmentService.findNoUseAttachmentNum());
-		model.addAttribute("indexPics", listNoUseIndexPicNum(indexPicService.listAllIndexPicName()));
-		return "system/cleans";
 	}
 
 	private File[] listPicFile() {
@@ -111,24 +111,8 @@ public class SystemController {
 	}
 
 	/**
-	 * 获取没有使用的首页图片数量
-	 * 
-	 * @param pics
-	 * @return
-	 */
-	private int listNoUseIndexPicNum(List<String> pics) {
-		File[] fs = listPicFile();
-		int count = 0;
-		for (File file : fs) {
-			if (!pics.contains(file.getName()))
-				count++;
-		}
-		return count;
-	}
-
-	/**
 	 * 获取没有使用的首页图片列表
-	 * 
+	 *
 	 * @param pics
 	 * @return
 	 */

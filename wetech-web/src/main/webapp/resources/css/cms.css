@@ -74,3 +74,11 @@
 	border-radius: 0;
 	text-align: center;
 }
+.am-panel>.am-list>li>a {
+	padding-left: 1rem;
+	padding-right: 1rem;
+	word-wrap: break-word;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}

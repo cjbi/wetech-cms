@@ -98,7 +98,7 @@
 		<div class="am-form-group">
 			<label class="am-u-sm-2 am-form-label">显示名称</label>
 			<div class="am-u-sm-10">
-				<input type="text" id="" name="nickname" placeholder="可以是中文">
+				<input type="text" name="nickname" placeholder="可以是中文">
 			</div>
 		</div>
 		<div class="am-form-group">
