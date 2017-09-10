@@ -115,7 +115,10 @@ $(function() {
 		var href = $(this).attr('href');
 		if (href != undefined && href != "" && href != "#") {
 			// 加载Content
-			loadContent(href);
+			loadContent(href,function() {
+                // callback重新注册组件
+                $('[data-am-selected]').selected();
+			});
 			e.preventDefault();
 		}
 	});
@@ -125,16 +128,17 @@ $(function() {
 });
 
 // 加载Content
-function loadContent(href) {
-    var url = location.href;
+function loadContent(href,callback) {
     //重写url，定位 admin-content
     history.pushState('','测试',href);
+    var url = location.href;
+    // document.title ='测试';
 	if(url.indexOf('#')>0&&url.substr(url.indexOf('#')+1).length>0) {
 		var url = url.replace("#","/");
         console.info(url);
-        $('#admin-content').load(url, function() {
-            // callback重新注册组件
-            $('[data-am-selected]').selected();
+        $('#admin-content').load(url, function(){
+        	if(callback!=undefined)
+            	callback();
         });
 	}
 }

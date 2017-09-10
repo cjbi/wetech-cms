@@ -107,12 +107,12 @@ $(function() {
 	/*------------ 查询用户 ------------*/
 	$("#example").on("click", '.am-btn[name=qryUser]', function(event) {
 		var gId = $(this).val();
-		$('#admin-content').load(contextPath + '/admin/user', function() {
-			$('[data-am-selected][name="gId"]').find('option[value="' + gId + '"]').attr('selected', true);
-            history.pushState('','测试','#user');
-			// callback重新注册组件
-			$('[data-am-selected]').selected();
-		});
+        loadContent('#user',function() {
+        	// 下拉选定
+            $('[data-am-selected][name="gId"]').find('option[value="' + gId + '"]').attr('selected', true);
+            // callback重新注册组件
+            $('[data-am-selected]').selected();
+        });
 	});
 
 	/*------------ 清空用户 ------------*/
