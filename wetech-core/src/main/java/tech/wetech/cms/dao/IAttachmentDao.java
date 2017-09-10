@@ -12,7 +12,7 @@ public interface IAttachmentDao extends IBaseDao<Attachment>{
 	 * @return
 	 */
 	public Pager<Attachment> findNoUseAttachment();
-	
+
 	public long findNoUseAttachmentNum();
 	/**
 	 * 清空没有被引用的附件

@@ -3,36 +3,28 @@ package tech.wetech.cms.model;
 import java.math.BigInteger;
 
 /**
- * Created by cjbi on 2017/9/9.
+ * Created by cjbi on 2017/9/10.
  */
-public class GroupFindModel {
+public class RoleFindModel  {
 
     /**
-     * 组id
+     * 角色id
      */
     private int id;
-
     /**
-     * 组名称
+     * 角色的名称，中文
      */
     private String name;
+
     /**
-     * 组描述信息
+     * 用户类型
      */
-    private String descr;
+    private String roleType;
 
     /**
      * 用户数量
      */
     private BigInteger userCount;
-
-    public BigInteger getUserCount() {
-        return userCount;
-    }
-
-    public void setUserCount(BigInteger userCount) {
-        this.userCount = userCount;
-    }
 
     public int getId() {
         return id;
@@ -50,11 +42,19 @@ public class GroupFindModel {
         this.name = name;
     }
 
-    public String getDescr() {
-        return descr;
+    public String getRoleType() {
+        return roleType;
     }
 
-    public void setDescr(String descr) {
-        this.descr = descr;
+    public void setRoleType(String roleType) {
+        this.roleType = roleType;
+    }
+
+    public BigInteger getUserCount() {
+        return userCount;
+    }
+
+    public void setUserCount(BigInteger userCount) {
+        this.userCount = userCount;
     }
 }

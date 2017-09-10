@@ -2,28 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02b3b07a-bcc0-43fa-8014-5eb3081a4461" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/model/RoleFindModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-basic-common/wetech-basic-common.iml" afterPath="$PROJECT_DIR$/wetech-basic-common/wetech-basic-common.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-basic-hibernate/src/main/java/tech/wetech/basic/dao/BaseDao.java" afterPath="$PROJECT_DIR$/wetech-basic-hibernate/src/main/java/tech/wetech/basic/dao/BaseDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-basic-hibernate/src/test/java/tech/wetech/basic/util/DbUtil.java" afterPath="$PROJECT_DIR$/wetech-basic-hibernate/src/test/java/tech/wetech/basic/util/DbUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-basic-hibernate/wetech-basic-hibernate.iml" afterPath="$PROJECT_DIR$/wetech-basic-hibernate/wetech-basic-hibernate.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/GroupDao.java" afterPath="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/GroupDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IGroupDao.java" afterPath="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IGroupDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IAttachmentDao.java" afterPath="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IAttachmentDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IChannelDao.java" afterPath="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IChannelDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IIndexPicDao.java" afterPath="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IIndexPicDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IKeywordDao.java" afterPath="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IKeywordDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IRoleDao.java" afterPath="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IRoleDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/ITopicDao.java" afterPath="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/ITopicDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IUserDao.java" afterPath="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IUserDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/RoleDao.java" afterPath="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/RoleDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/model/GroupFindModel.java" afterPath="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/model/GroupFindModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/model/Role.java" afterPath="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/model/Role.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-core/src/main/resources/jdbc.properties" afterPath="$PROJECT_DIR$/wetech-core/src/main/resources/jdbc.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-core/src/test/java/tech/wetech/basic/util/DbUtil.java" afterPath="$PROJECT_DIR$/wetech-core/src/test/java/tech/wetech/basic/util/DbUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-core/src/test/java/tech/wetech/cms/dao/GroupDaoTest.java" afterPath="$PROJECT_DIR$/wetech-core/src/test/java/tech/wetech/cms/dao/GroupDaoTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-core/wetech-core.iml" afterPath="$PROJECT_DIR$/wetech-core/wetech-core.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-topic/wetech-topic.iml" afterPath="$PROJECT_DIR$/wetech-topic/wetech-topic.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-user/src/main/java/tech/wetech/cms/service/GroupService.java" afterPath="$PROJECT_DIR$/wetech-user/src/main/java/tech/wetech/cms/service/GroupService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-user/src/main/java/tech/wetech/cms/service/IGroupService.java" afterPath="$PROJECT_DIR$/wetech-user/src/main/java/tech/wetech/cms/service/IGroupService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-user/src/test/java/tech/wetech/cms/service/GroupServiceTest.java" afterPath="$PROJECT_DIR$/wetech-user/src/test/java/tech/wetech/cms/service/GroupServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-user/wetech-user.iml" afterPath="$PROJECT_DIR$/wetech-user/wetech-user.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/catalina.home_IS_UNDEFINED/logs/wetech-web.log" afterPath="$PROJECT_DIR$/wetech-web/catalina.home_IS_UNDEFINED/logs/wetech-web.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/LoginController.java" afterPath="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/group.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/group.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/admin/main.css" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/admin/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/group.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/group.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/wetech-web.iml" afterPath="$PROJECT_DIR$/wetech-web/wetech-web.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-user/src/main/java/tech/wetech/cms/service/IRoleService.java" afterPath="$PROJECT_DIR$/wetech-user/src/main/java/tech/wetech/cms/service/IRoleService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-user/src/main/java/tech/wetech/cms/service/RoleService.java" afterPath="$PROJECT_DIR$/wetech-user/src/main/java/tech/wetech/cms/service/RoleService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/role.jsp" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/role.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/role.js" afterPath="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/role.js" />
     </list>
     <ignored path="$PROJECT_DIR$/wetech-basic-hibernate/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -61,40 +56,7 @@
     <favorites_list name="wetech-parent" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/admin/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="group.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/group.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-              <folding>
-                <marker date="1505034276140" expanded="true" signature="700:713" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wetech-web.iml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wetech-web/wetech-web.iml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -126,6 +88,7 @@
       <find>gridTable</find>
       <find>sClass</find>
       <find>sWidth</find>
+      <find>public</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -163,13 +126,10 @@
         <option value="$PROJECT_DIR$/wetech-user/src/main/java/tech/wetech/cms/model/GroupListModel.java" />
         <option value="$PROJECT_DIR$/wetech-core/src/test/java/tech/wetech/basic/util/DbUtil.java" />
         <option value="$PROJECT_DIR$/wetech-basic-hibernate/src/test/java/tech/wetech/basic/util/DbUtil.java" />
-        <option value="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/model/GroupFindModel.java" />
         <option value="$PROJECT_DIR$/wetech-basic-hibernate/src/main/java/tech/wetech/basic/dao/BaseDao.java" />
         <option value="$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/wetech-core/src/test/java/tech/wetech/cms/dao/GroupDaoTest.java" />
-        <option value="$PROJECT_DIR$/wetech-core/src/main/resources/jdbc.properties" />
         <option value="$PROJECT_DIR$/wetech-user/src/main/java/tech/wetech/cms/service/GroupService.java" />
-        <option value="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IGroupDao.java" />
         <option value="$PROJECT_DIR$/wetech-user/src/main/java/tech/wetech/cms/service/IGroupService.java" />
         <option value="$PROJECT_DIR$/wetech-user/src/test/java/tech/wetech/cms/service/GroupServiceTest.java" />
         <option value="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/GroupDao.java" />
@@ -177,6 +137,24 @@
         <option value="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/js/amazeui.datatables.plugin.js" />
         <option value="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/admin/main.css" />
         <option value="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/group.js" />
+        <option value="$PROJECT_DIR$/wetech-core/src/main/resources/jdbc.properties" />
+        <option value="$PROJECT_DIR$/wetech-user/src/main/java/tech/wetech/cms/service/RoleService.java" />
+        <option value="$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/role.jsp" />
+        <option value="$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/role.js" />
+        <option value="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IChannelDao.java" />
+        <option value="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IGroupDao.java" />
+        <option value="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IUserDao.java" />
+        <option value="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IIndexPicDao.java" />
+        <option value="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IKeywordDao.java" />
+        <option value="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/ITopicDao.java" />
+        <option value="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IAttachmentDao.java" />
+        <option value="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/ICmsLinkDao.java" />
+        <option value="$PROJECT_DIR$/wetech-user/src/main/java/tech/wetech/cms/service/IRoleService.java" />
+        <option value="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IRoleDao.java" />
+        <option value="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/model/Role.java" />
+        <option value="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/model/RoleFindModel.java" />
+        <option value="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/model/GroupFindModel.java" />
+        <option value="$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/RoleDao.java" />
       </list>
     </option>
   </component>
@@ -552,6 +530,68 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="wetech-user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wetech-parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wetech-cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wetech-user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wetech-parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wetech-cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wetech-user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wetech-parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wetech-cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="wetech-core" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -597,6 +637,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wetech-parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wetech-cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wetech-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -740,7 +814,7 @@
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="SearchEverywhereHistoryKey" value="group.js&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-web/src/main/webapp/resources/js/admin/group.js&#10;main.css&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-web/src/main/webapp/resources/css/admin/main.css&#10;admin.css&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-web/src/main/webapp/resources/amazeui/assets/css/admin.css&#10;admin.&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-web/src/main/webapp/resources/amazeui/assets/css/admin.css&#10;Group.&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-web/src/main/webapp/resources/js/admin/group.js&#10;group.jsp&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-web/src/main/webapp/WEB-INF/jsp/admin/group.jsp&#10;GroupService&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-user/src/main/java/tech/wetech/cms/service/GroupService.java&#10;IndexController&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-web/src/main/java/tech/wetech/cms/controller/IndexController.java&#10;User&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-core/src/main/java/tech/wetech/cms/model/User.java&#10;scrollLoading&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-web/src/main/webapp/WEB-INF/jsp/index/scrollLoading.jsp&#10;Topic&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-topic/src/main/java/tech/wetech/cms/service/TopicService.java&#10;Lo&#9;PSI&#9;JAVA://tech.wetech.cms.controller.LoginController&#10;GroupFindModel&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-core/src/main/java/tech/wetech/cms/model/GroupFindModel.java&#10;TopicService&#9;PSI&#9;JAVA://tech.wetech.cms.service.TopicService&#10;GroupChannel&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-core/src/main/java/tech/wetech/cms/model/GroupChannel.java&#10;GroupCon&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-web/src/main/java/tech/wetech/cms/controller/GroupController.java&#10;UserContr&#9;PSI&#9;JAVA://tech.wetech.cms.controller.UserController&#10;index.js&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/resources/js/index.js&#10;index.jsp&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/WEB-INF/jsp/index/index.jsp&#10;body&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/jsp/template/body.jsp&#10;cms.js&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/resources/js/cms.js&#10;indexService&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/java/tech/wetech/cms/service/IndexService.java&#10;IndexSer&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/test/java/tech/wetech/cms/service/IndexServiceTest.java&#10;body.ftl&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/resources/ftl/body.ftl&#10;indexCon&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/java/tech/wetech/cms/controller/IndexController.java&#10;sys&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/java/tech/wetech/cms/web/SystemContextFilter.java&#10;*.js&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/resources/js/admin/topic/add.js&#10;channel.jsp&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/WEB-INF/jsp/index/channel.jsp&#10;init&#9;PSI&#9;JAVA://tech.wetech.cms.web.InitServlet&#10;Pager&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-basic-hibernate/src/main/java/tech/wetech/basic/model/Pager.java&#10;topicContro&#9;PSI&#9;JAVA://tech.wetech.cms.controller.TopicController&#10;Response&#9;PSI&#9;JAVA://tech.wetech.cms.web.ResponseData&#10;indexController&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/java/tech/wetech/cms/controller/IndexController.java&#10;body.jsp&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/jsp/template/body.jsp&#10;indexCo&#9;PSI&#9;JAVA://tech.wetech.cms.controller.IndexController&#10;bea&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-core/src/main/resources/beans.xml" />
+    <property name="SearchEverywhereHistoryKey" value="Group.java&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-core/src/main/java/tech/wetech/cms/model/Group.java&#10;RoleT&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-core/src/main/java/tech/wetech/cms/model/RoleType.java&#10;role.js&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-web/src/main/webapp/resources/js/admin/role.js&#10;role.jsp&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-web/src/main/webapp/WEB-INF/jsp/admin/role.jsp&#10;Base&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-basic-hibernate/src/main/java/tech/wetech/basic/dao/BaseDao.java&#10;GroupFindModel&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-core/src/main/java/tech/wetech/cms/model/GroupFindModel.java&#10;group.js&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-web/src/main/webapp/resources/js/admin/group.js&#10;Role.js&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-web/src/main/webapp/resources/js/admin/role.js&#10;GroupDao&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-core/src/main/java/tech/wetech/cms/dao/GroupDao.java&#10;RoleSer&#9;PSI&#9;JAVA://tech.wetech.cms.service.RoleService&#10;GroupF&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-core/src/main/java/tech/wetech/cms/model/GroupFindModel.java&#10;jdb&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-core/src/main/resources/jdbc.properties&#10;main.css&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-web/src/main/webapp/resources/css/admin/main.css&#10;admin.css&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-web/src/main/webapp/resources/amazeui/assets/css/admin.css&#10;admin.&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-web/src/main/webapp/resources/amazeui/assets/css/admin.css&#10;Group.&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-web/src/main/webapp/resources/js/admin/group.js&#10;group.jsp&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-web/src/main/webapp/WEB-INF/jsp/admin/group.jsp&#10;GroupService&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-user/src/main/java/tech/wetech/cms/service/GroupService.java&#10;IndexController&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-web/src/main/java/tech/wetech/cms/controller/IndexController.java&#10;User&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-core/src/main/java/tech/wetech/cms/model/User.java&#10;scrollLoading&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-web/src/main/webapp/WEB-INF/jsp/index/scrollLoading.jsp&#10;Topic&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-topic/src/main/java/tech/wetech/cms/service/TopicService.java&#10;Lo&#9;PSI&#9;JAVA://tech.wetech.cms.controller.LoginController&#10;TopicService&#9;PSI&#9;JAVA://tech.wetech.cms.service.TopicService&#10;GroupChannel&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-core/src/main/java/tech/wetech/cms/model/GroupChannel.java&#10;GroupCon&#9;FILE&#9;file://C:/Users/cjbi/GitHub/wetech-cms/wetech-web/src/main/java/tech/wetech/cms/controller/GroupController.java&#10;UserContr&#9;PSI&#9;JAVA://tech.wetech.cms.controller.UserController&#10;index.js&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/resources/js/index.js&#10;index.jsp&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/WEB-INF/jsp/index/index.jsp&#10;body&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/jsp/template/body.jsp&#10;cms.js&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/resources/js/cms.js&#10;indexService&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/java/tech/wetech/cms/service/IndexService.java&#10;IndexSer&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/test/java/tech/wetech/cms/service/IndexServiceTest.java&#10;body.ftl&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/resources/ftl/body.ftl&#10;indexCon&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/java/tech/wetech/cms/controller/IndexController.java&#10;sys&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/java/tech/wetech/cms/web/SystemContextFilter.java&#10;*.js&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/resources/js/admin/topic/add.js&#10;channel.jsp&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/WEB-INF/jsp/index/channel.jsp&#10;init&#9;PSI&#9;JAVA://tech.wetech.cms.web.InitServlet&#10;Pager&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-basic-hibernate/src/main/java/tech/wetech/basic/model/Pager.java&#10;topicContro&#9;PSI&#9;JAVA://tech.wetech.cms.controller.TopicController&#10;Response&#9;PSI&#9;JAVA://tech.wetech.cms.web.ResponseData&#10;indexController&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/java/tech/wetech/cms/controller/IndexController.java&#10;body.jsp&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-web/src/main/webapp/jsp/template/body.jsp&#10;indexCo&#9;PSI&#9;JAVA://tech.wetech.cms.controller.IndexController&#10;bea&#9;FILE&#9;file://C:/Users/cjb/WetechWorkspace/wetech/wetech-core/src/main/resources/beans.xml" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -1327,8 +1401,16 @@
       <workItem from="1504929931124" duration="2533000" />
       <workItem from="1504932606158" duration="8398000" />
       <workItem from="1504942148718" duration="1869000" />
-      <workItem from="1505031901291" duration="2484000" />
+      <workItem from="1505031901291" duration="5580000" />
     </task>
+    <task id="LOCAL-00001" summary="提交">
+      <created>1505034428264</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1505034428264</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1364,7 +1446,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61493000" />
+    <option name="totallyTimeSpent" value="64589000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1377,13 +1459,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4810268" sideWeight="0.45735607" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1369936" sideWeight="0.487055" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22974414" sideWeight="0.487055" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1391,18 +1472,18 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18638393" sideWeight="0.69509596" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3861607" sideWeight="0.69509596" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6395089" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6183036" sideWeight="0.5426439" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4330357" sideWeight="0.30490404" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28198293" sideWeight="0.85562634" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1881663" sideWeight="0.85562634" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15298508" sideWeight="0.14345992" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23995535" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1422,9 +1503,13 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="提交" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="26" />
+      <option name="time" value="29" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
@@ -1440,371 +1525,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wetech-user/src/main/java/tech/wetech/cms/service/IUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-129">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-basic-hibernate/src/main/java/tech/wetech/basic/model/Pager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/4.2.0.Final/hibernate-core-4.2.0.Final-sources.jar!/org/hibernate/Query.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="334" column="17" lean-forward="false" selection-start-line="334" selection-start-column="17" selection-end-line="334" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/web/DataTableMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="24" column="37" lean-forward="false" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/GroupController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="49" column="68" lean-forward="false" selection-start-line="49" selection-start-column="68" selection-end-line="49" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-user/src/main/java/tech/wetech/cms/model/GroupListModel.java" />
-    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/model/GroupChannel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/easymock/easymock/3.1/easymock-3.1-sources.jar!/org/easymock/EasyMock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="2084" column="23" lean-forward="false" selection-start-line="2084" selection-start-column="23" selection-end-line="2084" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/AttachmentDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/resources/beans.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="47" column="29" lean-forward="true" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
-          <folding>
-            <element signature="e#1493#1506#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-core/src/test/java/tech/wetech/basic/util/DbUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-basic-hibernate/src/test/java/tech/wetech/basic/util/DbUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/4.2.0.Final/hibernate-core-4.2.0.Final-sources.jar!/org/hibernate/transform/AliasToBeanResultTransformer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/jre/lib/rt.jar!/sun/reflect/MethodAccessor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/reflect/Method.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="483" column="18" lean-forward="false" selection-start-line="483" selection-start-column="18" selection-end-line="483" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/model/Attachment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="119" column="17" lean-forward="false" selection-start-line="119" selection-start-column="17" selection-end-line="119" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/math/BigInteger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="3709" column="5" lean-forward="true" selection-start-line="3709" selection-start-column="5" selection-end-line="3709" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/4.2.0.Final/hibernate-core-4.2.0.Final-sources.jar!/org/hibernate/property/BasicPropertyAccessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="61" column="47" lean-forward="true" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IUserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="71" column="22" lean-forward="false" selection-start-line="71" selection-start-column="22" selection-end-line="71" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-core/src/test/java/tech/wetech/cms/dao/UserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-38">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-core/src/test/java/tech/wetech/cms/dao/UserDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="233" column="50" lean-forward="false" selection-start-line="233" selection-start-column="50" selection-end-line="233" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/index/scrollLoading.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="39" column="7" lean-forward="true" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="54" column="38" lean-forward="true" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/model/Topic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="32" column="27" lean-forward="true" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-topic/src/main/java/tech/wetech/cms/service/TopicService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="114" column="0" lean-forward="true" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2684">
-          <caret line="148" column="38" lean-forward="true" selection-start-line="148" selection-start-column="38" selection-end-line="148" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-core/src/test/java/tech/wetech/cms/dao/GroupDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="79" column="27" lean-forward="true" selection-start-line="79" selection-start-column="27" selection-end-line="79" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-user/src/main/java/tech/wetech/cms/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="220" column="39" lean-forward="false" selection-start-line="220" selection-start-column="39" selection-end-line="220" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/resources/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-core/src/test/java/tech/wetech/basic/util/EntitiesHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-basic-hibernate/src/main/java/tech/wetech/basic/dao/BaseDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="283" column="0" lean-forward="false" selection-start-line="283" selection-start-column="0" selection-end-line="283" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/model/Group.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-user/src/main/java/tech/wetech/cms/service/IGroupService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-user/src/test/java/tech/wetech/cms/service/GroupServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="751">
-          <caret line="109" column="33" lean-forward="true" selection-start-line="109" selection-start-column="33" selection-end-line="109" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/model/GroupFindModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-user/src/main/java/tech/wetech/cms/service/GroupService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="73" column="30" lean-forward="false" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1473#1474#0" expanded="true" />
-            <element signature="e#1507#1508#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/cmsLink.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="116" column="6" lean-forward="true" selection-start-line="116" selection-start-column="6" selection-end-line="116" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/group.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/GroupDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IGroupDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/js/amazeui.datatables.plugin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1504492083612" expanded="true" signature="588:594" ph="&amp;nbsp;" />
-            <marker date="1504492083612" expanded="true" signature="594:600" ph="&amp;nbsp;" />
-            <marker date="1504492083612" expanded="true" signature="603:609" ph="&amp;nbsp;" />
-            <marker date="1504492083612" expanded="true" signature="609:615" ph="&amp;nbsp;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/resources/amazeui/assets/css/admin.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7920">
-          <caret line="360" column="1" lean-forward="true" selection-start-line="360" selection-start-column="1" selection-end-line="360" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/index/web.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="569">
@@ -1821,28 +1541,444 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-web/wetech-web.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/resources/wetech_cms.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/resources/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/resources/css/admin/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+        <state relative-caret-position="94">
+          <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/AttachmentDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/KeywordDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1400">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/TopicDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="61" column="47" lean-forward="true" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/group.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        <state relative-caret-position="154">
+          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="29" selection-end-column="14" />
           <folding>
             <marker date="1505034276140" expanded="true" signature="700:713" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wetech-web/wetech-web.iml">
+    <entry file="file://$PROJECT_DIR$/wetech-user/src/main/java/tech/wetech/cms/service/GroupService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-user/src/main/java/tech/wetech/cms/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
-          <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <caret line="25" column="15" lean-forward="false" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
+          <folding>
+            <element signature="e#781#782#0" expanded="true" />
+            <element signature="e#802#803#0" expanded="true" />
+            <element signature="e#1057#1058#0" expanded="true" />
+            <element signature="e#1079#1080#0" expanded="true" />
+            <element signature="e#1136#1137#0" expanded="true" />
+            <element signature="e#1167#1168#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-topic/src/main/java/tech/wetech/cms/service/IndexPicService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="26" column="35" lean-forward="false" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#597#598#0" expanded="true" />
+            <element signature="e#622#623#0" expanded="true" />
+            <element signature="e#688#689#0" expanded="true" />
+            <element signature="e#725#726#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-topic/src/main/java/tech/wetech/cms/service/KeywordService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#439#440#0" expanded="true" />
+            <element signature="e#463#464#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-topic/src/main/java/tech/wetech/cms/service/TopicService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="15" column="36" lean-forward="false" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-topic/src/main/java/tech/wetech/cms/service/CmsLinkService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="23" column="34" lean-forward="false" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#518#519#0" expanded="true" />
+            <element signature="e#553#554#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="28" column="36" lean-forward="false" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/dwr/DwrService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IAttachmentDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IChannelDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/ICmsLinkDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IGroupDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IIndexPicDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IndexPicDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IKeywordDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-161">
+          <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/ITopicDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IRoleDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/IUserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/CmsLinkDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="90" column="9" lean-forward="true" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-basic-hibernate/src/main/java/tech/wetech/basic/dao/BaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="254" column="0" lean-forward="false" selection-start-line="254" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/GroupDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="21" column="46" lean-forward="true" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/jre/lib/rt.jar!/sun/reflect/DelegatingMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/WEB-INF/jsp/admin/role.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="43" column="32" lean-forward="true" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/webapp/resources/js/admin/role.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="149" column="36" lean-forward="true" selection-start-line="149" selection-start-column="36" selection-end-line="149" selection-end-column="36" />
+          <folding>
+            <marker date="1505035360513" expanded="true" signature="782:795" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final-sources.jar!/javax/persistence/EnumType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="24" column="30" lean-forward="true" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/reflect/Method.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="481" column="7" lean-forward="true" selection-start-line="481" selection-start-column="7" selection-end-line="481" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/model/RoleType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="14" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/4.2.0.Final/hibernate-core-4.2.0.Final-sources.jar!/org/hibernate/metamodel/source/annotations/attribute/type/AttributeTypeResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="32" column="2" lean-forward="true" selection-start-line="32" selection-start-column="2" selection-end-line="32" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final-sources.jar!/javax/persistence/Enumerated.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="56" column="22" lean-forward="false" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-web/src/main/java/tech/wetech/cms/controller/RoleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="42" column="53" lean-forward="false" selection-start-line="42" selection-start-column="53" selection-end-line="42" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1275#1276#0" expanded="true" />
+            <element signature="e#1336#1337#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-user/src/main/java/tech/wetech/cms/service/RoleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="67" column="27" lean-forward="false" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1331#1332#0" expanded="true" />
+            <element signature="e#1363#1364#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-user/src/main/java/tech/wetech/cms/service/IRoleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/model/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="25" column="24" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="25" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/model/Attachment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/model/Group.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/model/GroupFindModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1166">
+          <caret line="57" column="27" lean-forward="true" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="27" />
+          <folding>
+            <element signature="e#543#544#0" expanded="true" />
+            <element signature="e#568#569#0" expanded="true" />
+            <element signature="e#601#602#0" expanded="true" />
+            <element signature="e#629#630#0" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
+            <element signature="e#687#688#0" expanded="true" />
+            <element signature="e#727#728#0" expanded="true" />
+            <element signature="e#759#760#0" expanded="true" />
+            <element signature="e#791#792#0" expanded="true" />
+            <element signature="e#819#820#0" expanded="true" />
+            <element signature="e#861#862#0" expanded="true" />
+            <element signature="e#895#896#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/4.2.0.Final/hibernate-core-4.2.0.Final-sources.jar!/org/hibernate/property/BasicPropertyAccessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/dao/RoleDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="28" column="40" lean-forward="false" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wetech-core/src/main/java/tech/wetech/cms/model/RoleFindModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="23" lean-forward="false" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
           <folding />
         </state>
       </provider>

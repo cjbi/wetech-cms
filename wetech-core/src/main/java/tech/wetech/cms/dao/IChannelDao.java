@@ -49,7 +49,7 @@ public interface IChannelDao extends IBaseDao<Channel> {
 	 * @return
 	 */
 	public List<Channel> listAllIndexChannel(ChannelType ct);
-	
+
 	public List<Channel> listTopNavChannel();
 	/**
 	 * 删除频道和组的对应关系
@@ -63,7 +63,7 @@ public interface IChannelDao extends IBaseDao<Channel> {
 	 * @return
 	 */
 	public Channel loadFirstChannelByNav(int cid);
-	
+
 	public List<Channel> listUseChannelByParent(Integer cid);
 	/**
 	 * 通过类型来获取所有未停用的栏目

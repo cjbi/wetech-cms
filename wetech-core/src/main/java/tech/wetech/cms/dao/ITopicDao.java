@@ -11,8 +11,8 @@ import tech.wetech.cms.model.Topic;
 public interface ITopicDao extends IBaseDao<Topic>{
 	/**
 	 * 根据标题和状态进行文章的检索
-	 * @param cid
 	 * @param title
+	 * @param status
 	 * @return
 	 */
 	public Pager<Topic> find(String title,Integer status);

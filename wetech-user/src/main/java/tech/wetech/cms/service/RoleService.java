@@ -11,6 +11,7 @@ import tech.wetech.cms.dao.IRoleDao;
 import tech.wetech.cms.dao.IUserDao;
 import tech.wetech.cms.model.CmsException;
 import tech.wetech.cms.model.Role;
+import tech.wetech.cms.model.RoleFindModel;
 import tech.wetech.cms.model.User;
 
 @Service("roleService")
@@ -63,7 +64,7 @@ public class RoleService implements IRoleService {
 	}
 	
 	@Override
-	public Pager<Role> findRole() {
+	public Pager<RoleFindModel> findRole() {
 		return roleDao.findRole();
 	}
 

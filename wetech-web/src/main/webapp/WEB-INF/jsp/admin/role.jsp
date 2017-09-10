@@ -49,6 +49,7 @@
 						<th>角色 ID</th>
 						<th>角色名称</th>
 						<th>角色类型</th>
+						<th>用户数</th>
 						<th>角色操作</th>
 					</tr>
 				</thead>

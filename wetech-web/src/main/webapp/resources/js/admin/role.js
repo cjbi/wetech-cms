@@ -25,7 +25,14 @@ $(function() {
 			},
 			{
 				'data' : 'roleType'
-			},
+			},{
+            'data' : 'userCount',
+            'sWidth' : "5%",
+            "sClass" : "dt-column-center",
+            'mRender' : function(data,type,full) {
+                return '<span style="color: green;">'+data +'人</span>';
+            }
+       		 },
 			{
 				'data' : 'id',
 				'mRender' : function(data, type, full) {
