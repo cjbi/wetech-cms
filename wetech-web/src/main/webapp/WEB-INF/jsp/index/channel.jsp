@@ -5,7 +5,7 @@
 <html>
 <head lang="en">
 <meta charset="UTF-8">
-<title>Channel Page | ${baseInfo.name}</title>
+<title>${pc.name}栏目 | ${baseInfo.name}</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="format-detection" content="telephone=no">

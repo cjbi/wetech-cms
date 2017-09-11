@@ -36,6 +36,7 @@ public class BaseInfoUtil {
 		bi.setAddress(prop.getProperty("address"));
 		bi.setEmail(prop.getProperty("email"));
 		bi.setName(prop.getProperty("name"));
+		bi.setName2(prop.getProperty("name2"));
 		bi.setPhone(prop.getProperty("phone"));
 		bi.setRecordCode(prop.getProperty("recordCode"));
 		bi.setZipCode(prop.getProperty("zipCode"));
@@ -56,6 +57,7 @@ public class BaseInfoUtil {
 			prop.setProperty("address", bi.getAddress());
 			prop.setProperty("email", bi.getEmail());
 			prop.setProperty("name", bi.getName());
+			prop.setProperty("name2", bi.getName2());
 			prop.setProperty("phone",bi.getPhone());
 			prop.setProperty("recordCode",bi.getRecordCode());
 			prop.setProperty("zipCode",bi.getZipCode());

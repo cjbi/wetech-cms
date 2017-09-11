@@ -5,7 +5,7 @@
 <html>
 <head lang="en">
 <meta charset="UTF-8">
-<title>${baseInfo.name}</title>
+	<title>${baseInfo.name} <c:if test="${not empty baseInfo.name2}">|</c:if> ${baseInfo.name2}</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="format-detection" content="telephone=no">

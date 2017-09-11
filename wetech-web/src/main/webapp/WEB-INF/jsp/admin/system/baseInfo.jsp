@@ -32,6 +32,10 @@
 							<td>${baseInfo.name }</td>
 						</tr>
 						<tr>
+							<td class="am-text-right">副标题：</td>
+							<td>${baseInfo.name2 }</td>
+						</tr>
+						<tr>
 							<td class="am-text-right">网站所在地址：</td>
 							<td>${baseInfo.address }</td>
 						</tr>
@@ -91,6 +95,12 @@
 			<label class="am-u-sm-2 am-form-label">网站名称</label>
 			<div class="am-u-sm-10">
 				<input type="text" name="name" value="${baseInfo.name }" placeholder="请输入网站名称(必填)" required>
+			</div>
+		</div>
+		<div class="am-form-group">
+			<label class="am-u-sm-2 am-form-label">副标题</label>
+			<div class="am-u-sm-10">
+				<input type="text" name="name2" value="${baseInfo.name2 }">
 			</div>
 		</div>
 		<div class="am-form-group">

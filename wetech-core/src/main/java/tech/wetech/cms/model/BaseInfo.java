@@ -4,6 +4,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 public class BaseInfo {
     private String name;
+    private String name2;
     private String address;
     private String zipCode;
     private String recordCode;
@@ -39,6 +40,14 @@ public class BaseInfo {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getName2() {
+        return name2;
+    }
+
+    public void setName2(String name2) {
+        this.name2 = name2;
     }
 
     public String getAddress() {
