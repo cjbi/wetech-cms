@@ -42,7 +42,7 @@
 						</a>
 					</div>
 					<div class=" am-u-sm-9 am-list-main">
-						<a class="am-channel-title" href="topic/71">标普500创历史新高 易方达加码布局美股指基</a> 
+						<a class="am-channel-title" href="topic/71">标普500创历史新高 易方达加码布局美股指基</a>
 						<span class="am-channel-date">2016-11-27</span>
 						<div class="am-list-item-text">上周海外经济层面主要变化在联储12月加息概率和围绕美国大选结果的猜想。美联储12月加息悬念，是越来越少。联储副主席Stanley Fischer在美国总统大选后，就表示接下来有很大可能会加息。特朗普确定上台后，利率加速走低的局面将发生改变。按照竞选时的承诺，特朗普对当前极其宽松的货币政策并不满意，他更愿意加大财政支出，发展基础设施，我们对于利率上行需要保持足够的警惕。海外动向的变化对A股的冲击，主要是美元指数大幅走强带来的人民币贬值压力。</div>
 					</div>
@@ -53,7 +53,7 @@
 						</a>
 					</div>
 					<div class=" am-u-sm-9 am-list-main">
-						<a class="am-channel-title" href="topic/70">博时基金魏凤春：预计债市短期或陷入调整</a> 
+						<a class="am-channel-title" href="topic/70">博时基金魏凤春：预计债市短期或陷入调整</a>
 						<span class="am-channel-date">2016-11-27</span>
 						<div class="am-list-item-text">上周海外经济层面主要变化在联储12月加息概率和围绕美国大选结果的猜想。美联储12月加息悬念，是越来越少。联储副主席Stanley Fischer在美国总统大选后，就表示接下来有很大可能会加息。特朗普确定上台后，利率加速走低的局面将发生改变。</div>
 					</div>
@@ -64,7 +64,7 @@
 						</a>
 					</div>
 					<div class=" am-u-sm-9 am-list-main">
-						<a class="am-channel-title" href="topic/69">低风险需求驱动 定开债基成“爆款”产品</a> 
+						<a class="am-channel-title" href="topic/69">低风险需求驱动 定开债基成“爆款”产品</a>
 						<span class="am-channel-date">2016-11-27</span>
 						<div class="am-list-item-text">今年以来，A股市场持续震荡，低风险、收益稳健的基金产品因此备受青睐。而在货币基金收益率明显降低、保本基金接连受限的背景下，定期开放式债基接过固收产品发行的大旗，无论从数量还是规模上来看，都呈现爆发势头。业内人士表示，资产荒的加剧，让以纯债为主要投资方向的定期开放债券基金成为今年的“爆款”产品。</div>
 					</div>
@@ -88,7 +88,7 @@
 						</a>
 					</div>
 					<div class=" am-u-sm-9 am-list-main">
-						<a class="am-channel-title" href="topic/65">被禁入华澳乳企老板来自中国 被曝使用过期奶粉</a> 
+						<a class="am-channel-title" href="topic/65">被禁入华澳乳企老板来自中国 被曝使用过期奶粉</a>
 						<span class="am-channel-date">2016-11-27</span>
 						<div class="am-list-item-text">根据澳大利亚咨询公司GHD官方主页上显示，居住在墨尔本的中国投资者李大健先生寻求在澳大利亚建立一个奶粉厂，并建立了ViPlus Dairy Pty Ltd(ViPlus)项目，GHD负责项目开发阶段提供支持。</div>
 					</div>
@@ -99,7 +99,7 @@
 						</a>
 					</div>
 					<div class=" am-u-sm-9 am-list-main">
-						<a class="am-channel-title" href="topic/63">孵化器倒闭潮来临？数量太多创业者不够用</a> 
+						<a class="am-channel-title" href="topic/63">孵化器倒闭潮来临？数量太多创业者不够用</a>
 						<span class="am-channel-date">2016-11-27</span>
 						<div class="am-list-item-text">老牌的孵化器也逐渐展现出自己的特色：以北京创客空间、上海新车间、深圳柴火空间、洪泰空间、极地创新中心为主的专业服务型；清华x-lab、北大创业孵化营、亚杰汇为主的培训辅导型；36氪、创业家、创业邦、黑马会为主的媒体延伸型；以车库咖啡、Binggo咖啡、天使汇、3w咖啡为主的投资促进型；以创业公社、科技寺、融创空间、国安创客为主的整合服务型；以优客工场、无界空间、P2、梦想家、soho 3Q为主的联合办公型。</div>
 					</div>
@@ -110,7 +110,7 @@
 						</a>
 					</div>
 					<div class=" am-u-sm-9 am-list-main">
-						<a class="am-channel-title" href="topic/64">四五百元平衡车靠谱吗？成本都要七八百！</a> 
+						<a class="am-channel-title" href="topic/64">四五百元平衡车靠谱吗？成本都要七八百！</a>
 						<span class="am-channel-date">2016-11-26</span>
 						<div class="am-list-item-text">目前我国尚未出台电动平衡车的国家标准，但广东省地方标准（DB44/T1884）已于9月12日公布，这也是国内首个电动平衡车行业标准，将于明年1月1日正式开始实施。广东省电动车商会为通过地方标准认证的平衡车推出了“广东制造”的标签，消费者看到这一标签就可以放心购买。
 电动平衡车能否上路？广东产品质量监督检验研究院梁志勇表示，广东标准将电动平衡车的时速限制在20公里以下，“这就杜绝了目前有的平衡车车速太快的问题，而且这个时速，即使未来电动平衡车能上路，也不能走机动车道，只能在人行道上行驶。”</div>
@@ -135,7 +135,9 @@
             <div class="am-list-news-bd">
 
                 <ul class="am-list" id="topicList"></ul>
-                <div class="am-g am-text-middle" id="loading"></div>
+                <div style="display:none;" class="am-g am-text-middle" id="loading">
+					<button class="am-btn am-btn-xs am-btn-block"> <span class="am-icon-spinner am-icon-spin"></span>&nbsp;&nbsp;加载中&nbsp;&nbsp;</button>
+				</div>
             </div>
 
         </div>

@@ -117,21 +117,6 @@
 						</c:if>
 					</div>
 				</section>
-				<section class="am-panel am-panel-default">
-					<div class="am-panel-hd">最近访客</div>
-					<div class="am-panel-bd">
-						<ul class="am-avg-sm-4 blog-team">
-							<li><img class="am-thumbnail" src="<%=request.getContextPath()%>/resources/img/visitor.jpeg" alt="" /></li>
-							<li><img class="am-thumbnail" src="<%=request.getContextPath()%>/resources/img/visitor.jpeg" alt="" /></li>
-							<li><img class="am-thumbnail" src="<%=request.getContextPath()%>/resources/img/visitor.jpeg" alt="" /></li>
-							<li><img class="am-thumbnail" src="<%=request.getContextPath()%>/resources/img/visitor.jpeg" alt="" /></li>
-							<li><img class="am-thumbnail" src="<%=request.getContextPath()%>/resources/img/visitor.jpeg" alt="" /></li>
-							<li><img class="am-thumbnail" src="<%=request.getContextPath()%>/resources/img/visitor.jpeg" alt="" /></li>
-							<li><img class="am-thumbnail" src="<%=request.getContextPath()%>/resources/img/visitor.jpeg" alt="" /></li>
-							<li><img class="am-thumbnail" src="<%=request.getContextPath()%>/resources/img/visitor.jpeg" alt="" /></li>
-						</ul>
-					</div>
-				</section>
 			</div>
 		</div>
 	</div>

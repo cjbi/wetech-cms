@@ -12,12 +12,13 @@ $(function () {
     function getData() {
         if (done == true) {
             done = false;
-            $loading.append('<button class="am-btn am-btn-xs am-btn-default am-radius am-btn-block"> <span class="am-icon-spinner am-icon-spin"></span>&nbsp;&nbsp;加载中&nbsp;&nbsp;</button>');
-            $.post(contextPath + '/scrollLoading', {start: num++, length: 20}, function (data) {
+            $loading.show();
+            $.post(contextPath + '/scroll', {start: num++, length: 20}, function (data) {
                 $main.append(data);
-                $.getScript(contextPath + '/resources/amazeui/assets/js/amazeui.min.js');
+                console.log($('div.am-list-thumb'));
+                $('div.am-list-thumb > a > img').scrollspy({animation: 'fade',repeat: false});
                 done = true;
-                $loading.children().remove();
+                $loading.hide();
             });
         }
     }

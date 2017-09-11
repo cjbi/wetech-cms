@@ -144,12 +144,12 @@ public class IndexController {
 		return "index/topics";
 	}
 
-	@RequestMapping("/scrollLoading")
-	public String listTopic(String title, Model model) {
+	@RequestMapping("/scroll")
+	public String scroll(String title, Model model) {
 		SystemContext.setSort("t.publishDate");
 		SystemContext.setOrder("desc");
 		model.addAttribute("datas", topicService.find(title,1));
-		return "index/scrollLoading";
+		return "index/scroll";
 	}
 
 	@RequestMapping("/keyword/{con}")

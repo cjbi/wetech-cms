@@ -80,7 +80,9 @@
             <div class="am-list-news-bd">
 
                 <ul class="am-list" id="topicList"></ul>
-                <div class="am-g am-text-middle" id="loading"></div>
+                <div style="display:none;" class="am-g am-text-middle" id="loading">
+                    <button class="am-btn am-btn-xs am-btn-block"> <span class="am-icon-spinner am-icon-spin"></span>&nbsp;&nbsp;加载中&nbsp;&nbsp;</button>
+                </div>
             </div>
 
         </div>
@@ -107,13 +109,3 @@
         </div>
     </div>
 </div>
-<!-- last topic end -->
-<!-- keyword start -->
-<#--<div class="am-g am-g-fixed  cms-fixed">
-	<div class="am-u-sm-12" style="margin-top: 2rem;">
-		<#list keywords as kw>
-		<a href="keyword/${kw.name}" class="am-badge am-badge-primary am-text-sm am-radius ${keywordClzs[kw_index]}">${kw.name}</a>
-		</#list>
-	</div>
-</div>-->
-<!-- keyword end -->
