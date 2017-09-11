@@ -1,0 +1,12 @@
+input[type="checkbox"][name="roleIds"] {
+    height: 16px;
+    width: 16px;
+    position: relative;
+    bottom: 1px;
+}
+input[type="checkbox"][name="groupIds"] {
+    height: 16px;
+    width: 16px;
+    position: relative;
+    bottom: 1px;
+}
