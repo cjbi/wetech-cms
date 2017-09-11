@@ -1,5 +1,10 @@
 //TODO 注意： jq 1.8 以后 使用prop选固定元素，attr不能选固有元素
-
+/**
+ * author: cjbi
+ * date: 2016/9/20
+ * mail: cjbi@outlook.com
+ *  datatables 公共js封装
+ */
 /*------------ 多列查询 ------------*/
 jQuery.fn.dataTableExt.oApi.fnMultiFilter = function(oSettings, oData) {
 	for ( var key in oData) {

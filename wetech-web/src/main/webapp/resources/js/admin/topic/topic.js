@@ -38,7 +38,7 @@ $(function() {
 			if (data == '1') {
 				return '<span class="am-badge am-badge-success">已发布</span>';
 			} else if (data == '0') {
-				return '<span class="am-badge  am-badge-success">未发布</span>';
+				return '<span class="am-badge  am-badge-warning">未发布</span>';
 			} else {
 				return "未知";
 			}

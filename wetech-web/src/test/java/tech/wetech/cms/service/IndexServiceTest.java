@@ -13,7 +13,7 @@ import tech.wetech.basic.model.SystemContext;
 public class IndexServiceTest {
 	@Inject
 	private IIndexService indexService;
-	private String rp = "C:\\Users\\cjb\\WetechWorkspace\\wetech\\wetech-web\\src\\main\\webapp";
+	private static String rp = "C:\\Users\\cjbi\\GitHub\\wetech-cms\\wetech-web\\src\\main\\webapp";
 	@Test
 	public void testGenerateTop() {
 		SystemContext.setRealPath(rp);

@@ -75,7 +75,10 @@ $(function() {
 			    icon : 6
 			});
 			layer.close(index);
-			loadContent(contextPath + '/admin/system/clean');
+			loadContent('#system/clean',function() {
+                // callback重新注册组件
+                $('[data-am-selected]').selected();
+            });
 			
 		    },
 		    error : function(data) {
@@ -105,7 +108,10 @@ $(function() {
 			    icon : 6
 			});
 			layer.close(index);
-			loadContent(contextPath + '/admin/system/clean');
+			loadContent('#system/clean',function() {
+                // callback重新注册组件
+                $('[data-am-selected]').selected();
+            });
 		    },
 		    error : function(data) {
 			layer.msg('操作失败', {

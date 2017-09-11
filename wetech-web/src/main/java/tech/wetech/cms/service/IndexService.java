@@ -23,11 +23,10 @@ import tech.wetech.cms.web.BaseInfoUtil;
 @Service("indexService")
 public class IndexService implements IIndexService {
 
-
     /**
      * 日志对象
      */
-    private static final Logger logger = LoggerFactory.getLogger(TopicService.class);
+    private static final Logger logger = LoggerFactory.getLogger(IIndexService.class);
 
     private String outPath;
     private FreemarkerUtil util;
@@ -109,7 +108,6 @@ public class IndexService implements IIndexService {
             it.setCname(c.getName());
             int channelTopicNum = Integer.valueOf(prop.getProperty("cms.index.channel.topic.num"));
             List<Topic> tops = topicService.listTopicByChannelAndNumber(cid, channelTopicNum);
-            // System.out.println(cid+"--"+tops);
             it.setTopics(tops);
             channelTopics.add(it);
         }
@@ -117,7 +115,8 @@ public class IndexService implements IIndexService {
         generateBanner();
         Map<String, Object> root = new HashMap<String, Object>();
         int newNum = Integer.valueOf(prop.getProperty("cms.index.news.num"));
-        root.put("news", topicService.listRecommendTopicByNumber(newNum));
+        root.put("news", topicService.listTopicsByNumber(newNum));
+        root.put("recommendTopics", topicService.listRecommendTopicByNumber(10));
         root.put("channelTopics", channelTopics);
         root.put("keywords", keyworkService.getMaxTimesKeyword(50));
         randomKeywordClz(root, 100);

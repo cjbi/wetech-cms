@@ -1,7 +1,6 @@
 $(function() {
 	var url = contextPath + '/admin/backup/listBackups.do';
-	$
-			.ajax({
+	$.ajax({
 				type : 'post',
 				url : url,
 				dataType : 'json',
@@ -65,8 +64,7 @@ $(function() {
 								time : '2000',
 								icon : 6
 							});
-							loadContent(
-									contextPath + "/admin/backup");
+							loadContent("#backup");
 						},
 						error : function(data) {
 							layer.msg('操作失败', {
@@ -108,8 +106,10 @@ $(function() {
 									icon : 6
 								});
 								layer.close(index);
-								loadContent(
-										contextPath + "/admin/backup");
+								loadContent('#backup',function() {
+                                    // callback重新注册组件
+                                    $('[data-am-selected]').selected();
+                                });
 							},
 							error : function(data) {
 								layer.msg('操作失败', {
@@ -143,8 +143,10 @@ $(function() {
 									icon : 6
 								});
 								layer.close(index);
-								loadContent(
-										contextPath + "/admin/backup");
+								loadContent("#backup",function() {
+                                    // callback重新注册组件
+                                    $('[data-am-selected]').selected();
+                                });
 							},
 							error : function(data) {
 								layer.msg('操作失败', {

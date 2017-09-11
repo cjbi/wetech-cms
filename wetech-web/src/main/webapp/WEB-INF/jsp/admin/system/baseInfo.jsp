@@ -9,7 +9,18 @@
 			</div>
 		</div>
 		<hr>
-		<div class="am-u-sm-12">
+		<div class="am-g">
+			<div class="am-u-sm-12 am-u-md-6">
+				<div class="am-btn-toolbar">
+					<div class="am-btn-group am-btn-group-xs">
+						<button type="button" class="am-btn am-btn-secondary am-radius" id="reloadIndex">
+							<span class="am-icon-file-code-o am-animation-fade"></span> 重新静态化首页
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="am-u-sm-12  am-padding am-padding-bottom-0">
 			<div class="am-panel am-panel-default">
 				<div class="am-panel-hd">
 					<span class="am-icon-cog am-animation-spin"></span> 修改网站信息功能

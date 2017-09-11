@@ -142,7 +142,10 @@ $(function() {
 							icon : 6
 						});
 						layer.close(index);
-						loadContent(contextPath + "/admin/role");
+						loadContent("#role",function() {
+                            // callback重新注册组件
+                            $('[data-am-selected]').selected();
+                        });
 					},
 					error : function(data) {
 						layer.msg('操作失败', {

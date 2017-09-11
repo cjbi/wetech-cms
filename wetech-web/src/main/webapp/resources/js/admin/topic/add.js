@@ -111,7 +111,10 @@ $(function() {
 							icon : 6
 						});
 						// 如果成功了，就刷新父页面的表格
-						parent.loadContent(contextPath + '/admin/topic');
+						parent.loadContent('#topic',function() {
+                            // callback重新注册组件
+                            $('[data-am-selected]').selected();
+                        });
 						parent.layer.close(index);
 					},
 					error : function(data) {

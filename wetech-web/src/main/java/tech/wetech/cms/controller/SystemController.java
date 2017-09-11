@@ -53,10 +53,13 @@ public class SystemController {
 	}
 
 	@ResponseBody
-	@RequestMapping("/comment/edit")
-	public ResponseData editComment(HttpServletRequest request) {
-		String commentCode = request.getParameter("commentCode");
-
+	@RequestMapping("/index/reload")
+	public ResponseData reloadIndex() {
+		indexService.generateTop();
+		indexService.generateBanner();
+		indexService.generateBody();
+		indexService.generateCmsLink();
+		indexService.generateBottom();
 		return ResponseData.SUCCESS_NO_DATA;
 	}
 
