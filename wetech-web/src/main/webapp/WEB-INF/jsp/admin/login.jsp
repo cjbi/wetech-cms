@@ -75,11 +75,11 @@
 					</div>
 					<br> <br>
 					<div class="am-form-group">
-						<label for="username">用户名：</label> <input type="text" name="username" id="username" minlength="3" placeholder="请输入用户名" required />
+						<label for="username">用户名：</label> <input type="text" name="username" value="admin" id="username" minlength="3" placeholder="请输入用户名" required />
 					</div>
 
 					<div class="am-form-group">
-						<label for="password">密码：</label> <input type="password" name="password" id="password" minlength="6" placeholder="请输入密码" required data-foolish-msg="至少 6 位数字或字符的密码" />
+						<label for="password">密码：</label> <input type="password" name="password" value="123456" id="password" minlength="6" placeholder="请输入密码" required data-foolish-msg="至少 6 位数字或字符的密码" />
 					</div>
 					<div class="am-form-group">
 						<label for="checkcode">验证码：</label>
