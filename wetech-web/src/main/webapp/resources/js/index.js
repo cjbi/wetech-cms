@@ -4,7 +4,7 @@ $(function () {
     var elemt = 500;           //插入元素高度/单位px
     var maxnum = 100;            //设置加载最多次数
     var num = 0;
-    var totalheight = 0;
+    // var totalheight = 0;
     var $main = $('#topicList');                     //主体元素
     var $loading = $('#loading');
     var done = true;
@@ -15,8 +15,6 @@ $(function () {
             $loading.show();
             $.post(contextPath + '/scroll', {start: num++, length: 20}, function (data) {
                 $main.append(data);
-                console.log($('div.am-list-thumb'));
-                $('div.am-list-thumb > a > img').scrollspy({animation: 'fade',repeat: false});
                 done = true;
                 $loading.hide();
             });

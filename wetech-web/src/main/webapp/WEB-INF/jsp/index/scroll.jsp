@@ -7,7 +7,7 @@
         <a href="<%=request.getContextPath() %>/topic/${topic.id}" class="am-list-item-hd"><h2>${topic.title }</h2></a>
         <c:if test="${not empty topic.thumb}">
             <div class="am-u-sm-2 am-list-thumb">
-                <a href="<%=request.getContextPath() %>/topic/${topic.id}"><img src="${topic.thumb }" data-am-scrollspy="{animation: 'fade',repeat: false}"  /></a>
+                <a href="<%=request.getContextPath() %>/topic/${topic.id}"><img src="${topic.thumb }"/></a>
             </div>
             <div class=" am-u-sm-10  am-list-main">
                 <div class="am-list-item-text">${topic.summary }</div>
