@@ -1,5 +1,5 @@
 $(function() {
-    /*------------ 填充dataTables ------------*/
+    // 填充dataTables
     var url = contextPath + '/admin/system/clean/listNoUseAttachment.do';
     var attaCount = 0;
     var indexPicCount = 0;
@@ -124,7 +124,7 @@ $(function() {
 	});
     });
     
-    /*------------ 新增 ------------*/
+    // 新增
     add = function() {
 	var opts = {
 	    title : '添加用户',
@@ -190,5 +190,14 @@ $(function() {
 	};
 	$('#add-modal').layerOpen(opts);
     };
+
+    /**
+     * 重置
+     */
+    reset = function () {
+        loadContent('#system/clean', function () {
+            reloadComponent();
+        })
+    }
     
 });

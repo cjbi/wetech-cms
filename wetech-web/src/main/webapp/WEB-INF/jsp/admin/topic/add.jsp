@@ -4,16 +4,10 @@
 <html class="no-js fixed-layout">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>新增文章</title>
-<meta name="description" content="这是一个 index 页面">
-<meta name="keywords" content="index">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="renderer" content="webkit">
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 <link rel="icon" type="image/png" href="<%=request.getContextPath()%>/resources/amazeui/assets/i/favicon.png">
 <link rel="apple-touch-icon-precomposed" href="<%=request.getContextPath()%>/resources/amazeui/assets/i/app-icon72x72@2x.png">
-<meta name="apple-mobile-web-app-title" content="Amaze UI" />
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/amazeui/assets/css/amazeui.min.css" />
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/amazeui/assets/css/amazeui.upload.css" />
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/amazeui/assets/css/admin.css">
@@ -30,7 +24,6 @@
 	<ul id="mytree" class="ztree" style="margin-top: 0;"></ul>
 </div>
 <body>
-	<input type="hidden" id="sid" value="<%=session.getId()%>" />
 	<div class="admin-content">
 		<div class="admin-content-body">
 			<div class="am-cf am-padding am-padding-bottom-0">
@@ -131,7 +124,7 @@
 	<script src="<%=request.getContextPath()%>/resources/js/admin/main.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/js/common/jquery.cms.keywordinput.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/wangEditor/js/wangEditor.min.js"></script>
-	<script src="<%=request.getContextPath()%>/resources/js/common/dateFormat.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/js/common/wetech.common.js"></script>
 	<script src="<%=request.getContextPath()%>/dwr/engine.js"></script>
 	<script src="<%=request.getContextPath()%>/dwr/interface/dwrService.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/js/admin/topic/add.js"></script>

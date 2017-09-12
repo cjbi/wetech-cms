@@ -1,5 +1,5 @@
 $(function() {
-	/*------------ 填充dataTables ------------*/
+	// 填充dataTables
 	var url = contextPath + '/admin/pic/listIndexPic.do';
 	var gridTable = [ {
 		'data' : 'id',
@@ -54,13 +54,13 @@ $(function() {
 	// / / 页面数据加载
 	var table = initTable(url, gridTable);
 
-	/*------------ 删除 ------------*/
+    // 删除
 	$('#del').on('click', function() {
 		var url = contextPath + '/admin/pic/indexPic/delete.do';
 		deleteBatch(url, 'id');
 	});
 
-	/*------------ 新增 ------------*/
+	// 新增
 	$('#add').on('click', function() {
 		var index = layer.open({
 			type : 2,
@@ -72,7 +72,7 @@ $(function() {
 		});
 	});
 
-	/*------------ 修改 ------------*/
+	// 修改
 	$('#edit').on('click', function() {
 		var rowLength = table.rows('.selected').data().length;
 		if (rowLength == 0) {
@@ -98,5 +98,14 @@ $(function() {
 			content : contextPath + '/admin/pic/indexPic/edit/'+data.id
 		});
 	});
+
+    /**
+     * 重置
+     */
+    reset = function () {
+        loadContent('#pic/indexPic', function () {
+            reloadComponent();
+        })
+    }
 
 });

@@ -18,7 +18,7 @@
 			return false;
 		}
 	};
-	/*------------ ztree  ------------*/
+	// ztree 
 	$.fn.mytree = function(opts) {
 		var setting = $.extend({
 			data : {
@@ -142,13 +142,19 @@ function loadContent(href,callback) {
 	}
 }
 
+/**
+ * jQuery因为删除dom事件也会失效，所以页面需要注册下部分依赖jQuery的组件
+ */
+function reloadComponent() {
+    // 重新注册amaze ui下拉组件
+    $('[data-am-selected]').selected();
+}
+
 // ajax全局事件 modified on 2016/11/22
 $(function() {
 	$(document).ajaxError(function(event, request, settings) {
-		console.warn('error log begin:-------------------------------------->：');
 		console.warn(request);
 		console.warn(settings);
-		console.warn('error log end:-------------------------------------->：');
 		layer.alert(request.status + '  (' + request.statusText + ')', {
 			title : '出错',
 			icon : 5,
@@ -171,5 +177,7 @@ $(function() {
 		$.AMUI.progress.done();
 	});
     // 加载Content
-    loadContent();
+    loadContent('',function () {
+        reloadComponent();
+    });
 });

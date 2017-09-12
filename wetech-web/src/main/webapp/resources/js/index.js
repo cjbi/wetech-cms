@@ -1,5 +1,5 @@
+// scroll load
 $(function () {
-    /*------------ scroll loading ------------*/
     var range = 50;             //距下边界长度/单位px
     var elemt = 500;           //插入元素高度/单位px
     var maxnum = 100;            //设置加载最多次数

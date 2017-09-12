@@ -56,7 +56,7 @@
 	<script type="text/javascript" src="<%=request.getContextPath()%>/dwr/interface/dwrService.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/layer/layer.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/zTree/jquery.ztree.core-3.5.min.js"></script>
-	<script src="<%=request.getContextPath()%>/resources/js/common/dateFormat.js"></script>
+	<script src="<%=request.getContextPath()%>/resources/js/common/wetech.common.js"></script>
 	<script src="<%=request.getContextPath()%>/resources/js/admin/main.js"></script>
 </body>
 </html>

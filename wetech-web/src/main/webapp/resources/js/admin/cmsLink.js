@@ -1,10 +1,10 @@
 $(document).ready(function() {
-    /*------------ 初始化 ------------*/
+    // 初始化
 
 });
 
 $(function() {
-    /*------------ 填充dataTables ------------*/
+    // 填充dataTables
     var url = contextPath + '/admin/cmsLink/list.do';
     var gridTable = [ {
 	'data' : 'id',
@@ -77,7 +77,7 @@ $(function() {
 	}
     });
     
-    /*------------ 修改 ------------*/
+    // 修改
     edit = function() {
 	// 填充选择框
 	fillTypes();
@@ -118,13 +118,13 @@ $(function() {
 	$('#edit-modal').layerOpen(opts);
     }
 
-    /*------------ 删除 ------------*/
+    // 删除
     del = function() {
 	var url = contextPath + '/admin/cmsLink/delete.do';
 	deleteBatch(url, 'id');
     }
 
-    /*------------ 新增 ------------*/
+    // 新增
     add = function() {
 	// 填充选择框
 	fillTypes();
@@ -145,6 +145,15 @@ $(function() {
 	    }
 	};
 	$('#add-modal').layerOpen(opts);
-    };
+    }
+
+    /**
+     * 重置
+     */
+    reset = function () {
+        loadContent('#cmsLink', function () {
+            reloadComponent();
+        })
+    }
 
 });

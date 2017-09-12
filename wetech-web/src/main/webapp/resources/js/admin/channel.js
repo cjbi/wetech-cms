@@ -1,6 +1,6 @@
 $(function() {
 
-    /*------------ 初始化ztree ------------*/
+    // 初始化ztree
     var rMenu = $("#rMenu");
     var setting = {
 	data : {
@@ -26,17 +26,17 @@ $(function() {
 	}
     };
 
-    /*------------ 获取异步连接 ------------*/
+    // 获取异步连接
     function getAsyncUrl(treeId, treeNode) {
 	return treeNode == undefined ? contextPath + '/admin/channel/getChannelTree.do' : contextPath + '/admin/channel/getChannelTree?pId=' + treeNode.id;
     }
 
-    /*------------ 加载错误的fun ------------*/
+    // 加载错误的fun
     function zTreeOnAsyncError(event, treeId, treeNode) {
 	alert('数据加载失败!');
     }
 
-    /*------------ 点击之后的动作 ------------*/
+    // 点击之后的动作
     function beforeClick(treeId, treeNode) {
 	// 销毁表单验证
 	$('#edit-form').validator('destroy');
@@ -57,7 +57,7 @@ $(function() {
     var zNodes = [];
     $.fn.zTree.init($("#tree"), setting, zNodes);
 
-    /*------------  右键触发事件  ------------*/
+    //  右键触发事件
     // 在ztree上的右击事件
     function OnRightClick(event, treeId, treeNode) {
 	// 是否叶子节点
@@ -118,7 +118,7 @@ $(function() {
 	}
     }
 
-    /*------------  rDel删除节点  ------------*/
+    //  rDel删除节点
     $('#rDel').click(function() {
 
 	layer.confirm('确定要删除 [' + $('#add-form [name="pName"]').val() + '] 吗？', {
@@ -160,7 +160,7 @@ $(function() {
 	});
     });
 
-    /*------------  新增节点的模态框表单提交  ------------*/
+    //  新增节点的模态框表单提交
     $('#rAdd-chi,#rAdd-curr').click(function() {
 	var opts = {
 	    title : '新增节点',
@@ -228,7 +228,7 @@ $(function() {
 	}
     });
 
-    /*------------  右边编辑表单提交  ------------*/
+    //  右边编辑表单提交
     $('#edit-form [type="submit"]').on('click', function() {
 	var isFormValid = $('#edit-form').validator('isFormValid');
 	if (isFormValid) {

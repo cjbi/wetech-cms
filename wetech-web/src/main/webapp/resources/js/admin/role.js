@@ -1,10 +1,10 @@
 $(document).ready(function() {
-	/*------------ 初始化 ------------*/
+	// 初始化
 
 });
 
 $(function() {
-	/*------------ 填充dataTables ------------*/
+	// 填充dataTables
 	var url = contextPath + '/admin/role/list.do';
 	var gridTable = [
 			{
@@ -45,8 +45,8 @@ $(function() {
 	// 页面数据加载
 	var table = initTable(url, gridTable);
 
-	/*------------ 修改 ------------*/
-	edit = function() {
+	// 修改
+	 function edit() {
 		var rowLength = table.rows('.selected').data().length;
 		if (rowLength == 0) {
 			layer.msg('请选择一条记录！', {
@@ -84,13 +84,13 @@ $(function() {
 		$('#edit-modal').layerOpen(opts);
 	}
 
-	/*------------ 删除 ------------*/
-	del = function() {
+	// 删除
+	 function del() {
 		var url = contextPath + '/admin/role/delete.do';
 		deleteBatch(url, 'id');
 	}
 
-	/*------------ 新增 ------------*/
+	// 新增
 	add = function() {
 		var opts = {
 			title : '添加用户',
@@ -110,8 +110,17 @@ $(function() {
 		};
 		$('#add-modal').layerOpen(opts);
 	};
+
+    /**
+     * 重置
+     */
+    reset = function () {
+        loadContent('#role', function () {
+            reloadComponent();
+        })
+    }
 	
-	/*------------ 查询用户 ------------*/
+	// 查询用户
 	$("#example").on("click", '.am-btn[name=qryUser]', function(event) {
 		var rId = $(this).val();
 		loadContent('#user',function() {
@@ -121,7 +130,7 @@ $(function() {
 		});
 	});
 
-	/*------------ 清空用户 ------------*/
+	// 清空用户
 	$("#example").on("click", '.am-btn[name=clearUser]', function(event) {
 		var rId = $(this).val();
 		layer.confirm('确定要清空角色 ['+rId+'] 下所有用户吗？', {

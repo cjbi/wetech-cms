@@ -1,4 +1,4 @@
-/*------------ 初始化图片裁剪 ------------*/
+// 初始化图片裁剪
 $(function() {
 	var $clip = $("#clip");
 	var $file = $("#file");
@@ -34,7 +34,7 @@ $(function() {
 	});
 })
 
-/*------------  提交  ------------*/
+//  提交
 $('#submit').click(function() {
 	var index = parent.layer.getFrameIndex(window.name); // 获取窗口索引
 	if (index != undefined) {

@@ -1,5 +1,5 @@
 $(function() {
-	/*------------ 填充dataTables ------------*/
+	// 填充dataTables
 	var url = contextPath + '/admin/topic/list.do';
 	var gridTable = [ {
 		'data' : 'id',
@@ -52,7 +52,7 @@ $(function() {
 	// 页面数据加载
 	var table = initTable(url, gridTable);
 
-	/*------------ 修改 ------------*/
+	// 修改
 	$('#edit').on('click', function() {
 		// 只能选择一条数据
 		var rowLength = table.rows('.selected').data().length;
@@ -81,13 +81,22 @@ $(function() {
 		layer.full(index);
 	});
 
-	/*------------ 删除 ------------*/
+	// 删除
 	del = function() {
 		var url = contextPath + '/admin/topic/delete.do';
 		deleteBatch(url, 'id');
 	}
 
-	/*------------ 新增 ------------*/
+    /**
+     * 重置
+     */
+    reset = function () {
+        loadContent('#topic', function () {
+            reloadComponent();
+        })
+    }
+
+	// 新增
 	$('#add').on('click', function() {
 		var index = layer.open({
 			type : 2,

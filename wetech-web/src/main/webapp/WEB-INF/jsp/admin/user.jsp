@@ -24,6 +24,9 @@
 						<button type="button" class="am-btn am-btn-default" onclick="del()">
 							<span class="am-icon-trash-o"></span> 删除
 						</button>
+						<button type="button" class="am-btn am-btn-default" onclick="reset()">
+							<span class="am-icon-refresh"></span> 重置
+						</button>
 					</div>
 				</div>
 			</div>
@@ -123,7 +126,7 @@
 		<div class="am-form-group">
 			<label class="am-u-sm-2 am-form-label">电子邮件</label>
 			<div class="am-u-sm-10">
-				<input type="email" name="email" id="email" placeholder="输入电子邮件(格式：xxx@xxx.com)">
+				<input type="email" name="email"  placeholder="输入电子邮件(格式：xxx@xxx.com)">
 			</div>
 		</div>
 		<div class="am-form-group">
@@ -180,7 +183,7 @@
 		<div class="am-form-group">
 			<label class="am-u-sm-2 am-form-label">电子邮件</label>
 			<div class="am-u-sm-10">
-				<input type="email" name="email" id="email" placeholder="输入电子邮件">
+				<input type="email" name="email" placeholder="输入电子邮件">
 			</div>
 		</div>
 		<div class="am-form-group">

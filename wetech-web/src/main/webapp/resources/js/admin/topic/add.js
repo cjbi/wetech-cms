@@ -1,6 +1,6 @@
 $(function() {
 
-	/*------------  Amaze UI Upload  ------------*/
+	// Amaze UI Upload
 	var upload = $('#event').AmazeuiUpload({
 		url : contextPath + '/admin/topic/upload',
 		downloadUrl : '',
@@ -48,12 +48,12 @@ $(function() {
 		$("#attach").uploadify("upload", "*");
 	});
 
-	/*------------  搜索关键字  ------------*/
+	// 搜索关键字
 	$('#dropdown-search').keywordinput({
 		url : contextPath + "/admin/topic/searchKeyword",
 	});
 
-	/*------------  初始化wangEditor  ------------*/
+	// 初始化wangEditor
 	// 获取元素
 	var textarea = document.getElementById('content');
 	// 生成编辑器
@@ -70,10 +70,10 @@ $(function() {
 	};
 	editor.create();
 
-	/*------------  获取当前日期  ------------*/
+	// 获取当前日期
 	$('#publishDate').attr('value', dateFormat(new Date()));
 
-	/*------------  提交文章  ------------*/
+	// 提交文章
 	$('#submit').click(function() {
 		var index = parent.layer.getFrameIndex(window.name); // 获取窗口索引
 		if (index != undefined) {
@@ -151,7 +151,12 @@ $(function() {
 	$("#cname").click(showMenu);
 });
 
-/*------------ 对树的一系列操作 ------------*/
+/**
+ * 对树的一系列操作
+ * @param event
+ * @param treeId
+ * @param treeNode
+ */
 function choice(event, treeId, treeNode) {
 	$("#cname").val(treeNode.name);
 	$("#cid").val(treeNode.id);

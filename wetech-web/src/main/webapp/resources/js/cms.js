@@ -1,6 +1,6 @@
 $(function () {
     $.AMUI.progress.start();
-    /*------------ search ------------*/
+    // search
     var $dropdownSearch = $('#dropdown-search');
     var $dropdownInput = $("#dropdown-search-input");
     var $dropdownUl = $('#dropdown-search-ul');

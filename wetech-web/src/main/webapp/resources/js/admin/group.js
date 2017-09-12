@@ -1,5 +1,5 @@
 $(function() {
-	/*------------ 填充dataTables ------------*/
+	// 填充dataTables
 	var url = contextPath + '/admin/group/list.do';
 	var ggIdTable = [
 			{
@@ -38,7 +38,7 @@ $(function() {
 	// 页面数据加载
 	var table = initTable(url, ggIdTable);
 
-	/*------------ 修改 ------------*/
+	// 修改
 	edit = function() {
 		var rowLength = table.rows('.selected').data().length;
 		if (rowLength == 0) {
@@ -77,13 +77,13 @@ $(function() {
 		$('#edit-modal').layerOpen(opts);
 	}
 
-	/*------------ 删除 ------------*/
+	// 删除
 	del = function() {
 		var url = contextPath + '/admin/group/delete.do';
 		deleteBatch(url, 'id');
 	}
 
-	/*------------ 新增 ------------*/
+	// 新增
 	add = function() {
 		var opts = {
 			title : '添加用户',
@@ -104,7 +104,16 @@ $(function() {
 		$('#add-modal').layerOpen(opts);
 	};
 
-	/*------------ 查询用户 ------------*/
+    /**
+     * 重置
+     */
+    reset = function () {
+        loadContent('#group', function () {
+            reloadComponent();
+        })
+    }
+
+	// 查询用户
 	$("#example").on("click", '.am-btn[name=qryUser]', function(event) {
 		var gId = $(this).val();
         loadContent('#user',function() {
@@ -115,7 +124,7 @@ $(function() {
         });
 	});
 
-	/*------------ 清空用户 ------------*/
+	// 清空用户
 	$("#example").on("click", '.am-btn[name=clearUser]', function(event) {
 		var gId = $(this).val();
 		layer.confirm('确定要清空组 [' + gId + '] 下所有用户吗？', {

@@ -22,6 +22,9 @@
 						<button type="button" class="am-btn am-btn-default" onclick="del()">
 							<span class="am-icon-trash-o"></span> 删除
 						</button>
+						<button type="button" class="am-btn am-btn-default" onclick="reset()">
+							<span class="am-icon-refresh"></span> 重置
+						</button>
 					</div>
 				</div>
 			</div>
