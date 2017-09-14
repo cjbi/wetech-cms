@@ -29,5 +29,10 @@ public class DataTableMap {
 		return map;
 	}
 
+	public  static  void  main(String[] args) {
+		String aaa ="Hello World";
+		System.out.println(aaa+"");
+	}
+
 }
 

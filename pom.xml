@@ -1,54 +1,383 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>tech.wetech</groupId>
-	<artifactId>wetech-parent</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
+    <groupId>tech.wetech</groupId>
+    <artifactId>wetech-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>wetech</name>
+    <description>wetech聚合工程模板</description>
+    <url>https://github.com/cjbi/wetech-cms</url>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.version>4.3.5.RELEASE</spring.version>
-		<log4j.version>1.2.17</log4j.version>
-		<slf4j.version>1.7.12</slf4j.version>
-	</properties>
+    <issueManagement>
+        <system>Github Issue</system>
+        <url>https://github.com/cjbi/wetech-cms/issues</url>
+    </issueManagement>
 
-	<modules>
-		<module>wetech-basic-common</module>
-		<module>wetech-basic-hibernate</module>
-		<module>wetech-core</module>
-		<module>wetech-user</module>
-		<module>wetech-topic</module>
-		<module>wetech-web</module>
-	</modules>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
 
-	<build>
-		<plugins>
-			<!-- 项目工程使用jdk 1.8 -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.0</version>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-					<!-- 编译时排除 *Test.java -->
-					<excludes>
-						<exclude>**/*Test.java</exclude>
-					</excludes>
-				</configuration>
-			</plugin>
-			<!-- skip test -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.0</version>
-				<configuration>
-					<skip>true</skip>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+    <developers>
+        <developer>
+            <name>ChengJinbao</name>
+            <email>cjbi@outlook.com</email>
+        </developer>
+    </developers>
+
+    <properties>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <!-- versions -->
+        <servlet-api.version>2.5</servlet-api.version>
+
+        <spring.version>4.3.5.RELEASE</spring.version>
+
+        <slf4j.version>1.7.25</slf4j.version>
+        <logback-classic.version>1.1.3</logback-classic.version>
+        <jcl-over-slf4j.version>1.7.12</jcl-over-slf4j.version>
+
+        <jackson.version>2.8.0</jackson.version>
+
+        <jstl.version>1.2</jstl.version>
+
+        <mysql-connector-java.version>5.1.24</mysql-connector-java.version>
+
+        <aspectj.version>1.7.4</aspectj.version>
+
+        <hibernate-validator.version>5.4.2.Final</hibernate-validator.version>
+
+        <freemarker.version>2.3.23</freemarker.version>
+
+        <jsp-api.version>2.2</jsp-api.version>
+
+        <pager-taglib.version>2.0</pager-taglib.version>
+
+        <dwr.version>3.0.1-RELEASE</dwr.version>
+
+        <thumbnailator.version>0.4.3</thumbnailator.version>
+
+        <hibernate.version>4.2.0.Final</hibernate.version>
+
+        <pinyin4j.version>2.5.0</pinyin4j.version>
+
+        <javax-inject.version>1.0-201002241208</javax-inject.version>
+
+        <commons-fileupload.version>1.3</commons-fileupload.version>
+
+        <commons-dbcp2.version>2.1.1</commons-dbcp2.version>
+
+        <commons-collections.version>3.2.1</commons-collections.version>
+
+        <commons-lang3.version>3.4</commons-lang3.version>
+
+        <commons-compress.version>1.5</commons-compress.version>
+
+        <commons-beanutils.version>1.8.3</commons-beanutils.version>
+
+        <commons-io.version>2.4</commons-io.version>
+
+        <commons-lang.version>2.6</commons-lang.version>
+
+    </properties>
+
+    <!-- 声明依赖版本 -->
+    <dependencyManagement>
+        <dependencies>
+
+            <!-- 日志相关依赖 -->
+            <!-- 使用slf4j-api来处理日志 -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+
+            <!-- Logback-classic实现了SLF4j -->
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback-classic.version}</version>
+            </dependency>
+
+            <!-- 把JCL(Apache Commons Logging)的日志输出桥接到 SLF4J -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>jcl-over-slf4j</artifactId>
+                <version>${jcl-over-slf4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>servlet-api</artifactId>
+                <version>${servlet-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>jstl</groupId>
+                <artifactId>jstl</artifactId>
+                <version>${jstl.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.servlet.jsp</groupId>
+                <artifactId>jsp-api</artifactId>
+                <version>${jsp-api.version}</version>
+                <!-- 期望JDK、容器或使用者会提供这个依赖 -->
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>jsptags</groupId>
+                <artifactId>pager-taglib</artifactId>
+                <version>${pager-taglib.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.directwebremoting</groupId>
+                <artifactId>dwr</artifactId>
+                <version>${dwr.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-fileupload</groupId>
+                <artifactId>commons-fileupload</artifactId>
+                <version>${commons-fileupload.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-compress</artifactId>
+                <version>${commons-compress.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>net.coobird</groupId>
+                <artifactId>thumbnailator</artifactId>
+                <version>${thumbnailator.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>${hibernate-validator.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-orm</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aop</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-expression</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>${aspectj.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-dbcp2</artifactId>
+                <version>${commons-dbcp2.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-core</artifactId>
+                <version>${hibernate.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.belerweb</groupId>
+                <artifactId>pinyin4j</artifactId>
+                <version>${pinyin4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>${commons-beanutils.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.freemarker</groupId>
+                <artifactId>freemarker</artifactId>
+                <version>${freemarker.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-lang</groupId>
+                <artifactId>commons-lang</artifactId>
+                <version>${commons-lang.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.kenai.nbpwr</groupId>
+                <artifactId>javax-inject</artifactId>
+                <version>${javax-inject.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <!-- 测试相关依赖 -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.dbunit</groupId>
+            <artifactId>dbunit</artifactId>
+            <version>2.4.9</version>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <artifactId>junit</artifactId>
+                    <groupId>junit</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.springtestdbunit</groupId>
+            <artifactId>spring-test-dbunit</artifactId>
+            <version>1.3.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.easymock</groupId>
+            <artifactId>easymock</artifactId>
+            <version>3.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <modules>
+        <module>wetech-basic-common</module>
+        <module>wetech-basic-hibernate</module>
+        <module>wetech-core</module>
+        <module>wetech-user</module>
+        <module>wetech-topic</module>
+        <module>wetech-web</module>
+    </modules>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.eclipse.jetty</groupId>
+                    <artifactId>jetty-maven-plugin</artifactId>
+                    <version>9.4.0.v20161208</version>
+                    <configuration>
+                        <!-- 这是指定jetty扫描文件改变的时间间隔 -->
+                        <scanIntervalSeconds>1</scanIntervalSeconds>
+                        <httpConnector>
+                            <!-- 指定端口 -->
+                            <port>8888</port>
+                        </httpConnector>
+                        <webAppConfig>
+                            <!-- 指定webapp contextpath -->
+                            <contextPath>/${project.artifactId}</contextPath>
+                        </webAppConfig>
+                    </configuration>
+                </plugin>
+                <!-- 项目工程使用jdk 1.8 -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.0</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                        <!-- 编译时排除 *Test.java -->
+                        <excludes>
+                            <exclude>**/*Test.java</exclude>
+                        </excludes>
+                    </configuration>
+                </plugin>
+                <!-- skip test -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.0</version>
+                    <configuration>
+                        <skip>true</skip>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>
