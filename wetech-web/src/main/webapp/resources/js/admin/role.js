@@ -41,7 +41,7 @@ $(function() {
 	var table = initTable(url, gridTable);
 
 	// 修改
-	 function edit() {
+    edit = function() {
 		var rowLength = table.rows('.selected').data().length;
 		if (rowLength == 0) {
 			layer.msg('请选择一条记录！', {
@@ -79,13 +79,17 @@ $(function() {
 		$('#edit-modal').layerOpen(opts);
 	}
 
-	// 删除
-	 function del() {
+    /**
+	 * 删除
+     */
+	 del = function() {
 		var url = contextPath + '/admin/role/delete.do';
 		deleteBatch(url, 'id');
 	}
 
-	// 新增
+    /**
+	 * 新增
+     */
 	add = function() {
 		var opts = {
 			title : '添加用户',

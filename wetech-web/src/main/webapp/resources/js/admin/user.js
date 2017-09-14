@@ -70,11 +70,6 @@ $(function () {
         return data;
     }
 
-    // draw event 事件
-    $('#example').on('draw.dt', function () {
-        /* console.log( 'Redraw occurred at: '+new Date().getTime() ); */
-    });
-
     /**
      * 修改
      */
@@ -175,7 +170,7 @@ $(function () {
     /**
      * 新增
      */
-    add = function () {
+   add = function () {
         var opts = {
             title: '添加用户',
             yes: function (index, layero) {
@@ -220,7 +215,7 @@ $(function () {
     /**
      * 重置
      */
-    reset = function () {
+   reset = function () {
         loadContent('#user', function () {
             reloadComponent();
         })
