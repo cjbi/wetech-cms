@@ -84,10 +84,27 @@
 				</div>
 				<%-- baidu share end --%>
 			</div>
-			<!-- UY BEGIN -->
-			<div id="uyan_frame"></div>
-			<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2143470"></script>
-			<!-- UY END -->
+			<!-- 这里开始使用社会化评论框 -->
+			<!-- 国内的话推荐使用搜狐畅言:http://changyan.kuaizhan.com/ -->
+			<!-- 来必力City版安装代码 -->
+			<div id="lv-container" data-id="city" data-uid="MTAyMC8zMDc4OC83MzQw">
+				<script type="text/javascript">
+                    (function(d, s) {
+                        var j, e = d.getElementsByTagName(s)[0];
+
+                        if (typeof LivereTower === 'function') { return; }
+
+                        j = d.createElement(s);
+                        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                        j.async = true;
+
+                        e.parentNode.insertBefore(j, e);
+                    })(document, 'script');
+				</script>
+				<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+			</div>
+			<!-- City版安装代码已完成 -->
+			<!-- 这里结束使用社会化评论框 -->
 		</div>
 		<div class="am-u-md-4 blog-sidebar">
 			<div class="am-panel-group">
