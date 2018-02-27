@@ -10,20 +10,33 @@ wetech cms是本人自己整合开发的一套内容管理系统。旨在开发�
 >对datatables进行封装，增删改查基本的操作封装成插件，降低开发难度
 >严格的代码规范，对于每个类都有对应的单元测试覆盖
 
-##模块介绍
+## 模块介绍
 >   1. wetech-parent
+
 是所有子模块的父类，同时也是项目聚合器，以及版本申明管理，无实质代码
+
 >   2. wetech-basic-common
+
 主要是放一些通用工具类
+
 >   3. wetech-basic-hibernate
+
 对hibernate进行封装，目前就放了IBaseDao和BaseDao
+
 >   4. wetech-core
+
 项目核心模块，用来放POJO、DAO对象，以及ORM映射
+
 >   5. wetech-topic
+
 服务层文章相关
+
 >   7. wetech-user
+
 服务层用户相关
+
 >   6. wetech-web
+
 用来放前台页面，以及控制层相关代码
 
 ## 技术选型
