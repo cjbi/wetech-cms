@@ -1,47 +1,50 @@
 # wetech-cms
+
 wetech cms是本人自己整合开发的一套内容管理系统。旨在开发一个通用的、可持续开发集成的、方便扩展的cms系统，目前主要用来替代本人的wordpress博客
+
 ---
 
 ## 项目介绍
 
->首页使用freemarker完全静态化处理，减轻服务器和数据库的压力
+- 首页使用freemarker完全静态化处理，减轻服务器和数据库的压力
 
->后台相关js只在第一次登录时加载，各功能网页通过ajax load到content div中，包括异步前后台表单验证，所有的请求都是通过ajax来完成。
+- 后台相关js只在第一次登录时加载，各功能网页通过ajax load到content div中，包括异步前后台表单验证，所有的请求都是通过ajax来完成。
 
->批量删除功能，查询、新增、修改全部在一个网页当中，减少与服务器交互
+- 批量删除功能，查询、新增、修改全部在一个网页当中，减少与服务器交互
 
->对datatables进行封装，增删改查基本的操作封装成插件，降低开发难度
+- 对datatables进行封装，增删改查基本的操作封装成插件，降低开发难度
 
->严格的代码规范，对于每个类都有对应的单元测试覆盖
+- 严格的代码规范，对于每个类都有对应的单元测试覆盖
 
 ## 模块介绍
->   1. wetech-parent
 
-是所有子模块的父类，同时也是项目聚合器，以及版本申明管理，无实质代码
+1. wetech-parent
 
->   2. wetech-basic-common
+>   是所有子模块的父类，同时也是项目聚合器，以及版本申明管理，无实质代码
+
+2. wetech-basic-common
 
 主要是放一些通用工具类
 
->   3. wetech-basic-hibernate
+3. wetech-basic-hibernate
 
-对hibernate进行封装，目前就放了IBaseDao和BaseDao
+>   对hibernate进行封装，目前就放了IBaseDao和BaseDao
 
->   4. wetech-core
+4. wetech-core
 
-项目核心模块，用来放POJO、DAO对象，以及ORM映射
+>   项目核心模块，用来放POJO、DAO对象，以及ORM映射
 
->   5. wetech-topic
+5. wetech-topic
 
-服务层文章相关
+>   服务层文章相关
 
->   7. wetech-user
+7. wetech-user
 
-服务层用户相关
+>   服务层用户相关
 
->   6. wetech-web
+6. wetech-web
 
-用来放前台页面，以及控制层相关代码
+>   用来放前台页面，以及控制层相关代码
 
 ## 技术选型
 
