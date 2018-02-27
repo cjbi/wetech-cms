@@ -11,13 +11,20 @@ wetech cms是本人自己整合开发的一套内容管理系统。旨在开发�
 >严格的代码规范，对于每个类都有对应的单元测试覆盖
 
 ##模块介绍
->   1. wetech-parent 是所有子模块的父类，同时也是项目聚合器，以及版本申明管理，无实质代码
->   2. wetech-basic-common 主要是放一些通用工具类
->   3. wetech-basic-hibernate 对hibernate进行封装，目前就放了IBaseDao和BaseDao
->   4. wetech-core 项目核心模块，用来放POJO、DAO对象，以及ORM映射
->   5. wetech-topic 服务层文章相关
->   7. wetech-user  服务层用户相关
->   6. wetech-web  用来放前台页面，以及控制层相关代码
+>   1. wetech-parent
+是所有子模块的父类，同时也是项目聚合器，以及版本申明管理，无实质代码
+>   2. wetech-basic-common
+主要是放一些通用工具类
+>   3. wetech-basic-hibernate
+对hibernate进行封装，目前就放了IBaseDao和BaseDao
+>   4. wetech-core
+项目核心模块，用来放POJO、DAO对象，以及ORM映射
+>   5. wetech-topic
+服务层文章相关
+>   7. wetech-user
+服务层用户相关
+>   6. wetech-web
+用来放前台页面，以及控制层相关代码
 
 ## 技术选型
 
@@ -31,15 +38,17 @@ Hibernate | ORM框架 | 4.2.0.Final |  [http://hibernate.org/](http://hibernate.
 Maven | 项目构建管理 | 4.0.0 |  [http://maven.apache.org](http://maven.apache.org/)
 Freemarker | 模板引擎 | 2.3.23 |  [https://freemarker.apache.org/](https://freemarker.apache.org/)
 Logback | 日志组件 | 1.1.3 |  [https://logback.qos.ch](https://logback.qos.ch/)
-Druid | 数据库连接池 | 0.2.23 |  [https://github.com/alibaba/druid](https://github.com/alibaba/druid)
+Dbcp2 | 数据库连接池 | 2.1.1 |  [https://github.com/alibaba/druid](https://github.com/alibaba/druid)
 Hibernate Validator | 后端校验框架 | 5.4.2.Final | [http://hibernate.org/validator/](http://hibernate.org/validator/)
+DWR | WEB远程调用框架 | 3.0.1-RELEASE | [http://directwebremoting.org/dwr/index.html](http://directwebremoting.org/dwr/index.html)
+Thumbnailator | 生成高质量缩略图的Java类库 | 0.4.3 | [https://github.com/coobird/thumbnailator](https://github.com/coobird/thumbnailator)
 
 ### 前端技术
 
 技术 | 名称 | 版本 |  官网
 ----|------|----|----
 jQuery | 优秀的Javascript库 | 3.2.1 |  [http://jquery.com/](http://jquery.com/)
-Amaze UI | 前端框架 | 3.0.0 |  [http://amazeui.org/](http://amazeui.org/)
+Amaze UI | 前端框架 | 2.4.0 |  [http://amazeui.org/](http://amazeui.org/)
 DataTables | 数据表格 | 1.10.16 |  [https://www.datatables.net/](https://www.datatables.net/)
 Layer | jQuery弹出层插件 | 3.1.0 |  [http://layer.layui.com/](http://layer.layui.com/)
 ZTree | jQuery树插件 | 3.5.29 |  [http://www.treejs.cn](http://www.treejs.cn)
