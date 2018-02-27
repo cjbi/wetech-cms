@@ -1,5 +1,5 @@
 # wetech-cms
-wetech cms是本人自己整合开发的一套内容管理系统。旨在开发一个通用的、可持续开发集成的、方便扩展的cms系统，目前主要用来替代本人的wordpress博客（http://wetech.tech）。
+wetech cms是本人自己整合开发的一套内容管理系统。旨在开发一个通用的、可持续开发集成的、方便扩展的cms系统，目前主要用来替代本人的wordpress博客
 ---
 
 ## 项目介绍
@@ -27,11 +27,9 @@ wetech cms是本人自己整合开发的一套内容管理系统。旨在开发�
 ----|------|----|----
 Spring Framework | 容器 | 4.3.5.RELEASE | [http://projects.spring.io/spring-framework/](http://projects.spring.io/spring-framework/)
 SpringMVC | MVC框架 | 4.3.5.RELEASE |  [http://docs.spring.io/spring/docs/current/spring-framework-reference/htmlsingle/#mvc](http://docs.spring.io/spring/docs/current/spring-framework-reference/htmlsingle/#mvc)
-MyBatis | ORM框架 | 3.2.1 |  [http://www.mybatis.org/mybatis-3/zh/index.html](http://www.mybatis.org/mybatis-3/zh/index.html)
+Hibernate | ORM框架 | 4.2.0.Final |  [http://hibernate.org/](http://hibernate.org/)
 Maven | 项目构建管理 | 4.0.0 |  [http://maven.apache.org](http://maven.apache.org/)
-MyBatis Generator | 代码生成 | 1.3.5 |  [http://www.mybatis.org/generator/index.html](http://www.mybatis.org/generator/index.html)
 Freemarker | 模板引擎 | 2.3.23 |  [https://freemarker.apache.org/](https://freemarker.apache.org/)
-Apache Shiro | 安全框架 | 1.2.2 |  [http://shiro.apache.org](http://www.mybatis.org/generator/index.html)
 Logback | 日志组件 | 1.1.3 |  [https://logback.qos.ch](https://logback.qos.ch/)
 Druid | 数据库连接池 | 0.2.23 |  [https://github.com/alibaba/druid](https://github.com/alibaba/druid)
 Hibernate Validator | 后端校验框架 | 5.4.2.Final | [http://hibernate.org/validator/](http://hibernate.org/validator/)
