@@ -47,11 +47,11 @@ Thumbnailator | 生成高质量缩略图的Java类库 | 0.4.3 | [https://github.
 
 技术 | 名称 | 版本 |  官网
 ----|------|----|----
-jQuery | 优秀的Javascript库 | 3.2.1 |  [http://jquery.com/](http://jquery.com/)
-Amaze UI | 前端框架 | 2.4.0 |  [http://amazeui.org/](http://amazeui.org/)
+jQuery | 优秀的Javascript库 | 3.1.1 |  [http://jquery.com/](http://jquery.com/)
+Amaze UI | 前端框架 | 2.7.2 |  [http://amazeui.org/](http://amazeui.org/)
 DataTables | 数据表格 | 1.10.16 |  [https://www.datatables.net/](https://www.datatables.net/)
-Layer | jQuery弹出层插件 | 3.1.0 |  [http://layer.layui.com/](http://layer.layui.com/)
-ZTree | jQuery树插件 | 3.5.29 |  [http://www.treejs.cn](http://www.treejs.cn)
+Layer | jQuery弹出层插件 | 3.0.1 |  [http://layer.layui.com/](http://layer.layui.com/)
+ZTree | jQuery树插件 | 3.5.12 |  [http://www.treejs.cn](http://www.treejs.cn)
 
 ## 软件需求
 
