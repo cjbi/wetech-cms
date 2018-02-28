@@ -72,6 +72,7 @@ Amaze UI | 前端框架 | 2.7.2 |  [http://amazeui.org/](http://amazeui.org/)
 DataTables | 数据表格 | 1.10.16 |  [https://www.datatables.net/](https://www.datatables.net/)
 Layer | jQuery弹出层插件 | 3.0.1 |  [http://layer.layui.com/](http://layer.layui.com/)
 ZTree | jQuery树插件 | 3.5.12 |  [http://www.treejs.cn](http://www.treejs.cn)
+WangEditor | 轻量级web富文本编辑器 | 2.1.22 |  [http://www.wangeditor.com/](http://www.wangeditor.com/)
 
 ## 软件需求
 
